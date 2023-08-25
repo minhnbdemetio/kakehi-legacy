@@ -1,0 +1,27 @@
+.wrapper {
+  width: 393px;
+  height: 749px;
+  flex-shrink: 0;
+  position: relative;
+
+  //   background: url(<path-to-image>), lightgray -1192.336px -127.182px / 405.107% 153.87% no-repeat;
+  background: lightgray -1192.336px -127.182px / 405.107% 153.87% no-repeat;
+  background-repeat: no-repeat;
+  margin: 0;
+  padding: 0;
+
+  div {
+    width: 300px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: normal;
+
+    h1 {
+      text-shadow: 5px 5px 10px rgba(0, 0, 0, 0.75);
+      text-align: center;
+      font-family: Noto Sans JP;
+    }
+  }
+}
