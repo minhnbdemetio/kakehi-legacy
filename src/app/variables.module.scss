@@ -1,0 +1,21 @@
+$primary-color: #892140;
+$primary-light-color: #c89eab;
+$secondary-color: #000;
+
+$text-primary-color: #333333;
+$text-seconddary-color: #fff;
+
+$background-light-color: #fff;
+$background-dark-color: #000;
+
+:export {
+  primaryColor: $primary-color;
+  primaryLightColor: $primary-light-color;
+  secondaryColor: $secondary-color;
+
+  textPrimaryColor: $text-primary-color;
+  textSecondaryColor: $text-seconddary-color;
+
+  backgroundLightColor: $background-light-color;
+  backgroudDarkColor: $background-dark-color;
+}
