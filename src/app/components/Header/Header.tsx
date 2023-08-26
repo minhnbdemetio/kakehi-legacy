@@ -7,10 +7,12 @@ const Header: React.FC<IProps> = () => {
 
     return <>
         <div className='header'>
-            <img className='logo' src='/logo.png' />
-            <button className='menu-btn'>
-                <img src='/menu-icon.svg' />
-            </button>
+            <div className='header-items'>
+                <img className='logo' src='/logo.png' />
+                <button className='menu-btn'>
+                    <img src='/menu-icon.svg' />
+                </button>
+            </div>
         </div>
 
     </>

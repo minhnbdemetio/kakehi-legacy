@@ -1,18 +1,18 @@
 .wrapper {
-  width: 393px;
-  height: 749px;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 0.524;
   flex-shrink: 0;
   position: relative;
-
-  //   background: url(<path-to-image>), lightgray -1192.336px -127.182px / 405.107% 153.87% no-repeat;
-  background: lightgray -1192.336px -127.182px / 405.107% 153.87% no-repeat;
   background-repeat: no-repeat;
+
+  background-position: center;
   margin: 0;
   padding: 0;
 
   div {
-    width: 300px;
     position: absolute;
+    width: 100%;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
