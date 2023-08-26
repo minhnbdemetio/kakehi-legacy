@@ -1,9 +1,6 @@
-import Image from "next/image";
-import variables from './variables.module.scss'
 import Header from "./components/Header/Header";
 import BackgroundWithSlogan from "./components/BackgroundWithSlogan";
 import FloatingButtons from "./components/FloatingButtons";
-import './globals.css'
 
 export default function Home() {
   return (
@@ -15,6 +12,8 @@ export default function Home() {
         <h1>最適な答えを。</h1>
       </BackgroundWithSlogan>
       <FloatingButtons />
+
+
     </>
   );
 }
