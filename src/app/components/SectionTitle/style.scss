@@ -1,0 +1,21 @@
+@import "../../variables.module.scss";
+
+.section-title-container {
+  .subtitle {
+    color: rgba($primary-color, 10%);
+    text-transform: uppercase;
+  }
+
+  &.position-right {
+    align-items: flex-end;
+
+    p {
+      text-align: right;
+    }
+  }
+
+  .title {
+    padding: 0 21px;
+    transform: translate(0, -45%);
+  }
+}
