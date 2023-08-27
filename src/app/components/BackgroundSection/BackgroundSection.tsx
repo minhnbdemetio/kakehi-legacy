@@ -1,8 +1,7 @@
-import React from 'react'
+import React, { PropsWithChildren } from 'react'
 import './style.scss'
 
-interface IProps {
-    children: any
+interface IProps extends PropsWithChildren {
     src: string
     ratio: number
 }
