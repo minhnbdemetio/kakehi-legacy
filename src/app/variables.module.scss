@@ -3,10 +3,16 @@ $primary-light-color: #c89eab;
 $secondary-color: #000;
 
 $text-primary-color: #333333;
-$text-seconddary-color: #fff;
+$text-secondary-color: #fff;
 
 $background-light-color: #fff;
 $background-dark-color: #000;
+
+$typo-h1-font-size: 32px;
+$typo-h1-font-weight: 700;
+
+$typo-font-size: 12px;
+$typo-font-weight: 400;
 
 :export {
   primaryColor: $primary-color;
@@ -14,8 +20,11 @@ $background-dark-color: #000;
   secondaryColor: $secondary-color;
 
   textPrimaryColor: $text-primary-color;
-  textSecondaryColor: $text-seconddary-color;
+  textSecondaryColor: $text-secondary-color;
 
   backgroundLightColor: $background-light-color;
   backgroudDarkColor: $background-dark-color;
+
+  typoH1fontSize: $typo-h1-font-size;
+  typoH1fontWeight: $typo-h1-font-weight;
 }
