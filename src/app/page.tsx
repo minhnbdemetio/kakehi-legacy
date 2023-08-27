@@ -5,6 +5,7 @@ import MobileSidebar from "./components/MobileSidebar";
 import PageTitle from "./components/PageTitle";
 import TopPageInformation from "./organisms/TopPageInformation";
 import TopPageWorkSection from "./organisms/TopPageWorkSection";
+import TopPageFLowSection from "./organisms/TopPageFLowSection/TopPageFLowSection";
 
 export default function Home() {
   return (
@@ -21,6 +22,10 @@ export default function Home() {
 
 
       <TopPageWorkSection />
+
+      <div className="mt-50">
+        <TopPageFLowSection />
+      </div>
 
 
       <FloatingButtons />

@@ -3,6 +3,10 @@
 .card-description {
   background-color: $background-light-color;
 
+  &.background-card-primary {
+    background-color: $card-background-primary;
+  }
+
   .card-description-label {
     min-width: 100px;
     background-color: $primary-light-color;
