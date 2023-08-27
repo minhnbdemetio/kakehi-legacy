@@ -4,6 +4,7 @@ import './style.scss'
 import BackgroundSection from '@/app/components/BackgroundSection'
 import SectionTitle from '@/app/components/SectionTitle'
 import ListFeatures from '../ListFeatures'
+import AspectsOfCompany from '../AspectsOfCompany'
 
 interface IProps { }
 
@@ -21,9 +22,7 @@ const TopPageInformation: React.FC<IProps> = () => {
 
             <ListFeatures />
 
-            <div>
-                <SectionTitle position='right' subtitle={"advantages"} title={`システム建築が\n工場・倉庫に最適 な理由`} />
-            </div>
+            <AspectsOfCompany />
         </div >
     </BackgroundSection>
 

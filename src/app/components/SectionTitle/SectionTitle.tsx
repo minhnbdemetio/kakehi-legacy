@@ -10,9 +10,9 @@ interface IProps {
 const SectionTitle: React.FC<IProps> = ({ title, subtitle, position }) => {
 
 
-    return <div className={`section-title-container flex flex-col position-${position}`}>
+    return <div className={`section-title-container  flex flex-col position-${position}`}>
         <p className='subtitle text-4xl'>{subtitle}</p>
-        <p className={`text-2xl font-bold whitespace-pre title`}>{title}</p>
+        <p className={`text-2xl mx-7 font-bold whitespace-pre title`}>{title}</p>
     </div>
 }
 

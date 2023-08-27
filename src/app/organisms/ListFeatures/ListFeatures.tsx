@@ -6,7 +6,7 @@ import items from './items'
 interface IProps { }
 
 const ListFeatures: React.FC<IProps> = () => {
-    return <div className='featuring mt-15'>
+    return <div className='featuring mt-15 mx-7'>
         <div className='featuring-title'>
             <PageTitle title="システム建築に適した建物" divider />
         </div>
