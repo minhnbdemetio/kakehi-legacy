@@ -29,5 +29,38 @@ p {
   font-size: 12px;
   padding: 0;
   margin: 0;
-  color: $text-secondary-color;
+  // color: $text-secondary-color;
+}
+
+.bg-primary {
+  background-color: $background-light-color;
+}
+
+.bg-secondary {
+  background-color: $background-dark-color;
+}
+
+.hover-primary {
+  background-color: $primary-color;
+}
+
+.btn-primary {
+  &:hover {
+    background-color: rgba($primary-color, 0.6);
+    p {
+      color: $text-secondary-color;
+    }
+  }
+}
+
+.btn {
+  border: none;
+  padding: 0.5rem 1.25rem;
+}
+
+.btn-icon {
+  img {
+    width: 16px;
+    height: 16px;
+  }
 }

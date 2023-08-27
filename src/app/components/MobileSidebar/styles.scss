@@ -1,0 +1,8 @@
+.right-sidebar {
+  transform: translate(-100%, 0);
+  transition: 0.5;
+}
+
+.right-sidebar.show {
+  transform: translate(0, 0);
+}
