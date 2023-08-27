@@ -4,6 +4,7 @@ import FloatingButtons from "./components/FloatingButtons";
 import MobileSidebar from "./components/MobileSidebar";
 import PageTitle from "./components/PageTitle";
 import TopPageInformation from "./organisms/TopPageInformation";
+import TopPageWorkSection from "./organisms/TopPageWorkSection";
 
 export default function Home() {
   return (
@@ -18,7 +19,12 @@ export default function Home() {
 
       <TopPageInformation />
 
+
+      <TopPageWorkSection />
+
+
       <FloatingButtons />
+
 
 
       <MobileSidebar />

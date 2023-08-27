@@ -17,6 +17,7 @@ const config: Config = {
         xs: "8px", // Extra Small
         sm: "10px", // Small
         base: "12px", // Base (usually 16px)
+        md: "14px",
         lg: "16px", // Large
         xl: "18px", // Extra Large
         "2xl": "24px", // 2x Large
@@ -63,7 +64,10 @@ const config: Config = {
         "10": "30px",
         "14": "41px",
         "15": "45px",
+        "16.2/3": "50px",
         "20": "60px",
+        "23": "69px",
+        "24": "72px",
         "25": "75px",
         "30": "90px",
         "50": "150px",

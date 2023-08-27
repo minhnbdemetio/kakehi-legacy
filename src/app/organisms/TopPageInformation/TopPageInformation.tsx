@@ -5,6 +5,7 @@ import BackgroundSection from '@/app/components/BackgroundSection'
 import SectionTitle from '@/app/components/SectionTitle'
 import ListFeatures from '../ListFeatures'
 import AspectsOfCompany from '../AspectsOfCompany'
+import TopPageWorkSection from '../TopPageWorkSection'
 
 interface IProps { }
 
@@ -24,6 +25,7 @@ const TopPageInformation: React.FC<IProps> = () => {
 
             <AspectsOfCompany />
         </div >
+
     </BackgroundSection>
 
 
