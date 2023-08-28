@@ -1,21 +1,14 @@
-'use client'
 
 
 import PageTitle from '@/app/components/PageTitle'
-import ProjectCard from '@/app/components/ProjectCard/ProjectCard'
-import React, { useCallback, useRef } from 'react'
-import Slider from "react-slick";
+import React from 'react'
 
-
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import ProjectListCaroursel from '@/app/components/ProjectListCaroursel';
 
 interface IProps { }
 
 const TopPageWorkSection: React.FC<IProps> = () => {
 
-    const ref = useRef(null)
 
     return <div className='mt-16.2/3'>
         <PageTitle title='施工実績' subTitle='WORK' />

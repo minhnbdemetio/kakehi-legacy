@@ -1,0 +1,47 @@
+@import "../../variables.module.scss";
+
+.footer-container {
+  .btn {
+    > p {
+      font-size: 21px;
+    }
+  }
+
+  .link-btn {
+    width: 300px;
+    height: 75px;
+  }
+
+  .footer {
+    background-color: $background-dark-color;
+
+    .footer-logo {
+      //   width: 100%;
+      //   height: auto;
+      flex-shrink: 0;
+      //   aspect-ratio: 5.14168190128;
+      width: 100px;
+      height: 35.008px;
+    }
+
+    p,
+    a > span {
+      color: $text-secondary-color;
+    }
+
+    .footer-link {
+      a::after {
+        content: "";
+        display: inline-block;
+        height: 15px;
+        width: 2px;
+        background-color: $background-light-color;
+        margin: 0 8px;
+      }
+
+      :last-child::after {
+        display: none;
+      }
+    }
+  }
+}

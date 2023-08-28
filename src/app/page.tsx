@@ -6,6 +6,7 @@ import PageTitle from "./components/PageTitle";
 import TopPageInformation from "./organisms/TopPageInformation";
 import TopPageWorkSection from "./organisms/TopPageWorkSection";
 import TopPageFLowSection from "./organisms/TopPageFLowSection/TopPageFLowSection";
+import Footer from "./components/Footer";
 
 export default function Home() {
   return (
@@ -27,6 +28,7 @@ export default function Home() {
         <TopPageFLowSection />
       </div>
 
+      <Footer />
 
       <FloatingButtons />
 
