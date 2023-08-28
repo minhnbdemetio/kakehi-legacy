@@ -3,6 +3,8 @@
 
 import React, { useCallback } from 'react'
 import './style.scss'
+import './responsive.css'
+import menuItems from '../../configs/menuItems'
 
 interface IProps { }
 
@@ -21,10 +23,16 @@ const Header: React.FC<IProps> = () => {
 
     return <>
         <div className='header'>
-            <div className='header-items'>
-                <img className='logo' src='/logo.png' />
+            <div className='header-items p-3 flex justify-between items-center xl:justify-normal xl:pl-16.2/3 xl:p-7'>
+                <img className='logo xl:test' src='/logo.png' />
 
-                <button className='menu-btn' onClick={openMobileSidebar} data-target="#main-mobile-sidebar" type="button" >
+                <div className='menu-list hidden xl:block xl:ml-23'>
+                    <ul className='flex items-center'>
+                        {menuItems.map((item, index) => <li className='px-12 first:pl-0 last:pr-0' key={index}><a><span className='font-medium '>{item.label}</span></a></li>)}
+                    </ul>
+                </div>
+
+                <button className='menu-btn xl:hidden' onClick={openMobileSidebar} data-target="#main-mobile-sidebar" type="button" >
                     <img src='/menu-icon.svg' />
                 </button>
 

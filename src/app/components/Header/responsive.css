@@ -1,0 +1,10 @@
+@media screen(xl) {
+  .header .header-items .logo {
+    width: 175px !important;
+    height: 34.23676px !important;
+  }
+
+  .header .header-items {
+    height: 75px !important;
+  }
+}
