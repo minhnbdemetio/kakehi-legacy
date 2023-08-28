@@ -7,9 +7,8 @@ export default function Home() {
   return (
     <>
       <BackgroundWithSlogan src="/index-background.jpg" >
-        <h1 className="text-3xl">システム建築で、</h1>
-        <h1 className="text-3xl">工場・倉庫に</h1>
-        <h1 className="text-3xl">最適な答えを。</h1>
+        <h1 className="text-3xl whitespace-pre-wrap hidden xl:block">{`システム建築で、\n工場・倉庫に 最適な答えを。`}</h1>
+        <h1 className="text-3xl whitespace-pre-wrap block xl:hidden">{`システム建築で、\n工場・倉庫に \n最適な答えを。`}</h1>
       </BackgroundWithSlogan>
 
 
