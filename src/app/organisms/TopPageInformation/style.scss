@@ -1,0 +1,12 @@
+@import "../../variables.module.scss";
+.toppage-information-container {
+  padding-top: 101px;
+
+  .description {
+    padding: 0px 22px;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    line-height: 36px;
+  }
+}

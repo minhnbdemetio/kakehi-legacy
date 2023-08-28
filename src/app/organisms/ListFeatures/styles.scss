@@ -1,0 +1,62 @@
+@import "../../variables.module.scss";
+.featuring {
+  background: linear-gradient(180deg, rgba(242, 242, 242, 0) 0%, #f2f2f2 100%);
+
+  margin-top: 100px;
+  padding-bottom: 50px;
+
+  .featuring-title {
+    padding-top: 50px;
+  }
+
+  .list-feature {
+    margin-top: 70px;
+  }
+
+  .feature-item {
+    width: 250px;
+    margin: auto;
+
+    img {
+      width: 151px;
+      margin: auto;
+    }
+
+    .feature-item-description {
+      margin-top: 49.71px;
+
+      .description-label {
+        background-color: rgba(137, 33, 64, 0.4);
+        color: $text-secondary-color;
+        font-size: 21px;
+        padding: 23px 0 22px 0;
+      }
+
+      & > div {
+        background-color: $background-light-color;
+
+        ul {
+          padding: 20px 0;
+          margin: auto;
+          width: fit-content;
+
+          li {
+            position: relative;
+            line-height: 32px;
+
+            &:before {
+              content: ".";
+              color: $text-primary-color;
+              position: absolute;
+              left: 0;
+              top: 0;
+              line-height: 0.4;
+              font-size: 32px;
+              transform: translate(-15px, 0);
+            }
+          }
+        }
+      }
+    }
+  }
+}

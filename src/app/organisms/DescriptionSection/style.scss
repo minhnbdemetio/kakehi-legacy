@@ -1,0 +1,17 @@
+@import "../../variables.module.scss";
+
+.description-section {
+  position: relative;
+  .description-section-img {
+    width: 100%;
+    aspect-ratio: 0.49125;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+  }
+
+  .description-section-content-items {
+    padding-top: 50px;
+    background-color: $card-background-primary;
+  }
+}

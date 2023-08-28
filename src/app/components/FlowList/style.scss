@@ -1,0 +1,14 @@
+.flow-list-container {
+  .flow-node-container {
+    position: relative;
+    .chain-icon {
+      width: 50px;
+      height: 40px;
+      fill: #000;
+      position: absolute;
+      left: 50%;
+      bottom: 0;
+      transform: translate(-50%, 60%);
+    }
+  }
+}
