@@ -4,6 +4,9 @@ import Slider from 'react-slick'
 import ProjectCard from '../ProjectCard/ProjectCard';
 import './style.scss'
 
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
 interface IProps {
     projects: { name: string, img: string, descriptions: { label: string, content: string }[] }[]
 }

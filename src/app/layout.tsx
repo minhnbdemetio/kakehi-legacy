@@ -1,6 +1,10 @@
 import './globals.css'
 import type { Metadata } from 'next'
 import './app.scss'
+import Header from './components/Header/Header'
+import Footer from './components/Footer'
+import FloatingButtons from './components/FloatingButtons'
+import MobileSidebar from './components/MobileSidebar'
 
 
 
@@ -16,7 +20,15 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body >{children}</body>
+      <body >
+        <Header />
+
+        {children}
+        <Footer />
+
+        <FloatingButtons />
+        <MobileSidebar />
+      </body>
     </html>
   )
 }
