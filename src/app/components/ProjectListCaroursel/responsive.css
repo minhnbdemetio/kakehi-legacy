@@ -12,7 +12,7 @@
   }
 
   .project-card-container {
-    width: 100% !important;
+    max-width: 300px !important;
     margin: auto;
   }
 }

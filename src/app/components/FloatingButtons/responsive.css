@@ -1,0 +1,56 @@
+@media screen(xl) {
+  .floating-buttons-box {
+    right: 0 !important;
+    left: unset !important;
+    position: absolute !important;
+    top: 40% !important;
+    bottom: unset !important;
+  }
+
+  .floating-buttons-box.show .floating-buttons a {
+    transform: translate(0, 0) !important;
+  }
+  .floating-buttons-box.show .collapse-floating-buttons {
+    transform: rotate(0deg) !important;
+  }
+
+  .floating-buttons {
+    width: fit-content !important;
+    position: relative;
+    top: 0;
+    right: 0;
+    display: flex !important;
+    flex-direction: column !important;
+    overflow: hidden;
+  }
+
+  .floating-buttons a {
+    width: 100px;
+    height: 90px !important;
+    border-radius: 20px 0px 0px 20px;
+    transform: translate(100%, 0) !important;
+    transition: 0.5s;
+  }
+
+  .floating-buttons .email-button img {
+    width: 60px !important;
+    height: 36.75px !important;
+    flex-shrink: 0;
+  }
+
+  .floating-buttons .document-button img {
+    width: 36.842px !important;
+    height: 50px !important;
+    flex-shrink: 0;
+  }
+
+  .floating-buttons a p {
+    font-size: 13px;
+  }
+
+  .collapse-floating-buttons {
+    position: relative !important;
+    transform: translate(0, 0) rotate(90deg) !important ;
+    transition: 0.5s;
+  }
+}

@@ -1,6 +1,7 @@
 @media screen(md) {
   .section-title-container .subtitle {
     letter-spacing: 12.8px;
+    transform: unset !important;
   }
 
   .section-title-container .title {
