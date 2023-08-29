@@ -2,6 +2,7 @@ import { Button } from "../Button";
 import { InfoCard } from "../InfoCard";
 import { InfoContainer } from "../InfoContainer";
 import { InfoHeading } from "../InfoHeading";
+import { Routes } from "@/app/constants/routes";
 import clsx from "clsx";
 import React, { FC } from "react";
 
@@ -22,7 +23,7 @@ export const FAQBanner: FC = () => {
             以下のフォームに必要事項をご入力の上、お問い合わせください。
           </p>
           <InfoCard title="工場・倉庫建設ガイド" />
-          <Button text="資料請求はこちら" />
+          <Button text="資料請求はこちら" href={Routes.REQUEST} />
         </div>
       </InfoContainer>
     </section>
