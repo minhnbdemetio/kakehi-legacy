@@ -1,6 +1,6 @@
 import { Button } from "../Button";
-import { InfoContainer } from "../InfoContainer";
 import { InfoCard } from "../InfoCard";
+import { InfoContainer } from "../InfoContainer";
 import { InfoHeading } from "../InfoHeading";
 import clsx from "clsx";
 import React, { FC } from "react";
@@ -17,7 +17,7 @@ export const FAQBanner: FC = () => {
             "desktop:px-32"
           )}
         >
-          <p className="text-lg font-noto-sans-jp text-primary leading-[1.8] desktop:text-xl">
+          <p className="text-lg font-noto-sans-jp text-primary leading-[1.8] desktop:leading-loose desktop:text-xl">
             システム建築について、もっと詳しく知りたい方は、ガイドブックをご活用ください。
             以下のフォームに必要事項をご入力の上、お問い合わせください。
           </p>
