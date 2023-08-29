@@ -7,7 +7,7 @@ export const FAQContent = () => {
   return (
     <InfoContainer as="section" className="py-33 space-y-24">
       <InfoHeading subtitle="FAQ" title="よくあるお問い合わせ" />
-      <div className="space-y-7 max-w-[994px]">
+      <div className="space-y-7 max-w-[994px] mx-auto">
         <Accordion summary="建築・施工について">
           <Accordion
             summary="工場・倉庫はどれくらいの期間で立てることができますか？"
