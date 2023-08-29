@@ -6,15 +6,16 @@ interface Props extends PropsWithChildren {
   className?: string;
 }
 
-export const InfoContainer: FC<Props> = ({ as = "div", className, children }) => {
+export const InfoContainer: FC<Props> = ({
+  as = "div",
+  className,
+  children,
+}) => {
   const Component = as;
 
   return (
     <Component
-      className={clsx(
-        "mx-auto px-7 box-content max-w-screen-desktop",
-        className
-      )}
+      className={clsx("mx-auto px-7 box-content max-w-[994px]", className)}
     >
       {children}
     </Component>

@@ -13,7 +13,7 @@ export const FAQBanner: FC = () => {
         <InfoHeading subtitle="DOCUMENT" title="資料請求" className="mb-17" />
         <div
           className={clsx(
-            "text-center bg-white max-w-[994px]",
+            "text-center bg-white",
             "mx-auto space-y-33 pt-23 pb-33 px-7",
             "desktop:px-32"
           )}
