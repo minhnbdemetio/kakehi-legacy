@@ -28,6 +28,7 @@
     .menu-list {
       li {
         position: relative;
+        padding-bottom: 4px;
 
         ::after {
           content: "";
@@ -37,6 +38,11 @@
           background-color: $background-dark-color;
           position: absolute;
           right: 0;
+        }
+
+        :hover {
+          border-bottom: 2px solid $text-primary-color;
+          cursor: pointer;
         }
       }
 

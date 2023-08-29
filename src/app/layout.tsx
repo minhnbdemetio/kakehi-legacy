@@ -20,7 +20,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body >
+      <body style={{ width: '100%' }}>
         <Header />
 
         {children}
