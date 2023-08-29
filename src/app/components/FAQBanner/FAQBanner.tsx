@@ -1,5 +1,5 @@
 import { Button } from "../Button";
-import { Container } from "../Container";
+import { InfoContainer } from "../InfoContainer";
 import { InfoCard } from "../InfoCard";
 import { InfoHeading } from "../InfoHeading";
 import clsx from "clsx";
@@ -8,7 +8,7 @@ import React, { FC } from "react";
 export const FAQBanner: FC = () => {
   return (
     <section className="bg-card-background-primary pt-40 pb-46">
-      <Container>
+      <InfoContainer>
         <InfoHeading subtitle="DOCUMENT" title="資料請求" className="mb-17" />
         <div
           className={clsx(
@@ -24,7 +24,7 @@ export const FAQBanner: FC = () => {
           <InfoCard title="工場・倉庫建設ガイド" />
           <Button text="資料請求はこちら" />
         </div>
-      </Container>
+      </InfoContainer>
     </section>
   );
 };

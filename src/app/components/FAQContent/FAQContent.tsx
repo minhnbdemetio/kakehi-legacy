@@ -1,13 +1,13 @@
 import { Accordion } from "../Accordion";
-import { Container } from "../Container";
+import { InfoContainer } from "../InfoContainer";
 import { InfoHeading } from "../InfoHeading";
 import React from "react";
 
 export const FAQContent = () => {
   return (
-    <Container as="section" className="py-33 space-y-24">
+    <InfoContainer as="section" className="py-33 space-y-24">
       <InfoHeading subtitle="FAQ" title="よくあるお問い合わせ" />
-      <div className="space-y-7">
+      <div className="space-y-7 max-w-[994px]">
         <Accordion summary="建築・施工について">
           <Accordion
             summary="工場・倉庫はどれくらいの期間で立てることができますか？"
@@ -44,6 +44,6 @@ export const FAQContent = () => {
           </Accordion>
         </Accordion>
       </div>
-    </Container>
+    </InfoContainer>
   );
 };
