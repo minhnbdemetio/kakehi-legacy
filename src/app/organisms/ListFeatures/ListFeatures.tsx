@@ -7,7 +7,7 @@ import './responsive.css'
 interface IProps { }
 
 const ListFeatures: React.FC<IProps> = () => {
-    return <div className='featuring mt-15 mx-7 pb-16.2/3 xl:pb-21'>
+    return <div className='featuring mt-15 mx-7 pb-16.2/3 xl:pb-21 xl:mx-auto xl:w-fit xl:px-25 '>
         <div className='featuring-title'>
             <PageTitle title="システム建築に適した建物" divider />
         </div>

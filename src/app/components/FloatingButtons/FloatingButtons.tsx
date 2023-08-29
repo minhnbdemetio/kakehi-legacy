@@ -9,7 +9,7 @@ const FloatingButtons: React.FC<IProps> = () => {
 
     const [open, setOpen] = useState(false)
 
-    const boxClass = 'floating-buttons-box ' + (open ? "show" : "")
+    const boxClass = 'floating-buttons-box z-30 ' + (open ? "show" : "")
 
     return <div className={boxClass} >
         <button onClick={() => setOpen((o) => !o)} className='collapse-floating-buttons'>

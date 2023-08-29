@@ -14,7 +14,14 @@
     }
   }
 
-  .title {
-    transform: translate(0, -45%);
+  .title > div {
+    // transform: translate(0, -45%);
+    top: 55px !important;
   }
+
+  .title > div p {
+    text-align: left !important;
+  }
+
+  // .title
 }

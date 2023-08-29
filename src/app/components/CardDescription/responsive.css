@@ -1,0 +1,9 @@
+@media screen(xl) {
+  .card-description-label p {
+    font-size: 21px;
+  }
+
+  .card-description-label {
+    min-width: 150px !important;
+  }
+}

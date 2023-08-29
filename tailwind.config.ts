@@ -24,7 +24,7 @@ const config: Config = {
         "3xl": "32px", // 3x Large
         "4xl": "48px", // 4x Large
         "5xl": "64px", // 5x Large
-        "6xl": "4rem", // 6x Large
+        "6xl": "128px", // 6x Large
       },
       textColor: {
         primary: "#333333", // Primary text color
@@ -40,7 +40,7 @@ const config: Config = {
         sm: "576px", // Small screens and up
         md: "768px", // Medium screens and up
         lg: "992px", // Large screens and up
-        xl: "1280px", // Extra large screens and up
+        xl: "1024px", // Extra large screens and up
       },
       fontWeight: {
         light: "300",
@@ -67,6 +67,7 @@ const config: Config = {
         "15": "45px",
         "16.2/3": "50px",
         "17": "51px",
+        "18": "54px",
         "20": "60px",
         "21": "63px",
         "23": "69px",
@@ -76,7 +77,10 @@ const config: Config = {
         "35": "105px",
         "36": "108px",
         "41.2/3": "125px",
+        "49": "147px",
         "50": "150px",
+        "53": "162px",
+        "pc-container": "220px",
       },
     },
 

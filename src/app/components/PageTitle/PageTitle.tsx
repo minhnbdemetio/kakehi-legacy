@@ -10,7 +10,7 @@ interface IProps {
 const PageTitle: React.FC<IProps> = ({ divider = false, subTitle, title }) => {
     return <div className='flex flex-col justify-center items-center'>
         {subTitle && <p className='text-xl sub-title'>{subTitle}</p>}
-        <p className={'text-2xl font-bold ' + (divider ? 'divider' : "")} >{title}</p>
+        <p className={'text-2xl font-bold xl:text-3xl' + (divider ? 'divider' : "")} >{title}</p>
     </div>
 }
 

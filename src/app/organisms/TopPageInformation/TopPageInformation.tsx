@@ -2,16 +2,15 @@ import PageTitle from '@/app/components/PageTitle'
 import React from 'react'
 import './style.scss'
 import BackgroundSection from '@/app/components/BackgroundSection'
-import SectionTitle from '@/app/components/SectionTitle'
 import ListFeatures from '../ListFeatures'
 import AspectsOfCompany from '../AspectsOfCompany'
-import TopPageWorkSection from '../TopPageWorkSection'
+import './responsive.css'
 
 interface IProps { }
 
 const TopPageInformation: React.FC<IProps> = () => {
 
-    return <BackgroundSection ratio={0.236462094} src='/steel-self-background.jpg'>
+    return <BackgroundSection className='toppage-information-background' height={1662} src='/steel-self-background.jpg'>
         <div className='toppage-information-container'>
 
             <PageTitle title="システム建築とは" subTitle="SYSTEM" />

@@ -2,16 +2,20 @@
 
 .description-section {
   position: relative;
+
+  .description-section-content {
+    // height: 800px;
+  }
   .description-section-img {
     width: 100%;
-    aspect-ratio: 0.49125;
+    height: 800px;
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
   }
 
-  .description-section-content-items {
-    padding-top: 50px;
+  .background {
+    // padding-top: 50px;
     background-color: $card-background-primary;
   }
 }

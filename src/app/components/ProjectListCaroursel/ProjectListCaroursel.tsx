@@ -3,6 +3,7 @@ import React, { useCallback, useRef } from 'react'
 import Slider from 'react-slick'
 import ProjectCard from '../ProjectCard/ProjectCard';
 import './style.scss'
+import './responsive.css'
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
@@ -17,6 +18,8 @@ var settings = {
     slidesToShow: 1,
     slidesToScroll: 1
 };
+
+const xlSettings = { ...settings, slidesToShow: 3 }
 const ProjectListCaroursel: React.FC<IProps> = ({ projects }) => {
     const ref = useRef<{ slickNext: () => void, slickPrev: () => void } | null>(null)
 
@@ -36,10 +39,20 @@ const ProjectListCaroursel: React.FC<IProps> = ({ projects }) => {
 
 
     return <div className='project-list-carousel-container'>
-        <button className='project-list-carousel-naviate-btn left' onClick={prev}><img alt='Nagivate Prev' src='/icons/navigate-previous.png' /></button>
-        <div className='mx-23'>
+        <div>
+            <button className='project-list-carousel-naviate-btn left ' onClick={prev}><img alt='Nagivate Prev' src='/icons/navigate-previous.png' /></button>
+        </div>
+        <div className=' project-list-carousel mx-23 block xl:hidden'>
             <Slider ref={ref as any} {...settings}   >
-                {projects.map((project) => <div key={project.name} className='px-1'>
+                {projects.map((project) => <div key={project.name} className='px-1 '>
+                    <ProjectCard name={project.name}
+                        descriptions={project.descriptions} img={project.img} />
+                </div>)}
+            </Slider>
+        </div>
+        <div className=' project-list-carousel mx-23 hidden xl:block'>
+            <Slider ref={ref as any} {...xlSettings}   >
+                {projects.map((project) => <div key={project.name} className='px-1 xl:px-0 xl:pr-16'>
                     <ProjectCard name={project.name}
                         descriptions={project.descriptions} img={project.img} />
                 </div>)}

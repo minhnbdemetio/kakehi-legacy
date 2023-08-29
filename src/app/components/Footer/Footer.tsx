@@ -1,6 +1,7 @@
 import React from 'react'
 import BackgroundSection from '../BackgroundSection'
 import './style.scss'
+import './responsive.css'
 
 interface IProps { }
 
@@ -8,7 +9,7 @@ const Footer: React.FC<IProps> = () => {
 
     return <div className='footer-container '>
         <div className='pre-footer'>
-            <BackgroundSection src='/footer.jpg' ratio={0.65666666666} style={{
+            <BackgroundSection className='footer-background' src='/footer.jpg' height={600} style={{
                 background: "linear-gradient(180deg, #F2F2F2 29.20%, rgba(206, 236, 245, 0.00) 100%)"
             }}>
                 <div className='px-7 pt-41.2/3 '>
