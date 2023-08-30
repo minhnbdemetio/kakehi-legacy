@@ -43,7 +43,7 @@ const config: Config = {
         md: "768px", // Medium screens and up
         lg: "992px", // Large screens and up
         xl: "1024px", // Extra large screens and up
-        desktop: '1024px',
+        desktop: "1024px",
       },
       fontWeight: {
         light: "300",
@@ -80,10 +80,13 @@ const config: Config = {
         "30": "90px",
         "32": "96px",
         "33": "99px",
+        "33.1/3": "100px",
         "35": "105px",
         "36": "108px",
+        "38": "114px",
         "40": "120px",
         "41.2/3": "125px",
+        "43.1/3": "130px",
         "46": "138px",
         "49": "147px",
         "50": "150px",

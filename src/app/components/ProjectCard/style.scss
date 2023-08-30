@@ -31,4 +31,9 @@
       align-items: center;
     }
   }
+
+  .tag {
+    background-color: $primary-color;
+    color: $text-secondary-color;
+  }
 }

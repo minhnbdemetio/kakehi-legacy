@@ -22,7 +22,9 @@ export default function RootLayout({
       <body style={{ width: '100%' }} className={notoSansJP.variable}>
         <Header />
 
-        {children}
+        <div >
+          {children}
+        </div>
         <Footer />
 
         <FloatingButtons />
