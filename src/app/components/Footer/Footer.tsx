@@ -2,6 +2,7 @@ import React from 'react'
 import BackgroundSection from '../BackgroundSection'
 import './style.scss'
 import './responsive.css'
+import { Button } from '../Button'
 
 interface IProps { }
 
@@ -19,9 +20,7 @@ const Footer: React.FC<IProps> = () => {
 
 
                 <div className='flex justify-center mt-35'>
-                    <a className='btn btn-contained-primary link-btn mx-15 py-8 flex'>
-                        <span className='text-xl w-full text-center'>お問い合わせ</span>
-                    </a>
+                    <Button text='お問い合わせ' />
                 </div>
             </BackgroundSection>
         </div>
