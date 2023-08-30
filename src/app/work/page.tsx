@@ -19,7 +19,7 @@ const Work: React.FC<IProps> = () => {
     const miniImgHeight = useMemo(() => isExtraLargeScreen ? 90 : 49.2, [isExtraLargeScreen])
 
 
-    return <div className="pb-43.1/3 xl:pb-33.1/3">
+    return <div className="work-page-container pb-43.1/3 xl:pb-33.1/3">
         <DescriptionSection
             type="multi-image"
             firstTitle="施工事例"

@@ -1,9 +1,9 @@
 @media screen(xl) {
-  .description-section ul {
+  .work-page-container .description-section ul {
     margin-top: 25px !important;
   }
 
-  .description-section .card-description-label {
+  .work-page-container .description-section .card-description-label {
     height: 90px !important;
   }
 }
