@@ -5,8 +5,7 @@ import Header from './components/Header/Header'
 import Footer from './components/Footer'
 import FloatingButtons from './components/FloatingButtons'
 import MobileSidebar from './components/MobileSidebar'
-
-
+import { notoSansJP } from './constants/fonts'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -20,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body >
+      <body className={notoSansJP.variable}>
         <Header />
 
         {children}
