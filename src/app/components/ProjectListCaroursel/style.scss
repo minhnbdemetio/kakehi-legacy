@@ -22,4 +22,18 @@
     }
     transform: translate(0, -50%);
   }
+
+  .project-carousels {
+    .slick-arrow {
+      display: none !important;
+    }
+
+    .slick-list {
+      .slick-slide > {
+        // width: 300px !important;
+        min-width: 33.33% !important;
+        width: 33.33% !important;
+      }
+    }
+  }
 }

@@ -4,6 +4,7 @@
   .subtitle {
     color: rgba($primary-color, 10%);
     text-transform: uppercase;
+    transform: translate(0, 35px);
   }
 
   &.position-right {
@@ -14,7 +15,15 @@
     }
   }
 
-  .title {
-    transform: translate(0, -45%);
+  .title > div {
+    // transform: translate(0, -45%);
+    top: 55px !important;
+    // transform: translate(0, -35px);
   }
+
+  .title > div p {
+    text-align: left !important;
+  }
+
+  // .title
 }

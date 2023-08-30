@@ -1,0 +1,27 @@
+@media screen(md) {
+  .section-title-container .subtitle {
+    letter-spacing: 12.8px;
+    transform: unset !important;
+  }
+
+  .section-title-container .title {
+    width: 50%;
+    position: relative;
+    z-index: 40;
+  }
+
+  .section-title-container .title > div {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 40;
+  }
+
+  .section-title-container .first-title {
+    /* margin-top: 55px; */
+  }
+
+  .section-title-container.position-right .title {
+    text-align: left !important;
+  }
+}

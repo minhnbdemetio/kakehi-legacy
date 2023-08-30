@@ -1,0 +1,54 @@
+import { useCallback, useEffect, useState } from "react";
+import tailwindConfig from "../../../tailwind.config";
+
+const useMediaQuery = (screen: "sm" | "md" | "xl" | "lg") => {
+  const [currentScreen, setCurrentScreen] = useState<"sm" | "md" | "xl" | "lg">(
+    "sm"
+  );
+
+  const handleResize = useCallback(() => {
+    const screenConfig = tailwindConfig.theme?.extend?.screens;
+
+    if (!screenConfig) {
+      throw new Error("Not found screens config inside tailwind config!");
+    } else {
+      let screen: "sm" | "md" | "xl" | "lg" = "sm";
+
+      const toSizeNumber = (sizeStr: string) => +sizeStr.replace("px", "");
+
+      Object.keys(screenConfig)
+        .sort((a, b) =>
+          toSizeNumber((screenConfig as any)[a]) <=
+          toSizeNumber((screenConfig as any)[b])
+            ? -1
+            : 1
+        )
+        .forEach((key) => {
+          const size = toSizeNumber((screenConfig as any)[key]);
+
+          if (size <= window.innerWidth) {
+            screen = key as any;
+          }
+        });
+
+      setCurrentScreen(screen);
+    }
+  }, []);
+
+  useEffect(() => {
+    // Initial screen size detection
+    handleResize();
+
+    // Add event listener to track screen size changes
+    window.addEventListener("resize", handleResize);
+
+    // Clean up the event listener on component unmount
+    return () => {
+      window.removeEventListener("resize", handleResize);
+    };
+  }, [handleResize]);
+
+  return screen === currentScreen;
+};
+
+export default useMediaQuery;

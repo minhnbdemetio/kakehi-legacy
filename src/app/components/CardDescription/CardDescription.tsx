@@ -1,5 +1,6 @@
 import React from 'react'
 import './style.scss'
+import './responsive.css'
 
 interface IProps {
     label?: string
@@ -13,8 +14,8 @@ const CardDescription: React.FC<IProps> = ({ description, label, background = 'd
     return <div className={`card-description flex items-center background-${background}`}>
         {!!label && <div className='card-description-label  text-center'
             style={{ backgroundImage: !!labelBackgroundImg ? `url(${labelBackgroundImg})` : 'none' }}
-        ><p className='text-md'>{label}</p></div>}
-        <p className='card-description-content flex-auto px-7 py-5 text-md'>{description}</p>
+        ><p className='text-md xl:font-bold'>{label}</p></div>}
+        <p className='card-description-content flex-auto px-7 py-5 text-md xl:text-xl'>{description}</p>
     </div>
 }
 

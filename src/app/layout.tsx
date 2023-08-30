@@ -19,7 +19,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={notoSansJP.variable}>
+      <body style={{ width: '100%' }} className={notoSansJP.variable}>
         <Header />
 
         {children}

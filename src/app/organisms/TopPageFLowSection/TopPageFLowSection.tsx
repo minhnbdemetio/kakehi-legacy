@@ -12,7 +12,7 @@ const TopPageFLowSection: React.FC<IProps> = () => {
     return <div>
         <PageTitle title='お問い合せからの流れ' subTitle='FLOW' />
 
-        <div className='mt-17 mx-7 pb-40'>
+        <div className='mt-17 mx-7 pb-40 xl:mx-pc-container'>
             <FlowList>
                 {items.map((item) => <CardDescription key={item.label} background='card-primary' description={item.content} label={item.label} labelBackgroundImg={item.img} />
                 )}

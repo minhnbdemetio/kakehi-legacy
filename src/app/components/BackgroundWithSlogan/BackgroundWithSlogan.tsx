@@ -1,5 +1,6 @@
 import React from 'react'
 import './style.scss'
+import './responsive.css'
 
 interface IProps {
     src: string

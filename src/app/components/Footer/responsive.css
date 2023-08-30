@@ -1,0 +1,11 @@
+@media screen(md) {
+  .footer-background {
+    width: 100%;
+    height: 500px !important;
+    aspect-ratio: unset;
+  }
+
+  .footer-background-container {
+    min-height: 500px !important;
+  }
+}

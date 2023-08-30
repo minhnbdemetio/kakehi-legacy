@@ -1,6 +1,6 @@
 import React from 'react'
 import './style.scss'
-
+import './responsive.css'
 
 interface IProps {
     img: string
@@ -19,7 +19,7 @@ const ProjectCard: React.FC<IProps> = ({ img, name, descriptions }) => {
 
             <ul className='project-card-descriptions mt-7 grid grid-cols-1 gap-7'>
                 {descriptions.map((description) => <li key={description.label} className='project-card-description flex '>
-                    <p className='project-card-description-label text-md'>{description.label}</p>
+                    <p className='project-card-description-label text-md xl:text-lg'>{description.label}</p>
                     <p className='project-card-description-content text-md pl-7 flex-auto' >{description.content}</p>
                 </li>)}
             </ul>

@@ -1,0 +1,12 @@
+@media screen(xl) {
+  .featuring .feature-item {
+    margin: unset !important;
+  }
+
+  .featuring .feature-img {
+    height: 231px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}

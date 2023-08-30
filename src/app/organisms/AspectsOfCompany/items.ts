@@ -1,5 +1,6 @@
 const items: {
-  title: string;
+  firstTitle: string;
+  secondTitle: string;
   subtitle: string;
   titlePosition: "right" | "left";
   img: string;
@@ -10,8 +11,8 @@ const items: {
 }[] = [
   {
     img: "/advantages.jpg",
-    title: `システム建築が
-工場・倉庫に最適 な理由`,
+    firstTitle: `システム建築が`,
+    secondTitle: "工場・倉庫に最適 な理由",
     items: [
       {
         label: "ローコスト",
@@ -38,8 +39,8 @@ const items: {
   },
   {
     img: "/strength-image.jpg",
-    title: `懸樋工務店の強み
-一貫したサービス の提供`,
+    firstTitle: `懸樋工務店の強み`,
+    secondTitle: "一貫したサービス の提供",
     items: [
       {
         label: "土地探し",
@@ -68,8 +69,8 @@ const items: {
   },
   {
     img: "/history-img.jpg",
-    title: `懸樋工務店の
-歴史と実績`,
+    firstTitle: `懸樋工務店の,`,
+    secondTitle: "歴史と実績",
     items: [
       {
         description:
