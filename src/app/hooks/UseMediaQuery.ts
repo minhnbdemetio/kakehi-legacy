@@ -1,5 +1,5 @@
 import tailwindConfig from "../../../tailwind.config";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useMemo, useState } from "react";
 
 const getScreenSize = () => {
   const screenConfig = tailwindConfig.theme?.extend?.screens;
@@ -37,9 +37,14 @@ const useMediaQuery = (screen: "sm" | "md" | "xl" | "lg") => {
     getScreenSize()
   );
 
+
   const handleResize = useCallback(() => {
-    setCurrentScreen(getScreenSize());
-  }, []);
+    const checkScreen = getScreenSize()
+
+    if (checkScreen !== currentScreen) {
+      setCurrentScreen(checkScreen);
+    }
+  }, [currentScreen]);
 
   useEffect(() => {
     // Initial screen size detection
@@ -54,7 +59,7 @@ const useMediaQuery = (screen: "sm" | "md" | "xl" | "lg") => {
     };
   }, [handleResize]);
 
-  return screen === currentScreen;
+  return useMemo(() => screen === currentScreen, [screen, currentScreen]);
 };
 
 export default useMediaQuery;

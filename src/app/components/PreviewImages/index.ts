@@ -1,3 +1,3 @@
-import PreviewImages from "./PreviewImages";
 
+import PreviewImages from "./PreviewImages";
 export default PreviewImages;
