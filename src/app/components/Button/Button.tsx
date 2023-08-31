@@ -1,36 +1,35 @@
 import clsx from "clsx";
-import { ButtonHTMLAttributes, FC, HTMLAttributes } from "react";
+import Link from "next/link";
+import {
+  ButtonHTMLAttributes,
+  FC,
+  HTMLAttributes,
+  PropsWithChildren,
+} from "react";
 
-interface Props extends HTMLAttributes<HTMLElement> {
-  text: string;
+interface Props extends PropsWithChildren<HTMLAttributes<HTMLElement>> {
   href?: string;
   type?: ButtonHTMLAttributes<HTMLButtonElement>["type"];
   onClick?: () => void;
 }
 
 const baseClasses = clsx(
-  "inline-block text-1.5xl desktop:text-2xl text-center font-medium font-noto-sans-jp",
+  "inline-block text-1.5xl xl:text-2xl text-center font-medium font-noto-sans-jp",
   "btn btn-contained-primary link-btn p-7 w-[330px] max-w-full"
 );
 
-export const Button: FC<Props> = ({
-  text,
-  href,
-  className,
-  onClick,
-  ...props
-}) => {
+export const Button: FC<Props> = ({ children, href, className, ...props }) => {
   if (href) {
     return (
-      <a className={clsx(baseClasses, className)} href={href} {...props}>
-        {text}
-      </a>
+      <Link href={href} className={clsx(baseClasses, className)} {...props}>
+        {children}
+      </Link>
     );
   }
 
   return (
     <button className={clsx(baseClasses, className)} {...props}>
-      {text}
+      {children}
     </button>
   );
 };

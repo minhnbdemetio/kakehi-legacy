@@ -23,7 +23,7 @@ export const InfoHeading: FC<Props> = ({ subtitle, title, className }) => {
       >
         {subtitle}
       </h2>
-      <h1 className="text-inherit font-bold text-2xl desktop:text-3xl font-noto-sans-jp">
+      <h1 className="text-inherit font-bold text-2xl xl:text-3xl font-noto-sans-jp">
         {title}
       </h1>
     </div>
