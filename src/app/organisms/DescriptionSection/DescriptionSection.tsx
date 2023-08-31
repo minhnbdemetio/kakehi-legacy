@@ -6,18 +6,37 @@ import React, { useMemo } from 'react'
 import './responsive.css'
 
 import './style.scss'
+import PreviewImages from '@/app/components/PreviewImages'
 
 
-interface IProps {
+
+
+
+interface CommonProps {
     titlePosition: 'left' | 'right'
     firstTitle: string
     secondTitle: string
     subtitle: string
-    img: string
     items: { label?: string, description: string }[]
 }
 
-const DescriptionSection: React.FC<IProps> = ({ img, items, subtitle, firstTitle, secondTitle, titlePosition }) => {
+interface SingleImageProps extends CommonProps {
+
+    type: 'single-image'
+    img: string
+}
+
+
+interface MultipleImageProps extends CommonProps {
+    type: 'multi-image'
+    images: { tag: string, src: string }[]
+    mainImgHeight: number
+    miniImgHeight: number
+}
+declare type IProps = SingleImageProps | MultipleImageProps
+
+
+const DescriptionSection: React.FC<IProps> = ({ items, subtitle, firstTitle, secondTitle, titlePosition, ...rest }) => {
 
 
 
@@ -28,7 +47,7 @@ const DescriptionSection: React.FC<IProps> = ({ img, items, subtitle, firstTitle
 
             <div className={`description-section-content-body  h-full  relative  z-20 xl:flex xl:items-stretch `}>
                 <div className='description-section-img-box w-full h-full xl:relative xl:h-auto' >
-                    <div className='description-section-img xl:z-20 w-full ' style={{ backgroundImage: `url(${img})` }} />
+                    {rest.type === 'single-image' ? <div className='description-section-img xl:z-20 w-full ' style={{ backgroundImage: `url(${rest.img})` }} /> : <PreviewImages images={rest.images} mainImgHeight={rest.mainImgHeight} miniImgHeight={rest.miniImgHeight} />}
                 </div>
 
                 <ul className={`px-7 mt-16.2/3 gap-7 xl:pl-3 xl:flex-1 grid grid-cols-1 xl:gap-3 xl:self-end ${titlePosition === 'left' ? 'xl:ml-35' : 'xl:mr-35'} `}>

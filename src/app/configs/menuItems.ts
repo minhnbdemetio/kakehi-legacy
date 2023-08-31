@@ -16,7 +16,7 @@ const items: {
   },
   {
     label: "工場・倉庫建築のポイント",
-    link: "",
+    link: "/work",
   },
   {
     label: "会社概要",
