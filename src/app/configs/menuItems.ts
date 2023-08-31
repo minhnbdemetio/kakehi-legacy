@@ -24,7 +24,7 @@ const items: {
   },
   {
     label: "お役立ち情報",
-    link: "",
+    link: "/profile",
   },
 ];
 
