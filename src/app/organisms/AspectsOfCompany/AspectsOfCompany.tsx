@@ -10,7 +10,7 @@ const AspectsOfCompany: React.FC<IProps> = () => {
 
     return <ul className='grid grid-cols-1 aspects mt-5 xl:gap-10'>
         {items.map((item) => <li key={item.firstTitle}>
-            <DescriptionSection img={item.img} items={item.items} subtitle={item.subtitle} firstTitle={item.firstTitle} secondTitle={item.secondTitle} titlePosition={item.titlePosition} />
+            <DescriptionSection type='single-image' img={item.img} items={item.items} subtitle={item.subtitle} firstTitle={item.firstTitle} secondTitle={item.secondTitle} titlePosition={item.titlePosition} />
         </li>)}
     </ul>
 }

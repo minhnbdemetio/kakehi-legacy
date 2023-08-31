@@ -1,0 +1,9 @@
+@import "../variables.module.scss";
+
+.point-screen {
+  .page-header {
+    .list-points {
+      border-bottom: 2px solid $text-primary-color;
+    }
+  }
+}

@@ -42,13 +42,13 @@ export const Accordion: FC<Props> = ({
             [clsx(
               "text-1.5xl leading-8",
               "bg-card-background-primary pl-14 pr-7",
-              "desktop:pl-33 desktop:pr-16.2/3"
+              "xl:pl-33 xl:pr-16.2/3"
             )]: type === "section",
 
             // Question
             [clsx(
               "text-xl leading-8",
-              "px-7 desktop:px-18 transition-colors duration-300",
+              "px-7 xl:px-18 transition-colors duration-300",
               {
                 "bg-white": !isOpen,
                 "bg-hover-primary/40": isOpen,
@@ -89,9 +89,8 @@ export const Accordion: FC<Props> = ({
       >
         <div
           className={clsx("space-y-7 font-bold text-xl leading-8", {
-            "px-8 pb-24 desktop:px-17": type === "section",
-            "px-7 pt-9 pb-13 desktop:px-18 accordion__answer":
-              type === "question",
+            "px-8 pb-24 xl:px-17": type === "section",
+            "px-7 pt-9 pb-13 xl:px-18 accordion__answer": type === "question",
           })}
         >
           {children}

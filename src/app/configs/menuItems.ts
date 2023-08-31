@@ -16,11 +16,11 @@ const items: {
   },
   {
     label: "工場・倉庫建築のポイント",
-    link: "",
+    link: "/work",
   },
   {
     label: "会社概要",
-    link: "",
+    link: "/point",
   },
   {
     label: "お役立ち情報",

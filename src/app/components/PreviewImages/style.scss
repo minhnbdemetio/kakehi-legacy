@@ -1,0 +1,28 @@
+@import "../../variables.module.scss";
+
+.preview-images-container {
+  width: 100%;
+
+  .main-image {
+    height: 100%;
+    width: 100%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    transition: ease-in 0.5s;
+  }
+
+  .tag {
+    background-color: $primary-color;
+    color: $text-secondary-color;
+  }
+
+  .list-images {
+    > div {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+    }
+  }
+}
