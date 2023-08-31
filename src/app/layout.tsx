@@ -7,6 +7,7 @@ import FloatingButtons from './components/FloatingButtons'
 import MobileSidebar from './components/MobileSidebar'
 import { notoSans, notoSansJP } from './constants/fonts'
 import clsx from 'clsx'
+import { Suspense } from 'react'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -24,7 +25,9 @@ export default function RootLayout({
         <Header />
 
         <div >
-          {children}
+          <Suspense fallback={<>Loading...</>}>
+            {children}
+          </Suspense>
         </div>
         <Footer />
 
