@@ -17,7 +17,7 @@ export const InfoCard: FC<Props> = ({ title }) => {
     >
       <span>{title}</span>
 
-      <Image
+      <img
         src="/logo.png"
         width={100}
         height={20}
