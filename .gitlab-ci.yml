@@ -1,0 +1,47 @@
+stages:
+  - build
+  - deploy
+
+variables:
+  DOCKER_HOST: tcp://docker:2376
+  DOCKER_TLS_CERTDIR: "/certs"
+  DOCKER_TLS_VERIFY: 1
+  DOCKER_CERT_PATH: "$DOCKER_TLS_CERTDIR/client"
+
+build-staging:
+  stage: build
+  image: docker:20
+  services:
+    - docker:20-dind
+  variables:
+    DEPLOYER_IMAGE_TAG_NAME: $CI_REGISTRY_IMAGE/$CI_COMMIT_BRANCH
+  before_script:
+    - until docker info; do sleep 1; done
+    - apk add --update git
+    - echo "$CI_REGISTRY_PASSWORD" | docker login $CI_REGISTRY --username $CI_REGISTRY_USER --password-stdin
+  after_script:
+    - docker logout $CI_REGISTRY
+  script:
+    - BUILD_IMAGE_TAG_COMMIT=$DEPLOYER_IMAGE_TAG_NAME:$CI_COMMIT_SHORT_SHA
+    - BUILD_IMAGE_TAG_LATEST=$DEPLOYER_IMAGE_TAG_NAME:latest
+    - docker build -t $BUILD_IMAGE_TAG_COMMIT -t $BUILD_IMAGE_TAG_LATEST .
+    - docker push $DEPLOYER_IMAGE_TAG_NAME --all-tags
+    - echo "LATEST_BUILD_IMAGE_TAG_NAME=$BUILD_IMAGE_TAG_COMMIT" >> .env
+  artifacts:
+    reports:
+      dotenv: .env
+    expire_in: 1 days
+  only:
+    refs:
+      - demetio-dev
+
+deploy-staging:
+  stage: deploy
+  image: caprover/cli-caprover:2.2.3
+  script:
+    - echo "Deploying on CapRover..."
+    - echo "$LATEST_BUILD_IMAGE_TAG_NAME"
+    - caprover deploy --caproverUrl $CAPROVER_URL --appToken $CAPROVER_STAGING_APP_TOKEN --caproverApp $CAPROVER_STAGING_APP --imageName $LATEST_BUILD_IMAGE_TAG_NAME
+  only:
+    refs:
+      - demetio-dev
