@@ -16,6 +16,10 @@ interface IProps {
 
 const CardDescription: React.FC<IProps> = ({ description, label, background = 'default', descriptionAlign = 'left', size = 'medium', descriptionBold = false, labelBackgroundImg }) => {
 
+    // <<<<<<< HEAD
+    //     return <div className={`card-description items-stretch flex items-center background-${background}`}>
+    //         {!!label && <div className='card-description-label  text-center'
+    // =======
     const isSmall = size === 'small'
     const isMedium = size === 'medium'
 
@@ -23,7 +27,7 @@ const CardDescription: React.FC<IProps> = ({ description, label, background = 'd
 
 
     return <div className={CLSX({
-        [`card-description ${size} flex items-center background-${background}`]: true,
+        [`card-description ${size} flex items-stretch items-center background-${background}`]: true,
 
     })}>
         {!!label && <div className={CLSX({ ['card-description-label  text-center']: true })}
