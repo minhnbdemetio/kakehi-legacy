@@ -14,13 +14,13 @@ const Footer: React.FC<IProps> = () => {
                 background: "linear-gradient(180deg, #F2F2F2 29.20%, rgba(206, 236, 245, 0.00) 100%)"
             }}>
                 <div className='px-7 pt-41.2/3 '>
-                    <p className='text-xl whitespace-pre-wrap '>{`工場・倉庫建設に関するあらゆるお悩みに対応いたします。\n資料請求・お見積りはフォームより、お気軽にお問い合わせください。`}</p>
+                    <p className='text-xl whitespace-pre-wrap xl:text-center xl:w-full '>{`工場・倉庫建設に関するあらゆるお悩みに対応いたします。\n資料請求・お見積りはフォームより、お気軽にお問い合わせください。`}</p>
 
                 </div>
 
 
                 <div className='flex justify-center mt-35'>
-                    <Button text='お問い合わせ' />
+                    <Button>お問い合わせ</Button>
                 </div>
             </BackgroundSection>
         </div>
@@ -28,7 +28,7 @@ const Footer: React.FC<IProps> = () => {
             <div className='mx-36 mt-14'>
                 <img className='footer-logo ' src='/kakehi_logo_white_rectangle.png' alt='Kakehi footer logo' />
             </div>
-            <p className='text-md text-center mt-3'>〒680-1417 鳥取県鳥取市桂見573番地</p>
+            <p className='text-md text-center mt-3 '>〒680-1417 鳥取県鳥取市桂見573番地</p>
             <p className='text-md text-center font-base'>TEL 0857-28-4788</p>
 
 

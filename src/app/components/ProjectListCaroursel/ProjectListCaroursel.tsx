@@ -11,7 +11,7 @@ import "slick-carousel/slick/slick-theme.css";
 import useMediaQuery from '@/app/hooks/UseMediaQuery';
 
 interface IProps {
-    projects: { name: string, img: string, descriptions: { label: string, content: string }[] }[]
+    projects: { name: string, img: string, tag?: string, descriptions: { label: string, content: string }[] }[]
 }
 
 const ProjectListCaroursel: React.FC<IProps> = ({ projects }) => {
@@ -59,10 +59,10 @@ const ProjectListCaroursel: React.FC<IProps> = ({ projects }) => {
         <div>
             <button className='project-list-carousel-naviate-btn left ' onClick={prev}><img alt='Nagivate Prev' src='/icons/navigate-previous.png' /></button>
         </div>
-        <div className=' project-list-carousel mx-23'>
+        <div className='project-list-carousel mx-23'>
             <Slider ref={ref as any} {...settings}   >
                 {projects.map((project) => <div key={project.name} className='px-1 xl:px-0'>
-                    <ProjectCard name={project.name}
+                    <ProjectCard tag={project.tag} name={project.name}
                         descriptions={project.descriptions} img={project.img} />
                 </div>)}
             </Slider>

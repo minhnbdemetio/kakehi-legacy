@@ -4,14 +4,15 @@ import './responsive.css'
 
 interface IProps {
     img: string
+    tag?: string
     name: string
     descriptions: { label: string, content: string }[]
 
 }
 
-const ProjectCard: React.FC<IProps> = ({ img, name, descriptions }) => {
+const ProjectCard: React.FC<IProps> = ({ img, name, descriptions, tag }) => {
 
-    return <div className='project-card-container pb-12'>
+    return <div className='project-card-container pb-12 relative'>
         <img className='project-card-image' src={img} alt={name} />
 
         <div className='mx-7 mt-8'>
@@ -24,6 +25,7 @@ const ProjectCard: React.FC<IProps> = ({ img, name, descriptions }) => {
                 </li>)}
             </ul>
         </div>
+        {!!tag && <span className='tag absolute top-0 left-0 text-md px-7 py-2 xl:py-3'>{tag}</span>}
     </div>
 }
 

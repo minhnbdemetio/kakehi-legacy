@@ -1,38 +1,44 @@
-import { useCallback, useEffect, useState } from "react";
 import tailwindConfig from "../../../tailwind.config";
+import { useCallback, useEffect, useState } from "react";
 
-const useMediaQuery = (screen: "sm" | "md" | "xl" | "lg") => {
-  const [currentScreen, setCurrentScreen] = useState<"sm" | "md" | "xl" | "lg">(
-    "sm"
-  );
+const getScreenSize = () => {
+  const screenConfig = tailwindConfig.theme?.extend?.screens;
 
-  const handleResize = useCallback(() => {
-    const screenConfig = tailwindConfig.theme?.extend?.screens;
+  if (!screenConfig) {
+    throw new Error("Not found screens config inside tailwind config!");
+  } else {
+    let screen: "sm" | "md" | "xl" | "lg" = "sm";
 
-    if (!screenConfig) {
-      throw new Error("Not found screens config inside tailwind config!");
-    } else {
-      let screen: "sm" | "md" | "xl" | "lg" = "sm";
+    const toSizeNumber = (sizeStr: string) => +sizeStr.replace("px", "");
 
-      const toSizeNumber = (sizeStr: string) => +sizeStr.replace("px", "");
+    Object.keys(screenConfig)
+      .sort((a, b) =>
+        toSizeNumber((screenConfig as any)[a]) <=
+        toSizeNumber((screenConfig as any)[b])
+          ? -1
+          : 1
+      )
+      .forEach((key) => {
+        const size = toSizeNumber((screenConfig as any)[key]);
 
-      Object.keys(screenConfig)
-        .sort((a, b) =>
-          toSizeNumber((screenConfig as any)[a]) <=
-          toSizeNumber((screenConfig as any)[b])
-            ? -1
-            : 1
-        )
-        .forEach((key) => {
-          const size = toSizeNumber((screenConfig as any)[key]);
-
+        if (typeof window !== "undefined") {
           if (size <= window.innerWidth) {
             screen = key as any;
           }
-        });
+        }
+      });
 
-      setCurrentScreen(screen);
-    }
+    return screen;
+  }
+};
+
+const useMediaQuery = (screen: "sm" | "md" | "xl" | "lg") => {
+  const [currentScreen, setCurrentScreen] = useState<"sm" | "md" | "xl" | "lg">(
+    getScreenSize()
+  );
+
+  const handleResize = useCallback(() => {
+    setCurrentScreen(getScreenSize());
   }, []);
 
   useEffect(() => {

@@ -1,9 +1,13 @@
 @media screen(xl) {
-  .card-description-label p {
+  /* .card-description-label p {
     font-size: 21px;
-  }
+  } */
 
   .card-description-label {
     min-width: 150px !important;
+  }
+
+  .card-description.small .card-description-label {
+    min-height: 90px !important;
   }
 }

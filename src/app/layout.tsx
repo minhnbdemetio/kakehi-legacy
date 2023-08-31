@@ -1,11 +1,12 @@
 import './globals.css'
-import type { Metadata } from 'next'
 import './app.scss'
+import type { Metadata } from 'next'
 import Header from './components/Header/Header'
 import Footer from './components/Footer'
 import FloatingButtons from './components/FloatingButtons'
 import MobileSidebar from './components/MobileSidebar'
-import { notoSansJP } from './constants/fonts'
+import { notoSans, notoSansJP } from './constants/fonts'
+import clsx from 'clsx'
 
 export const metadata: Metadata = {
   title: 'Create Next App',
@@ -19,10 +20,12 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body style={{ width: '100%' }} className={notoSansJP.variable}>
+      <body style={{ width: '100%' }} className={clsx(notoSansJP.variable, notoSans.variable)}>
         <Header />
 
-        {children}
+        <div >
+          {children}
+        </div>
         <Footer />
 
         <FloatingButtons />
