@@ -12,7 +12,7 @@ interface IProps {
 
 const SectionTitle: React.FC<IProps> = ({ fistTitle, secondTitle, subtitle, position }) => {
 
-    return <div className={CLSX({ [`section-title-container relative  flex flex-col position-${position}`]: true })}>
+    return <div className={CLSX({ [`section-title-container relative  flex flex-col position-${position} `]: true })}>
         <p className='subtitle relative text-4xl xl:text-6xl xl:font-medium '>{subtitle}</p>
         <div className='title'>
             <div>
