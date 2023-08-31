@@ -22,14 +22,14 @@ export const TextField: FC<Props> = ({
   const InputElement = props.rows ? "textarea" : "input";
 
   return (
-    <div className={clsx("block desktop:table-row", wrapperClassName)}>
+    <div className={clsx("block xl:table-row", wrapperClassName)}>
       {label ? (
         <label
           className={clsx(
-            "table-cell text-left font-noto-sans text-lg leading-normal font-bold pr-10 desktop:text-1.5xl",
+            "table-cell box-content text-left font-noto-sans text-lg leading-normal font-bold pr-10 xl:text-1.5xl xl:w-[168px]",
             {
               "align-middle": !props.rows,
-              "align-top desktop:pt-10": props.rows,
+              "align-top xl:pt-10": props.rows,
             }
           )}
           htmlFor={name}
@@ -39,7 +39,7 @@ export const TextField: FC<Props> = ({
 
       <InputElement
         className={clsx(
-          "table-cell w-full min-h-[100px] text-1.5xl leading-normal font-medium py-3 px-7",
+          "table-cell w-full min-h-[100px] font-noto-sans text-1.5xl leading-normal font-medium py-3 px-7",
           className
         )}
         name={name}

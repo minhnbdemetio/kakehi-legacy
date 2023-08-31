@@ -20,7 +20,7 @@ const Footer: React.FC<IProps> = () => {
 
 
                 <div className='flex justify-center mt-35'>
-                    <Button text='お問い合わせ' />
+                    <Button>お問い合わせ</Button>
                 </div>
             </BackgroundSection>
         </div>
