@@ -25,4 +25,10 @@
     line-height: 27px;
     white-space: pre-wrap;
   }
+
+  &.small {
+    .card-description-label {
+      min-height: 75px;
+    }
+  }
 }
