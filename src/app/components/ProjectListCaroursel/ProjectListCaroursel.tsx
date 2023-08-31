@@ -60,7 +60,7 @@ const ProjectListCaroursel: React.FC<IProps> = ({ projects }) => {
             <button className='project-list-carousel-naviate-btn left ' onClick={prev}><img alt='Nagivate Prev' src='/icons/navigate-previous.png' /></button>
         </div>
         <div className=' project-list-carousel mx-23'>
-            <Slider ref={ref as any} {...settings}   >
+            <Slider arrows={false} ref={ref as any} {...settings}   >
                 {projects.map((project) => <div key={project.name} className='px-1 xl:px-0'>
                     <ProjectCard name={project.name}
                         descriptions={project.descriptions} img={project.img} />

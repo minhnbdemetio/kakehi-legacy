@@ -69,7 +69,7 @@ const items: {
   },
   {
     img: "/history-img.jpg",
-    firstTitle: `懸樋工務店の,`,
+    firstTitle: `懸樋工務店の`,
     secondTitle: "歴史と実績",
     items: [
       {

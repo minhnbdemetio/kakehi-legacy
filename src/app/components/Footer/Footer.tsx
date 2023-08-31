@@ -14,7 +14,7 @@ const Footer: React.FC<IProps> = () => {
                 background: "linear-gradient(180deg, #F2F2F2 29.20%, rgba(206, 236, 245, 0.00) 100%)"
             }}>
                 <div className='px-7 pt-41.2/3 '>
-                    <p className='text-xl whitespace-pre-wrap '>{`工場・倉庫建設に関するあらゆるお悩みに対応いたします。\n資料請求・お見積りはフォームより、お気軽にお問い合わせください。`}</p>
+                    <p className='text-xl whitespace-pre-wrap greeting'>{`工場・倉庫建設に関するあらゆるお悩みに対応いたします。\n資料請求・お見積りはフォームより、お気軽にお問い合わせください。`}</p>
 
                 </div>
 

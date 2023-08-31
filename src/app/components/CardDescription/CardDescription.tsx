@@ -11,7 +11,7 @@ interface IProps {
 
 const CardDescription: React.FC<IProps> = ({ description, label, background = 'default', labelBackgroundImg }) => {
 
-    return <div className={`card-description flex items-center background-${background}`}>
+    return <div className={`card-description items-stretch flex items-center background-${background}`}>
         {!!label && <div className='card-description-label  text-center'
             style={{ backgroundImage: !!labelBackgroundImg ? `url(${labelBackgroundImg})` : 'none' }}
         ><p className='text-md xl:font-bold'>{label}</p></div>}
