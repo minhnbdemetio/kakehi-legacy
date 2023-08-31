@@ -38,12 +38,10 @@ declare type IProps = SingleImageProps | MultipleImageProps
 
 const DescriptionSection: React.FC<IProps> = ({ items, subtitle, firstTitle, secondTitle, titlePosition, ...rest }) => {
 
-
-
     return <div className='description-section '>
         <SectionTitle position={titlePosition} subtitle={subtitle} secondTitle={secondTitle} fistTitle={firstTitle} />
 
-        <div className={`description-section-content  bg-transparent mt-7  relative pb-14  xl:h-fit xl:mt-36 xl:pb-0 ${titlePosition}`}>
+        <div className={`description-section-content  bg-transparent mt-23.1/3  relative pb-14  xl:h-fit xl:mt-36 xl:pb-0 ${titlePosition}`}>
 
             <div className={`description-section-content-body  h-full  relative  z-20 xl:flex xl:items-stretch `}>
                 <div className='description-section-img-box w-full h-full xl:relative xl:h-auto' >

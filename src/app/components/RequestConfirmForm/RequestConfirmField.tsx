@@ -3,14 +3,14 @@ import React, { FC, PropsWithChildren } from "react";
 
 interface Props extends PropsWithChildren {
   label: string;
-  content: string;
+  content?: string;
   multiline?: boolean;
   className?: string;
 }
 
 export const RequestConfirmField: FC<Props> = ({
   label,
-  content,
+  content = "",
   className,
   multiline,
 }) => {

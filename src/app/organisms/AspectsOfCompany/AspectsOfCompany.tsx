@@ -8,7 +8,7 @@ interface IProps { }
 
 const AspectsOfCompany: React.FC<IProps> = () => {
 
-    return <ul className='grid grid-cols-1 aspects mt-16.2/3 xl:gap-10'>
+    return <ul className='grid grid-cols-1 aspects mt-5 xl:gap-10'>
         {items.map((item) => <li key={item.firstTitle}>
             <DescriptionSection type='single-image' img={item.img} items={item.items} subtitle={item.subtitle} firstTitle={item.firstTitle} secondTitle={item.secondTitle} titlePosition={item.titlePosition} />
         </li>)}

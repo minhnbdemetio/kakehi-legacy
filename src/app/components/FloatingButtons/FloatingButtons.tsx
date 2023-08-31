@@ -9,7 +9,7 @@ interface IProps { }
 
 const FloatingButtons: React.FC<IProps> = () => {
 
-    const [open, setOpen] = useState(false)
+    const [open, setOpen] = useState(true)
 
     const boxClass = 'floating-buttons-box z-30 ' + (open ? "show" : "")
 

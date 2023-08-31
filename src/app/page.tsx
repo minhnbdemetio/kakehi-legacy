@@ -20,8 +20,6 @@ export default function Home() {
       <div className="mt-50">
         <TopPageFLowSection />
       </div>
-
-
     </>
   );
 }

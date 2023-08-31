@@ -67,7 +67,7 @@ export const Accordion: FC<Props> = ({
         </span>
 
         <div className={clsx({ "p-5": type === "section" })}>
-          <Image
+          <img
             src="/icons/chevron-icon.png"
             alt=""
             width={20}
