@@ -20,7 +20,7 @@ const items: {
   },
   {
     label: "会社概要",
-    link: "",
+    link: "/point",
   },
   {
     label: "お役立ち情報",
