@@ -10,7 +10,7 @@ interface IProps { }
 
 const PointScreen: React.FC<IProps> = () => {
   return (
-    <div className="point-screen">
+    <div className="point-screen xl:mb-33.1/3">
       <div className="page-header ">
         <BackgroundWithSlogan src="/points/point-1.jpg">
           <h1 className="text-3xl whitespace-pre text-center font-bold">{`工場・倉庫\n建築のポイント`}</h1>
