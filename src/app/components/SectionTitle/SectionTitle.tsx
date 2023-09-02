@@ -17,14 +17,15 @@ const SectionTitle: React.FC<IProps> = ({ fistTitle, secondTitle, subtitle, posi
         <div className='title'>
             <div>
                 <p className={CLSX({
-                    [`text-2xl z-20 mx-7  font-bold whitespace-normal  xl:pl-16.2/3 xl:pt-18s xl:text-3xl`]: true,
+                    [`text-2xl z-20 mx-7  font-bold whitespace-normal  xl:pl-16.2/3 xl:pt-18s xl:text-3xl xl:mx-0`]: true,
                     [`text-right xl:text-left`]: position === 'right',
                     [`text-left xl:text-right`]: position === 'left',
                 })}>{fistTitle}</p>
                 <p className={CLSX({
-                    [`text-2xl z-20 mx-7  whitespace-normal font-bold  xl:pl-16.2/3 xl:text-4xl`]: true,
+                    [`text-2xl z-20 mx-7  whitespace-normal font-bold  xl:pl-16.2/3 xl:text-4xl xl:mx-0`]: true,
                     [`text-right xl:text-left`]: position === 'right',
                     [`text-left xl:text-right`]: position === 'left',
+
                 })}>{secondTitle}</p>
             </div>
         </div>

@@ -4,8 +4,9 @@ import DescriptionSection from "../organisms/DescriptionSection";
 import items from "./items";
 import "./style.scss";
 import React from "react";
+import './responsive.css'
 
-interface IProps {}
+interface IProps { }
 
 const PointScreen: React.FC<IProps> = () => {
   return (
@@ -16,17 +17,17 @@ const PointScreen: React.FC<IProps> = () => {
         </BackgroundWithSlogan>
 
         <div className="mx-7 xl:mx-pc-container mt-33 xl:mt-16.2/3">
-          <p className="text-xl ">
+          <p className="text-xl font-medium">
             通常の建物とは異なる工場・倉庫の建設では、たくさんの考慮すべきポイントがあります。使い勝手やメンテナンス性など、後から容易に変更ができない点は、計画段階から考慮しておく必要があります。また、取り扱う商材によって考慮すべき点が異なります。
           </p>
         </div>
-        <div className="mt-33 mx-7 xl:mx-pc-container list-points pb-33 xl:mt-16.2/3">
-          <ul className=" grid grid-cols-1 gap-3 xl:grid-cols-2 xl:gap-7 xl:gap-x-14">
+        <div className=" mt-33 mx-7 xl:mx-pc-container list-points pb-33 xl:mt-16.2/3">
+          <ul className=" point-lists grid grid-cols-1 gap-3 xl:grid-cols-2 xl:gap-7 xl:gap-x-14">
             {items.map((item) => (
               <li key={item.firstTitle}>
                 <CardDescription
                   size="small"
-                  descriptionAlign="center"
+                  descriptionAlign="left"
                   descriptionBold
                   background="card-primary"
                   description={item.secondTitle}
