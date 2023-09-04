@@ -9,8 +9,13 @@ import './responsive.css'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+
+
+
+
+
 interface IProps {
-    projects: { name: string, img: string, tag?: string, descriptions: { label: string, content: string }[] }[]
+    projects: { name: string, thumbnail: string, tag?: string, structure: string, acreage: number }[]
 }
 
 const ProjectListCaroursel: React.FC<IProps> = ({ projects }) => {
@@ -20,7 +25,6 @@ const ProjectListCaroursel: React.FC<IProps> = ({ projects }) => {
 
     const next = useCallback(() => {
         if (ref.current) {
-            console.debug(ref.current)
             ref.current.slickNext()
         }
     }, [])
@@ -47,7 +51,7 @@ const ProjectListCaroursel: React.FC<IProps> = ({ projects }) => {
             <Slider dots={false} infinite={true} speed={500} slidesToShow={3} slidesToScroll={1} arrows={false} ref={ref as any}    >
                 {projects.map((project, index) => <div key={index} className='px-1 xl:px-0'>
                     <ProjectCard tag={project.tag} name={project.name}
-                        descriptions={project.descriptions} img={project.img} />
+                        acreage={project.acreage} structure={project.structure} thumbnail={project.thumbnail} />
                 </div>)}
             </Slider>
 
@@ -57,7 +61,7 @@ const ProjectListCaroursel: React.FC<IProps> = ({ projects }) => {
             <Slider dots={false} infinite={true} speed={500} slidesToShow={1} slidesToScroll={1} arrows={false} ref={ref as any}    >
                 {projects.map((project, index) => <div key={index} className='px-1 xl:px-0'>
                     <ProjectCard tag={project.tag} name={project.name}
-                        descriptions={project.descriptions} img={project.img} />
+                        acreage={project.acreage} structure={project.structure} thumbnail={project.thumbnail} />
                 </div>)}
             </Slider>
         </div>
