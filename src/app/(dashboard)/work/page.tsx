@@ -6,10 +6,44 @@ import "./responsive.css";
 import DescriptionSection from "@/app/organisms/DescriptionSection";
 import PageTitle from "@/app/components/PageTitle";
 import ProjectListCaroursel from "@/app/components/ProjectListCaroursel";
+import { gql, useQuery } from '@apollo/client'
 
-interface IProps {}
+interface IProps { }
+
+
+const GET_FAQS = gql(`query {
+  projects {
+    data {
+      attributes {
+        name
+        tag
+        thumbnail {
+          data {
+            id
+            attributes {
+              name
+              
+            }
+          }
+        }
+        project_property {
+          data {
+            attributes {
+              structure
+            }
+          }
+        }
+      }
+    }
+  }
+}`);
 
 const Work: React.FC<IProps> = () => {
+
+  const data = useQuery(GET_FAQS)
+
+  console.debug(data)
+
   return (
     <div className="work-page-container pb-43.1/3 xl:pb-33.1/3">
       <div className="xl hidden xl:block">

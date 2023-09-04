@@ -9,6 +9,11 @@ import './responsive.css'
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+
+
+
+
+
 interface IProps {
     projects: { name: string, img: string, tag?: string, descriptions: { label: string, content: string }[] }[]
 }
