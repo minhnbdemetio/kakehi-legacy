@@ -6,43 +6,15 @@ import "./responsive.css";
 import DescriptionSection from "@/app/organisms/DescriptionSection";
 import PageTitle from "@/app/components/PageTitle";
 import ProjectListCaroursel from "@/app/components/ProjectListCaroursel";
-import { gql, useQuery } from '@apollo/client'
+import useProjects from "@/app/hooks/useProjects";
 
 interface IProps { }
 
 
-const GET_FAQS = gql(`query {
-  projects {
-    data {
-      attributes {
-        name
-        tag
-        thumbnail {
-          data {
-            id
-            attributes {
-              name
-              
-            }
-          }
-        }
-        project_property {
-          data {
-            attributes {
-              structure
-            }
-          }
-        }
-      }
-    }
-  }
-}`);
 
 const Work: React.FC<IProps> = () => {
 
-  const data = useQuery(GET_FAQS)
-
-  console.debug(data)
+  const projects = useProjects()
 
   return (
     <div className="work-page-container pb-43.1/3 xl:pb-33.1/3">
@@ -126,44 +98,7 @@ const Work: React.FC<IProps> = () => {
 
       <div className="mt-30">
         <ProjectListCaroursel
-          projects={[
-            {
-              name: "構造",
-              img: "/project-1.jpg",
-              descriptions: [
-                { label: "構造", content: "鉄骨造2階建" },
-                { label: "延床面積", content: "2,699.79㎡" },
-              ],
-              tag: "食品工場",
-            },
-            {
-              name: "Project 2",
-              img: "/project-1.jpg",
-              descriptions: [
-                { label: "構造", content: "鉄骨造2階建" },
-                { label: "延床面積", content: "2,699.79㎡" },
-              ],
-              tag: "金属製造工場",
-            },
-            {
-              name: "Project 3",
-              img: "/project-1.jpg",
-              descriptions: [
-                { label: "構造", content: "鉄骨造2階建" },
-                { label: "延床面積", content: "2,699.79㎡" },
-              ],
-              tag: "自動車部品製造工場",
-            },
-            {
-              name: "Project 4",
-              img: "/project-1.jpg",
-              descriptions: [
-                { label: "構造", content: "鉄骨造2階建" },
-                { label: "延床面積", content: "2,699.79㎡" },
-              ],
-              tag: "自動車部品製造工場",
-            },
-          ]}
+          projects={projects}
         />
       </div>
     </div>
