@@ -23,7 +23,7 @@ const ProjectCard: React.FC<IProps> = ({ thumbnail, name, tag, acreage, structur
             <ul className='project-card-descriptions mt-7 grid grid-cols-1 gap-7'>
                 <li className='project-card-description flex '>
                     <p className='project-card-description-label text-md xl:text-lg'>構造</p>
-                    <p className='project-card-description-content text-md pl-7 flex-auto' >{structure}㎡</p>
+                    <p className='project-card-description-content text-md pl-7 flex-auto' >{structure}</p>
                 </li>
                 <li className='project-card-description flex '>
                     <p className='project-card-description-label text-md xl:text-lg'>延床面積</p>
