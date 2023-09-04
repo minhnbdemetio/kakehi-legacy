@@ -1,3 +1,5 @@
+import { Routes } from "../constants/routes";
+
 const items: {
   label: string;
   link: string;
@@ -12,19 +14,19 @@ const items: {
   },
   {
     label: "お問い合わせからの流れ",
-    link: "",
+    link: Routes.REQUEST,
   },
   {
     label: "工場・倉庫建築のポイント",
-    link: "/work",
+    link: Routes.WORK,
   },
   {
     label: "会社概要",
-    link: "/point",
+    link: Routes.POINT,
   },
   {
     label: "お役立ち情報",
-    link: "/profile",
+    link: Routes.PROFILE,
   },
 ];
 

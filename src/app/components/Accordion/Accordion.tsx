@@ -36,7 +36,7 @@ export const Accordion: FC<Props> = ({
     <div>
       <button
         className={clsx(
-          "flex items-center justify-between w-full py-9 font-bold",
+          "flex w-full items-center justify-between py-9 font-bold",
           {
             // Section
             [clsx(
@@ -48,7 +48,7 @@ export const Accordion: FC<Props> = ({
             // Question
             [clsx(
               "text-xl leading-8",
-              "px-7 xl:px-18 transition-colors duration-300",
+              "px-7 transition-colors duration-300 xl:px-18",
               {
                 "bg-white": !isOpen,
                 "bg-hover-primary/40": isOpen,
@@ -73,14 +73,14 @@ export const Accordion: FC<Props> = ({
             width={20}
             height={12}
             className={clsx({
-              "transform rotate-180": isOpen,
+              "rotate-180 transform": !isOpen,
             })}
           />
         </div>
       </button>
 
       <div
-        className={clsx("transition-all duration-300 overflow-hidden", {
+        className={clsx("overflow-hidden transition-all duration-300", {
           "max-h-0": !isOpen,
           "max-h-[200vh]": isOpen,
           "bg-card-background-primary": type === "section",
@@ -88,9 +88,9 @@ export const Accordion: FC<Props> = ({
         })}
       >
         <div
-          className={clsx("space-y-7 font-bold text-xl leading-8", {
+          className={clsx("space-y-7 text-xl font-bold leading-8", {
             "px-8 pb-24 xl:px-17": type === "section",
-            "px-7 pt-9 pb-13 xl:px-18 accordion__answer": type === "question",
+            "accordion__answer px-7 pb-13 pt-9 xl:px-18": type === "question",
           })}
         >
           {children}
