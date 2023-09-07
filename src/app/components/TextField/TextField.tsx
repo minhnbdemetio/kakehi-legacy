@@ -10,6 +10,7 @@ interface Props extends InputType {
   rows?: number;
   className?: string;
   wrapperClassName?: string;
+  error?: string
 }
 
 export const TextField: FC<Props> = ({
@@ -17,11 +18,12 @@ export const TextField: FC<Props> = ({
   name,
   className,
   wrapperClassName,
+  error,
   ...props
 }) => {
   const InputElement = props.rows ? "textarea" : "input";
 
-  return (
+  return (<>
     <div className={clsx("block xl:table-row", wrapperClassName)}>
       {label ? (
         <label
@@ -46,6 +48,9 @@ export const TextField: FC<Props> = ({
         id={name}
         {...props}
       />
+      {error && <p className="text-lg mt-3 text-red-700">{error}</p>}
     </div>
+  </>
+
   );
 };

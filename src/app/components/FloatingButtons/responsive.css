@@ -5,6 +5,7 @@
     position: absolute !important;
     top: 40% !important;
     bottom: unset !important;
+    width: fit-content !important;
   }
 
   .floating-buttons-box.show .floating-buttons a {
