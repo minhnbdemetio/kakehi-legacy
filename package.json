@@ -8,7 +8,7 @@
     "start": "next start",
     "lint": "next lint",
     "export": "next build && next export",
-    "pretty": "prettier --write \"./**/*.{js,jsx,ts,tsx,scss,css}\""
+    "format": "prettier --write \"./**/*.{js,jsx,ts,tsx,scss,css}\""
   },
   "dependencies": {
     "@apollo/client": "^3.8.2",
