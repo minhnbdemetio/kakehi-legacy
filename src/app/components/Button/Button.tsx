@@ -14,7 +14,7 @@ interface Props extends PropsWithChildren<HTMLAttributes<HTMLElement>> {
 }
 
 const baseClasses = clsx(
-  "inline-block text-1.5xl xl:text-2xl leading-snug text-center font-medium font-noto-sans-jp",
+  "inline-block text-1.5xl xl:text-2xl leading-snug text-center font-medium font-noto-sans-jp min-h-[75px]",
   "btn btn-contained-primary link-btn p-7 w-[330px] max-w-full"
 );
 
