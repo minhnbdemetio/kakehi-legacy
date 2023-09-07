@@ -79,8 +79,10 @@ p {
 
 .accordion__question::before {
   content: "Q.";
+  font-family: var(--font-noto-sans);
 }
 
 .accordion__answer::before {
   content: "A.";
+  font-family: var(--font-noto-sans);
 }
