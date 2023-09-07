@@ -1,48 +1,75 @@
+"use client";
+
 import { Accordion } from "../Accordion";
 import { InfoContainer } from "../InfoContainer";
 import { InfoHeading } from "../InfoHeading";
 import React from "react";
+import { gql, useQuery } from "@apollo/client";
+import { getDataArrayFromQueryResults } from "@/app/utils/query";
+import { QueryResultData } from "@/app/types/QueryResultData";
+
+const GET_FAQ_CATEGORIES = gql(`query {
+  faqCategories {
+    data {
+      attributes {
+        title
+        faqs {
+          data {
+            attributes {
+              question
+              answer
+            }
+          }
+        }
+      }
+    }
+  }
+}`);
+
+interface FAQCategoryData {
+  title: string;
+  faqs: QueryResultData<FAQData>;
+}
+interface FAQData {
+  question: string;
+  answer: string;
+}
 
 export const FAQContent = () => {
+  const { data } = useQuery(GET_FAQ_CATEGORIES);
+  const categoriesData = getDataArrayFromQueryResults<FAQCategoryData>(
+    data?.faqCategories
+  );
+
+  if (!categoriesData.length) {
+    return null;
+  }
+
+  const categories = categoriesData.map((category) => ({
+    title: category.title,
+    faqs: getDataArrayFromQueryResults<FAQData>(category.faqs),
+  }));
+
   return (
-    <InfoContainer as="section" className="py-33 space-y-24">
+    <InfoContainer as="section" className="space-y-24 py-33">
       <InfoHeading subtitle="FAQ" title="よくあるお問い合わせ" />
-      <div className="space-y-7 mx-auto">
-        <Accordion summary="建築・施工について">
+      <div className="mx-auto space-y-7">
+        {categories.map((category) => (
           <Accordion
-            summary="工場・倉庫はどれくらいの期間で立てることができますか？"
-            type="question"
+            summary={category.title}
+            key={`FAQCategory_${category.title}`}
           >
-            建物の仕様にもよりますが、参考までに1,000m²で工事着工してから完成まで、半年ぐらいかかります。
-            弊社としては、設計・見積・申請などの工事着工までに必要なプロセスを踏まえ、お客さまのご希望される建物完成時期を逆算して、スケジュールを組み、ご提案いたします。
+            {category.faqs.map((faq) => (
+              <Accordion
+                key={`FAQQuestion_${faq.question}`}
+                summary={faq.question}
+                type="question"
+              >
+                {faq.answer}
+              </Accordion>
+            ))}
           </Accordion>
-
-          <Accordion
-            summary="工場・倉庫はどれくらいの期間で立てることができますか？"
-            type="question"
-          >
-            建物の仕様にもよりますが、参考までに1,000m²で工事着工してから完成まで、半年ぐらいかかります。
-            弊社としては、設計・見積・申請などの工事着工までに必要なプロセスを踏まえ、お客さまのご希望される建物完成時期を逆算して、スケジュールを組み、ご提案いたします。
-          </Accordion>
-        </Accordion>
-
-        <Accordion summary="建築・施工について">
-          <Accordion
-            summary="工場・倉庫はどれくらいの期間で立てることができますか？"
-            type="question"
-          >
-            建物の仕様にもよりますが、参考までに1,000m²で工事着工してから完成まで、半年ぐらいかかります。
-            弊社としては、設計・見積・申請などの工事着工までに必要なプロセスを踏まえ、お客さまのご希望される建物完成時期を逆算して、スケジュールを組み、ご提案いたします。
-          </Accordion>
-
-          <Accordion
-            summary="工場・倉庫はどれくらいの期間で立てることができますか？"
-            type="question"
-          >
-            建物の仕様にもよりますが、参考までに1,000m²で工事着工してから完成まで、半年ぐらいかかります。
-            弊社としては、設計・見積・申請などの工事着工までに必要なプロセスを踏まえ、お客さまのご希望される建物完成時期を逆算して、スケジュールを組み、ご提案いたします。
-          </Accordion>
-        </Accordion>
+        ))}
       </div>
     </InfoContainer>
   );

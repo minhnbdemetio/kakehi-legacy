@@ -20,6 +20,7 @@ export const FAQBanner: FC = () => {
         >
           <p className="text-lg font-noto-sans-jp text-primary leading-[1.8] xl:leading-loose xl:text-xl">
             システム建築について、もっと詳しく知りたい方は、ガイドブックをご活用ください。
+            <br />
             以下のフォームに必要事項をご入力の上、お問い合わせください。
           </p>
           <InfoCard title="工場・倉庫建設ガイド" />
