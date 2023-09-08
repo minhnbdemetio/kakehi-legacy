@@ -1,3 +1,3 @@
-import DescriptionSection from './DescriptionSection'
+import DescriptionSection from "./DescriptionSection";
 
 export default DescriptionSection;

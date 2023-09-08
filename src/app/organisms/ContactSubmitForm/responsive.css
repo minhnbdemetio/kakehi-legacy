@@ -1,0 +1,20 @@
+@media screen(xl) {
+  .contact-form-body {
+    width: 994px !important;
+  }
+
+  .contact-form-body input,
+  textarea {
+    width: 650px;
+  }
+
+  .contact-form-body label {
+    white-space: pre;
+  }
+}
+
+@media screen(md) {
+  .contact-form-body {
+    width: 600px;
+  }
+}

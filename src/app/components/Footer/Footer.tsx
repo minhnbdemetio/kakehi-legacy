@@ -23,10 +23,10 @@ const Footer: React.FC<IProps> = ({ showPreFooter }) => {
             }}
           >
             <div className="px-7 pt-41.2/3 ">
-              <p className="text-xl whitespace-pre-wrap xl:text-center xl:w-full greeting">{`工場・倉庫建設に関するあらゆるお悩みに対応いたします。\n資料請求・お見積りはフォームより、お気軽にお問い合わせください。`}</p>
+              <p className="greeting whitespace-pre-wrap text-xl xl:w-full xl:text-center">{`工場・倉庫建設に関するあらゆるお悩みに対応いたします。\n資料請求・お見積りはフォームより、お気軽にお問い合わせください。`}</p>
             </div>
 
-            <div className="flex justify-center mt-35">
+            <div className="mt-35 flex justify-center">
               <Button>お問い合わせ</Button>
             </div>
           </BackgroundSection>
@@ -43,10 +43,10 @@ const Footer: React.FC<IProps> = ({ showPreFooter }) => {
             />
           </picture>
         </div>
-        <p className="text-md text-center mt-3 ">
+        <p className="mt-3 text-center text-md ">
           〒680-1417 鳥取県鳥取市桂見573番地
         </p>
-        <p className="text-md text-center font-base">TEL 0857-28-4788</p>
+        <p className="font-base text-center text-md">TEL 0857-28-4788</p>
 
         <div className="footer-link mt-8">
           <a>
@@ -60,7 +60,7 @@ const Footer: React.FC<IProps> = ({ showPreFooter }) => {
           </a>
         </div>
 
-        <p className="text-sm text-center mt-5">
+        <p className="mt-5 text-center text-sm">
           Copyright © Kakehi Builder. All rights reserved.
         </p>
       </div>

@@ -1,39 +1,47 @@
-'use client'
+"use client";
 
-import React, { useMemo } from 'react'
-import './style.scss'
+import React, { useMemo } from "react";
+import "./style.scss";
 
 interface IProps {
-    children: React.ReactElement[]
+  children: React.ReactElement[];
 }
 
 const FlowList: React.FC<IProps> = ({ children }) => {
+  const polygonImg = useMemo(
+    () => <img className="chain-icon z-20" src="/icons/polygon-icon.svg" />,
+    []
+  );
 
-    const polygonImg = useMemo(() => <img className='chain-icon z-20' src="/icons/polygon-icon.svg" />, [])
+  const addChainIcons = useMemo(
+    () =>
+      children.map((child, index) => {
+        const zIndex = children.length - index + 10;
 
-    const addChainIcons = useMemo(() => children.map((child, index) => {
-
-        const zIndex = (children.length - index) + 10
-
-
-        const isLastChild = index === children.length - 1
+        const isLastChild = index === children.length - 1;
         if (isLastChild) {
-            return child
+          return child;
         }
 
-
-        return <div key={zIndex} className='flow-node-container relative' style={{ zIndex }}>
+        return (
+          <div
+            key={zIndex}
+            className="flow-node-container relative"
+            style={{ zIndex }}
+          >
             {child}
             {polygonImg}
-        </div>
+          </div>
+        );
+      }),
+    [children, polygonImg]
+  );
 
-
-    }), [children, polygonImg])
-
-
-    return <div className='flow-list-container grid grid-cols-1 gap-5'>
-        {addChainIcons}
+  return (
+    <div className="flow-list-container grid grid-cols-1 gap-5">
+      {addChainIcons}
     </div>
-}
+  );
+};
 
-export default FlowList
+export default FlowList;

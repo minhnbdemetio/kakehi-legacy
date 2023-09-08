@@ -5,6 +5,11 @@ p {
   color: $text-primary-color;
 }
 
+:root {
+  --primary-color: $primary-color;
+  --error-color: $primary-color;
+}
+
 body {
   color: $text-primary-color;
   background-color: $background-light-color;

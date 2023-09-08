@@ -10,11 +10,11 @@ interface IProps {}
 const FloatingButtons: React.FC<IProps> = () => {
   const [open, setOpen] = useState(true);
 
-  const boxClass = "floating-buttons-box z-30 " + (open ? "show" : "");
+  const boxClass = "floating-buttons-box z-30 xl:w-fit " + (open ? "show" : "");
 
   return (
     <div className={boxClass}>
-      <div className="xl:relative xl:flex xl:flex-col-reverse xl:items-end">
+      <div className="xl:relative xl:flex xl:w-fit xl:flex-col-reverse xl:items-end">
         <button
           onClick={() => setOpen((o) => !o)}
           className="collapse-floating-buttons xl:mt-10"

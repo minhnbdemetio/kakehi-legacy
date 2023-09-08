@@ -8,13 +8,10 @@ import PageTitle from "@/app/components/PageTitle";
 import ProjectListCaroursel from "@/app/components/ProjectListCaroursel";
 import useProjects from "@/app/hooks/useProjects";
 
-interface IProps { }
-
-
+interface IProps {}
 
 const Work: React.FC<IProps> = () => {
-
-  const projects = useProjects()
+  const projects = useProjects();
 
   return (
     <div className="work-page-container pb-43.1/3 xl:pb-33.1/3">
@@ -97,9 +94,7 @@ const Work: React.FC<IProps> = () => {
       </div>
 
       <div className="mt-30">
-        <ProjectListCaroursel
-          projects={projects}
-        />
+        <ProjectListCaroursel projects={projects} />
       </div>
     </div>
   );
