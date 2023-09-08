@@ -15,7 +15,9 @@
     align-items: center;
     justify-content: center;
     white-space: pre;
-
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     p {
       color: $text-secondary-color;
     }

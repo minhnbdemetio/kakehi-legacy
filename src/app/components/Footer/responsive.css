@@ -8,4 +8,9 @@
   .footer-background-container {
     min-height: 500px !important;
   }
+
+  .footer .footer-logo {
+    width: 210px !important;
+    height: 40.843px !important;
+  }
 }
