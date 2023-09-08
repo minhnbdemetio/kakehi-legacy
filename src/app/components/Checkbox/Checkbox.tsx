@@ -12,7 +12,7 @@ export const Checkbox: FC<Props> = ({
   return (
     <div
       className={clsx(
-        "flex gap-5 items-center text-xl leading-loose",
+        "flex items-center gap-5 text-xl leading-loose",
         className
       )}
     >

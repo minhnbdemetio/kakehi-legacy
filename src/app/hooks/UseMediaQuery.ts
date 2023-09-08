@@ -37,9 +37,8 @@ const useMediaQuery = (screen: "sm" | "md" | "xl" | "lg") => {
     getScreenSize()
   );
 
-
   const handleResize = useCallback(() => {
-    const checkScreen = getScreenSize()
+    const checkScreen = getScreenSize();
 
     if (checkScreen !== currentScreen) {
       setCurrentScreen(checkScreen);

@@ -47,9 +47,9 @@ export const RequestForm = () => {
   return (
     <form
       onSubmit={onSubmit}
-      className="bg-card-background-primary pt-17 pb-23 pl-6 pr-6 text-center xl:pl-33 xl:pr-12"
+      className="bg-card-background-primary pb-23 pl-6 pr-6 pt-17 text-center xl:pl-33 xl:pr-12"
     >
-      <p className="mb-17 text-lg font-noto-sans-jp text-primary leading-[1.8] xl:leading-loose xl:text-xl">
+      <p className="mb-17 font-noto-sans-jp text-lg leading-[1.8] text-primary xl:text-xl xl:leading-loose">
         以下のフォームに必要事項をご入力の上、資料をご請求ください。
         <br />
         ご入力いただいたメールアドレスへ、資料のダウンロードリンクをご連絡いたします。
@@ -59,7 +59,7 @@ export const RequestForm = () => {
 
       <InfoCard title="工場・倉庫建設ガイド" />
 
-      <div className="table border-spacing-y-7 -my-7 pt-21 pb-17 w-full">
+      <div className="-my-7 table w-full border-spacing-y-7 pb-17 pt-21">
         <TextField
           label="会社名*"
           name="Company"
@@ -119,7 +119,7 @@ export const RequestForm = () => {
         />
       </div>
 
-      <Checkbox className="justify-center mb-7" required>
+      <Checkbox className="mb-7 justify-center" required>
         <a href={Routes.PRIVACY_POLICY} className="text-hover-primary">
           利用規約
         </a>{" "}

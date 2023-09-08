@@ -10,9 +10,9 @@ export const InfoCard: FC<Props> = ({ title }) => {
   return (
     <div
       className={clsx(
-        "flex justify-center items-center relative mx-auto",
-        "w-60 max-w-full aspect-[240/300] bg-hover-primary/40",
-        "text-white text-xl"
+        "relative mx-auto flex items-center justify-center",
+        "aspect-[240/300] w-60 max-w-full bg-hover-primary/40",
+        "text-xl text-white"
       )}
     >
       <span>{title}</span>
