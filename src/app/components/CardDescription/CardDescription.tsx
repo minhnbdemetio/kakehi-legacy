@@ -27,7 +27,7 @@ const CardDescription: React.FC<IProps> = ({ description, label, background = 'd
 
 
     return <div className={CLSX({
-        [`card-description ${size} flex items-stretch items-center background-${background}`]: true,
+        [`card-description ${size} flex items-stretch  background-${background}`]: true,
 
     })}>
         {!!label && <div className={CLSX({ ['card-description-label  text-center']: true })}
