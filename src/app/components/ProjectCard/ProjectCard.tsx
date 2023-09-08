@@ -1,32 +1,55 @@
-import React from 'react'
-import './style.scss'
-import './responsive.css'
+import React from "react";
+import "./style.scss";
+import "./responsive.css";
 
 interface IProps {
-    img: string
-    tag?: string
-    name: string
-    descriptions: { label: string, content: string }[]
-
+  thumbnail: string;
+  tag?: string;
+  name: string;
+  structure: string;
+  acreage: number;
 }
 
-const ProjectCard: React.FC<IProps> = ({ img, name, descriptions, tag }) => {
+const ProjectCard: React.FC<IProps> = ({
+  thumbnail,
+  name,
+  tag,
+  acreage,
+  structure,
+}) => {
+  return (
+    <div className="project-card-container relative pb-12">
+      <img className="project-card-image" src={thumbnail} alt={name} />
 
-    return <div className='project-card-container pb-12 relative'>
-        <img className='project-card-image' src={img} alt={name} />
+      <div className="mx-7 mt-8">
+        <p className="project-card-name pb-4 text-lg font-bold">{name}</p>
 
-        <div className='mx-7 mt-8'>
-            <p className='text-lg font-bold pb-4 project-card-name'>{name}</p>
-
-            <ul className='project-card-descriptions mt-7 grid grid-cols-1 gap-7'>
-                {descriptions.map((description) => <li key={description.label} className='project-card-description flex '>
-                    <p className='project-card-description-label text-md xl:text-lg'>{description.label}</p>
-                    <p className='project-card-description-content text-md pl-7 flex-auto' >{description.content}</p>
-                </li>)}
-            </ul>
-        </div>
-        {!!tag && <span className='tag absolute top-0 left-0 text-md px-7 py-2 xl:py-3'>{tag}</span>}
+        <ul className="project-card-descriptions mt-7 grid grid-cols-1 gap-7">
+          <li className="project-card-description flex ">
+            <p className="project-card-description-label text-md xl:text-lg">
+              構造
+            </p>
+            <p className="project-card-description-content flex-auto pl-7 text-md">
+              {structure}
+            </p>
+          </li>
+          <li className="project-card-description flex ">
+            <p className="project-card-description-label text-md xl:text-lg">
+              延床面積
+            </p>
+            <p className="project-card-description-content flex-auto pl-7 text-md">
+              {acreage}㎡
+            </p>
+          </li>
+        </ul>
+      </div>
+      {!!tag && (
+        <span className="tag absolute left-0 top-0 px-7 py-2 text-md xl:py-3">
+          {tag}
+        </span>
+      )}
     </div>
-}
+  );
+};
 
-export default ProjectCard
+export default ProjectCard;

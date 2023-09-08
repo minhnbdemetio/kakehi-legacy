@@ -1,0 +1,31 @@
+@media screen(xl) {
+  .work-page-container .description-section ul {
+    margin-top: 25px !important;
+  }
+
+  .work-page-container .description-section .card-description-label {
+    height: 90px !important;
+  }
+
+  .work-page-container
+    .description-section-content
+    .preview-images-container
+    .main-image {
+    height: 479px !important;
+  }
+
+  .work-page-container
+    .description-section-content
+    .preview-images-container
+    .list-images {
+    height: 90px !important;
+  }
+
+  .work-page-container
+    .description-section-content
+    .preview-images-container
+    .list-images
+    div {
+    height: 90px !important;
+  }
+}

@@ -11,19 +11,19 @@ export const InfoHeading: FC<Props> = ({ subtitle, title, className }) => {
   return (
     <div
       className={clsx(
-        "text-primary text-center uppercase space-y-2",
+        "space-y-2 text-center uppercase text-primary",
         className
       )}
     >
       <h2
         className={clsx(
-          "text-xl font-noto-sans",
-          "underline underline-offset-4 decoration-hover-primary/60 decoration-width decoration-2"
+          "font-noto-sans text-xl",
+          "decoration-width underline decoration-hover-primary/60 decoration-2 underline-offset-4"
         )}
       >
         {subtitle}
       </h2>
-      <h1 className="text-inherit font-bold text-2xl xl:text-3xl font-noto-sans-jp">
+      <h1 className="font-noto-sans-jp text-2xl font-bold text-inherit xl:text-3xl">
         {title}
       </h1>
     </div>

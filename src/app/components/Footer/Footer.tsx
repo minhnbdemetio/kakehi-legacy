@@ -1,8 +1,8 @@
-import React from 'react'
-import BackgroundSection from '../BackgroundSection'
-import './style.scss'
-import './responsive.css'
-import { Button } from '../Button'
+import BackgroundSection from "../BackgroundSection";
+import { Button } from "../Button";
+import "./responsive.css";
+import "./style.scss";
+import React from "react";
 
 interface IProps { }
 
@@ -45,4 +45,4 @@ const Footer: React.FC<IProps> = () => {
     </div>
 }
 
-export default Footer
+export default Footer;

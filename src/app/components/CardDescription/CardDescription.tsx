@@ -1,29 +1,32 @@
-import React from 'react'
-import './style.scss'
-import './responsive.css'
-import CLSX from 'clsx'
+import React from "react";
+import "./style.scss";
+import "./responsive.css";
+import CLSX from "clsx";
 
 interface IProps {
-    label?: string
-    labelBackgroundImg?: string
-    description: string
-    background?: "default" | 'card-primary'
-    size?: 'small' | 'medium'
-    descriptionBold?: boolean
-    descriptionAlign?: 'left' | "center" | 'right'
-
+    label?: string;
+    labelBackgroundImg?: string;
+    description: string;
+    background?: "default" | "card-primary";
+    size?: "small" | "medium";
+    descriptionBold?: boolean;
+    descriptionAlign?: "left" | "center" | "right";
 }
 
-const CardDescription: React.FC<IProps> = ({ description, label, background = 'default', descriptionAlign = 'left', size = 'medium', descriptionBold = false, labelBackgroundImg }) => {
+const CardDescription: React.FC<IProps> = ({
+    description,
+    label,
+    background = "default",
+    descriptionAlign = "left",
+    size = "medium",
+    descriptionBold = false,
+    labelBackgroundImg,
+}) => {
 
-    // <<<<<<< HEAD
-    //     return <div className={`card-description items-stretch flex items-center background-${background}`}>
-    //         {!!label && <div className='card-description-label  text-center'
-    // =======
-    const isSmall = size === 'small'
-    const isMedium = size === 'medium'
+    const isSmall = size === "small";
+    const isMedium = size === "medium";
 
-    const descriptionOnly = !label
+    const descriptionOnly = !label;
 
 
     return <div className={CLSX({
@@ -37,10 +40,13 @@ const CardDescription: React.FC<IProps> = ({ description, label, background = 'd
             ["card-description-content flex-auto px-7 py-5 text-md xl:text-xl"]: true,
             'font-bold': descriptionBold,
             [`text-${descriptionAlign}`]: true,
-            'xl:px-22': descriptionOnly,
-            'xl:py-17.1/3': descriptionOnly,
-        })}>{description}</p>
+            "xl:px-22": descriptionOnly,
+            "xl:py-17.1/3": descriptionOnly,
+        })}
+        >
+            {description}
+        </p>
     </div>
-}
+};
 
-export default CardDescription  
+export default CardDescription;

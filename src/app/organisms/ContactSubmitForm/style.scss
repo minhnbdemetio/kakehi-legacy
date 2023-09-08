@@ -1,0 +1,7 @@
+@import "../../variables.module.scss";
+
+.contact {
+  input[type="checkbox"] {
+    accent-color: $primary-color !important;
+  }
+}
