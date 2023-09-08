@@ -1,10 +1,9 @@
-import React from 'react'
+import React from "react";
 
-interface IProps { }
+interface IProps {}
 
 const FlowCard: React.FC<IProps> = () => {
+  return <></>;
+};
 
-    return <></>
-}
-
-export default FlowCard
+export default FlowCard;

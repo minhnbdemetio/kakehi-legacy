@@ -5,7 +5,7 @@ import React, { useState } from "react";
 import "./responsive.css";
 import "./style.scss";
 import { Routes } from "@/app/constants/routes";
-interface IProps { }
+interface IProps {}
 
 const FloatingButtons: React.FC<IProps> = () => {
   const [open, setOpen] = useState(true);

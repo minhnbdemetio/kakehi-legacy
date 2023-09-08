@@ -10,7 +10,7 @@ interface Props extends InputType {
   rows?: number;
   className?: string;
   wrapperClassName?: string;
-  error?: string
+  error?: string;
 }
 
 export const TextField: FC<Props> = ({
@@ -23,34 +23,34 @@ export const TextField: FC<Props> = ({
 }) => {
   const InputElement = props.rows ? "textarea" : "input";
 
-  return (<>
-    <div className={clsx("block xl:table-row", wrapperClassName)}>
-      {label ? (
-        <label
+  return (
+    <>
+      <div className={clsx("block xl:table-row", wrapperClassName)}>
+        {label ? (
+          <label
+            className={clsx(
+              "box-content table-cell pr-10 text-left font-noto-sans text-lg font-bold leading-normal xl:w-[168px] xl:text-1.5xl",
+              {
+                "align-middle": !props.rows,
+                "align-top xl:pt-10": props.rows,
+              }
+            )}
+            htmlFor={name}
+            dangerouslySetInnerHTML={{ __html: label }}
+          />
+        ) : null}
+
+        <InputElement
           className={clsx(
-            "table-cell box-content text-left font-noto-sans text-lg leading-normal font-bold pr-10 xl:text-1.5xl xl:w-[168px]",
-            {
-              "align-middle": !props.rows,
-              "align-top xl:pt-10": props.rows,
-            }
+            "table-cell min-h-[100px] w-full px-7 py-3 font-noto-sans text-1.5xl font-medium leading-normal",
+            className
           )}
-          htmlFor={name}
-          dangerouslySetInnerHTML={{ __html: label }}
+          name={name}
+          id={name}
+          {...props}
         />
-      ) : null}
-
-      <InputElement
-        className={clsx(
-          "table-cell w-full min-h-[100px] font-noto-sans text-1.5xl leading-normal font-medium py-3 px-7",
-          className
-        )}
-        name={name}
-        id={name}
-        {...props}
-      />
-      {error && <p className="text-lg mt-3 text-red-700">{error}</p>}
-    </div>
-  </>
-
+        {error && <p className="mt-3 text-lg text-red-700">{error}</p>}
+      </div>
+    </>
   );
 };

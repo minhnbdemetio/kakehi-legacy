@@ -1,14 +1,14 @@
 @media screen(xl) {
-    .point-screen  .description-section.left  .title > div p {
-        text-align: left !important;
-        padding-left: 134px !important;
-    }
+  .point-screen .description-section.left .title > div p {
+    text-align: left !important;
+    padding-left: 134px !important;
+  }
 
-    .point-screen .card-description-content {
-        line-height: 32px !important;
-    }
+  .point-screen .card-description-content {
+    line-height: 32px !important;
+  }
 
-    .point-screen .point-lists .card-description-content  {
-        text-align: center !important;
-    }
+  .point-screen .point-lists .card-description-content {
+    text-align: center !important;
+  }
 }
