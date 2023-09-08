@@ -50,7 +50,7 @@ const items: {
   {
     label: "POINT 04",
     firstTitle: "ポイント 04",
-    secondTitle: "建設場所と建築方法",
+    secondTitle: "断熱性能",
     img: "/points/point-5.jpg",
     position: "left",
 
