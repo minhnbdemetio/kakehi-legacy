@@ -1,23 +1,50 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 
 import "./responsive.css";
 import "./style.scss";
 import { Routes } from "@/app/constants/routes";
-interface IProps {}
+import clsx from "clsx";
+interface IProps { }
 
 const FloatingButtons: React.FC<IProps> = () => {
-  const [open, setOpen] = useState(true);
 
-  const boxClass = "floating-buttons-box z-30 xl:w-fit " + (open ? "show" : "");
+  const [visible, setVisible] = useState(false)
+
+
+  const scrollToTop = useCallback(() => {
+    if (typeof window !== 'undefined') {
+      window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+  }, [])
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+
+      const onScroll = (ev: any) => {
+        const scrolled = document.documentElement.scrollTop;
+        if (scrolled > 350) {
+          setVisible(true)
+        }
+        else if (scrolled <= 350) {
+          setVisible(false)
+        }
+      }
+
+      window.addEventListener('scroll', onScroll)
+
+
+      return () => window.removeEventListener('scroll', onScroll)
+    }
+  })
 
   return (
-    <div className={boxClass}>
+    <div className="floating-buttons-box z-30 xl:w-fit">
       <div className="xl:relative xl:flex xl:w-fit xl:flex-col-reverse xl:items-end">
         <button
-          onClick={() => setOpen((o) => !o)}
-          className="collapse-floating-buttons xl:mt-10"
+          onClick={scrollToTop}
+          className={clsx({ ["scroll-to-top-buttons xl:mt-10 sticky"]: true, visible: visible })}
         >
           <img
             src="/icons/chevron-circle-icon.png"

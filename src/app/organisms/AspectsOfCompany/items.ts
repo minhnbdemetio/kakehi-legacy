@@ -4,6 +4,7 @@ const items: {
   subtitle: string;
   titlePosition: "right" | "left";
   img: string;
+  className: string;
   items: {
     label?: string;
     description: string;
@@ -36,6 +37,7 @@ const items: {
     ],
     subtitle: "advantages",
     titlePosition: "right",
+    className: "",
   },
   {
     img: "/strength-image.jpg",
@@ -66,6 +68,7 @@ const items: {
     ],
     subtitle: "STRENGTH",
     titlePosition: "left",
+    className: "xl:mt-20",
   },
   {
     img: "/history-img.jpg",
@@ -79,6 +82,7 @@ const items: {
     ],
     subtitle: "HISTORY",
     titlePosition: "right",
+    className: "xl:mt-[51px]",
   },
 ];
 

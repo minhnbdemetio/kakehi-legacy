@@ -2,6 +2,7 @@ import React from "react";
 import "./style.scss";
 import "./responsive.css";
 
+
 interface IProps {
   thumbnail: string;
   tag?: string;
@@ -17,6 +18,9 @@ const ProjectCard: React.FC<IProps> = ({
   acreage,
   structure,
 }) => {
+
+  const acreageText = Intl.NumberFormat('en-IN').format(acreage)
+
   return (
     <div className="project-card-container relative pb-12">
       <img className="project-card-image" src={thumbnail} alt={name} />
@@ -38,7 +42,7 @@ const ProjectCard: React.FC<IProps> = ({
               延床面積
             </p>
             <p className="project-card-description-content flex-auto pl-7 text-md">
-              {acreage}㎡
+              {acreageText}㎡
             </p>
           </li>
         </ul>

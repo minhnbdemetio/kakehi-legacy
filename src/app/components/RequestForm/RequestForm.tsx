@@ -1,5 +1,6 @@
 "use client";
 
+import { FORM_VALIATIONS } from "@/app/constants/forms";
 import { Button } from "../Button";
 import { Checkbox } from "../Checkbox";
 import { InfoCard } from "../InfoCard";
@@ -8,31 +9,50 @@ import { Routes } from "@/app/constants/routes";
 import { sessionStorageKey } from "@/app/constants/storage";
 import { useConfirmLeavingPrompt } from "@/app/hooks/useConfirmLeavingPrompt";
 import { RequestFormData } from "@/app/types/RequestFormData";
+import Yup from "@/app/yupGlobal";
+import { yupResolver } from "@hookform/resolvers/yup";
 import { useRouter } from "next/navigation";
-import React, { useState } from "react";
+import React, { useCallback } from "react";
+import { Controller, useForm } from "react-hook-form";
+
+
+const schema = Yup.object().shape({
+  company: Yup.string().required(FORM_VALIATIONS.REQUIRED),
+  name: Yup.string().required(FORM_VALIATIONS.REQUIRED),
+  namePronunciation: Yup.string().required(FORM_VALIATIONS.REQUIRED),
+  email: Yup.string()
+    .required(FORM_VALIATIONS.REQUIRED)
+    .email(FORM_VALIATIONS.INVALID_EMAIL),
+  emailConfirm: Yup.string()
+    .required(FORM_VALIATIONS.REQUIRED)
+    .email(FORM_VALIATIONS.INVALID_EMAIL)
+    .equals([Yup.ref("email")], FORM_VALIATIONS.PRIVACY_ACCEPT_REQUIRED),
+  phoneNumber: (Yup.string() as any).required(FORM_VALIATIONS.REQUIRED).jpPhone(FORM_VALIATIONS.INVALID_PHONE),
+  message: Yup.string().required(FORM_VALIATIONS.REQUIRED),
+  acceptPolicy: Yup.boolean().oneOf([true], FORM_VALIATIONS.REQUIRED),
+});
+
 
 export const RequestForm = () => {
   const router = useRouter();
-  const [company, setCompany] = useState("");
-  const [name, setName] = useState("");
-  const [namePronunciation, setNamePronunciation] = useState("");
-  const [email, setEmail] = useState("");
-  const [emailConfirm, setEmailConfirm] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState("");
-  const [message, setMessage] = useState("");
 
-  const data: RequestFormData = {
-    company,
-    name,
-    namePronunciation,
-    email,
-    emailConfirm,
-    phoneNumber,
-    message,
-  };
 
-  const onSubmit = (event: React.FormEvent<HTMLFormElement>) => {
-    event.preventDefault();
+  const form = useForm({
+    defaultValues: {
+      company: "",
+      name: "",
+      namePronunciation: "",
+      email: "",
+      emailConfirm: "",
+      phoneNumber: "",
+      message: "",
+      acceptPolicy: false,
+    },
+    resolver: yupResolver(schema),
+  });
+
+
+  const onSubmit = useCallback((data: any) => {
 
     sessionStorage.setItem(
       sessionStorageKey.REQUEST_DATA,
@@ -40,16 +60,16 @@ export const RequestForm = () => {
     );
 
     router.push(Routes.REQUEST_CONFIRM);
-  };
+  }, [])
 
-  useConfirmLeavingPrompt(data);
+  useConfirmLeavingPrompt(form.getValues());
 
   return (
     <form
-      onSubmit={onSubmit}
-      className="bg-card-background-primary pb-23 pl-6 pr-6 pt-17 text-center xl:pl-33 xl:pr-12"
+      onSubmit={form.handleSubmit(onSubmit)}
+      className="bg-card-background-primary pb-23 pl-6 pr-6 pt-17  xl:pl-33 xl:pr-12"
     >
-      <p className="mb-17 font-noto-sans-jp text-lg leading-[1.8] text-primary xl:text-xl xl:leading-loose">
+      <p className="mb-17 font-noto-sans-jp text-lg leading-[1.8] text-primary xl:text-xl xl:leading-loose text-center">
         以下のフォームに必要事項をご入力の上、資料をご請求ください。
         <br />
         ご入力いただいたメールアドレスへ、資料のダウンロードリンクをご連絡いたします。
@@ -60,73 +80,69 @@ export const RequestForm = () => {
       <InfoCard title="工場・倉庫建設ガイド" />
 
       <div className="-my-7 table w-full border-spacing-y-7 pb-17 pt-21">
-        <TextField
+        <Controller name="company" control={form.control} render={({ field, fieldState }) => <TextField
           label="会社名*"
-          name="Company"
-          value={company}
-          onChange={({ target }) => setCompany(target.value)}
-          required
-        />
-
-        <TextField
+          {...field}
+          error={fieldState.error?.message}
+        />} />
+        <Controller name="name" control={form.control} render={({ field, fieldState }) => <TextField
           label="お名前*"
-          name="Name"
-          value={name}
-          onChange={({ target }) => setName(target.value)}
-          required
-        />
+          {...field}
+          error={fieldState.error?.message}
+        />} />
 
-        <TextField
+        <Controller name="namePronunciation" control={form.control} render={({ field, fieldState }) => <TextField
           label="ふりがな*"
-          name="NamePronunciation"
-          value={namePronunciation}
-          onChange={({ target }) => setNamePronunciation(target.value)}
-          required
-        />
+          {...field}
+          error={fieldState.error?.message}
+        />} />
 
-        <TextField
+        <Controller name="email" control={form.control} render={({ field, fieldState }) => <TextField
           label="メールアドレス*"
-          name="Email"
-          value={email}
-          onChange={({ target }) => setEmail(target.value)}
-          required
-        />
+          {...field}
+          error={fieldState.error?.message}
+        />} />
 
-        <TextField
+
+
+        <Controller name="emailConfirm" control={form.control} render={({ field, fieldState }) => <TextField
           label="メールアドレス*<br/>（確認用）"
-          name="EmailConfirm"
-          value={emailConfirm}
-          onChange={({ target }) => setEmailConfirm(target.value)}
-          required
-        />
+          {...field}
+          error={fieldState.error?.message}
+        />} />
 
-        <TextField
+
+        <Controller name="phoneNumber" control={form.control} render={({ field, fieldState }) => <TextField
           label="電話番号*"
-          name="PhoneNumber"
-          value={phoneNumber}
-          onChange={({ target }) => setPhoneNumber(target.value)}
-          required
-        />
+          {...field}
+          error={fieldState.error?.message}
+        />} />
 
-        <TextField
+
+        <Controller name="message" control={form.control} render={({ field, fieldState }) => <TextField
           className="resize-none"
           label="お問い合わせ内容<br/>（任意）"
-          name="Message"
           rows={10}
-          value={message}
-          onChange={({ target }) => setMessage(target.value)}
-          required
-        />
+
+          {...field}
+
+          error={fieldState.error?.message}
+        />} />
+
+
       </div>
 
-      <Checkbox className="mb-7 justify-center" required>
+      <Controller name="acceptPolicy" control={form.control} render={({ field, fieldState }) => <Checkbox className="mb-7 justify-center" error={fieldState.error?.message}
+        onChange={field.onChange}>
         <a href={Routes.PRIVACY_POLICY} className="text-hover-primary">
           利用規約
         </a>{" "}
         に同意する
-      </Checkbox>
+      </Checkbox>} />
 
-      <Button className="mx-auto">確認する</Button>
+      <div className="text-center">
+        <Button className="mx-auto">確認する</Button>
+      </div>
     </form>
   );
 };
