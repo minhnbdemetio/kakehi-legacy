@@ -10,7 +10,7 @@ interface IProps {
     companyName: string;
     furigana: string;
     email: string;
-    confirmedEmail: string;
+    confirmationEmail: string;
     phone: string;
     content: string;
   };
@@ -63,7 +63,7 @@ const ContactFormReview: React.FC<IProps> = ({
             <RequestConfirmField
               label="メールアドレス
 （確認用）"
-              content={data.confirmedEmail}
+              content={data.confirmationEmail}
             />
           )}
           <RequestConfirmField label="電話番号" content={data.phone} />
