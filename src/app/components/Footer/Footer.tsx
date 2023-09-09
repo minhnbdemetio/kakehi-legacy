@@ -34,9 +34,9 @@ const Footer: React.FC<IProps> = () => {
 
 
             <div className='footer-link mt-8 xl:mt-10'>
-                <a><span className='text-md xl:text-[15px]'>会社概要</span></a>
-                <a><span className='text-md xl:text-[15px]'>個人情報保護方針</span></a>
-                <a><span className='text-md xl:text-[15px]'>利用規約</span></a>
+                <a><span className='text-md xl:text-[15px] xl:px-[22px]'>会社概要</span></a>
+                <a><span className='text-md xl:text-[15px] xl:px-[22px]'>個人情報保護方針</span></a>
+                <a><span className='text-md xl:text-[15px] xl:px-[22px]'>利用規約</span></a>
             </div>
 
 
