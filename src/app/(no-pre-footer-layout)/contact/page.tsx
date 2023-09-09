@@ -5,11 +5,11 @@ import "./style.scss";
 import { useForm } from "react-hook-form";
 import ContactSubmitForm from "@/app/organisms/ContactSubmitForm";
 
-interface IProps {}
+interface IProps { }
 
 const Contact: React.FC<IProps> = () => {
   return (
-    <div className="contact mx-7 mt-15 xl:mt-39.1/3">
+    <div className="contact mx-7 mt-15 xl:mt-39.1/3 xl:pb-40">
       <div>
         <PageTitle title="お問い合わせ" subTitle="CONTACT" />
       </div>

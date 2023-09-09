@@ -4,12 +4,14 @@ import "./responsive.css";
 import "./style.scss";
 import React from "react";
 
-interface IProps { }
+interface IProps {
+    showPreFooter?: boolean
+}
 
-const Footer: React.FC<IProps> = () => {
+const Footer: React.FC<IProps> = ({ showPreFooter = true }) => {
 
     return <div className='footer-container '>
-        <div className='pre-footer'>
+        {showPreFooter && <div className='pre-footer'>
             <BackgroundSection className='footer-background' src='/footer.jpg' height={600} style={{
                 background: "linear-gradient(180deg, #F2F2F2 29.20%, rgba(206, 236, 245, 0.00) 100%)"
             }}>
@@ -24,7 +26,7 @@ const Footer: React.FC<IProps> = () => {
                     <Button>お問い合わせ</Button>
                 </div>
             </BackgroundSection>
-        </div>
+        </div>}
         <div className='footer flex flex-col items-center pb-14 xl:pb-12'>
             <div className='mx-36 mt-14'>
                 <img className='footer-logo ' src='/kakehi_logo_white_rectangle.png' alt='Kakehi footer logo' />
