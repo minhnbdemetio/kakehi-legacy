@@ -46,42 +46,19 @@ const ProjectListCaroursel: React.FC<IProps> = ({ projects }) => {
           <img alt="Nagivate Prev" src="/icons/navigate-previous.png" />
         </button>
       </div>
-      <div className="project-list-carousel mx-23 hidden xl:block">
+      <div className="project-list-carousel mx-23 ">
         <Slider
           dots={false}
           infinite={true}
           speed={500}
-          slidesToShow={3}
           slidesToScroll={1}
+          centerMode={false}
           arrows={false}
           ref={ref as any}
+          variableWidth={true}
         >
           {projects.map((project, index) => (
-            <div key={index} className="px-1 xl:px-0">
-              <ProjectCard
-                tag={project.tag}
-                name={project.name}
-                acreage={project.acreage}
-                structure={project.structure}
-                thumbnail={project.thumbnail}
-              />
-            </div>
-          ))}
-        </Slider>
-      </div>
-
-      <div className="project-list-carousel mx-23 block xl:hidden">
-        <Slider
-          dots={false}
-          infinite={true}
-          speed={500}
-          slidesToShow={1}
-          slidesToScroll={1}
-          arrows={false}
-          ref={ref as any}
-        >
-          {projects.map((project, index) => (
-            <div key={index} className="px-1 xl:px-0">
+            <div key={index} className="max-w-[260px] px-3 xl:px-0 xl:max-w-[350px] xl:pr-[50px]">
               <ProjectCard
                 tag={project.tag}
                 name={project.name}
