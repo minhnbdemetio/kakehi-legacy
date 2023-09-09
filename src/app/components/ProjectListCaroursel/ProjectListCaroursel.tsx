@@ -25,8 +25,6 @@ const ProjectListCaroursel: React.FC<IProps> = ({ projects }) => {
   );
 
   const next = useCallback(() => {
-
-    console.debug(ref)
     if (ref.current) {
       ref.current.slickNext();
     }
