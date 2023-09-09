@@ -29,7 +29,7 @@
   }
 }
 
-.collapse-floating-buttons {
+.scroll-to-top-buttons {
   img {
     flex-shrink: 0;
     width: 100%;
@@ -48,16 +48,19 @@
   right: 0;
   top: 0;
   transform: translate(0, -100%);
+  visibility: hidden;
+  transition: 0.5s;
+
+  &.visible {
+    visibility: visible;
+  }
 }
 
 .floating-buttons-box {
   background-color: transparent;
-  position: fixed;
+  position: sticky;
   width: 100%;
   bottom: -60px;
   transition: 0.5s;
-}
-
-.floating-buttons-box.show {
-  bottom: 0px;
+  bottom: -1px;
 }
