@@ -30,14 +30,14 @@ const CardDescription: React.FC<IProps> = ({
 
 
     return <div className={CLSX({
-        [`card-description ${size} flex items-stretch  background-${background}`]: true,
+        [`card-description ${size} flex items-stretch background-${background}`]: true,
 
     })}>
         {!!label && <div className={CLSX({ ['card-description-label  text-center']: true })}
             style={{ backgroundImage: !!labelBackgroundImg ? `url(${labelBackgroundImg})` : 'none' }}
         ><p className={CLSX({ ["text-md xl:font-bold"]: true, ['xl:text-lg']: isSmall, ['xl:text-1.5xl']: isMedium })}>{label}</p></div>}
         <p className={CLSX({
-            ["card-description-content flex-auto px-7 py-5 text-md xl:text-xl"]: true,
+            ["card-description-content flex-auto px-7 py-5 text-md flex items-center justify-center xl:text-xl"]: true,
             'font-bold': descriptionBold,
             [`text-${descriptionAlign}`]: true,
             "xl:px-22": descriptionOnly,
