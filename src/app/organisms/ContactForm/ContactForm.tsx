@@ -7,20 +7,16 @@ import { Routes } from "@/app/constants/routes";
 import { Button } from "@/app/components/Button";
 
 interface IProps {
-  form: UseFormReturn<
-    {
-      confirmedEmail?: any;
-      phone?: any;
-      acceptPolicy?: boolean | undefined;
-      companyName: string;
-      name: string;
-      furigana: string;
-      email: string;
-      content: string;
-    },
-    any,
-    undefined
-  >;
+  form: UseFormReturn<{
+    confirmationEmail?: any;
+    phone?: any;
+    acceptPolicy?: boolean | undefined;
+    companyName: string;
+    name: string;
+    furigana: string;
+    email: string;
+    content: string;
+  }, any, undefined>
 
   next: () => void;
 }
@@ -90,7 +86,7 @@ const ContactForm: React.FC<IProps> = ({ form, next }) => {
             )}
           />
           <Controller
-            name="confirmedEmail"
+            name="confirmationEmail"
             control={form.control}
             render={({ field, fieldState }) => (
               <TextField
@@ -135,12 +131,12 @@ const ContactForm: React.FC<IProps> = ({ form, next }) => {
         <Controller
           control={form.control}
           name="acceptPolicy"
-          render={({ field }) => (
-            <div>
+          render={({ field, fieldState }) => (
+            <div className="mb-7 ">
               <Checkbox
+                error={fieldState.error?.message}
                 onChange={field.onChange}
-                className="mb-7 justify-center"
-                required
+                className="justify-center"
               >
                 <a
                   href={Routes.PRIVACY_POLICY}

@@ -8,35 +8,34 @@ import "./style.scss";
 
 import { yupResolver } from "@hookform/resolvers/yup";
 
-import * as Yup from "yup";
 import ContactForm from "../ContactForm";
 import ContactFormReview from "../ContactFormReview";
+
+import Yup from '../../yupGlobal';
+import { FORM_VALIATIONS } from "@/app/constants/forms";
 
 const summitData = async () => {
   return new Promise((res) => setTimeout(res, 1000));
 };
 
-Yup.addMethod(Yup.string, "jpPhone", function (message) {
-  const JP_PHONE_REGEX = /^\d{2}(?:-\d{4}-\d{4}|\d{8}|\d-\d{3,4}-\d{4})$/;
-  return this.matches(JP_PHONE_REGEX, { message, excludeEmptyString: true });
-});
 
-interface IProps {}
+
+interface IProps { }
 
 const schema = Yup.object().shape({
-  companyName: Yup.string().required("会社名を空白にすることはできません。"),
-  name: Yup.string().required("名前を空白のままにすることはできません。"),
-  furigana: Yup.string().required("ふりがなを空にすることはできません。"),
+  companyName: Yup.string().required(FORM_VALIATIONS.REQUIRED),
+  name: Yup.string().required(FORM_VALIATIONS.REQUIRED),
+  furigana: Yup.string().required(FORM_VALIATIONS.REQUIRED),
   email: Yup.string()
-    .required("メールを空にすることはできません。")
-    .email("電子メールの形式が無効です。"),
-  confirmedEmail: Yup.string()
-    .required("確認メールを空にすることはできません。")
-    .email("メールの形式が無効であることを確認してください。")
-    .equals([Yup.ref("email")], "メールアドレスが合わない！"),
-  phone: (Yup.string() as any).jpPhone("電話が無効です!"),
-  content: Yup.string().required("コンテンツは空であってはなりません。"),
-  acceptPolicy: Yup.bool(),
+    .required(FORM_VALIATIONS.REQUIRED)
+    .email(FORM_VALIATIONS.INVALID_EMAIL),
+  confirmationEmail: Yup.string()
+    .required(FORM_VALIATIONS.REQUIRED)
+    .email(FORM_VALIATIONS.INVALID_EMAIL)
+    .equals([Yup.ref("email")], FORM_VALIATIONS.PRIVACY_ACCEPT_REQUIRED),
+  phone: (Yup.string() as any).required(FORM_VALIATIONS.REQUIRED).jpPhone(FORM_VALIATIONS.INVALID_PHONE),
+  content: Yup.string().required(FORM_VALIATIONS.REQUIRED),
+  acceptPolicy: Yup.boolean().oneOf([true], FORM_VALIATIONS.REQUIRED),
 });
 
 const STAGES = {
@@ -56,7 +55,7 @@ const ContactSubmitForm: React.FC<IProps> = () => {
       name: "",
       furigana: "",
       email: "",
-      confirmedEmail: "",
+      confirmationEmail: "",
       phone: "",
       content: "",
       acceptPolicy: false,
