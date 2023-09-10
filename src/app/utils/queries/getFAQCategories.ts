@@ -1,5 +1,5 @@
 import { getClient } from "@/app/lib/apolloClient";
-import { getDataArrayFromQueryResults } from "../query";
+import { getDataArrayFromQueryResults } from "@/app/utils/query";
 import { QueryResultData } from "@/app/types/QueryResultData";
 import { gql } from "@apollo/client";
 

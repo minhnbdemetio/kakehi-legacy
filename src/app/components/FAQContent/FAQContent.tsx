@@ -1,7 +1,7 @@
+import { getFAQCategories } from "@/app/utils/queries/getFAQCategories";
 import { Accordion } from "../Accordion";
 import { InfoContainer } from "../InfoContainer";
 import { InfoHeading } from "../InfoHeading";
-import { getFAQCategories } from "@/app/utils/faqs/getFAQCategories";
 
 export const FAQContent = async () => {
   const categories = await getFAQCategories();
