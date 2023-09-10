@@ -8,7 +8,6 @@ import { TextField } from "../TextField";
 import { Routes } from "@/app/constants/routes";
 import { sessionStorageKey } from "@/app/constants/storage";
 import { useConfirmLeavingPrompt } from "@/app/hooks/useConfirmLeavingPrompt";
-import { RequestFormData } from "@/app/types/RequestFormData";
 import Yup from "@/app/yupGlobal";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useRouter } from "next/navigation";
@@ -28,7 +27,7 @@ const schema = Yup.object().shape({
     .email(FORM_VALIATIONS.INVALID_EMAIL)
     .equals([Yup.ref("email")], FORM_VALIATIONS.PRIVACY_ACCEPT_REQUIRED),
   phoneNumber: (Yup.string() as any).required(FORM_VALIATIONS.REQUIRED).jpPhone(FORM_VALIATIONS.INVALID_PHONE),
-  message: Yup.string().required(FORM_VALIATIONS.REQUIRED),
+  message: Yup.string(),
   acceptPolicy: Yup.boolean().oneOf([true], FORM_VALIATIONS.REQUIRED),
 });
 
