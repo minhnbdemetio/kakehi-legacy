@@ -6,27 +6,27 @@ const items: {
 }[] = [
   {
     label: "システム建築とは",
-    link: "",
+    link: Routes.TOP,
   },
   {
     label: "施工実績",
-    link: "",
-  },
-  {
-    label: "お問い合わせからの流れ",
-    link: Routes.REQUEST,
-  },
-  {
-    label: "工場・倉庫建築のポイント",
     link: Routes.WORK,
   },
   {
-    label: "会社概要",
+    label: "お問い合わせからの流れ",
+    link: Routes.CONTACT,
+  },
+  {
+    label: "工場・倉庫建築のポイント",
     link: Routes.POINT,
   },
   {
-    label: "お役立ち情報",
+    label: "会社概要",
     link: Routes.PROFILE,
+  },
+  {
+    label: "お役立ち情報",
+    link: Routes.FAQ,
   },
 ];
 
