@@ -134,6 +134,7 @@ const ContactForm: React.FC<IProps> = ({ form, next }) => {
           render={({ field, fieldState }) => (
             <div className="mb-7 ">
               <Checkbox
+                checked={field.value}
                 error={fieldState.error?.message}
                 onChange={field.onChange}
                 className="justify-center"
