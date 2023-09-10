@@ -1,54 +1,14 @@
 import { Accordion } from "../Accordion";
 import { InfoContainer } from "../InfoContainer";
 import { InfoHeading } from "../InfoHeading";
-import React from "react";
-import { gql } from "@apollo/client";
-import { getDataArrayFromQueryResults } from "@/app/utils/query";
-import { QueryResultData } from "@/app/types/QueryResultData";
-import { getClient } from "@/app/lib/apolloClient";
-
-const GET_FAQ_CATEGORIES = gql(`query {
-  faqCategories {
-    data {
-      attributes {
-        title
-        faqs {
-          data {
-            attributes {
-              question
-              answer
-            }
-          }
-        }
-      }
-    }
-  }
-}`);
-
-interface FAQCategoryData {
-  title: string;
-  faqs: QueryResultData<FAQData>;
-}
-interface FAQData {
-  question: string;
-  answer: string;
-}
+import { getFAQCategories } from "@/app/utils/faqs/getFAQCategories";
 
 export const FAQContent = async () => {
-  const client = getClient();
-  const { data } = await client.query({ query: GET_FAQ_CATEGORIES });
-  const categoriesData = getDataArrayFromQueryResults<FAQCategoryData>(
-    data?.faqCategories
-  );
+  const categories = await getFAQCategories();
 
-  if (!categoriesData.length) {
+  if (!categories.length) {
     return null;
   }
-
-  const categories = categoriesData.map((category) => ({
-    title: category.title,
-    faqs: getDataArrayFromQueryResults<FAQData>(category.faqs),
-  }));
 
   return (
     <InfoContainer as="section" className="space-y-24 py-33">
@@ -65,7 +25,10 @@ export const FAQContent = async () => {
                 summary={faq.question}
                 type="question"
               >
-                {faq.answer}
+                <span
+                  dangerouslySetInnerHTML={{ __html: faq.answer }}
+                  className="whitespace-pre-line"
+                />
               </Accordion>
             ))}
           </Accordion>
