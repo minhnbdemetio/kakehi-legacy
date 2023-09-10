@@ -1,12 +1,11 @@
-"use client";
-
 import { Accordion } from "../Accordion";
 import { InfoContainer } from "../InfoContainer";
 import { InfoHeading } from "../InfoHeading";
 import React from "react";
-import { gql, useQuery } from "@apollo/client";
+import { gql } from "@apollo/client";
 import { getDataArrayFromQueryResults } from "@/app/utils/query";
 import { QueryResultData } from "@/app/types/QueryResultData";
+import { getClient } from "@/app/lib/apolloClient";
 
 const GET_FAQ_CATEGORIES = gql(`query {
   faqCategories {
@@ -35,8 +34,9 @@ interface FAQData {
   answer: string;
 }
 
-export const FAQContent = () => {
-  const { data } = useQuery(GET_FAQ_CATEGORIES);
+export const FAQContent = async () => {
+  const client = getClient();
+  const { data } = await client.query({ query: GET_FAQ_CATEGORIES });
   const categoriesData = getDataArrayFromQueryResults<FAQCategoryData>(
     data?.faqCategories
   );
