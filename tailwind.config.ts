@@ -109,6 +109,9 @@ const config: Config = {
       "noto-sans": ["var(--font-noto-sans)"],
       "noto-sans-jp": ["var(--font-noto-sans-jp)"],
     },
+    lineHeight: {
+      lg: "36px",
+    },
   },
   plugins: [],
 };
