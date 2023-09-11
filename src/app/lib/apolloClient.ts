@@ -13,11 +13,12 @@ import { registerApolloClient } from "@apollo/experimental-nextjs-app-support/rs
 export const { getClient } = registerApolloClient(() => {
   return new NextSSRApolloClient({
     cache: new NextSSRInMemoryCache(),
-    headers: {
-      authorization: `Bearer ${process.env.CMS_ACCESS_TOKEN}` || "",
-    },
     link: new HttpLink({
       uri: process.env.NEXT_PUBLIC_CMS_ENDPOINT + "/graphql",
+      headers: {
+        authorization: `Bearer ${process.env.CMS_ACCESS_TOKEN}`,
+      },
     }),
+    ssrMode: true,
   });
 });

@@ -32,22 +32,27 @@ const GET_FAQ_CATEGORIES = gql(`query {
 }`);
 
 export const getFAQCategories = async () => {
-  const client = getClient();
-  const { data } = await client.query({ query: GET_FAQ_CATEGORIES });
-  const categoriesData = getDataArrayFromQueryResults<FAQCategoryData>(
-    data?.faqCategories
-  );
+  try {
+    const client = getClient();
+    const { data } = await client.query({ query: GET_FAQ_CATEGORIES });
+    const categoriesData = getDataArrayFromQueryResults<FAQCategoryData>(
+      data?.faqCategories
+    );
 
-  if (!categoriesData.length) {
+    if (!categoriesData.length) {
+      return [];
+    }
+
+    const categories = categoriesData.map((category) => {
+      return {
+        title: category.title,
+        faqs: getDataArrayFromQueryResults<FAQData>(category.faqs),
+      };
+    });
+
+    return categories;
+  } catch (e) {
+    console.error(e);
     return [];
   }
-
-  const categories = categoriesData.map((category) => {
-    return {
-      title: category.title,
-      faqs: getDataArrayFromQueryResults<FAQData>(category.faqs),
-    };
-  });
-
-  return categories;
 };
