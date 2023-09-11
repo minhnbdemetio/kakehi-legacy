@@ -1,15 +1,13 @@
-"use client";
-
 import PageTitle from "@/app/components/PageTitle";
 import React from "react";
 
 import ProjectListCaroursel from "@/app/components/ProjectListCaroursel";
-import useProjects from "@/app/hooks/useProjects";
+import getProjects from "@/app/utils/queries/getProjects";
 
 interface IProps {}
 
-const TopPageWorkSection: React.FC<IProps> = () => {
-  const projects = useProjects();
+const TopPageWorkSection: React.FC<IProps> = async () => {
+  const projects = await getProjects();
 
   return (
     <div className="mt-16.2/3">

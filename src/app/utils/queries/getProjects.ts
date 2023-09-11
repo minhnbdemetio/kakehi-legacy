@@ -1,7 +1,28 @@
-import { gql, useQuery, QueryResult } from "@apollo/client";
-import { useMemo } from "react";
+import { gql, QueryResult } from "@apollo/client";
+import { getClient } from "@/app/lib/apolloClient";
 
-const GET_PROJECTS = gql(`query {
+type ProjectData = QueryResult<{
+  projects: {
+    data: {
+      attributes: {
+        name?: string;
+        tag?: string;
+        thumbnail?: {
+          data?: {
+            attributes?: {
+              name?: string;
+              url?: string;
+            };
+          };
+        };
+        acreage?: number;
+        structure?: string;
+      };
+    }[];
+  };
+}>;
+
+export const GET_PROJECTS = gql(`query {
   projects {
     data {
       attributes {
@@ -9,7 +30,6 @@ const GET_PROJECTS = gql(`query {
         tag
         thumbnail {
           data {
-            id
             attributes {
               name
               url
@@ -27,28 +47,7 @@ const getStrapiImageUrl = (uri: string) => {
   return process.env.NEXT_PUBLIC_CMS_ENDPOINT + uri;
 };
 
-const formatProjects = (
-  data: QueryResult<{
-    projects: {
-      data: {
-        attributes: {
-          name?: string;
-          tag?: string;
-          thumbnail?: {
-            data?: {
-              attributes?: {
-                name?: string;
-                url?: string;
-              };
-            };
-          };
-          acreage?: number;
-          structure?: string;
-        };
-      }[];
-    };
-  }>
-) => {
+const formatProjects = (data: ProjectData) => {
   if (!data.data?.projects) return [];
 
   return data.data?.projects.data.map((project) => {
@@ -64,10 +63,11 @@ const formatProjects = (
   });
 };
 
-const useProjects = () => {
-  const data = useQuery(GET_PROJECTS);
+const getProjects = async () => {
+  const client = getClient();
+  const { data } = await client.query({ query: GET_PROJECTS });
 
-  return useMemo(() => formatProjects(data), [data]);
+  return formatProjects(data);
 };
 
-export default useProjects;
+export default getProjects;
