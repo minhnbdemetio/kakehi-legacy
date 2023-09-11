@@ -1,7 +1,7 @@
-import { gql, QueryResult } from "@apollo/client";
+import { ApolloQueryResult, gql, QueryResult } from "@apollo/client";
 import { getClient } from "@/app/lib/apolloClient";
 
-type ProjectData = QueryResult<{
+type ProjectData = {
   projects: {
     data: {
       attributes: {
@@ -20,7 +20,7 @@ type ProjectData = QueryResult<{
       };
     }[];
   };
-}>;
+};
 
 export const GET_PROJECTS = gql(`query {
   projects {
@@ -47,8 +47,8 @@ const getStrapiImageUrl = (uri: string) => {
   return process.env.NEXT_PUBLIC_CMS_ENDPOINT + uri;
 };
 
-const formatProjects = (data: ProjectData) => {
-  if (!data.data?.projects) return [];
+const formatProjects = (data: ApolloQueryResult<ProjectData>) => {
+  if (!data.data?.projects?.data) return [];
 
   return data.data?.projects.data.map((project) => {
     return {
@@ -65,7 +65,7 @@ const formatProjects = (data: ProjectData) => {
 
 const getProjects = async () => {
   const client = getClient();
-  const { data } = await client.query({ query: GET_PROJECTS });
+  const data = await client.query<ProjectData>({ query: GET_PROJECTS });
 
   return formatProjects(data);
 };
