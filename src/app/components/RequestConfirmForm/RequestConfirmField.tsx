@@ -29,7 +29,7 @@ export const RequestConfirmField: FC<Props> = ({
 
       <div
         className={clsx(
-          "break-all border-b border-black pb-3 pt-5 text-left font-noto-sans text-1.5xl font-medium leading-normal xl:table-cell xl:pt-0"
+          "break-all border-b border-black pb-3 pt-5 text-left font-noto-sans text-1.5xl font-medium leading-normal xl:table-cell xl:pt-0 whitespace-pre-wrap"
         )}
       >
         {content}

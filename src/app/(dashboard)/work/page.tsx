@@ -1,17 +1,15 @@
-"use client";
-
 import React from "react";
 import "./style.scss";
 import "./responsive.css";
 import DescriptionSection from "@/app/organisms/DescriptionSection";
 import PageTitle from "@/app/components/PageTitle";
 import ProjectListCaroursel from "@/app/components/ProjectListCaroursel";
-import useProjects from "@/app/hooks/useProjects";
+import getProjects from "@/app/utils/queries/getProjects";
 
 interface IProps {}
 
-const Work: React.FC<IProps> = () => {
-  const projects = useProjects();
+const Work: React.FC<IProps> = async () => {
+  const projects = await getProjects();
 
   return (
     <div className="work-page-container pb-43.1/3 xl:pb-33.1/3">

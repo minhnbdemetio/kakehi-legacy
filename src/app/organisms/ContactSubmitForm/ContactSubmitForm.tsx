@@ -64,7 +64,6 @@ const ContactSubmitForm: React.FC<IProps> = () => {
   });
 
   const handleSubmit = async () => {
-    console.debug(form.getValues());
     await summitData();
     setSubmitted(true);
   };
