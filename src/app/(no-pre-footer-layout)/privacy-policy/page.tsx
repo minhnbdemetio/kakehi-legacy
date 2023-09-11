@@ -4,7 +4,7 @@ import items from "./items";
 
 import "./style.scss";
 
-interface IProps {}
+interface IProps { }
 
 const PrivacyPolicy: React.FC<IProps> = () => {
   return (
@@ -13,7 +13,7 @@ const PrivacyPolicy: React.FC<IProps> = () => {
         <PageTitle title="個人情報保護方針" subTitle="PRIVACY POLICY" />
       </div>
       <div className=" mt-15 xl:mt-21.2/3">
-        <p>
+        <p className="text-lg leading-lg">
           懸樋工務店は、お客さまの氏名や生年月日、住所、メールアドレスなど、特定の個人を識別できる情報（以下｢個人情報｣といいます）を適切に取り扱い、保護することが企業の責務であると認識し、次の取り組みを実施します。
         </p>
       </div>
@@ -21,10 +21,10 @@ const PrivacyPolicy: React.FC<IProps> = () => {
         <ul className="grid grid-cols-1 gap-7 xl:gap-16">
           {items.map((item, index) => (
             <li key={index} className="">
-              <p className="title pb-2 text-lg font-bold xl:text-xl">
+              <p className="title pb-2 text-lg font-bold xl:text-xl leading-lg">
                 {index + 1}. {item.title}
               </p>
-              <p className="text-md xl:text-lg">{item.content}</p>
+              <p className="text-md xl:text-lg leading-lg">{item.content}</p>
             </li>
           ))}
         </ul>

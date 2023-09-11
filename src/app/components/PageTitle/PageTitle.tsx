@@ -14,7 +14,7 @@ const PageTitle: React.FC<IProps> = ({ divider = false, subTitle, title }) => {
       {subTitle && <p className="sub-title text-xl">{subTitle}</p>}
       <p
         className={CLSX({
-          ["text-1.5xl font-bold xl:text-3xl"]: true,
+          ["text-1.5xl font-bold xl:text-3xl mt-[5px]"]: true,
           divider: divider,
         })}
       >

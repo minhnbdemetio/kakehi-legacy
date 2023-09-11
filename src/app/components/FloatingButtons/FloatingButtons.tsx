@@ -6,45 +6,43 @@ import "./responsive.css";
 import "./style.scss";
 import { Routes } from "@/app/constants/routes";
 import clsx from "clsx";
-interface IProps { }
+interface IProps {}
 
 const FloatingButtons: React.FC<IProps> = () => {
-
-  const [visible, setVisible] = useState(false)
-
+  const [visible, setVisible] = useState(false);
 
   const scrollToTop = useCallback(() => {
-    if (typeof window !== 'undefined') {
-      window.scrollTo({ top: 0, behavior: 'smooth' })
+    if (typeof window !== "undefined") {
+      window.scrollTo({ top: 0, behavior: "smooth" });
     }
-  }, [])
+  }, []);
 
   useEffect(() => {
-    if (typeof window !== 'undefined') {
-
+    if (typeof window !== "undefined") {
       const onScroll = (ev: any) => {
         const scrolled = document.documentElement.scrollTop;
         if (scrolled > 350) {
-          setVisible(true)
+          setVisible(true);
+        } else if (scrolled <= 350) {
+          setVisible(false);
         }
-        else if (scrolled <= 350) {
-          setVisible(false)
-        }
-      }
+      };
 
-      window.addEventListener('scroll', onScroll)
+      window.addEventListener("scroll", onScroll);
 
-
-      return () => window.removeEventListener('scroll', onScroll)
+      return () => window.removeEventListener("scroll", onScroll);
     }
-  })
+  });
 
   return (
     <div className="floating-buttons-box z-30 xl:w-fit">
       <div className="xl:relative xl:flex xl:w-fit xl:flex-col-reverse xl:items-end">
         <button
           onClick={scrollToTop}
-          className={clsx({ ["scroll-to-top-buttons xl:mt-10 sticky"]: true, visible: visible })}
+          className={clsx({
+            ["scroll-to-top-buttons sticky xl:mt-10"]: true,
+            visible: visible,
+          })}
         >
           <img
             src="/icons/chevron-circle-icon.png"
@@ -52,7 +50,10 @@ const FloatingButtons: React.FC<IProps> = () => {
           />
         </button>
         <div className="floating-buttons grid w-full grid-cols-2">
-          <a className="email-button flex w-full flex-col items-center justify-around xl:mb-12">
+          <a
+            className="email-button flex w-full flex-col items-center justify-around xl:mb-12"
+            href={Routes.CONTACT}
+          >
             <img
               src="/icons/email-icon.png "
               className="btn-icon inline"
