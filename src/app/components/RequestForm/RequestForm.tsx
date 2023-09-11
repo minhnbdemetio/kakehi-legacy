@@ -25,7 +25,7 @@ const schema = Yup.object().shape({
     .email(formValidationMessage.INVALID_EMAIL),
   emailConfirm: Yup.string()
     .required(formValidationMessage.REQUIRED)
-    .email(formValidationMessage.INVALID_CONFIRMATION_EMAIL)
+    .email(formValidationMessage.INVALID_EMAIL)
     .equals([Yup.ref("email")], formValidationMessage.PRIVACY_ACCEPT_REQUIRED),
   phoneNumber: (Yup.string() as any)
     .required(formValidationMessage.REQUIRED)
