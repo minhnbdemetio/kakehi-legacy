@@ -14,7 +14,6 @@ export const RequestConfirmField: FC<Props> = ({
   className,
   multiline,
 }) => {
-  console.debug(content)
   return (
     <div className={clsx("block xl:table-row", className)}>
       <div
