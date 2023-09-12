@@ -35,9 +35,9 @@ const CardDescription: React.FC<IProps> = ({
     })}>
         {!!label && <div className={CLSX({ ['card-description-label  text-center']: true })}
             style={{ backgroundImage: !!labelBackgroundImg ? `url(${labelBackgroundImg})` : 'none' }}
-        ><p className={CLSX({ ["text-md xl:font-bold"]: true, ['xl:text-lg']: isSmall, ['xl:text-1.5xl']: isMedium })}>{label}</p></div>}
+        ><p className={CLSX({ ["text-md xl:font-bold xl:leading-[normal]"]: true, ['xl:text-lg']: isSmall, ['xl:text-1.5xl']: isMedium })}>{label}</p></div>}
         <p className={CLSX({
-            ["card-description-content flex-auto px-7 py-5 text-md flex items-center justify-center xl:text-xl"]: true,
+            ["card-description-content flex-auto px-7 py-5 text-md flex leading-[27px] items-center justify-center xl:text-xl xl:leading-lg"]: true,
             'font-bold': descriptionBold,
             [`text-${descriptionAlign}`]: true,
             "xl:px-22": descriptionOnly,

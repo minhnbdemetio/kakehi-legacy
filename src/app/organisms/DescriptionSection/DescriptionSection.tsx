@@ -63,14 +63,14 @@ const DescriptionSection: React.FC<IProps> = ({
                 images={rest.images}
                 mainImgHeight={rest.mainImgHeight}
                 miniImgHeight={rest.miniImgHeight}
+
               />
             )}
           </div>
 
           <ul
-            className={`mt-16.2/3 grid grid-cols-1 gap-7 px-7 xl:flex-1 xl:gap-3 xl:self-end xl:pl-3 ${
-              titlePosition === "left" ? "xl:ml-35" : "xl:mr-35"
-            } `}
+            className={`mt-16.2/3 grid grid-cols-1 gap-7 px-7 xl:flex-1 xl:gap-3 xl:self-end xl:pl-3 ${titlePosition === "left" ? "xl:ml-35" : "xl:mr-35"
+              } `}
           >
             {items.map((item, index) => (
               <li key={index}>
