@@ -29,7 +29,7 @@ export const TextField: FC<Props> = ({
         {label ? (
           <label
             className={clsx(
-              "box-content table-cell pr-10 text-left font-noto-sans text-lg font-bold leading-normal xl:w-[168px] xl:text-1.5xl",
+              "leading-normal box-content table-cell whitespace-pre pr-10 text-left font-noto-sans text-lg font-bold xl:w-[168px] xl:text-1.5xl",
               {
                 "align-middle": !props.rows,
                 "align-top xl:pt-10": props.rows,
@@ -42,7 +42,10 @@ export const TextField: FC<Props> = ({
 
         <InputElement
           className={clsx(
-            "table-cell min-h-[100px] w-full px-7 py-3 font-noto-sans text-1.5xl font-medium leading-normal",
+            "leading-normal table-cell min-h-[100px] w-full px-7 py-3 font-noto-sans text-1.5xl font-medium",
+            {
+              "border-2 border-red-700": error,
+            },
             className
           )}
           name={name}

@@ -18,7 +18,7 @@ export const RequestConfirmField: FC<Props> = ({
     <div className={clsx("block xl:table-row", className)}>
       <div
         className={clsx(
-          "border-black pr-10 text-left font-noto-sans text-lg font-bold leading-normal xl:table-cell xl:w-[277px] xl:border-b xl:text-1.5xl",
+          "leading-normal whitespace-pre border-black pr-10 text-left font-noto-sans text-lg font-bold xl:table-cell xl:w-[277px] xl:border-b xl:text-1.5xl",
           {
             "align-middle": !multiline,
             "align-top": multiline,
@@ -29,7 +29,7 @@ export const RequestConfirmField: FC<Props> = ({
 
       <div
         className={clsx(
-          "break-all border-b border-black pb-3 pt-5 text-left font-noto-sans text-1.5xl font-medium leading-normal xl:table-cell xl:pt-0 whitespace-pre-wrap"
+          "leading-normal whitespace-pre-wrap break-all border-b border-black pb-3 pt-5 text-left font-noto-sans text-1.5xl font-medium xl:table-cell xl:pt-0"
         )}
       >
         {content}
