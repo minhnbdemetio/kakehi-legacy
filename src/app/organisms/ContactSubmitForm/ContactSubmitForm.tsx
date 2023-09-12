@@ -11,31 +11,37 @@ import { yupResolver } from "@hookform/resolvers/yup";
 import ContactForm from "../ContactForm";
 import ContactFormReview from "../ContactFormReview";
 
-import Yup from '../../yupGlobal';
-import { FORM_VALIATIONS } from "@/app/constants/forms";
+import Yup from "../../yupGlobal";
+import { formValidationMessage } from "@/app/constants/forms";
 
 const summitData = async () => {
   return new Promise((res) => setTimeout(res, 1000));
 };
 
-
-
-interface IProps { }
+interface IProps {}
 
 const schema = Yup.object().shape({
-  companyName: Yup.string().required(FORM_VALIATIONS.REQUIRED),
-  name: Yup.string().required(FORM_VALIATIONS.REQUIRED),
-  furigana: Yup.string().required(FORM_VALIATIONS.REQUIRED),
+  companyName: Yup.string().required(formValidationMessage.REQUIRED),
+  name: Yup.string().required(formValidationMessage.REQUIRED),
+  furigana: Yup.string().required(formValidationMessage.REQUIRED),
   email: Yup.string()
-    .required(FORM_VALIATIONS.REQUIRED)
-    .email(FORM_VALIATIONS.INVALID_EMAIL),
+    .required(formValidationMessage.REQUIRED)
+    .email(formValidationMessage.INVALID_EMAIL),
   confirmationEmail: Yup.string()
-    .required(FORM_VALIATIONS.REQUIRED)
-    .email(FORM_VALIATIONS.INVALID_EMAIL)
-    .equals([Yup.ref("email")], FORM_VALIATIONS.PRIVACY_ACCEPT_REQUIRED),
-  phone: (Yup.string() as any).required(FORM_VALIATIONS.REQUIRED).jpPhone(FORM_VALIATIONS.INVALID_PHONE),
-  content: Yup.string().required(FORM_VALIATIONS.REQUIRED),
-  acceptPolicy: Yup.boolean().oneOf([true], FORM_VALIATIONS.REQUIRED),
+    .required(formValidationMessage.REQUIRED)
+    .email(formValidationMessage.INVALID_EMAIL)
+    .equals(
+      [Yup.ref("email")],
+      formValidationMessage.INVALID_CONFIRMATION_EMAIL
+    ),
+  phone: (Yup.string() as any)
+    .required(formValidationMessage.REQUIRED)
+    .jpPhone(formValidationMessage.INVALID_PHONE),
+  content: Yup.string().required(formValidationMessage.REQUIRED),
+  acceptPolicy: Yup.boolean().oneOf(
+    [true],
+    formValidationMessage.CHECKBOX_REQUIRED
+  ),
 });
 
 const STAGES = {

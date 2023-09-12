@@ -1,6 +1,6 @@
 "use client";
 
-import { FORM_VALIATIONS } from "@/app/constants/forms";
+import { formValidationMessage } from "@/app/constants/forms";
 import { Button } from "../Button";
 import { Checkbox } from "../Checkbox";
 import { InfoCard } from "../InfoCard";
@@ -17,21 +17,24 @@ import { useSessionStorage } from "@/app/hooks/useSessionStorage";
 import { RequestFormData } from "@/app/types/RequestFormData";
 
 const schema = Yup.object().shape({
-  company: Yup.string().required(FORM_VALIATIONS.REQUIRED),
-  name: Yup.string().required(FORM_VALIATIONS.REQUIRED),
-  namePronunciation: Yup.string().required(FORM_VALIATIONS.REQUIRED),
+  company: Yup.string().required(formValidationMessage.REQUIRED),
+  name: Yup.string().required(formValidationMessage.REQUIRED),
+  namePronunciation: Yup.string().required(formValidationMessage.REQUIRED),
   email: Yup.string()
-    .required(FORM_VALIATIONS.REQUIRED)
-    .email(FORM_VALIATIONS.INVALID_EMAIL),
+    .required(formValidationMessage.REQUIRED)
+    .email(formValidationMessage.INVALID_EMAIL),
   emailConfirm: Yup.string()
-    .required(FORM_VALIATIONS.REQUIRED)
-    .email(FORM_VALIATIONS.INVALID_EMAIL)
-    .equals([Yup.ref("email")], FORM_VALIATIONS.PRIVACY_ACCEPT_REQUIRED),
+    .required(formValidationMessage.REQUIRED)
+    .email(formValidationMessage.INVALID_CONFIRMATION_EMAIL)
+    .equals([Yup.ref("email")], formValidationMessage.PRIVACY_ACCEPT_REQUIRED),
   phoneNumber: (Yup.string() as any)
-    .required(FORM_VALIATIONS.REQUIRED)
-    .jpPhone(FORM_VALIATIONS.INVALID_PHONE),
+    .required(formValidationMessage.REQUIRED)
+    .jpPhone(formValidationMessage.INVALID_PHONE),
   message: Yup.string(),
-  acceptPolicy: Yup.boolean().oneOf([true], FORM_VALIATIONS.REQUIRED),
+  acceptPolicy: Yup.boolean().oneOf(
+    [true],
+    formValidationMessage.CHECKBOX_REQUIRED
+  ),
 });
 
 export const RequestForm = () => {
@@ -178,8 +181,6 @@ export const RequestForm = () => {
               className="resize-none"
               label="お問い合わせ内容<br/>（任意）"
               rows={10}
-              {...field}
-              {...field}
               {...field}
               error={fieldState.error?.message}
             />

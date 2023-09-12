@@ -61,8 +61,7 @@ const ContactFormReview: React.FC<IProps> = ({
           <RequestConfirmField label="メールアドレス" content={data.email} />
           {!submitted && (
             <RequestConfirmField
-              label="メールアドレス
-（確認用）"
+              label={`メールアドレス\n（確認用）`}
               content={data.confirmationEmail}
             />
           )}
