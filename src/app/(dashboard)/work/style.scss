@@ -16,9 +16,14 @@
     .subtitle,
     .title {
       line-height: 40px;
+
+      p {
+        line-height: normal;
+      }
     }
     .subtitle {
-      transform: translate(0, 20px);
+      transform: translate(0, 35px);
+      line-height: normal;
     }
   }
 
