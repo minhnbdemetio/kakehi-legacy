@@ -47,7 +47,7 @@ const DescriptionSection: React.FC<IProps> = ({
       />
 
       <div
-        className={`description-section-content  relative mt-23.1/3  bg-transparent pb-14  xl:mt-36 xl:h-fit xl:pb-0 ${titlePosition}`}
+        className={`description-section-content relative mt-33 bg-transparent pb-16.2/3 xl:mt-36 xl:h-fit xl:pb-0 ${titlePosition}`}
       >
         <div
           className={`description-section-content-body  relative  z-20  h-full xl:flex xl:items-stretch `}
