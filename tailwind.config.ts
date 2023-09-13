@@ -30,6 +30,7 @@ const config: Config = {
       },
       lineHeight: {
         lg: "36px",
+        sectionTitle: "40px",
       },
       textColor: {
         primary: "#333333", // Primary text color

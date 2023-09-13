@@ -6,7 +6,7 @@ import BackgroundWithSlogan from "@/app/components/BackgroundWithSlogan";
 import CardDescription from "@/app/components/CardDescription";
 import DescriptionSection from "@/app/organisms/DescriptionSection";
 
-interface IProps {}
+interface IProps { }
 
 const PointScreen: React.FC<IProps> = () => {
   return (
@@ -38,8 +38,8 @@ const PointScreen: React.FC<IProps> = () => {
         </div>
       </div>
 
-      <div className="mt-18">
-        <ul>
+      <div className="mt-15">
+        <ul className="grid grid-cols-1 gap-15">
           {items.map((item) => (
             <li key={item.firstTitle}>
               <DescriptionSection

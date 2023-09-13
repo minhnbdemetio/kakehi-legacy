@@ -55,7 +55,7 @@ const PreviewImages: React.FC<IProps> = ({
         ))}
       </div>
 
-      <span className="tag absolute left-0 top-0 px-7 py-3 text-md leading-[normal] xl:text-[20px] xl:py-5  xl:px-[35px] ">
+      <span className="tag absolute left-0 top-0 px-7 py-3 text-md leading-[normal] xl:text-[20px] xl:py-5 xl:pb-[16px] xl:px-[35px] ">
         {mainImg.tag}
       </span>
     </div>
