@@ -11,8 +11,10 @@ import { useConfirmLeavingPrompt } from "@/app/hooks/useConfirmLeavingPrompt";
 import Yup from "@/app/yupGlobal";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useRouter } from "next/navigation";
-import React, { useCallback } from "react";
+import React, { useCallback, useEffect, useMemo } from "react";
 import { Controller, useForm } from "react-hook-form";
+import { useSessionStorage } from "@/app/hooks/useSessionStorage";
+import { RequestFormData } from "@/app/types/RequestFormData";
 
 const schema = Yup.object().shape({
   company: Yup.string().required(formValidationMessage.REQUIRED),
@@ -23,7 +25,7 @@ const schema = Yup.object().shape({
     .email(formValidationMessage.INVALID_EMAIL),
   emailConfirm: Yup.string()
     .required(formValidationMessage.REQUIRED)
-    .email(formValidationMessage.INVALID_CONFIRMATION_EMAIL)
+    .email(formValidationMessage.INVALID_EMAIL)
     .equals([Yup.ref("email")], formValidationMessage.PRIVACY_ACCEPT_REQUIRED),
   phoneNumber: (Yup.string() as any)
     .required(formValidationMessage.REQUIRED)
@@ -37,6 +39,11 @@ const schema = Yup.object().shape({
 
 export const RequestForm = () => {
   const router = useRouter();
+  const requestData = useSessionStorage(sessionStorageKey.REQUEST_DATA, null);
+  const parsedData = useMemo<RequestFormData | null>(
+    () => (requestData ? JSON.parse(requestData) : null),
+    [requestData]
+  );
 
   const form = useForm({
     defaultValues: {
@@ -52,14 +59,30 @@ export const RequestForm = () => {
     resolver: yupResolver(schema),
   });
 
-  const onSubmit = useCallback((data: any) => {
-    sessionStorage.setItem(
-      sessionStorageKey.REQUEST_DATA,
-      JSON.stringify(data)
-    );
+  const onSubmit = useCallback(
+    (data: any) => {
+      sessionStorage.setItem(
+        sessionStorageKey.REQUEST_DATA,
+        JSON.stringify(data)
+      );
 
-    router.push(Routes.REQUEST_CONFIRM);
-  }, []);
+      router.push(Routes.REQUEST_CONFIRM);
+    },
+    [router]
+  );
+
+  useEffect(() => {
+    form.reset({
+      company: parsedData?.company,
+      name: parsedData?.name,
+      namePronunciation: parsedData?.namePronunciation,
+      email: parsedData?.email,
+      emailConfirm: parsedData?.emailConfirm,
+      phoneNumber: parsedData?.phoneNumber,
+      message: parsedData?.message,
+      acceptPolicy: parsedData?.acceptPolicy,
+    });
+  }, [parsedData, form]);
 
   useConfirmLeavingPrompt(form.getValues());
 

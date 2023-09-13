@@ -6,4 +6,5 @@ export interface RequestFormData {
   emailConfirm: string;
   phoneNumber: string;
   message: string;
+  acceptPolicy: boolean;
 }
