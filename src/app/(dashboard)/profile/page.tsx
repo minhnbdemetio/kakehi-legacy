@@ -22,8 +22,8 @@ const Profile: React.FC<IProps> = () => {
               background="card-primary"
               label={item.label}
               description={item.description}
-              descriptionClassName="xl:text-xl xl:font-normal xl:leading-loose"
-              labelClassName="xl:text-xl xl:font-bold xl:leading-snug"
+              descriptionClassName="xl:!text-xl xl:!font-normal xl:!leading-loose"
+              labelClassName="xl:!text-xl xl:!font-bold xl:!leading-snug"
             />
           </li>
         ))}
