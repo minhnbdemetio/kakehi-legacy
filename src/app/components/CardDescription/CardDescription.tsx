@@ -45,7 +45,7 @@ const CardDescription: React.FC<IProps> = ({
         >
           <p
             className={CLSX({
-              ["leading-snug xl:leading-loose font-noto-sans text-lg font-bold xl:font-noto-sans"]:
+              ["leading-snug xl:leading-loose font-noto-sans text-md font-bold xl:font-noto-sans"]:
                 true,
               ["xl:text-lg"]: isSmall,
               ["xl:text-1.5xl"]: isMedium,
