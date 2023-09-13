@@ -4,11 +4,77 @@
     padding-left: 134px !important;
   }
 
+  .point-screen .description-section.right .title > div p {
+    text-align: left !important;
+    padding-left: 49px !important; 
+  }
+
   .point-screen .card-description-content {
     line-height: 32px !important;
+  }  
+
+  .point-screen .card-description-content {
+    font-size: 18px !important;
   }
 
   .point-screen .point-lists .card-description-content {
     text-align: center !important;
+  }
+
+  .point-screen
+    .list-points
+    .description-section.right
+    .description-section-content
+    ul {
+    padding-right: 0;
+    margin-right: 108px;
+    padding-left: 12px;
+  }
+
+  .point-screen
+    .list-points
+    .description-section.left
+    .description-section-content
+    ul {
+    padding-left: 0;
+    margin-right: 0;
+    margin-left: 108px;
+    padding-right: 12px;
+  }
+
+  .point-screen
+    .list-points
+    > ul
+    > li:nth-child(odd)
+    .description-section
+    .description-section-content
+    ul {
+    padding-left: 13px;
+  }
+
+  .point-screen .list-points .description-section .title > div {
+    top: 46px !important;
+  }
+
+  .point-screen .description-section-content .description-section-content-body {
+    transform: translate(0, -179px);
+  }
+
+  .point-screen
+    .list-points
+    > ul
+    > li
+    .description-section-content
+    .description-section-img-box {
+    height: 481px !important;
+  }
+
+  .point-screen .list-points .description-section-content ul {
+    padding-top: 0px;
+  }
+
+  .point-screen .list-points .description-section .background {
+    height: 400px !important;
+    top: -8px !important;
   }
 }
