@@ -8,7 +8,8 @@
     "start": "next start",
     "lint": "next lint",
     "export": "next build && next export",
-    "format": "prettier --write \"./**/*.{js,jsx,ts,tsx,scss,css}\""
+    "format": "prettier --write \"./**/*.{js,jsx,ts,tsx,scss,css}\"",
+    "prepare": "husky install"
   },
   "dependencies": {
     "@apollo/client": "^3.8.0-rc.2",
@@ -41,6 +42,12 @@
     "eslint-config-prettier": "^9.0.0",
     "prettier": "3.0.3",
     "prettier-plugin-tailwindcss": "0.5.3",
-    "sass": "^1.66.1"
+    "sass": "^1.66.1",
+    "husky": "^8.0.0"
+  },
+  "lint-staged": {
+    "**/*.{json,css,scss,js,jsx,ts,tsx}": [
+      "prettier --write"
+    ]
   }
 }
