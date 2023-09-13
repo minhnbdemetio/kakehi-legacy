@@ -6,12 +6,12 @@
 
   .point-screen .description-section.right .title > div p {
     text-align: left !important;
-    padding-left: 49px !important;
+    padding-left: 49px !important; 
   }
 
   .point-screen .card-description-content {
     line-height: 32px !important;
-  }
+  }  
 
   .point-screen .card-description-content {
     font-size: 18px !important;
