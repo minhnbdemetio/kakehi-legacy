@@ -13,6 +13,10 @@
     line-height: normal;
   }
 
+  .work-page-container .description-section .title p {
+    padding-left: 51px !important;
+  }
+
   .work-page-container
     .description-section-content
     .preview-images-container

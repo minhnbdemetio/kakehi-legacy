@@ -29,6 +29,7 @@ const config: Config = {
         "6xl": "128px", // 6x Large
       },
       lineHeight: {
+        md: "32px",
         lg: "36px",
         sectionTitle: "40px",
       },
