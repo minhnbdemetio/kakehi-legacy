@@ -22,10 +22,14 @@ const config: Config = {
         xl: "18px", // Extra Large
         "1.5xl": "21px",
         "2xl": "24px", // 2x Large
+        "2.5xl": "27px",
         "3xl": "32px", // 3x Large
         "4xl": "48px", // 4x Large
         "5xl": "64px", // 5x Large
         "6xl": "128px", // 6x Large
+      },
+      lineHeight: {
+        lg: "36px",
       },
       textColor: {
         primary: "#333333", // Primary text color
@@ -57,6 +61,7 @@ const config: Config = {
         "1": "3px",
         "2": "6px",
         "3": "9px",
+        "3.1/3": "10px",
         "4": "12px",
         "5": "15px",
         "6": "18px",
@@ -108,9 +113,6 @@ const config: Config = {
       serif: ["Merriweather", "serif"],
       "noto-sans": ["var(--font-noto-sans)"],
       "noto-sans-jp": ["var(--font-noto-sans-jp)"],
-    },
-    lineHeight: {
-      lg: "36px",
     },
   },
   plugins: [],

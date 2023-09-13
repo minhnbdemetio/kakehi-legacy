@@ -7,16 +7,20 @@ import { Routes } from "@/app/constants/routes";
 import { Button } from "@/app/components/Button";
 
 interface IProps {
-  form: UseFormReturn<{
-    confirmationEmail?: any;
-    phone?: any;
-    acceptPolicy?: boolean | undefined;
-    companyName: string;
-    name: string;
-    furigana: string;
-    email: string;
-    content: string;
-  }, any, undefined>
+  form: UseFormReturn<
+    {
+      confirmationEmail?: any;
+      phone?: any;
+      acceptPolicy?: boolean | undefined;
+      companyName: string;
+      name: string;
+      furigana: string;
+      email: string;
+      content: string;
+    },
+    any,
+    undefined
+  >;
 
   next: () => void;
 }
@@ -30,7 +34,9 @@ const ContactForm: React.FC<IProps> = ({ form, next }) => {
     <div className="contact-form">
       <form onSubmit={form.handleSubmit(handleSubmit)}>
         <div className="px-5 pt-16.2/3 xl:px-0">
-          <p className="text-center text-lg xl:whitespace-pre xl:text-xl ">{`以下のフォームに必要事項をご入力の上、お問い合わせください\n*は必須項目です`}</p>
+          <p className="text-center text-lg xl:whitespace-pre xl:text-xl ">
+            {`以下のフォームに必要事項をご入力の上、お問い合わせください。\n*は必須項目です。`}
+          </p>
         </div>
         <div className=" contact-form-body table w-full border-spacing-y-7 px-5 pb-5  pt-11 xl:px-14 xl:pb-16 xl:pl-33.1/3">
           <Controller
@@ -91,8 +97,7 @@ const ContactForm: React.FC<IProps> = ({ form, next }) => {
             render={({ field, fieldState }) => (
               <TextField
                 error={fieldState.error?.message}
-                label={`メールアドレス*
-（確認用)`}
+                label={`メールアドレス*\n（確認用)`}
                 name={field.name}
                 onChange={field.onChange}
                 value={field.value}

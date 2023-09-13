@@ -30,7 +30,7 @@ const PreviewImages: React.FC<IProps> = ({
   return (
     <div className="preview-images-container relative">
       <div
-        className="main-image mb-2 mt-10"
+        className="main-image mb-2 mt-10 xl:mb-3.1/3"
         style={{
           height: mainImgHeight,
           backgroundImage: `url(${mainImg.src})`,
@@ -38,7 +38,7 @@ const PreviewImages: React.FC<IProps> = ({
       ></div>
 
       <div
-        className="list-images grid grid-cols-5 gap-2"
+        className="list-images grid grid-cols-5 gap-2 xl:gap-3.1/3"
         style={{ height: miniImgHeight }}
       >
         {images.map((image) => (
@@ -49,13 +49,13 @@ const PreviewImages: React.FC<IProps> = ({
               backgroundImage: `url(${image.src})`,
             }}
             onMouseOver={changeMainImg}
-            dat-tag={image.tag}
+            data-tag={image.tag}
             data-src={image.src}
           />
         ))}
       </div>
 
-      <span className="tag absolute left-0 top-0 px-7 py-3 text-md">
+      <span className="tag absolute left-0 top-0 px-7 py-3 text-md leading-[normal] xl:text-[20px] xl:pt-5 xl:pb-[16px] xl:px-[35px] ">
         {mainImg.tag}
       </span>
     </div>
