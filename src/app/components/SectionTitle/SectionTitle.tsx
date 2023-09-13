@@ -23,14 +23,14 @@ const SectionTitle: React.FC<IProps> = ({
           true,
       })}
     >
-      <p className="subtitle leading-snug relative text-4xl font-medium xl:text-6xl">
+      <p className="subtitle leading-[normal] relative text-4xl font-medium xl:text-6xl">
         {subtitle}
       </p>
       <div className="title">
         <div>
           <p
             className={CLSX(
-              "leading-10 xl:pt-18s z-20 mx-7  whitespace-normal text-2xl font-bold xl:mx-0 xl:pl-16.2/3 xl:text-3xl",
+              "leading-sectionTitle xl:pt-18s z-20 mx-7  whitespace-normal xl:leading-[normal] text-2xl font-bold xl:mx-0 xl:pl-16.2/3 xl:text-3xl",
               {
                 [`text-right xl:text-left`]: position === "right",
                 [`text-left xl:pl-46.2/3 xl:text-left`]: position === "left",
@@ -41,7 +41,7 @@ const SectionTitle: React.FC<IProps> = ({
           </p>
           <p
             className={CLSX(
-              "leading-10 text-2.5xl z-20 mx-7 whitespace-normal font-bold xl:mx-0 xl:pl-16.2/3 xl:text-[40px]",
+              "leading-sectionTitle  text-2.5xl z-20 mx-7 whitespace-normal font-bold xl:mx-0 xl:leading-[normal] xl:pl-16.2/3 xl:text-[40px]",
               {
                 [`text-right xl:text-left xl:text-3xl`]: position === "right",
                 [`text-left xl:pl-46.2/3 xl:text-left `]: position === "left",

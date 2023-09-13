@@ -29,7 +29,9 @@ const config: Config = {
         "6xl": "128px", // 6x Large
       },
       lineHeight: {
+        md: "32px",
         lg: "36px",
+        sectionTitle: "40px",
       },
       textColor: {
         primary: "#333333", // Primary text color
