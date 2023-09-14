@@ -10,7 +10,7 @@ const TopPageInformation: React.FC<IProps> = () => {
   return (
     <BackgroundSection 
       className="toppage-information-background"
-      height={0}
+      height={1662}
       src="/steel-self-background.jpg"
     >
       <div className="toppage-information-container">
