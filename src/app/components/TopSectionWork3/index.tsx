@@ -14,7 +14,7 @@ export default function TopSectionWork3() {
         <span className="text-2.5xl xl:text-[40px]">歴史と実績</span>
       </div>
 
-      <div className="flex w-full flex-col gap-[50px] bg-card-background-primary pb-[41px] xl:hidden">
+      <div className="flex w-full flex-col gap-[50px] bg-card-background-primary pb-[50px] xl:hidden">
         <div className="relative h-[800px] w-full">
           <Image
             src="/history-img.jpg"
@@ -34,7 +34,7 @@ export default function TopSectionWork3() {
         </div>
       </div>
 
-      <div className="absolute left-0 top-[108px] hidden xl:block">
+      <div className="absolute left-0 top-[150px] hidden xl:block">
         <div className="relative h-[481px] w-[50vw]">
           <Image
             src="/history-img.jpg"
@@ -46,7 +46,7 @@ export default function TopSectionWork3() {
       </div>
 
       <div className="hidden pt-[283px] xl:block">
-        <div className="ml-[10vw] bg-card-background-primary pb-[191px] pr-[105px] pt-[109px]">
+        <div className="ml-[10vw] bg-card-background-primary pb-[191px] pr-[107px] pt-[109px]">
           <div className="ml-[40vw] flex flex-col gap-[14px] pl-[14px]">
             <div className="flex flex-row">
               <div className="w-full bg-white px-[52px] py-[66.36px] font-noto-sans-jp text-xl leading-lg">
