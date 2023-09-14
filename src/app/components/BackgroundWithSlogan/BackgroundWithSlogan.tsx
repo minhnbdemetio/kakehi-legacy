@@ -1,16 +1,22 @@
-import React from "react";
+import React, { ReactNode } from "react";
 import "./style.scss";
 import "./responsive.css";
+import clsx from "clsx";
 
 interface IProps {
   src: string;
-  children: any;
+  children: ReactNode;
+  className?: string;
 }
 
-const BackgroundWithSlogan: React.FC<IProps> = ({ src, children }) => {
+const BackgroundWithSlogan: React.FC<IProps> = ({
+  src,
+  children,
+  className,
+}) => {
   return (
     <div
-      className="background-wrapper h-[749px] xl:h-[800px]"
+      className={clsx("background-wrapper h-[749px] xl:h-[800px]", className)}
       style={{ backgroundImage: `url(${src})` }}
     >
       <div>{children}</div>
