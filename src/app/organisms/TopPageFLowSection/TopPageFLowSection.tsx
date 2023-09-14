@@ -1,5 +1,3 @@
-import CardDescription from "@/app/components/CardDescription";
-import FlowList from "@/app/components/FlowList";
 import React from "react";
 import items from "./items";
 import clsx from "clsx";
