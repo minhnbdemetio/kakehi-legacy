@@ -9,7 +9,7 @@ interface IProps {}
 const ListFeatures: React.FC<IProps> = () => {
   return (
     <div className="featuring mx-[20px] p-[50px] xl:mx-auto xl:max-w-[1000px] xl:px-[75px] xl:pb-[64px] xl:pt-[90px]">
-      <div className="xl:text-2.5xl mb-[70px] border-b-2 border-black pb-[8px] font-noto-sans-jp text-1.5xl font-bold mx-auto xl:mb-[100px] w-max xl:rounded-[50px] xl:border-2 xl:px-[63px] xl:pt-[10px]">
+      <div className="mx-auto mb-[70px] w-max border-b-2 border-black pb-[8px] font-noto-sans-jp text-1.5xl font-bold xl:mb-[100px] xl:rounded-[50px] xl:border-2 xl:px-[63px] xl:pt-[10px] xl:text-2.5xl">
         システム建築に適した建物
       </div>
 
@@ -25,7 +25,7 @@ const ListFeatures: React.FC<IProps> = () => {
               </div>
               <div className="feature-item-description">
                 <p
-                  className="description-label text-center"
+                  className="pb-[22px] pt-[23px] text-center font-noto-sans-jp text-1.5xl font-bold text-white"
                   style={{ background: "#BE95A1" }}
                 >
                   {item.label}

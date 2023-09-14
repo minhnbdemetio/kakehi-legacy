@@ -151,7 +151,7 @@ export default function TopSectionWork1() {
             <div className="flex flex-row">
               <div className="bg-pink-custom-2 relative flex min-w-[150px] items-center justify-center px-[15px] py-[57px] font-noto-sans-jp text-1.5xl font-bold text-white">
                 <Image
-                  src="/background/advantage-3.png"
+                  src="/background/advantage-4.png"
                   alt="advantages"
                   layout="fill"
                   objectFit="cover"
