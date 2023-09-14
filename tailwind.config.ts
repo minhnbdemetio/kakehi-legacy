@@ -12,6 +12,13 @@ const config: Config = {
         "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
         "gradient-conic":
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+        about:
+          "linear-gradient(180deg, #FFF 10%, rgba(255, 255, 255, 0.25) 150%), url('/steel-self-background.jpg');",
+        "list-feature":
+          "linear-gradient(180deg, rgba(242, 242, 242, 0.00) 0%, #F2F2F2 74.13%);",
+      },
+      backgroundSize: {
+        "1000px": "1000px",
       },
       fontSize: {
         xs: "8px", // Extra Small
@@ -40,10 +47,15 @@ const config: Config = {
         danger: "#e53e3e", // Danger text color
         gray: "#718096", // Gray text color
         custom: "#ff9900", // Custom text color
+        section: "rgba(137, 33, 64, 0.10)",
       },
       colors: {
         "hover-primary": "#892140",
         "card-background-primary": "#F2F2F2",
+        "hover-nav": "#C39AA6",
+        "color-custom": "rgba(137, 33, 64, 0.60)",
+        "pink-custom": "#BE95A1",
+        "pink-custom-2": "#C89EAB",
       },
       screens: {
         sm: "576px", // Small screens and up
@@ -116,6 +128,11 @@ const config: Config = {
       serif: ["Merriweather", "serif"],
       "noto-sans": ["var(--font-noto-sans)"],
       "noto-sans-jp": ["var(--font-noto-sans-jp)"],
+    },
+    lineHeight: {
+      lg: "36px",
+      xl: "32px",
+      sm: "27px",
     },
   },
   plugins: [],
