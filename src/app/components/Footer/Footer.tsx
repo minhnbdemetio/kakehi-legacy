@@ -23,7 +23,7 @@ const Footer: React.FC<IProps> = ({ showPreFooter = true }) => {
                 "linear-gradient(180deg, #F2F2F2 29.20%, rgba(206, 236, 245, 0.00) 100%)",
             }}
           >
-            <div className="px-7 pt-41.2/3 ">
+            <div className="px-7 pt-[121px]">
               <p className="greeting whitespace-pre-wrap font-noto-sans text-[18px] font-normal leading-lg xl:w-full xl:text-center">{`工場・倉庫建設に関するあらゆるお悩みに対応いたします。\n資料請求・お見積りはフォームより、お気軽にお問い合わせください。`}</p>
             </div>
 
