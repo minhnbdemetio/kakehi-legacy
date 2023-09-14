@@ -59,7 +59,7 @@ const FloatingButtons: React.FC<IProps> = () => {
               className="btn-icon inline"
               alt="Email icon"
             />
-            <p className="font-noto-sans-jp text-secondary">お問い合わせ</p>
+            <p className="font-noto-sans text-secondary">お問い合わせ</p>
           </a>
           <a
             className="document-button flex w-full flex-col items-center justify-around pb-[5px] pt-[8px]"
@@ -70,7 +70,7 @@ const FloatingButtons: React.FC<IProps> = () => {
               className="btn-icon inline"
               alt="Document icon"
             />
-            <p className="font-noto-sans-jp text-secondary">資料請求</p>
+            <p className="font-noto-sans text-secondary">資料請求</p>
           </a>
         </div>
       </div>
