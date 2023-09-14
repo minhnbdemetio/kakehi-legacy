@@ -51,7 +51,7 @@ const FloatingButtons: React.FC<IProps> = () => {
         </button>
         <div className="floating-buttons grid w-full grid-cols-2">
           <a
-            className="email-button flex w-full flex-col items-center justify-around pb-[5px] pt-[11px]"
+            className="email-button flex w-full flex-col items-center justify-around pb-[5px] pt-[11px] xl:mb-[20px]"
             href={Routes.CONTACT}
           >
             <img
