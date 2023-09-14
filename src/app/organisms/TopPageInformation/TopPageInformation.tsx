@@ -1,30 +1,34 @@
-import PageTitle from "@/app/components/PageTitle";
 import React from "react";
 import "./style.scss";
 import BackgroundSection from "@/app/components/BackgroundSection";
 import ListFeatures from "../ListFeatures";
-import AspectsOfCompany from "../AspectsOfCompany";
 import "./responsive.css";
 
 interface IProps {}
 
 const TopPageInformation: React.FC<IProps> = () => {
   return (
-    <BackgroundSection
+    <BackgroundSection 
       className="toppage-information-background"
-      height={1662}
+      height={0}
       src="/steel-self-background.jpg"
     >
       <div className="toppage-information-container">
-        <PageTitle title="システム建築とは" subTitle="SYSTEM" />
+        <div className="flex flex-col  items-center justify-center">
+          <div className="border-color-custom mb-[5px] w-max border-b-2 px-[22px] pb-[3px] text-center font-noto-sans text-xl uppercase text-primary xl:px-0">
+            ABOUT
+          </div>
 
-        <p className="description mt-30 text-xl font-medium xl:mt-14">
-          システム建築とは、規格化された部材と建築工法を用いた建物であり、在来工法より安く・早く建てることが可能です。規模により部材の寸法や形状、配置などがあらかじめ決められているため、短い設計期間・工事期間で建設できます。
-        </p>
+          <div className="mb-[90px] px-[22px] font-noto-sans-jp text-2xl font-bold xl:mb-[40px] xl:px-0 xl:text-3xl">
+            システム建築とは
+          </div>
+
+          <div className="mb-[100px] px-[22px] font-noto-sans-jp text-xl font-medium leading-lg xl:mb-[45px] xl:w-[800px] xl:px-0">
+            システム建築は、規格化された部材と工法を用いた建築手法です。在来工法に比べて、設計と工事の期間が短く、コストも抑制できます。規模に応じた部材の寸法、形状などの規格化により、品質の安定性も確保されており、高い信頼性を誇ります。
+          </div>
+        </div>
 
         <ListFeatures />
-
-        <AspectsOfCompany />
       </div>
     </BackgroundSection>
   );
