@@ -8,6 +8,7 @@ import "./responsive.css";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Image from "next/image";
 
 interface IProps {
   projects: {
@@ -20,6 +21,7 @@ interface IProps {
 }
 
 const ProjectListCaroursel: React.FC<IProps> = ({ projects }) => {
+  console.log("🚀 ~ projects:", projects);
   const ref = useRef<{ slickNext: () => void; slickPrev: () => void } | null>(
     null
   );
@@ -51,21 +53,38 @@ const ProjectListCaroursel: React.FC<IProps> = ({ projects }) => {
           dots={false}
           infinite={true}
           speed={500}
-          slidesToScroll={1}
-          centerMode={false}
+          slidesToScroll={3}
           arrows={false}
           ref={ref as any}
-          variableWidth={true}
+          variableWidth={false}
+          slidesToShow={3}
+          responsive={[
+            {
+              breakpoint: 1024,
+              settings: {
+                infinite: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+              },
+            },
+          ]}
         >
           {projects.map((project, index) => (
-            <div key={index} className="max-w-[260px] px-3 xl:px-0 xl:max-w-[350px] xl:pr-[50px]">
-              <ProjectCard
-                tag={project.tag}
-                name={project.name}
-                acreage={project.acreage}
-                structure={project.structure}
-                thumbnail={project.thumbnail}
-              />
+            <div key={index} className="flex w-[250px] flex-col">
+              <div className="relative w-full">
+                <img
+                  className="project-card-image aspect-250/167 w-full object-cover"
+                  src={project.thumbnail}
+                />
+              </div>
+              <div className="bg-card-background-primary px-[20.83px] py-[25px]">
+                <div className="mb-[20px] border-b-2 border-black pb-[10.33px] font-noto-sans-jp text-lg font-bold text-black">
+                  株式会社さんれいフーズ
+                </div>
+                <div className="bg-black px-[24px] py-[6px] font-noto-sans-jp text-[13px] text-white">
+                  構造
+                </div>
+              </div>
             </div>
           ))}
         </Slider>

@@ -134,6 +134,9 @@ const config: Config = {
       xl: "32px",
       sm: "27px",
     },
+    aspectRatio: {
+      "250/167": "250/167",
+    },
   },
   plugins: [],
 };
