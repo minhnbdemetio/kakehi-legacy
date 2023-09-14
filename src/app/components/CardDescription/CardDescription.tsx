@@ -11,6 +11,8 @@ interface IProps {
   size?: "small" | "medium";
   descriptionBold?: boolean;
   descriptionAlign?: "left" | "center" | "right";
+  labelClassName?: string;
+  descriptionClassName?: string;
 }
 
 const CardDescription: React.FC<IProps> = ({
@@ -21,6 +23,8 @@ const CardDescription: React.FC<IProps> = ({
   size = "medium",
   descriptionBold = false,
   labelBackgroundImg,
+  labelClassName,
+  descriptionClassName,
 }) => {
   const isSmall = size === "small";
   const isMedium = size === "medium";
@@ -36,7 +40,9 @@ const CardDescription: React.FC<IProps> = ({
     >
       {!!label && (
         <div
-          className={CLSX({ ["card-description-label  text-center"]: true })}
+          className={CLSX({
+            ["card-description-label text-center"]: true,
+          })}
           style={{
             backgroundImage: !!labelBackgroundImg
               ? `url(${labelBackgroundImg})`
@@ -44,8 +50,8 @@ const CardDescription: React.FC<IProps> = ({
           }}
         >
           <p
-            className={CLSX({
-              ["leading-[normal] xl:leading-md font-noto-sans text-lg font-bold xl:font-noto-sans"]:
+            className={CLSX(labelClassName, {
+              ["xl:leading-md font-noto-sans text-lg font-bold leading-[normal] xl:font-noto-sans"]:
                 true,
               ["xl:text-lg"]: isSmall,
               ["xl:text-1.5xl"]: isMedium,
@@ -57,14 +63,15 @@ const CardDescription: React.FC<IProps> = ({
       )}
       <p
         className={CLSX(
-          "card-description-content leading-[normal] flex flex-auto items-center justify-start px-9 py-5 text-[15px]",
-          "xl:leading-8 xl:justify-center xl:text-1.5xl xl:font-medium",
+          "card-description-content flex flex-auto items-center justify-start px-9 py-5 text-[15px] leading-[normal]",
+          "xl:justify-center xl:text-1.5xl xl:font-medium xl:leading-8",
           {
             "font-bold": descriptionBold,
             [`text-${descriptionAlign}`]: true,
             "xl:px-22": descriptionOnly,
             "xl:py-17.1/3": descriptionOnly,
-          }
+          },
+          descriptionClassName
         )}
       >
         {description}
