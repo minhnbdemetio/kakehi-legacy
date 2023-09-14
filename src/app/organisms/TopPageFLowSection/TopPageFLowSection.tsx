@@ -1,5 +1,3 @@
-import CardDescription from "@/app/components/CardDescription";
-import FlowList from "@/app/components/FlowList";
 import React from "react";
 import items from "./items";
 import clsx from "clsx";
@@ -10,11 +8,11 @@ const TopPageFLowSection: React.FC<IProps> = () => {
   return (
     <div>
       <div className="mt-[150px] flex flex-col items-center justify-center xl:mt-[100px]">
-        <div className="mb-[5px] w-max border-b-2 border-color-custom pb-[3px] text-center font-noto-sans text-xl uppercase text-primary xl:px-0">
+        <div className="mb-[5px] w-max border-b-2 border-color-custom pb-[3px] text-center font-noto-sans text-xl uppercase leading-lg text-primary xl:px-0">
           FLOW
         </div>
 
-        <div className="mb-[51px] font-noto-sans-jp text-2xl font-bold xl:mb-[79px] xl:px-0 xl:text-3xl">
+        <div className="mb-[51px] font-noto-sans text-2xl font-bold xl:mb-[79px] xl:px-0 xl:text-3xl">
           お問い合せからの流れ
         </div>
       </div>
