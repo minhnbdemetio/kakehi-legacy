@@ -89,7 +89,7 @@ export default function TopSectionWork1() {
         </div>
       </div>
 
-      <div className="absolute left-0 top-[108px] hidden xl:block">
+      <div className="absolute left-0 bottom-[161px] hidden xl:block">
         <div className="relative h-[964px] w-[50vw]">
           <Image
             src="/advantages.jpg"

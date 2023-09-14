@@ -3,10 +3,14 @@
   flex-shrink: 0;
   position: relative;
   background-repeat: no-repeat;
-  background-position: top;
-
+  background-position-x: center;
   margin: 0;
   padding: 0;
+  background-size: cover;
+  background-position-y: top;
+  @media screen and (max-width: 1024px) {
+    background-size: unset;
+  }
 
   div {
     position: absolute;
