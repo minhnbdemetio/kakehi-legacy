@@ -16,10 +16,7 @@ const BackgroundSection: React.FC<IProps> = ({
   className,
 }) => {
   return (
-    <div
-      className={`relative ${className}-container`}
-      style={{ minHeight: height }}
-    >
+    <div className={`relative ${className}-container min-h-[${height}]`}>
       <div
         className={`background-section-container absolute left-0 top-0 w-full ${className}`}
         style={{ backgroundImage: `url(${src})`, height }}

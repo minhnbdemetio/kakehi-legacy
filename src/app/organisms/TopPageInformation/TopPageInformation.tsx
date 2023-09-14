@@ -1,6 +1,6 @@
 import React from "react";
 import "./style.scss";
-import BackgroundSection from "@/app/components/BackgroundSection";
+import BackgroundSection from "@/app/components/BackgroundSectionCopy";
 import ListFeatures from "../ListFeatures";
 import "./responsive.css";
 
@@ -8,14 +8,14 @@ interface IProps {}
 
 const TopPageInformation: React.FC<IProps> = () => {
   return (
-    <BackgroundSection 
+    <BackgroundSection
       className="toppage-information-background"
       height={1662}
       src="/steel-self-background.jpg"
     >
       <div className="toppage-information-container">
         <div className="flex flex-col  items-center justify-center">
-          <div className="border-color-custom mb-[5px] w-max border-b-2 px-[22px] pb-[3px] text-center font-noto-sans text-xl uppercase text-primary xl:px-0">
+          <div className="mb-[5px] w-max border-b-2 border-color-custom px-[22px] pb-[3px] text-center font-noto-sans text-xl uppercase text-primary xl:px-0">
             ABOUT
           </div>
 
