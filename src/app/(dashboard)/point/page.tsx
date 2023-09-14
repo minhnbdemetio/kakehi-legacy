@@ -6,14 +6,14 @@ import BackgroundWithSlogan from "@/app/components/BackgroundWithSlogan";
 import CardDescription from "@/app/components/CardDescription";
 import DescriptionSection from "@/app/organisms/DescriptionSection";
 
-interface IProps { }
+interface IProps {}
 
 const PointScreen: React.FC<IProps> = () => {
   return (
     <div className="point-screen xl:mb-33.1/3">
       <div className="page-header mt-7 xl:mt-0">
         <BackgroundWithSlogan src="/points/point-1.jpg">
-          <h1 className="whitespace-pre text-center text-[40px] font-bold leading-[normal]">{`工場・倉庫建築のポイント`}</h1>
+          <h1 className="whitespace-pre text-center text-[40px] font-bold leading-[normal] xl:whitespace-nowrap">{`工場・倉庫\n建築のポイント`}</h1>
         </BackgroundWithSlogan>
 
         <div className="mx-7 mt-33 xl:mx-pc-container xl:mt-16.2/3">
