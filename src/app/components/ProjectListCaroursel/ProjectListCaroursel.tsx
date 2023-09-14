@@ -1,14 +1,12 @@
 "use client";
 
-import React, { useCallback, useRef } from "react";
+import React from "react";
 import Slider from "react-slick";
-import ProjectCard from "../ProjectCard/ProjectCard";
 import "./style.scss";
 import "./responsive.css";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Image from "next/image";
 
 interface IProps {
   projects: {
@@ -21,61 +19,39 @@ interface IProps {
 }
 
 const ProjectListCaroursel: React.FC<IProps> = ({ projects }) => {
-  console.log("🚀 ~ projects:", projects);
-  const ref = useRef<{ slickNext: () => void; slickPrev: () => void } | null>(
-    null
-  );
-
-  const next = useCallback(() => {
-    if (ref.current) {
-      ref.current.slickNext();
-    }
-  }, []);
-
-  const prev = useCallback(() => {
-    if (ref.current) {
-      ref.current.slickPrev();
-    }
-  }, []);
+  const settings = {
+    dots: false,
+    infinite: projects.length >= 3,
+    speed: 500,
+    slidesToShow: 3,
+    slidesToScroll: 3,
+    arrow: true,
+    responsive: [
+      {
+        breakpoint: 1024,
+        settings: {
+          infinite: true,
+          slidesToShow: 1,
+          slidesToScroll: 1,
+        },
+      },
+    ],
+  };
 
   return (
     <div className="project-list-carousel-container">
-      <div>
-        <button
-          className="project-list-carousel-naviate-btn left "
-          onClick={prev}
-        >
-          <img alt="Nagivate Prev" src="/icons/navigate-previous.png" />
-        </button>
-      </div>
-      <div className="project-list-carousel mx-23 ">
-        <Slider
-          dots={false}
-          infinite={true}
-          speed={500}
-          slidesToScroll={3}
-          arrows={false}
-          ref={ref as any}
-          variableWidth={false}
-          slidesToShow={3}
-          // responsive={[
-          //   {
-          //     breakpoint: 1024,
-          //     settings: {
-          //       infinite: true,
-          //       slidesToShow: 1,
-          //       slidesToScroll: 1,
-          //     },
-          //   },
-          // ]}
-        >
+      <div className="project-list-carousel px-[71px] xl:px-0">
+        <Slider {...settings}>
           {projects.map((project, index) => (
-            <div key={index} className="flex w-[250px] flex-col">
+            <div key={index} className="flex w-[250px] flex-col xl:px-[24.5px]">
               <div className="relative w-full">
                 <img
                   className="project-card-image aspect-250/167 w-full object-cover"
                   src={project.thumbnail}
                 />
+                <div className="absolute left-0 top-0 bg-hover-primary pb-[7px] pl-[24px] pr-[20px] pt-[6px] font-noto-sans-jp text-[15px] font-normal text-white">
+                  {project.tag}
+                </div>
               </div>
               <div className="bg-card-background-primary px-[20.83px] py-[25px]">
                 <div className="mb-[20px] border-b-2 border-black pb-[10.33px] font-noto-sans-jp text-lg font-bold text-black">
@@ -99,13 +75,6 @@ const ProjectListCaroursel: React.FC<IProps> = ({ projects }) => {
           ))}
         </Slider>
       </div>
-
-      <button
-        className="project-list-carousel-naviate-btn right"
-        onClick={next}
-      >
-        <img alt="Nagivate next" src="/icons/navigate-next.png" />
-      </button>
     </div>
   );
 };

@@ -51,7 +51,7 @@ const FloatingButtons: React.FC<IProps> = () => {
         </button>
         <div className="floating-buttons grid w-full grid-cols-2">
           <a
-            className="email-button flex w-full flex-col items-center justify-around xl:mb-12"
+            className="email-button flex w-full flex-col items-center justify-around pb-[5px] pt-[11px]"
             href={Routes.CONTACT}
           >
             <img
@@ -59,10 +59,10 @@ const FloatingButtons: React.FC<IProps> = () => {
               className="btn-icon inline"
               alt="Email icon"
             />
-            <p className="text-secondary">お問い合わせ</p>
+            <p className="font-noto-sans-jp text-secondary">お問い合わせ</p>
           </a>
           <a
-            className="document-button flex w-full flex-col items-center justify-around"
+            className="document-button flex w-full flex-col items-center justify-around pb-[5px] pt-[8px]"
             href={Routes.REQUEST}
           >
             <img
@@ -70,7 +70,7 @@ const FloatingButtons: React.FC<IProps> = () => {
               className="btn-icon inline"
               alt="Document icon"
             />
-            <p className="text-secondary">資料請求</p>
+            <p className="font-noto-sans-jp text-secondary">資料請求</p>
           </a>
         </div>
       </div>
