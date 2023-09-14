@@ -17,7 +17,7 @@ const TopPageFLowSection: React.FC<IProps> = () => {
         </div>
       </div>
 
-      <div className="mb-[120px] flex w-full flex-col gap-[14px] px-[20px] xl:mx-auto xl:mb-[110px] xl:w-[994px]">
+      <div className="mb-[120px] flex w-full flex-col gap-[14px] px-[20px] xl:mx-auto xl:mb-[100px] xl:w-[994px]">
         {items.map((item, index) => (
           <div className="relative flex" key={item.label}>
             <div
