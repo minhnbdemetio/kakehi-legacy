@@ -58,16 +58,16 @@ const ProjectListCaroursel: React.FC<IProps> = ({ projects }) => {
           ref={ref as any}
           variableWidth={false}
           slidesToShow={3}
-          responsive={[
-            {
-              breakpoint: 1024,
-              settings: {
-                infinite: true,
-                slidesToShow: 1,
-                slidesToScroll: 1,
-              },
-            },
-          ]}
+          // responsive={[
+          //   {
+          //     breakpoint: 1024,
+          //     settings: {
+          //       infinite: true,
+          //       slidesToShow: 1,
+          //       slidesToScroll: 1,
+          //     },
+          //   },
+          // ]}
         >
           {projects.map((project, index) => (
             <div key={index} className="flex w-[250px] flex-col">
@@ -79,10 +79,20 @@ const ProjectListCaroursel: React.FC<IProps> = ({ projects }) => {
               </div>
               <div className="bg-card-background-primary px-[20.83px] py-[25px]">
                 <div className="mb-[20px] border-b-2 border-black pb-[10.33px] font-noto-sans-jp text-lg font-bold text-black">
-                  株式会社さんれいフーズ
+                  {project.name}
                 </div>
-                <div className="bg-black px-[24px] py-[6px] font-noto-sans-jp text-[13px] text-white">
-                  構造
+                <div className="flex items-center gap-[16.67px]">
+                  <div className="flex w-[75px] items-center justify-center bg-black px-[10.83px] py-[6.67px] font-noto-sans-jp text-[13px] text-white">
+                    構造
+                  </div>
+                  <div>{project.structure}</div>
+                </div>
+
+                <div className="mt-[19.67px] flex items-center gap-[16.67px]">
+                  <div className="flex w-[75px] items-center justify-center bg-black px-[10.83px] py-[6.67px] font-noto-sans-jp text-[13px] text-white">
+                    延床面積
+                  </div>
+                  <div>{project.acreage}</div>
                 </div>
               </div>
             </div>

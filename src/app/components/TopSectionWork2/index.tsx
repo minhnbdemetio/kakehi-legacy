@@ -93,7 +93,7 @@ export default function TopSectionWork2() {
         </div>
       </div>
 
-      <div className="absolute right-0 top-[108px] hidden xl:block">
+      <div className="absolute right-0 bottom-[161px] hidden xl:block">
         <div className="relative h-[960px] w-[50vw]">
           <Image
             src="/strength-image.jpg"
@@ -105,7 +105,7 @@ export default function TopSectionWork2() {
       </div>
 
       <div className="hidden pt-[283px] xl:block">
-        <div className="mr-[10vw] bg-card-background-primary pb-[175px] pl-[107px] pt-[132px]">
+        <div className="mr-[10vw] bg-card-background-primary pb-[161px] pl-[107px] pt-[132px]">
           <div className="mr-[40vw] flex flex-col gap-[14px] pr-[14px]">
             <div className="flex flex-row">
               <div className="bg-pink-custom-2 relative flex min-w-[150px] items-center justify-center px-[12px] py-[60px] font-noto-sans-jp text-1.5xl font-bold text-white">
