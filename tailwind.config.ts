@@ -24,12 +24,15 @@ const config: Config = {
         "2xl": "24px", // 2x Large
         "2.5xl": "27px",
         "3xl": "32px", // 3x Large
+        "3.5xl": "40px",
         "4xl": "48px", // 4x Large
         "5xl": "64px", // 5x Large
         "6xl": "128px", // 6x Large
       },
       lineHeight: {
+        md: "32px",
         lg: "36px",
+        sectionTitle: "40px",
       },
       textColor: {
         primary: "#333333", // Primary text color
@@ -104,7 +107,7 @@ const config: Config = {
         "50": "150px",
         "53": "162px",
         "66.2/3": "200px",
-        "pc-container": "220px",
+        "pc-container": "223px",
       },
     },
 

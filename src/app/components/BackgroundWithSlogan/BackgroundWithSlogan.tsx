@@ -10,7 +10,7 @@ interface IProps {
 const BackgroundWithSlogan: React.FC<IProps> = ({ src, children }) => {
   return (
     <div
-      className="background-wrapper"
+      className="background-wrapper h-[800px] xl:h-[544px]"
       style={{ backgroundImage: `url(${src})` }}
     >
       <div>{children}</div>
