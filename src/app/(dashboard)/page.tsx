@@ -24,9 +24,7 @@ export default function Home() {
 
       <TopPageWorkSection />
 
-      <div className="mt-50">
-        <TopPageFLowSection />
-      </div>
+      <TopPageFLowSection />
     </>
   );
 }
