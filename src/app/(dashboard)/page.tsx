@@ -2,8 +2,9 @@ import BackgroundWithSlogan from "../components/BackgroundWithSlogan";
 import TopPageInformation from "../organisms/TopPageInformation";
 import TopPageWorkSection from "../organisms/TopPageWorkSection";
 import TopPageFLowSection from "../organisms/TopPageFLowSection/TopPageFLowSection";
-import { Layout } from "../components/Layout";
-import { FC, PropsWithChildren, ReactElement, ReactNode } from "react";
+import TopSectionWork1 from "../components/TopSectionWork1";
+import TopSectionWork2 from "../components/TopSectionWork2";
+import TopSectionWork3 from "../components/TopSectionWork3";
 
 export default function Home() {
   return (
@@ -14,6 +15,12 @@ export default function Home() {
       </BackgroundWithSlogan>
 
       <TopPageInformation />
+
+      <TopSectionWork1 />
+
+      <TopSectionWork2 />
+
+      <TopSectionWork3 />
 
       <TopPageWorkSection />
 

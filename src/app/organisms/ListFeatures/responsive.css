@@ -3,8 +3,12 @@
     margin: unset !important;
   }
 
+  .featuring .feature-img img {
+    width: 230px;
+    margin: auto;
+  }
+
   .featuring .feature-img {
-    height: 231px;
     display: flex;
     align-items: center;
     justify-content: center;

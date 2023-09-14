@@ -8,19 +8,22 @@ interface IProps {}
 
 const ListFeatures: React.FC<IProps> = () => {
   return (
-    <div className="featuring mx-7 mt-15 pb-16.2/3 xl:mx-auto xl:w-fit xl:px-25 xl:pb-21 ">
-      <div className="featuring-title">
-        <PageTitle title="システム建築に適した建物" divider />
+    <div className="featuring mx-[20px] p-[50px] xl:mx-auto xl:max-w-[1000px] xl:px-[75px] xl:pb-[64px] xl:pt-[90px]">
+      <div className="xl:text-2.5xl mb-[70px] border-b-2 border-black pb-[8px] font-noto-sans-jp text-1.5xl font-bold mx-auto xl:mb-[100px] w-max xl:rounded-[50px] xl:border-2 xl:px-[63px] xl:pt-[10px]">
+        システム建築に適した建物
       </div>
 
-      <ul className="list-feature flex flex-col xl:mt-8 xl:flex-row xl:justify-center xl:gap-16.2/3">
+      <ul className="list-feature flex flex-col xl:flex-row xl:justify-center xl:gap-16.2/3">
         {items.map((item) => {
           return (
-            <li key={item.img} className="feature-item pb-24 xl:pb-0 ">
-              <div className="feature-img">
+            <li
+              key={item.img}
+              className="feature-item flex flex-col gap-[50px] pb-[70px] xl:gap-[90px] xl:pb-0"
+            >
+              <div className="feature-img xl:h-[170px]">
                 <img alt="Factory" src={item.img} />
               </div>
-              <div className="feature-item-description  mt-16.2/3 xl:mt-14">
+              <div className="feature-item-description">
                 <p
                   className="description-label text-center"
                   style={{ background: "#BE95A1" }}
