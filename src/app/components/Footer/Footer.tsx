@@ -11,7 +11,7 @@ interface IProps {
 
 const Footer: React.FC<IProps> = ({ showPreFooter = true }) => {
   return (
-    <div className="footer-container ">
+    <div className="footer-container">
       {showPreFooter && (
         <div className="pre-footer">
           <BackgroundSection
@@ -23,7 +23,7 @@ const Footer: React.FC<IProps> = ({ showPreFooter = true }) => {
                 "linear-gradient(180deg, #F2F2F2 29.20%, rgba(206, 236, 245, 0.00) 100%)",
             }}
           >
-            <div className="px-7 pt-[121px]">
+            <div className="px-7 pt-[125px] xl:pt-[121px]">
               <p className="greeting whitespace-pre-wrap font-noto-sans text-[18px] font-normal leading-lg xl:w-full xl:text-center">{`工場・倉庫建設に関するあらゆるお悩みに対応いたします。\n資料請求・お見積りはフォームより、お気軽にお問い合わせください。`}</p>
             </div>
 
@@ -32,7 +32,7 @@ const Footer: React.FC<IProps> = ({ showPreFooter = true }) => {
                 href={Routes.CONTACT}
                 className="font-noto-sans text-[21px] font-medium xl:text-[24px]"
               >
-                お問い合わせ
+                <span className="font-noto-sans">お問い合わせ</span>
               </Button>
             </div>
           </BackgroundSection>
