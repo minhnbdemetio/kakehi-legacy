@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useCallback } from "react";
 import Slider from "react-slick";
 import "./style.scss";
 import "./responsive.css";
