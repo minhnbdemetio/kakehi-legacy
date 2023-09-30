@@ -15,4 +15,14 @@
     width: 100% !important;
     /* margin: auto; */
   }
+
+  .slick-slide > div > div {
+    width: 300px !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+  }
+
+  .slick-slide {
+    width: 351px !important;
+  }
 }

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 
 import "./responsive.css";
@@ -13,10 +13,8 @@ import ContactFormReview from "../ContactFormReview";
 
 import Yup from "../../yupGlobal";
 import { formValidationMessage } from "@/app/constants/forms";
-
-const summitData = async () => {
-  return new Promise((res) => setTimeout(res, 1000));
-};
+import { sendContactEmail } from "@/app/utils/queries/email";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 interface IProps {}
 
@@ -69,9 +67,36 @@ const ContactSubmitForm: React.FC<IProps> = () => {
     resolver: yupResolver(schema),
   });
 
+  const { executeRecaptcha } = useGoogleReCaptcha();
+
+  useEffect(() => {
+    if (executeRecaptcha) {
+      console.debug("handle recapcha ");
+      executeRecaptcha();
+    }
+  }, [executeRecaptcha]);
+
   const handleSubmit = async () => {
-    await summitData();
-    setSubmitted(true);
+    try {
+      const values = form.getValues();
+      if (executeRecaptcha) {
+        const token = await executeRecaptcha();
+        await sendContactEmail({
+          email: values.email,
+          companyName: values.companyName,
+          content: values.content,
+          furigana: values.furigana,
+          phone: values.phone,
+          name: values.name,
+          token,
+        });
+      }
+    } catch (e) {
+      console.error(e);
+      alert("Something went wrong!");
+    } finally {
+      setSubmitted(true);
+    }
   };
 
   return (

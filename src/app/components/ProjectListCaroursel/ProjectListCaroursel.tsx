@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useCallback } from "react";
-import Slider from "react-slick";
+import Slider, { Settings } from "react-slick";
 import "./style.scss";
 import "./responsive.css";
 
@@ -19,13 +19,15 @@ interface IProps {
 }
 
 const ProjectListCaroursel: React.FC<IProps> = ({ projects }) => {
-  const settings = {
+  const settings: Settings = {
     dots: false,
     infinite: projects.length >= 3,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
     arrow: true,
+    variableWidth: true,
+
     responsive: [
       {
         breakpoint: 1024,
@@ -33,6 +35,7 @@ const ProjectListCaroursel: React.FC<IProps> = ({ projects }) => {
           infinite: true,
           slidesToShow: 1,
           slidesToScroll: 1,
+          variableWidth: false,
         },
       },
     ],
@@ -43,32 +46,35 @@ const ProjectListCaroursel: React.FC<IProps> = ({ projects }) => {
       <div className="project-list-carousel px-[71px] xl:px-0">
         <Slider {...settings}>
           {projects.map((project, index) => (
-            <div key={index} className="flex w-[250px] flex-col xl:px-[24.5px]">
+            <div
+              key={index}
+              className="flex w-[250px] flex-col xl:w-[300px] xl:px-[24.5px]"
+            >
               <div className="relative w-full">
                 <img
-                  className="project-card-image aspect-250/167 w-full object-cover"
+                  className="project-card-image aspect-250/167 w-full  object-cover xl:aspect-[300/205]"
                   src={project.thumbnail}
                 />
-                <div className="absolute left-0 top-0 bg-hover-primary pb-[7px] pl-[24px] pr-[20px] pt-[6px] font-noto-sans-jp text-[15px] font-normal text-white">
+                <div className="absolute left-0 top-0 bg-hover-primary pb-[7px] pl-[24px] pr-[20px] pt-[6px] font-noto-sans-jp text-[15px] font-normal text-white xl:py-[9px]">
                   {project.tag}
                 </div>
               </div>
-              <div className="bg-card-background-primary px-[20.83px] py-[25px]">
-                <div className="mb-[20px] border-b-2 border-black pb-[10.33px] font-noto-sans-jp text-lg font-bold text-black">
+              <div className="h-[200px] bg-card-background-primary px-[20.83px] pb-[35px] pt-[25px] xl:h-[250px] xl:pb-[49px] xl:pt-[32px]">
+                <div className="mb-[20px] border-b-2 border-black pb-[10.33px] font-noto-sans-jp text-lg font-bold text-black xl:pb-[20px]">
                   {project.name}
                 </div>
-                <div className="flex items-center gap-[16.67px]">
-                  <div className="flex w-[75px] items-center justify-center bg-black px-[10.83px] py-[6.67px] font-noto-sans-jp text-[13px] text-white">
+                <div className="flex items-center gap-[16.67px] xl:gap-[20px]">
+                  <div className="flex w-[75px] items-center justify-center bg-black px-[10.83px] py-[6.67px] font-noto-sans-jp text-[13px] text-white xl:w-[90px] xl:pb-[9px] xl:pt-[8px] xl:text-[16px]">
                     構造
                   </div>
-                  <div>{project.structure}</div>
+                  <div className="xl:text-[16px]">{project.structure}</div>
                 </div>
 
-                <div className="mt-[19.67px] flex items-center gap-[16.67px]">
-                  <div className="flex w-[75px] items-center justify-center bg-black px-[10.83px] py-[6.67px] font-noto-sans-jp text-[13px] text-white">
+                <div className="mt-[19.67px] flex items-center gap-[16.67px] xl:gap-[20px]">
+                  <div className="flex w-[75px] items-center justify-center bg-black px-[10.83px] py-[6.67px] font-noto-sans-jp text-[13px] text-white xl:w-[90px] xl:pb-[9px] xl:pt-[8px] xl:text-[16px]">
                     延床面積
                   </div>
-                  <div>{project.acreage}</div>
+                  <div className="xl:text-[16px]">{project.acreage}㎡</div>
                 </div>
               </div>
             </div>
