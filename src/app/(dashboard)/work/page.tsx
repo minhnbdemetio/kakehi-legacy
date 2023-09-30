@@ -6,13 +6,13 @@ import PageTitle from "@/app/components/PageTitle";
 import ProjectListCaroursel from "@/app/components/ProjectListCaroursel";
 import getProjects from "@/app/utils/queries/getProjects";
 
-interface IProps { }
+interface IProps {}
 
 const Work: React.FC<IProps> = async () => {
   const projects = await getProjects();
 
   return (
-    <div className="work-page-container mt-[5px] pb-43.1/3 xl:pb-33.1/3 xl:mt-0">
+    <div className="work-page-container mt-[5px] pb-43.1/3 xl:mt-0 xl:pb-33.1/3">
       <div className="xl hidden xl:block">
         <DescriptionSection
           type="multi-image"
@@ -87,7 +87,7 @@ const Work: React.FC<IProps> = async () => {
         />
       </div>
 
-      <div className="mt-38 xl:mt-33.1/3 list-project-title">
+      <div className="list-project-title mt-38 xl:mt-0">
         <PageTitle title="その他の施工事例" divider />
       </div>
 

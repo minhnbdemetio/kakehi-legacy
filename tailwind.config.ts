@@ -62,6 +62,7 @@ const config: Config = {
         md: "768px", // Medium screens and up
         lg: "992px", // Large screens and up
         xl: "1024px", // Extra large screens and up
+        xxl: "1280px",
       },
       fontWeight: {
         light: "300",

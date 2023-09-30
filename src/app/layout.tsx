@@ -4,6 +4,7 @@ import { notoSans, notoSansJP } from "./constants/fonts";
 import clsx from "clsx";
 import type { Metadata } from "next";
 import { ApolloContext } from "@/app/contexts/ApolloContext";
+import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 
 export const metadata: Metadata = {
   title: "Kakehi",

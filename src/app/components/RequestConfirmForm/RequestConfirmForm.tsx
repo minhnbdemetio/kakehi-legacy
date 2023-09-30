@@ -6,8 +6,10 @@ import { Routes } from "@/app/constants/routes";
 import { sessionStorageKey } from "@/app/constants/storage";
 import { useSessionStorage } from "@/app/hooks/useSessionStorage";
 import { RequestFormData } from "@/app/types/RequestFormData";
+import { sendDocumentRequestEmail } from "@/app/utils/queries/email";
 import clsx from "clsx";
-import { useMemo, useState } from "react";
+import { useEffect, useMemo, useState } from "react";
+import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 const INFO_TEXT_CLASSNAME =
   "text-lg font-noto-sans-jp text-primary leading-[1.8] xl:mb-30 xl:leading-loose xl:text-xl";
@@ -19,6 +21,40 @@ export const RequestConfirmForm = () => {
     () => (requestData ? JSON.parse(requestData) : null),
     [requestData]
   );
+
+  const { executeRecaptcha } = useGoogleReCaptcha();
+
+  useEffect(() => {
+    if (executeRecaptcha) {
+      console.debug("handle recapcha ");
+      executeRecaptcha();
+    }
+  }, [executeRecaptcha]);
+
+  const handleSubmit = async () => {
+    try {
+      if (parsedData && executeRecaptcha) {
+        const token = await executeRecaptcha();
+
+        console.debug(token);
+
+        await sendDocumentRequestEmail({
+          companyName: parsedData.company,
+          content: parsedData.message,
+          email: parsedData.email,
+          furigana: parsedData.namePronunciation,
+          name: parsedData.name,
+          phone: parsedData.phoneNumber,
+          token,
+        });
+      }
+    } catch (e) {
+      console.error(e);
+      alert("Something went wrong!");
+    } finally {
+      setIsConfirmed(true);
+    }
+  };
 
   return (
     <div>
@@ -80,7 +116,7 @@ export const RequestConfirmForm = () => {
                 height={17}
               />
             </Button>
-            <Button onClick={() => setIsConfirmed(true)} className="relative">
+            <Button onClick={handleSubmit} className="relative">
               <span>確認する</span>
               <img
                 className="absolute right-7 top-1/2 hidden -translate-y-1/2 xl:block"
