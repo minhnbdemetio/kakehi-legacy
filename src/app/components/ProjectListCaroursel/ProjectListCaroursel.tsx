@@ -1,7 +1,7 @@
 "use client";
 
-import React, { useCallback } from "react";
-import Slider, { Settings } from "react-slick";
+import React from "react";
+import Slider from "react-slick";
 import "./style.scss";
 import "./responsive.css";
 
@@ -19,7 +19,7 @@ interface IProps {
 }
 
 const ProjectListCaroursel: React.FC<IProps> = ({ projects }) => {
-  const settings: Settings = {
+  const settings = {
     dots: false,
     infinite: projects.length >= 3,
     speed: 500,
