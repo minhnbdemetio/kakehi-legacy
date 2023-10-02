@@ -10,6 +10,8 @@ import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 interface IProps {}
 
 const Contact: React.FC<IProps> = () => {
+  console.log("recaptcha key", process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY);
+
   return (
     <div className="contact mx-7 mt-15 xl:mt-39.1/3 xl:pb-40">
       <div>
