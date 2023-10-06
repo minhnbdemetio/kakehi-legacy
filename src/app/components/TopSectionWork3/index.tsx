@@ -4,7 +4,7 @@ import React from "react";
 export default function TopSectionWork3() {
   return (
     <div className="relative mt-[50px]">
-      <div className="text-section absolute right-0 font-noto-sans text-4xl font-medium uppercase tracking-[4.8px] xl:text-[128px] xl:tracking-[12.8px]">
+      <div className="absolute right-0 font-noto-sans text-4xl font-medium uppercase tracking-[4.8px] text-section xl:text-[128px] xl:tracking-[12.8px]">
         HISTORY
       </div>
 
@@ -26,15 +26,14 @@ export default function TopSectionWork3() {
 
         <div className="flex flex-col gap-[20px] px-[20px]">
           <div className="flex flex-row">
-            <div className="leading-sm w-full bg-white px-[26px] py-[15px] font-noto-sans-jp text-[15px] font-normal">
-              創業1954年 鳥取に根ざして60年以上。年間契約数300件以上。創業1954年
-              鳥取に根ざして60年以上。年間契約数300件以上。
+            <div className="w-full bg-white px-[26px] py-[15px] font-noto-sans-jp text-[15px] font-normal leading-sm">
+              創業1954年。「お客様の懸け橋に」をコンセプトに、地域に根差す私たちは、多様な建物の建設により、鳥取を彩ってきました。年間の平均売上は20億円、300件以上の案件に対応しています。
             </div>
           </div>
         </div>
       </div>
 
-      <div className="absolute left-0 bottom-[161px] hidden xl:block">
+      <div className="absolute bottom-[161px] left-0 hidden xl:block">
         <div className="relative h-[481px] w-[50vw]">
           <Image
             src="/history-img.jpg"
