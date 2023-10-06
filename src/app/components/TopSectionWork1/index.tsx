@@ -4,7 +4,7 @@ import React from "react";
 export default function TopSectionWork1() {
   return (
     <div className="relative mt-[50px]">
-      <div className="text-section absolute right-0 font-noto-sans text-4xl font-medium uppercase tracking-[4.8px] xl:text-[128px] xl:tracking-[12.8px]">
+      <div className="absolute right-0 font-noto-sans text-4xl font-medium uppercase tracking-[4.8px] text-section xl:text-[128px] xl:tracking-[12.8px]">
         advantages
       </div>
 
@@ -28,7 +28,7 @@ export default function TopSectionWork1() {
 
         <div className="flex flex-col gap-[20px] px-[20px]">
           <div className="flex flex-row">
-            <div className="bg-pink-custom-2 relative flex min-w-[100px] items-center justify-center py-[48px] font-noto-sans-jp text-lg font-bold text-white">
+            <div className="relative flex min-w-[100px] items-center justify-center bg-pink-custom-2 py-[48px] font-noto-sans-jp text-lg font-bold text-white">
               <Image
                 src="/background/advantage-1.png"
                 alt="advantages"
@@ -37,13 +37,13 @@ export default function TopSectionWork1() {
               />
               <span className="z-10">ローコスト</span>
             </div>
-            <div className="leading-sm w-full bg-white px-[26px] py-[15px] font-noto-sans-jp text-[15px] font-normal">
-              屋根・母屋・フレームの一体化構造により、低コストを実現。要望に沿ったスピーディーな設計が可能です。
+            <div className="w-full bg-white px-[26px] py-[15px] font-noto-sans-jp text-[15px] font-normal leading-sm">
+              部材の標準化と少部材化を図り、コスト削減を実現。蓄積されたデータを基に、初期過程から高精度の見積りが可能です。
             </div>
           </div>
 
           <div className="flex flex-row">
-            <div className="bg-pink-custom-2 relative flex min-w-[100px] items-center justify-center py-[48px] font-noto-sans-jp text-lg font-bold text-white">
+            <div className="relative flex min-w-[100px] items-center justify-center bg-pink-custom-2 py-[48px] font-noto-sans-jp text-lg font-bold text-white">
               <Image
                 src="/background/advantage-2.png"
                 alt="advantages"
@@ -52,13 +52,13 @@ export default function TopSectionWork1() {
               />
               <span className="z-10">高品質</span>
             </div>
-            <div className="leading-sm w-full bg-white px-[26px] py-[15px] font-noto-sans-jp text-[15px] font-normal">
-              規格化された部材と工法を用いるシステム建築は、安心の品質保証。耐震性や耐久性にも優れています。
+            <div className="w-full bg-white px-[26px] py-[15px] font-noto-sans-jp text-[15px] font-normal leading-sm">
+              部材と工法の標準化により品質の安定性を確保。屋根断熱性能は高層ビルにも用いられる外壁材ALCの約2倍。耐震性や耐久性にも優れています。
             </div>
           </div>
 
           <div className="flex flex-row">
-            <div className="bg-pink-custom-2 relative flex min-w-[100px] items-center justify-center py-[48px] font-noto-sans-jp text-lg font-bold text-white">
+            <div className="relative flex min-w-[100px] items-center justify-center bg-pink-custom-2 py-[48px] font-noto-sans-jp text-lg font-bold text-white">
               <Image
                 src="/background/advantage-3.png"
                 alt="advantages"
@@ -67,13 +67,13 @@ export default function TopSectionWork1() {
               />
               <span className="z-10">大空間</span>
             </div>
-            <div className="leading-sm w-full bg-white px-[26px] py-[15px] font-noto-sans-jp text-[15px] font-normal">
-              最大無柱スパン60m、中間柱有りで最大120mの大空間を実現。天井走行クレーンの設置にも対応します。
+            <div className="w-full bg-white px-[26px] py-[15px] font-noto-sans-jp text-[15px] font-normal leading-sm">
+              橋梁などに使用される高張力材を採用し、最大無柱スパン60mを実現。さらに、中間柱を設けることで最大120mの大空間の構築も可能です。
             </div>
           </div>
 
           <div className="flex flex-row">
-            <div className="bg-pink-custom-2 relative flex min-w-[100px] items-center justify-center py-[48px] font-noto-sans-jp text-lg font-bold text-white">
+            <div className="relative flex min-w-[100px] items-center justify-center bg-pink-custom-2 py-[48px] font-noto-sans-jp text-lg font-bold text-white">
               <Image
                 src="/background/advantage-4.png"
                 alt="advantages"
@@ -82,14 +82,14 @@ export default function TopSectionWork1() {
               />
               <span className="z-10">短工期</span>
             </div>
-            <div className="leading-sm w-full bg-white px-[26px] py-[15px] font-noto-sans-jp text-[15px] font-normal">
-              合理的な設計・生産システムにより、在来工法に比べて、工期を15％～20％短縮できます。
+            <div className="w-full bg-white px-[26px] py-[15px] font-noto-sans-jp text-[15px] font-normal leading-sm">
+              設計から施工までの工程をシステム化。在来工法に比べ、工期をおよそ15%〜20%短縮できます。※建物の仕様による{" "}
             </div>
           </div>
         </div>
       </div>
 
-      <div className="absolute left-0 bottom-[161px] hidden xl:block">
+      <div className="absolute bottom-[161px] left-0 hidden xl:block">
         <div className="relative h-[964px] w-[50vw]">
           <Image
             src="/advantages.jpg"
@@ -104,7 +104,7 @@ export default function TopSectionWork1() {
         <div className="ml-[10vw] bg-card-background-primary pb-[161px] pr-[105px] pt-[146px]">
           <div className="ml-[40vw] flex flex-col gap-[14px] pl-[14px]">
             <div className="flex flex-row">
-              <div className="bg-pink-custom-2 relative flex min-w-[150px] items-center justify-center px-[15px] py-[57px] font-noto-sans-jp text-1.5xl font-bold text-white">
+              <div className="relative flex min-w-[150px] items-center justify-center bg-pink-custom-2 px-[15px] py-[57px] font-noto-sans-jp text-1.5xl font-bold text-white">
                 <Image
                   src="/background/advantage-1.png"
                   alt="advantages"
@@ -114,12 +114,12 @@ export default function TopSectionWork1() {
                 <span className="z-10">ローコスト</span>
               </div>
               <div className="w-full bg-white px-[25px] py-[21px] font-noto-sans-jp text-xl leading-lg">
-                屋根・母屋・フレームの一体化構造により、低コストを実現。要望に沿ったスピーディーな設計が可能です。
+                部材の標準化と少部材化を図り、コスト削減を実現。蓄積されたデータを基に、初期過程から高精度の見積りが可能です。
               </div>
             </div>
 
             <div className="flex flex-row">
-              <div className="bg-pink-custom-2 relative flex min-w-[150px] items-center justify-center px-[15px] py-[57px] font-noto-sans-jp text-1.5xl font-bold text-white">
+              <div className="relative flex min-w-[150px] items-center justify-center bg-pink-custom-2 px-[15px] py-[57px] font-noto-sans-jp text-1.5xl font-bold text-white">
                 <Image
                   src="/background/advantage-2.png"
                   alt="advantages"
@@ -129,12 +129,12 @@ export default function TopSectionWork1() {
                 <span className="z-10">高品質</span>
               </div>
               <div className="w-full bg-white px-[25px] py-[21px] font-noto-sans-jp text-xl leading-lg">
-                規格化された部材と工法を用いるシステム建築は、安心の品質保証。耐震性や耐久性にも優れています。
+                部材と工法の標準化により品質の安定性を確保。屋根断熱性能は高層ビルにも用いられる外壁材ALCの約2倍。耐震性や耐久性にも優れています。
               </div>
             </div>
 
             <div className="flex flex-row">
-              <div className="bg-pink-custom-2 relative flex min-w-[150px] items-center justify-center px-[15px] py-[57px] font-noto-sans-jp text-1.5xl font-bold text-white">
+              <div className="relative flex min-w-[150px] items-center justify-center bg-pink-custom-2 px-[15px] py-[57px] font-noto-sans-jp text-1.5xl font-bold text-white">
                 <Image
                   src="/background/advantage-3.png"
                   alt="advantages"
@@ -144,12 +144,12 @@ export default function TopSectionWork1() {
                 <span className="z-10">大空間</span>
               </div>
               <div className="w-full bg-white px-[25px] py-[21px] font-noto-sans-jp text-xl leading-lg">
-                最大無柱スパン60m、中間柱有りで最大120mの大空間を実現。天井走行クレーンの設置にも対応します。
+                橋梁などに使用される高張力材を採用し、最大無柱スパン60mを実現。さらに、中間柱を設けることで最大120mの大空間の構築も可能です。
               </div>
             </div>
 
             <div className="flex flex-row">
-              <div className="bg-pink-custom-2 relative flex min-w-[150px] items-center justify-center px-[15px] py-[57px] font-noto-sans-jp text-1.5xl font-bold text-white">
+              <div className="relative flex min-w-[150px] items-center justify-center bg-pink-custom-2 px-[15px] py-[57px] font-noto-sans-jp text-1.5xl font-bold text-white">
                 <Image
                   src="/background/advantage-4.png"
                   alt="advantages"
@@ -159,7 +159,7 @@ export default function TopSectionWork1() {
                 <span className="z-10">短工期</span>
               </div>
               <div className="w-full bg-white px-[25px] py-[21px] font-noto-sans-jp text-xl leading-lg">
-                合理的な設計・生産システムにより、在来工法に比べて、工期を15％～20％短縮できます。
+                設計から施工までの工程をシステム化。在来工法に比べ、工期をおよそ15%〜20%短縮できます。※建物の仕様による
               </div>
             </div>
           </div>
