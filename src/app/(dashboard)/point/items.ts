@@ -10,7 +10,7 @@ const items: {
     label: "POINT 01",
     firstTitle: "ポイント 01",
     secondTitle: "建設場所と建築方法",
-    img: "/points/point-2.jpg",
+    img: "/points/point-1.png",
     position: "right",
     descriptions: [
       {
@@ -23,7 +23,7 @@ const items: {
     label: "POINT 02",
     firstTitle: "ポイント 02",
     secondTitle: "建築面積と階数",
-    img: "/points/point-3.jpg",
+    img: "/points/point-2.png",
     position: "left",
 
     descriptions: [
@@ -37,7 +37,7 @@ const items: {
     label: "POINT 03",
     firstTitle: "ポイント 03",
     secondTitle: "用途",
-    img: "/points/point-4.jpg",
+    img: "/points/point-3.png",
     position: "right",
 
     descriptions: [
@@ -51,7 +51,7 @@ const items: {
     label: "POINT 04",
     firstTitle: "ポイント 04",
     secondTitle: "断熱性能",
-    img: "/points/point-5.jpg",
+    img: "/points/point-4.png",
     position: "left",
 
     descriptions: [
