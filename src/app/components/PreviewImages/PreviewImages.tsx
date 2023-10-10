@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useCallback, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import "./style.scss";
 
 interface IProps {
@@ -14,7 +14,11 @@ const PreviewImages: React.FC<IProps> = ({
   mainImgHeight,
   miniImgHeight,
 }) => {
-  const [mainImg, setMainImg] = useState(images[0]);
+  const [mainImg, setMainImg] = useState(images[0] || "");
+
+  useEffect(() => {
+    setMainImg(images[0] || "");
+  }, [images]);
 
   const changeMainImg = useCallback((e: React.MouseEvent) => {
     if (e.currentTarget && e.currentTarget.getAttribute("data-src")) {
@@ -54,7 +58,6 @@ const PreviewImages: React.FC<IProps> = ({
           />
         ))}
       </div>
-
 
       <span className="tag absolute left-0 top-0 px-7 py-3 text-md leading-[normal] xl:px-[35px] xl:py-5 xl:pb-[16px] xl:text-[20px] ">
         {mainImg.tag}
