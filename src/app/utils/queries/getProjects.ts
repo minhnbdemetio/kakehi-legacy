@@ -34,14 +34,6 @@ export const GET_PROJECTS = gql(`query {
       attributes {
         name
         tag
-        thumbnail {
-          data {
-            attributes {
-              name
-              url
-            }
-          }
-        }
         images {
           data {
              attributes {
@@ -79,9 +71,13 @@ const formatProjects = (data: ApolloQueryResult<ProjectData>) => {
 
 const getProjects = async () => {
   const client = getClient();
-  const data = await client.query<ProjectData>({ query: GET_PROJECTS });
-
-  return formatProjects(data);
+  try {
+    const data = await client.query<ProjectData>({ query: GET_PROJECTS });
+    return formatProjects(data);
+  } catch (e) {
+    console.error(e);
+    return [];
+  }
 };
 
 export default getProjects;
