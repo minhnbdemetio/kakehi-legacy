@@ -26,7 +26,7 @@ export default function Home() {
 
       <TopPageWorkSection />
 
-      {/* <TopPageFLowSection /> */}
+      <TopPageFLowSection />
     </>
   );
 }

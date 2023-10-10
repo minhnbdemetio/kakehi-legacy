@@ -1,9 +1,11 @@
 import { ApolloQueryResult, gql, QueryResult } from "@apollo/client";
 import { getClient } from "@/app/lib/apolloClient";
+import { getStrapiImageUrl } from "../common";
 
 type ProjectData = {
   projects: {
     data: {
+      id: string;
       attributes: {
         name?: string;
         tag?: string;
@@ -15,6 +17,9 @@ type ProjectData = {
             };
           };
         };
+        images: {
+          data: { attributes: { name: string; url: string } }[];
+        };
         acreage?: number;
         structure?: string;
       };
@@ -25,12 +30,21 @@ type ProjectData = {
 export const GET_PROJECTS = gql(`query {
   projects {
     data {
+      id
       attributes {
         name
         tag
         thumbnail {
           data {
             attributes {
+              name
+              url
+            }
+          }
+        }
+        images {
+          data {
+             attributes {
               name
               url
             }
@@ -43,25 +57,21 @@ export const GET_PROJECTS = gql(`query {
   }
 }`);
 
-const getStrapiImageUrl = (uri: string) => {
-  if (uri.startsWith("http")) {
-    return uri;
-  }
-
-  return process.env.NEXT_PUBLIC_CMS_ENDPOINT + uri;
-};
-
 const formatProjects = (data: ApolloQueryResult<ProjectData>) => {
   if (!data.data?.projects?.data) return [];
 
   return data.data?.projects.data.map((project) => {
+    const images = project?.attributes?.images?.data || [];
+
+    const firstImage = images[0];
+
     return {
+      id: project.id,
       name: project.attributes.name || "",
       tag: project.attributes.tag || "",
       structure: project.attributes.structure || "",
-      thumbnail: getStrapiImageUrl(
-        project.attributes.thumbnail?.data?.attributes?.url || ""
-      ),
+      thumbnail: getStrapiImageUrl(firstImage?.attributes.url),
+      images: images.map((image) => getStrapiImageUrl(image?.attributes?.url)),
       acreage: project.attributes.acreage || 0,
     };
   });
