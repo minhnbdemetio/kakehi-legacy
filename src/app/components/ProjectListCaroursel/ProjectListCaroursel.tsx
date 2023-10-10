@@ -7,9 +7,11 @@ import "./responsive.css";
 
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import { useRouter } from "next/navigation";
 
 interface IProps {
   projects: {
+    id: string;
     name: string;
     thumbnail: string;
     tag?: string;
@@ -19,6 +21,7 @@ interface IProps {
 }
 
 const ProjectListCaroursel: React.FC<IProps> = ({ projects }) => {
+  const router = useRouter();
   const settings = {
     dots: false,
     infinite: projects.length >= 3,
@@ -41,14 +44,19 @@ const ProjectListCaroursel: React.FC<IProps> = ({ projects }) => {
     ],
   };
 
+  const toWorkPage = (id: string) => {
+    router.push(`/work?id=${id}`);
+  };
+
   return (
     <div className="project-list-carousel-container">
       <div className="project-list-carousel px-[71px] xl:px-0">
         <Slider {...settings}>
           {projects.map((project, index) => (
             <div
+              onClick={() => toWorkPage(project.id)}
               key={index}
-              className="flex w-[250px] flex-col xl:w-[300px] xl:px-[24.5px]"
+              className="flex w-[250px] cursor-pointer flex-col xl:w-[300px] xl:px-[24.5px]"
             >
               <div className="relative w-full">
                 <img
