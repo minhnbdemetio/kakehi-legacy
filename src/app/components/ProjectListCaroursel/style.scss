@@ -53,30 +53,33 @@
   &:before {
     content: "" !important;
   }
-}
-.slick-prev {
-  background-image: url("/icons/navigate-previous.png") !important;
-  width: 60px !important;
-  height: 60px !important;
-  left: -71px !important;
-  cursor: pointer !important;
-  background-repeat: no-repeat !important;
-  background-size: cover !important;
-  &:before {
-    content: "" !important;
-  }
-}
 
-.slick-track {
-  width: fit-content !important;
+  .slick-prev {
+    background-image: url("/icons/navigate-previous.png") !important;
+    width: 60px !important;
+    height: 60px !important;
+    left: -71px !important;
+    cursor: pointer !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    &:before {
+      content: "" !important;
+    }
+  }
+
+  .slick-track {
+    width: fit-content !important;
+  }
 }
 
 @media screen and (min-width: 1024px) {
-  .slick-prev {
-    left: -110px !important;
-  }
+  .project-list-carousel-container {
+    .slick-prev {
+      left: -110px !important;
+    }
 
-  .slick-next {
-    right: -110px !important;
+    .slick-next {
+      right: -110px !important;
+    }
   }
 }

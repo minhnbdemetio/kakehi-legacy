@@ -1,28 +1,28 @@
 @media screen(xl) {
-  .project-list-carousel {
+  .project-list-carousel-container .project-list-carousel {
     margin: 0 220px;
   }
 
-  .project-list-carousel-naviate-btn.left {
+  .project-list-carousel-container .project-list-carousel-naviate-btn.left {
     left: 135px !important;
   }
 
-  .project-list-carousel-naviate-btn.right {
+  .project-list-carousel-container .project-list-carousel-naviate-btn.right {
     right: 135px !important;
   }
 
-  .project-card-container {
+  .project-list-carousel-container .project-card-container {
     width: 100% !important;
     /* margin: auto; */
   }
 
-  .slick-slide > div > div {
+  .project-list-carousel-container .slick-slide > div > div {
     width: 300px !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
 
-  .slick-slide {
+  .project-list-carousel-container .slick-slide {
     width: 351px !important;
   }
 }
