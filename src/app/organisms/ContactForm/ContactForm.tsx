@@ -149,9 +149,9 @@ const ContactForm: React.FC<IProps> = ({ form, next }) => {
                   target="_blank"
                   className="text-hover-primary"
                 >
-                  利用規約
+                  個人情報保護方針に
                 </a>{" "}
-                に同意する
+                同意する
               </Checkbox>
             </div>
           )}
