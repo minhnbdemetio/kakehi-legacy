@@ -7,11 +7,12 @@ import TopSectionWork3 from "@/app/components/TopSectionWork3";
 import SliderBackgroundWithSlogan from "@/app/components/SliderBackgroundWithSlogan";
 
 export default function Home() {
+  const images = Array.from({ length: 5 }).map(
+    (_, idx) => `/top/kakehi_lp_main_visual-${idx + 1}.png`
+  );
   return (
     <>
-      <SliderBackgroundWithSlogan
-        images={["/index-background.jpg", "/company-profile-background.png"]}
-      >
+      <SliderBackgroundWithSlogan images={images}>
         <h1 className="hidden whitespace-pre-wrap text-center text-3xl xl:block">{`システム建築で、\n工場・倉庫に 最適な答えを。`}</h1>
         <h1 className="block whitespace-pre-wrap text-center text-3xl xl:hidden">{`システム建築で、\n工場・倉庫に \n最適な答えを。`}</h1>
       </SliderBackgroundWithSlogan>

@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { TopSectionWorkCard } from "../TopSectionWorkCard";
 
 export default function TopSectionWork1() {
   return (
@@ -83,7 +84,9 @@ export default function TopSectionWork1() {
               <span className="z-10">短工期</span>
             </div>
             <div className="w-full bg-white px-[26px] py-[15px] font-noto-sans-jp text-[15px] font-normal leading-sm">
-              設計から施工までの工程をシステム化。在来工法に比べ、工期をおよそ15%〜20%短縮できます。※建物の仕様による{" "}
+              設計から施工までの工程をシステム化。在来工法に比べ、工期をおよそ15%〜20%短縮できます。
+              <br />
+              ※建物の仕様による{" "}
             </div>
           </div>
         </div>
@@ -103,65 +106,39 @@ export default function TopSectionWork1() {
       <div className="hidden pt-[283px] xl:block">
         <div className="ml-[10vw] bg-card-background-primary pb-[161px] pr-[105px] pt-[146px]">
           <div className="ml-[40vw] flex flex-col gap-[14px] pl-[14px]">
-            <div className="flex flex-row">
-              <div className="relative flex min-w-[150px] items-center justify-center bg-pink-custom-2 px-[15px] py-[57px] font-noto-sans-jp text-1.5xl font-bold text-white">
-                <Image
-                  src="/background/advantage-1.png"
-                  alt="advantages"
-                  layout="fill"
-                  objectFit="cover"
-                />
-                <span className="z-10">ローコスト</span>
-              </div>
-              <div className="w-full bg-white px-[25px] py-[21px] font-noto-sans-jp text-xl leading-lg">
-                部材の標準化と少部材化を図り、コスト削減を実現。蓄積されたデータを基に、初期過程から高精度の見積りが可能です。
-              </div>
-            </div>
+            <TopSectionWorkCard
+              image="/background/advantage-1.png"
+              textImage="ローコスト"
+              alt="advantages"
+            >
+              部材の標準化と少部材化を図り、コスト削減を実現。蓄積されたデータを基に、初期過程から高精度の見積りが可能です。
+            </TopSectionWorkCard>
 
-            <div className="flex flex-row">
-              <div className="relative flex min-w-[150px] items-center justify-center bg-pink-custom-2 px-[15px] py-[57px] font-noto-sans-jp text-1.5xl font-bold text-white">
-                <Image
-                  src="/background/advantage-2.png"
-                  alt="advantages"
-                  layout="fill"
-                  objectFit="cover"
-                />
-                <span className="z-10">高品質</span>
-              </div>
-              <div className="w-full bg-white px-[25px] py-[21px] font-noto-sans-jp text-xl leading-lg">
-                部材と工法の標準化により品質の安定性を確保。屋根断熱性能は高層ビルにも用いられる外壁材ALCの約2倍。耐震性や耐久性にも優れています。
-              </div>
-            </div>
+            <TopSectionWorkCard
+              image="/background/advantage-2.png"
+              textImage="高品質"
+              alt="advantages"
+            >
+              部材と工法の標準化により品質の安定性を確保。屋根断熱性能は高層ビルにも用いられる外壁材ALCの約2倍。耐震性や耐久性にも優れています。
+            </TopSectionWorkCard>
 
-            <div className="flex flex-row">
-              <div className="relative flex min-w-[150px] items-center justify-center bg-pink-custom-2 px-[15px] py-[57px] font-noto-sans-jp text-1.5xl font-bold text-white">
-                <Image
-                  src="/background/advantage-3.png"
-                  alt="advantages"
-                  layout="fill"
-                  objectFit="cover"
-                />
-                <span className="z-10">大空間</span>
-              </div>
-              <div className="w-full bg-white px-[25px] py-[21px] font-noto-sans-jp text-xl leading-lg">
-                橋梁などに使用される高張力材を採用し、最大無柱スパン60mを実現。さらに、中間柱を設けることで最大120mの大空間の構築も可能です。
-              </div>
-            </div>
+            <TopSectionWorkCard
+              image="/background/advantage-3.png"
+              textImage="大空間"
+              alt="advantages"
+            >
+              橋梁などに使用される高張力材を採用し、最大無柱スパン60mを実現。さらに、中間柱を設けることで最大120mの大空間の構築も可能です。
+            </TopSectionWorkCard>
 
-            <div className="flex flex-row">
-              <div className="relative flex min-w-[150px] items-center justify-center bg-pink-custom-2 px-[15px] py-[57px] font-noto-sans-jp text-1.5xl font-bold text-white">
-                <Image
-                  src="/background/advantage-4.png"
-                  alt="advantages"
-                  layout="fill"
-                  objectFit="cover"
-                />
-                <span className="z-10">短工期</span>
-              </div>
-              <div className="w-full bg-white px-[25px] py-[21px] font-noto-sans-jp text-xl leading-lg">
-                設計から施工までの工程をシステム化。在来工法に比べ、工期をおよそ15%〜20%短縮できます。※建物の仕様による
-              </div>
-            </div>
+            <TopSectionWorkCard
+              image="/background/advantage-4.png"
+              textImage="短工期"
+              alt="advantages"
+            >
+              設計から施工までの工程をシステム化。在来工法に比べ、工期をおよそ15%〜20%短縮できます。
+              <br />
+              ※建物の仕様による
+            </TopSectionWorkCard>
           </div>
         </div>
       </div>

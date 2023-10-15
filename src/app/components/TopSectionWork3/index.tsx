@@ -48,7 +48,7 @@ export default function TopSectionWork3() {
         <div className="ml-[10vw] bg-card-background-primary pb-[161px] pr-[107px] pt-[109px]">
           <div className="ml-[40vw] flex flex-col gap-[14px] pl-[14px]">
             <div className="flex flex-row">
-              <div className="w-full bg-white px-[52px] py-[66.36px] font-noto-sans-jp text-xl leading-lg">
+              <div className="w-full bg-white px-[52px] py-[66.36px] font-noto-sans-jp text-1.5xl leading-lg">
                 創業1954年
                 鳥取に根ざして60年以上。年間契約数300件以上。創業1954年
                 鳥取に根ざして60年以上。年間契約数300件以上。

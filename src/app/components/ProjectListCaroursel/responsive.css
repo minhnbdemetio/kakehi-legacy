@@ -17,12 +17,15 @@
   }
 
   .project-list-carousel-container .slick-slide > div > div {
-    width: 300px !important;
     padding-left: 0 !important;
     padding-right: 0 !important;
   }
 
-  .project-list-carousel-container .slick-slide {
-    width: 351px !important;
+  .project-list-carousel-container .slick-list {
+    margin: 0 -24px;
+  }
+
+  .project-list-carousel-container .slick-slide > div {
+    padding: 0 24px;
   }
 }
