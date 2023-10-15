@@ -1,7 +1,8 @@
-import React from "react";
+import React, { Fragment, PropsWithChildren } from "react";
 import "./style.scss";
 import "./responsive.css";
 import CLSX from "clsx";
+import Link from "next/link";
 
 interface IProps {
   label?: string;
@@ -13,11 +14,13 @@ interface IProps {
   descriptionAlign?: "left" | "center" | "right";
   labelClassName?: string;
   descriptionClassName?: string;
+  link?: string;
 }
 
 const CardDescription: React.FC<IProps> = ({
   description,
   label,
+  link,
   background = "default",
   descriptionAlign = "left",
   size = "medium",
@@ -30,6 +33,14 @@ const CardDescription: React.FC<IProps> = ({
   const isMedium = size === "medium";
 
   const descriptionOnly = !label;
+
+  const DescriptionWrapper = link
+    ? ({ children, ...props }: PropsWithChildren) => (
+        <Link href={link} {...props}>
+          {children}
+        </Link>
+      )
+    : "p";
 
   return (
     <div
@@ -51,7 +62,7 @@ const CardDescription: React.FC<IProps> = ({
         >
           <p
             className={CLSX(labelClassName, {
-              ["xl:leading-md font-noto-sans text-lg font-bold leading-[normal] xl:font-noto-sans"]:
+              ["font-noto-sans text-lg font-bold leading-[normal] xl:font-noto-sans xl:leading-md"]:
                 true,
               ["xl:text-lg"]: isSmall,
               ["xl:text-1.5xl"]: isMedium,
@@ -61,21 +72,22 @@ const CardDescription: React.FC<IProps> = ({
           </p>
         </div>
       )}
-      <p
+      <DescriptionWrapper
         className={CLSX(
           "card-description-content flex flex-auto items-center justify-start px-9 py-5 text-[15px] leading-[normal]",
-          "xl:justify-center xl:text-1.5xl xl:font-medium xl:leading-8",
+          "xl:leading-8 xl:justify-center xl:text-1.5xl xl:font-medium",
           {
             "font-bold": descriptionBold,
             [`text-${descriptionAlign}`]: true,
             "xl:px-22": descriptionOnly,
             "xl:py-17.1/3": descriptionOnly,
+            "hover:text-hover-nav": !!link,
           },
           descriptionClassName
         )}
       >
         {description}
-      </p>
+      </DescriptionWrapper>
     </div>
   );
 };
