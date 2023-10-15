@@ -6,7 +6,7 @@ const items: {
   {
     img: "/factories/factory.png",
     label: "工場",
-    description: ["機械・金属・鉄鋼", "自動車", "食品", "製薬", "電気機器"],
+    description: ["機械 / 金属 / 鉄鋼", "自動車", "食品", "製薬", "電気機器"],
   },
   {
     img: "/factories/warehouse.png",
@@ -21,7 +21,7 @@ const items: {
       "スーパーマーケット",
       "ドラッグストア",
       "ホームセンター",
-      "体育館・室内練習場",
+      "体育館 / 室内練習場",
     ],
   },
 ];

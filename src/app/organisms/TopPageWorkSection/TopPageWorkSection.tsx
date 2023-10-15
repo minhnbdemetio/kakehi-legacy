@@ -9,7 +9,7 @@ const TopPageWorkSection: React.FC<IProps> = async () => {
   const projects = await getProjects();
 
   return (
-    <div>
+    <div id="Work">
       <div className="mt-[50px] flex flex-col items-center justify-center xl:mt-[95px]">
         <div className="mb-[5px] w-max border-b-2 border-color-custom pb-[3px] text-center font-noto-sans text-xl uppercase text-primary xl:px-0">
           WORK

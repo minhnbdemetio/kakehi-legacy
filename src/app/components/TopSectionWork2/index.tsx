@@ -1,5 +1,6 @@
 import Image from "next/image";
 import React from "react";
+import { TopSectionWorkCard } from "../TopSectionWorkCard";
 
 export default function TopSectionWork2() {
   return (
@@ -107,69 +108,37 @@ export default function TopSectionWork2() {
       <div className="hidden pt-[283px] xl:block">
         <div className="mr-[10vw] bg-card-background-primary pb-[161px] pl-[107px] pt-[132px]">
           <div className="mr-[40vw] flex flex-col gap-[14px] pr-[14px]">
-            <div className="flex flex-row">
-              <div className="relative flex min-w-[150px] items-center justify-center bg-pink-custom-2 px-[12px] py-[60px] font-noto-sans-jp text-1.5xl font-bold text-white">
-                <Image
-                  src="/background/strength-1.png"
-                  alt="advantages"
-                  layout="fill"
-                  objectFit="cover"
-                />
-                <span className="z-10">土地探し</span>
-              </div>
-              <div className="w-full bg-white px-[25px] py-[21px] font-noto-sans-jp text-xl leading-lg">
-                宅地建物取引士の資格を有するスタッフが、土地探しからお手伝いいたします。立地条件や地域環境など、ご希望の条件をお聞かせください。
-              </div>
-            </div>
+            <TopSectionWorkCard
+              image="/background/strength-1.png"
+              textImage="土地探し"
+              alt="advantages"
+            >
+              宅地建物取引士の資格を有するスタッフが、土地探しからお手伝いいたします。立地条件や地域環境など、ご希望の条件をお聞かせください。
+            </TopSectionWorkCard>
 
-            <div className="flex flex-row">
-              <div className="relative flex min-w-[150px] items-center justify-center bg-pink-custom-2 px-[12px] py-[60px] font-noto-sans-jp text-1.5xl font-bold text-white">
-                <Image
-                  src="/background/strength-2.png"
-                  alt="advantages"
-                  layout="fill"
-                  objectFit="cover"
-                />
-                <span className="z-10">設計</span>
-              </div>
-              <div className="w-full bg-white px-[25px] py-[21px] font-noto-sans-jp text-xl leading-lg">
-                設計部を設けた弊社には、10名もの一級建築士が在籍しています。お客様との入念なヒアリングを基に、最適な工場・倉庫を設計いたします。
-              </div>
-            </div>
+            <TopSectionWorkCard
+              image="/background/strength-2.png"
+              textImage="設計"
+              alt="advantages"
+            >
+              設計部を設けた弊社には、10名もの一級建築士が在籍しています。お客様との入念なヒアリングを基に、最適な工場・倉庫を設計いたします。
+            </TopSectionWorkCard>
 
-            <div className="flex flex-row">
-              <div className="relative flex min-w-[150px] items-center justify-center bg-pink-custom-2 px-[12px] py-[60px] font-noto-sans-jp text-1.5xl font-bold text-white">
-                <Image
-                  src="/background/strength-3.png"
-                  alt="advantages"
-                  layout="fill"
-                  objectFit="cover"
-                />
-                <span className="z-10">施工</span>
-              </div>
-              <div className="w-full bg-white px-[25px] py-[21px] font-noto-sans-jp text-xl leading-lg">
-                住宅からビル・工場・商業施設まで、あらゆる建物の建設で得られた豊富な経験と実績を基に、信頼性の高い建物をお届けいたします。{" "}
-              </div>
-            </div>
+            <TopSectionWorkCard
+              image="/background/strength-3.png"
+              textImage="施工"
+              alt="advantages"
+            >
+              住宅からビル・工場・商業施設まで、あらゆる建物の建設で得られた豊富な経験と実績を基に、信頼性の高い建物をお届けいたします。
+            </TopSectionWorkCard>
 
-            <div className="flex flex-row">
-              <div className="relative flex min-w-[150px] items-center justify-center bg-pink-custom-2 px-[12px] py-[45px] font-noto-sans-jp text-1.5xl font-bold text-white">
-                <Image
-                  src="/background/strength-4.png"
-                  alt="advantages"
-                  layout="fill"
-                  objectFit="cover"
-                />
-                <span className="z-10">
-                  アフター
-                  <br />
-                  メンテナンス
-                </span>
-              </div>
-              <div className="w-full bg-white px-[25px] py-[21px] font-noto-sans-jp text-xl leading-lg">
-                お客様が長きにわたり安心して工場・倉庫をご利用いただけるよう、建物の保守管理のお手伝いをいたします。
-              </div>
-            </div>
+            <TopSectionWorkCard
+              image="/background/strength-4.png"
+              textImage={`アフター\nメンテナンス`}
+              alt="advantages"
+            >
+              お客様が長きにわたり安心して工場・倉庫をご利用いただけるよう、建物の保守管理のお手伝いをいたします。
+            </TopSectionWorkCard>
           </div>
         </div>
       </div>

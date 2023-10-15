@@ -6,15 +6,15 @@ const items: {
 }[] = [
   {
     label: "システム建築とは",
-    link: Routes.TOP,
+    link: `${Routes.TOP}#About`,
   },
   {
     label: "施工実績",
-    link: Routes.WORK,
+    link: `${Routes.TOP}#Work`,
   },
   {
     label: "お問い合わせからの流れ",
-    link: Routes.CONTACT,
+    link: `${Routes.TOP}#Flow`,
   },
   {
     label: "工場・倉庫建築のポイント",
