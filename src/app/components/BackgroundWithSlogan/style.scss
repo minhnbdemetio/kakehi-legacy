@@ -8,9 +8,6 @@
   padding: 0;
   background-size: cover;
   background-position-y: top;
-  @media screen and (max-width: 1024px) {
-    background-size: unset;
-  }
 
   div {
     position: absolute;
