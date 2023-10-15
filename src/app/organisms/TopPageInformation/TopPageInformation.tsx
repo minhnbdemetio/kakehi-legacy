@@ -14,7 +14,7 @@ const TopPageInformation: React.FC<IProps> = () => {
       src="/steel-self-background.jpg"
     >
       <div className="toppage-information-container">
-        <div className="flex flex-col  items-center justify-center">
+        <div className="flex flex-col  items-center justify-center" id="About">
           <div className="mb-[5px] w-max border-b-2 border-color-custom px-[22px] pb-[3px] text-center font-noto-sans text-xl uppercase text-primary xl:px-0">
             ABOUT
           </div>

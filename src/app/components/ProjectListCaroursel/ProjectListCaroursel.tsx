@@ -24,12 +24,13 @@ const ProjectListCaroursel: React.FC<IProps> = ({ projects }) => {
   const router = useRouter();
   const settings = {
     dots: false,
-    infinite: projects.length >= 3,
+    infinite: true,
+    autoplay: true,
     speed: 500,
     slidesToShow: 3,
     slidesToScroll: 1,
     arrow: true,
-    variableWidth: true,
+    variableWidth: false,
 
     responsive: [
       {
@@ -56,7 +57,7 @@ const ProjectListCaroursel: React.FC<IProps> = ({ projects }) => {
             <div
               onClick={() => toWorkPage(project.id)}
               key={index}
-              className="flex w-[250px] cursor-pointer flex-col xl:w-[300px] xl:px-[24.5px]"
+              className="flex cursor-pointer flex-col xl:px-[24.5px]"
             >
               <div className="relative w-full">
                 <img
