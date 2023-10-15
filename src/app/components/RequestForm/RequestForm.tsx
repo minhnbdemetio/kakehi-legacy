@@ -197,10 +197,14 @@ export const RequestForm = () => {
             error={fieldState.error?.message}
             onChange={field.onChange}
           >
-            <a href={Routes.PRIVACY_POLICY} className="text-hover-primary">
-              利用規約
+            <a
+              href={Routes.PRIVACY_POLICY}
+              target="_blank"
+              className="text-hover-primary"
+            >
+              個人情報保護方針に
             </a>{" "}
-            に同意する
+            同意する
           </Checkbox>
         )}
       />
