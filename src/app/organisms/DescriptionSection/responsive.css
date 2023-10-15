@@ -15,7 +15,7 @@
     flex-direction: column;
     height: 117px;
     justify-content: space-between;
-  } 
+  }
 
   .description-section-content.left > .description-section-content-body {
     flex-direction: row-reverse !important;
@@ -28,7 +28,7 @@
   }
 
   .description-section-content ul {
-    padding-top: 286px;
+    padding-top: 296px;
     width: 50%;
   }
 
