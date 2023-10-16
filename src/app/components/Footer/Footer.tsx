@@ -64,7 +64,7 @@ const Footer: React.FC<IProps> = ({ showPreFooter = true }) => {
               個人情報保護方針
             </span>
           </a>
-          <a>
+          <a href={Routes.TERMS_OF_SERVICE}>
             <span className="text-md xl:px-[22px] xl:text-[15px]">
               利用規約
             </span>
