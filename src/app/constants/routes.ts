@@ -4,7 +4,7 @@ export const Routes = {
   REQUEST: "/request",
   REQUEST_CONFIRM: "/request/confirm",
   PRIVACY_POLICY: "/privacy-policy#privacies",
-  TERMS_OF_SERVICE: "/terms-of-service#terms",
+  TERMS_OF_SERVICE: "/privacy-policy#terms",
   WORK: "/work",
   POINT: "/point",
   PROFILE: "/profile",
