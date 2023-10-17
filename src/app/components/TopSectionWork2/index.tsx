@@ -13,7 +13,7 @@ export default function TopSectionWork2() {
         懸樋工務店の強み
         <br />
         <span className="text-2.5xl xl:text-[40px]">
-          一貫したサービス の提供
+          一貫したサービス <span className="text-3xl">の提供</span>
         </span>
       </div>
 
