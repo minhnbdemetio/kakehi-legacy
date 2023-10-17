@@ -13,7 +13,7 @@ export default function TopSectionWork1() {
         システム建築が
         <br />
         <span className="text-2.5xl xl:text-[40px]">
-          工場・倉庫に最適 な理由
+          工場・倉庫に最適 <span className="text-3xl">な理由</span>
         </span>
       </div>
 

@@ -48,7 +48,7 @@ export default function SliderBackgroundWithSlogan({
               className="h-full w-full bg-cover bg-no-repeat"
             ></div>
 
-            <div className="absolute left-[50%] top-[50%] flex translate-x-[-50%] translate-y-[-50%] justify-center">
+            <div className="absolute left-[50%] top-[50%] flex w-full translate-x-[-50%] translate-y-[-50%] justify-center">
               {children}
             </div>
           </div>
