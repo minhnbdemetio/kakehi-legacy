@@ -36,7 +36,7 @@ const CardDescription: React.FC<IProps> = ({
 
   const DescriptionWrapper = link
     ? ({ children, ...props }: PropsWithChildren) => (
-        <Link href={link} {...props}>
+        <Link href={link} target="_blank" {...props}>
           {children}
         </Link>
       )

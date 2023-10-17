@@ -1,6 +1,19 @@
 .slider-background {
   .slick-arrow {
-    display: none !important;
+    z-index: 1;
+    width: 36px;
+    height: 36px;
+    bottom: -25px;
+  }
+  .slick-prev:before,
+  .slick-next:before {
+    font-size: 36px;
+  }
+  .slick-prev {
+    left: 0;
+  }
+  .slick-next {
+    right: 0;
   }
   .slick-dots {
     z-index: 1;
