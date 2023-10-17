@@ -18,7 +18,7 @@ const ListFeatures: React.FC<IProps> = () => {
           return (
             <li
               key={item.img}
-              className="feature-item flex flex-col gap-[50px] pb-[70px] xl:gap-[90px] xl:pb-0"
+              className="feature-item flex flex-col gap-[50px] pb-[70px] last:pb-0 xl:gap-[90px] xl:pb-0"
             >
               <div className="feature-img xl:h-[170px]">
                 <img alt="Factory" src={item.img} />

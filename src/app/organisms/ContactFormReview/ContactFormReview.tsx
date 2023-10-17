@@ -54,7 +54,7 @@ const ContactFormReview: React.FC<IProps> = ({
             </p>
           )}
         </div>
-        <div className="contact-form-body w-full space-y-7 px-33.1/3 pb-24 pt-14 xl:table xl:border-spacing-y-26">
+        <div className="contact-form-body w-full space-y-7 px-5 pb-24 pt-14 xl:table xl:border-spacing-y-26 xl:px-33.1/3">
           <RequestConfirmField label="会社名" content={data.companyName} />
           <RequestConfirmField label="お名前" content={data.name} />
           <RequestConfirmField label="ふりがな" content={data.furigana} />
@@ -74,21 +74,28 @@ const ContactFormReview: React.FC<IProps> = ({
         </div>
 
         {!submitted ? (
-          <div className="flex justify-center gap-7 xl:gap-14">
-            <Button onClick={back} className="relative bg-black">
-              <span>戻る</span>
+          <div className="flex justify-center gap-7 px-5 xl:gap-14">
+            <Button
+              onClick={back}
+              className="relative flex flex-col-reverse items-center justify-center gap-y-2 bg-black px-7 sm:flex-row sm:justify-between"
+            >
               <img
-                className="absolute left-7 top-1/2 hidden -translate-y-1/2 -scale-x-100 xl:block"
+                className="-scale-x-100"
                 src="/icons/arrow-right-icon.png"
                 alt=""
                 width={50}
                 height={17}
               />
+              <span>戻る</span>
+              <span className="sm:w-[50px]"></span>
             </Button>
-            <Button onClick={handleSubmit} className="relative">
+            <Button
+              onClick={handleSubmit}
+              className="relative flex flex-col items-center justify-center gap-y-2 px-7 sm:flex-row sm:justify-between"
+            >
+              <span className="sm:w-[50px]"></span>
               <span>{submitting ? "提出中..." : "確認する"}</span>
               <img
-                className="absolute right-7 top-1/2 hidden -translate-y-1/2 xl:block"
                 src="/icons/arrow-right-icon.png"
                 alt=""
                 width={50}

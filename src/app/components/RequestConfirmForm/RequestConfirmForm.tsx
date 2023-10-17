@@ -106,20 +106,27 @@ export const RequestConfirmForm = () => {
 
         {!isConfirmed ? (
           <div className="flex justify-center gap-7 xl:gap-14">
-            <Button href={Routes.REQUEST} className="relative bg-black">
-              <span>戻る</span>
+            <Button
+              href={Routes.REQUEST}
+              className="relative flex flex-col-reverse items-center justify-center gap-y-2 bg-black px-7 sm:flex-row sm:justify-between"
+            >
               <img
-                className="absolute left-7 top-1/2 hidden -translate-y-1/2 -scale-x-100 xl:block"
+                className="-scale-x-100"
                 src="/icons/arrow-right-icon.png"
                 alt=""
                 width={50}
                 height={17}
               />
+              <span>戻る</span>
+              <span className="sm:w-[50px]"></span>
             </Button>
-            <Button onClick={handleSubmit} className="relative">
+            <Button
+              onClick={handleSubmit}
+              className="relative flex flex-col items-center justify-center gap-y-2 px-7 sm:flex-row sm:justify-between"
+            >
+              <span className="sm:w-[50px]"></span>
               <span>確認する</span>
               <img
-                className="absolute right-7 top-1/2 hidden -translate-y-1/2 xl:block"
                 src="/icons/arrow-right-icon.png"
                 alt=""
                 width={50}

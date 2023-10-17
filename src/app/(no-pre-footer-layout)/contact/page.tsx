@@ -17,7 +17,7 @@ const Contact: React.FC<IProps> = () => {
       <div>
         <PageTitle title="お問い合わせ" subTitle="CONTACT" />
       </div>
-      <div className=" mx-auto mt-16.2/3 w-fit">
+      <div className=" mx-auto mt-16.2/3 w-fit max-w-full">
         <GoogleReCaptchaProvider
           reCaptchaKey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY || ""}
         >
