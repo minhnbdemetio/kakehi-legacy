@@ -21,6 +21,7 @@ export default function SliderBackgroundWithSlogan({
 }: SliderBackgroundWithSloganProps) {
   const settings: Settings = {
     dots: true,
+    arrows: true,
     infinite: true,
     speed: 500,
     slidesToShow: 1,
@@ -30,15 +31,15 @@ export default function SliderBackgroundWithSlogan({
   };
 
   return (
-    <div
-      className={clsx(
-        "slider-background relative h-[749px] w-full xl:h-[543px]",
-        className
-      )}
-    >
+    <div className={clsx("slider-background relative w-full", className)}>
       <Slider {...settings}>
         {images.map((image, index) => (
-          <div key={index} className={clsx(" h-[749px] w-full  xl:h-[543px]")}>
+          <div
+            key={index}
+            className={clsx(
+              "relative h-[749px] w-full xl:aspect-[1440/543] xl:h-auto"
+            )}
+          >
             <div
               style={{
                 backgroundImage: `url(${image})`,
@@ -46,13 +47,13 @@ export default function SliderBackgroundWithSlogan({
               }}
               className="h-full w-full bg-cover bg-no-repeat"
             ></div>
+
+            <div className="absolute left-[50%] top-[50%] flex translate-x-[-50%] translate-y-[-50%] justify-center">
+              {children}
+            </div>
           </div>
         ))}
       </Slider>
-
-      <div className="absolute left-[50%] top-[50%] flex w-full translate-x-[-50%] translate-y-[-50%] justify-center">
-        {children}
-      </div>
     </div>
   );
 }

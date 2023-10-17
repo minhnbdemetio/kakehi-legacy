@@ -196,6 +196,7 @@ export const RequestForm = () => {
             className="mb-7 justify-center"
             error={fieldState.error?.message}
             onChange={field.onChange}
+            checked={field.value}
           >
             <a
               href={Routes.PRIVACY_POLICY}
