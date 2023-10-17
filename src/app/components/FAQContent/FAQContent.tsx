@@ -1,11 +1,13 @@
-import { getFAQCategories } from "@/app/utils/queries/getFAQCategories";
+import { FAQData } from "@/app/utils/queries/getFAQCategories";
 import { Accordion } from "../Accordion";
 import { InfoContainer } from "../InfoContainer";
 import { InfoHeading } from "../InfoHeading";
 
-export const FAQContent = async () => {
-  const categories = await getFAQCategories();
-
+export const FAQContent = async ({
+  categories,
+}: {
+  categories: { title: string; faqs: FAQData[] }[];
+}) => {
   if (!categories.length) {
     return null;
   }
