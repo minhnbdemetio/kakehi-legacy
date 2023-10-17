@@ -3,12 +3,12 @@ import { getDataArrayFromQueryResults } from "@/app/utils/query";
 import { QueryResultData } from "@/app/types/QueryResultData";
 import { gql } from "@apollo/client";
 
-interface FAQCategoryData {
+export interface FAQCategoryData {
   title: string;
   faqs: QueryResultData<FAQData>;
 }
 
-interface FAQData {
+export interface FAQData {
   question: string;
   answer: string;
 }
@@ -34,7 +34,12 @@ const GET_FAQ_CATEGORIES = gql(`query {
 export const getFAQCategories = async () => {
   try {
     const client = getClient();
-    const { data } = await client.query({ query: GET_FAQ_CATEGORIES });
+
+    const { data } = await client.query({
+      query: GET_FAQ_CATEGORIES,
+      fetchPolicy: "no-cache",
+    });
+
     const categoriesData = getDataArrayFromQueryResults<FAQCategoryData>(
       data?.faqCategories
     );
