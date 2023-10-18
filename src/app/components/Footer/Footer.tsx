@@ -20,7 +20,7 @@ const Footer: React.FC<IProps> = ({ showPreFooter = true }) => {
             height={600}
             style={{
               background:
-                "linear-gradient(180deg, #F2F2F2 30%, rgba(206, 236, 245, 0.00) 100%)",
+                "linear-gradient(180deg, #FFF 10%, rgba(206, 236, 245, 0.5) 87%)",
             }}
           >
             <div className="px-7 pt-[125px] xl:pt-[121px]">
