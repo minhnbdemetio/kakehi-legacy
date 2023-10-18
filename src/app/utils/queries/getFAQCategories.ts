@@ -5,21 +5,25 @@ import { gql } from "@apollo/client";
 
 export interface FAQCategoryData {
   title: string;
+  id: string;
   faqs: QueryResultData<FAQData>;
 }
 
 export interface FAQData {
   question: string;
   answer: string;
+  id: string;
 }
 
 const GET_FAQ_CATEGORIES = gql(`query {
   faqCategories {
     data {
+      id
       attributes {
         title
         faqs {
           data {
+            id
             attributes {
               question
               answer
@@ -50,6 +54,7 @@ export const getFAQCategories = async () => {
 
     const categories = categoriesData.map((category) => {
       return {
+        id: category.id,
         title: category.title,
         faqs: getDataArrayFromQueryResults<FAQData>(category.faqs),
       };
