@@ -129,6 +129,7 @@ const config: Config = {
       serif: ["Merriweather", "serif"],
       "noto-sans": ["var(--font-noto-sans)"],
       "noto-sans-jp": ["var(--font-noto-sans-jp)"],
+      "noto-sans-jp-gg": ["Noto Sans JP", "sans-serif"],
     },
     lineHeight: {
       lg: "36px",

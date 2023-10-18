@@ -24,7 +24,7 @@ const Footer: React.FC<IProps> = ({ showPreFooter = true }) => {
             }}
           >
             <div className="px-7 pt-[125px] xl:pt-[121px]">
-              <p className="greeting whitespace-pre-wrap text-center font-noto-sans text-[18px] font-normal leading-lg md:w-full md:text-center">{`工場・倉庫建設に関するあらゆるお悩みに対応いたします。\n資料請求・お見積りはフォームより、お気軽にお問い合わせください。`}</p>
+              <p className="greeting whitespace-pre-wrap text-center font-noto-sans text-[19px] font-[350] leading-lg md:w-full md:text-center">{`工場・倉庫建設に関するあらゆるお悩みに対応いたします。\n資料請求・お見積りはフォームより、お気軽にお問い合わせください。`}</p>
             </div>
 
             <div className="mt-[106px] flex justify-center xl:mt-[86px]">
