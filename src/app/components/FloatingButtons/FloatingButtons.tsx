@@ -1,9 +1,8 @@
 "use client";
 
 import React, { useCallback, useEffect, useState } from "react";
-
-import "./responsive.css";
 import "./style.scss";
+import "./responsive.css";
 import { Routes } from "@/app/constants/routes";
 import clsx from "clsx";
 interface IProps {}
