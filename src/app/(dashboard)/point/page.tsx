@@ -17,7 +17,7 @@ const PointScreen: React.FC<IProps> = () => {
         </BackgroundWithSlogan>
 
         <div className="mx-7 mt-33 xl:mx-pc-container xl:mt-16.2/3">
-          <p className="text-xl font-medium leading-lg">
+          <p className="text-xl font-[350] leading-lg">
             用途に応じた高い専門性が求められる工場・倉庫の建築においては、多くの考慮すべきポイントが存在します。運用開始後の改築が難しい点については、基本計画の段階から考慮する必要があります。
           </p>
         </div>

@@ -95,4 +95,6 @@ p {
 .accordion__answer::before {
   content: "A.";
   font-family: var(--font-noto-sans);
+  font-weight: 200;
+  color: #333333;
 }

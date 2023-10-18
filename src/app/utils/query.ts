@@ -6,7 +6,10 @@ export const getDataArrayFromQueryResults = <T>(data: QueryResultData<T>) => {
   }
 
   const dataFromKey = data.data || [];
-  const results = dataFromKey.map((item) => item.attributes);
+  const results = dataFromKey.map((item) => ({
+    ...item.attributes,
+    id: (item as any).id,
+  }));
 
   return results;
 };

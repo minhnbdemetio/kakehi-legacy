@@ -15,6 +15,9 @@ build-staging:
     - docker:20-dind
   variables:
     DEPLOYER_IMAGE_TAG_NAME: $CI_REGISTRY_IMAGE/$CI_COMMIT_BRANCH
+    NEXT_PUBLIC_CMS_ENDPOINT: "https://proj-kakehi-const-api.caprover.demetio.com"
+    CMS_ACCESS_TOKEN: "e227207b67820601ca62127b4b5625db6138fddcce265a85e80710264220cf119e44b61f3313206f3d6d28f544b001515577397c49244b294cf8fc8c409ebc9ba46a5c93a60d592c670a061087aaf6cfb97d5e523a30a4eb057944c1b1f10ad8fef3129784a55d8605d9b771cd11b6337a75b8cf104e23de1044cc0f54dfb947"
+    NEXT_PUBLIC_RECAPTCHA_SITE_KEY: "6Les9GsoAAAAAEUab1hL2BgQni9GkF4Xvi5gqMyF"
   before_script:
     - until docker info; do sleep 1; done
     - apk add --update git
@@ -22,6 +25,10 @@ build-staging:
   after_script:
     - docker logout $CI_REGISTRY
   script:
+    - echo "NEXT_PUBLIC_CMS_ENDPOINT=$NEXT_PUBLIC_CMS_ENDPOINT" >> .env
+    - echo "CMS_ACCESS_TOKEN=$CMS_ACCESS_TOKEN" >> .env
+    - echo "NEXT_PUBLIC_RECAPTCHA_SITE_KEY=$NEXT_PUBLIC_RECAPTCHA_SITE_KEY" >> .env
+    - cat .env
     - BUILD_IMAGE_TAG_COMMIT=$DEPLOYER_IMAGE_TAG_NAME:$CI_COMMIT_SHORT_SHA
     - BUILD_IMAGE_TAG_LATEST=$DEPLOYER_IMAGE_TAG_NAME:latest
     - docker build -t $BUILD_IMAGE_TAG_COMMIT -t $BUILD_IMAGE_TAG_LATEST .
