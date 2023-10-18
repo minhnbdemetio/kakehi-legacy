@@ -35,7 +35,7 @@ const TopPageFLowSection: React.FC<IProps> = () => {
             >
               {item.label}
             </div>
-            <div className="flex w-full content-center items-center bg-card-background-primary px-3 font-noto-sans-jp text-[15px] font-normal leading-sm xl:px-[21px] xl:py-[57px] xl:text-[18px] xl:leading-lg">
+            <div className="flex w-full content-center items-center bg-card-background-primary px-3 font-noto-sans-jp-gg text-[15px] font-[200] leading-sm xl:px-[21px] xl:py-[57px] xl:text-[18px] xl:leading-lg">
               {item.content}
             </div>
             {index !== items.length - 1 && (

@@ -48,10 +48,8 @@ export default function TopSectionWork3() {
         <div className="ml-[10vw] bg-card-background-primary pb-[161px] pr-[107px] pt-[109px]">
           <div className="ml-[40vw] flex flex-col gap-[14px] pl-[14px]">
             <div className="flex flex-row">
-              <div className="w-full bg-white px-[52px] py-[66.36px] font-noto-sans-jp text-1.5xl leading-lg">
-                創業1954年
-                鳥取に根ざして60年以上。年間契約数300件以上。創業1954年
-                鳥取に根ざして60年以上。年間契約数300件以上。
+              <div className="w-full bg-white px-[66.36px] py-[36px] font-noto-sans-jp-gg text-xl font-[200] leading-[32px]">
+                創業1954年。「お客様の懸け橋に」をコンセプトに、地域に根差す私たちは、多様な建物の建設により、鳥取を彩ってきました。年間の平均売上は20億円、300件以上の案件に対応しています。
               </div>
             </div>
           </div>
