@@ -203,9 +203,9 @@ export const RequestForm = () => {
               target="_blank"
               className="text-hover-primary hover:underline hover:decoration-hover-primary"
             >
-              個人情報保護方針に
+              個人情報保護方針
             </a>{" "}
-            同意する
+            に同意する
           </Checkbox>
         )}
       />
