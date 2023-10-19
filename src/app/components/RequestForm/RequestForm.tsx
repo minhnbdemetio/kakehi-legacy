@@ -201,7 +201,7 @@ export const RequestForm = () => {
             <a
               href={Routes.PRIVACY_POLICY}
               target="_blank"
-              className="text-hover-primary"
+              className="text-hover-primary hover:underline hover:decoration-hover-primary"
             >
               個人情報保護方針に
             </a>{" "}

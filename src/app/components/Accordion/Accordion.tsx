@@ -7,36 +7,34 @@ import { FC, PropsWithChildren, useEffect, useRef, useState } from "react";
 interface Props extends PropsWithChildren {
   summary: string;
   type?: "section" | "question";
+  open: boolean;
+  toggle: () => void;
 }
 
 export const Accordion: FC<Props> = ({
   children,
   summary,
   type = "section",
+  open,
+  toggle,
 }) => {
-  const [isOpen, setIsOpen] = useState(false);
-
-  const toggle = () => {
-    setIsOpen(!isOpen);
-  };
-
   const contentRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
     const contentEl = contentRef.current;
 
-    if (isOpen && contentEl) {
+    if (open && contentEl) {
       contentEl.style.maxHeight = contentEl.scrollHeight + "px";
     } else if (contentEl) {
       contentEl.style.maxHeight = "0px";
     }
-  }, [isOpen]);
+  }, [open]);
 
   return (
     <div>
       <button
         className={clsx(
-          "flex w-full items-center justify-between py-9 text-left font-bold",
+          "flex w-full items-center justify-between gap-5 py-9 text-left font-bold",
           {
             // Section
             [clsx(
@@ -48,10 +46,10 @@ export const Accordion: FC<Props> = ({
             // Question
             [clsx(
               "leading-8 text-xl",
-              "px-7 transition-colors duration-300 xl:px-18",
+              "px-7 transition-colors duration-300  xl:px-18",
               {
-                "bg-white": !isOpen,
-                "bg-hover-primary/40": isOpen,
+                "bg-white": !open,
+                "bg-hover-primary/40": open,
               }
             )]: type === "question",
           }
@@ -73,7 +71,7 @@ export const Accordion: FC<Props> = ({
             width={20}
             height={12}
             className={clsx({
-              "rotate-180 transform": !isOpen,
+              "rotate-180 transform": !open,
             })}
           />
         </div>
@@ -81,8 +79,8 @@ export const Accordion: FC<Props> = ({
 
       <div
         className={clsx("overflow-hidden transition-all duration-300", {
-          "max-h-0": !isOpen,
-          "max-h-[200vh]": isOpen,
+          "max-h-0": !open,
+          "max-h-[200vh]": open,
           "bg-card-background-primary": type === "section",
           "bg-white": type === "question",
         })}
@@ -90,7 +88,7 @@ export const Accordion: FC<Props> = ({
         <div
           className={clsx("leading-8 space-y-7 text-xl font-bold", {
             "px-8 pb-24 xl:px-17": type === "section",
-            "accordion__answer px-7 pb-13 pt-9 xl:px-18": type === "question",
+            "accordion__answer px-7 pb-13 pt-9  xl:px-18": type === "question",
           })}
         >
           {children}

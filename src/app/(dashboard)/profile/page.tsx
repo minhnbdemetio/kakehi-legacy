@@ -16,7 +16,7 @@ const Profile: React.FC<IProps> = () => {
         </h1>
       </BackgroundWithSlogan>
 
-      <ul className="mx-7 mt-22 grid grid-cols-1 gap-3 xl:mx-pc-container xl:mt-33.1/3 xl:gap-7">
+      <ul className="mx-auto mt-22 box-content grid max-w-[994px] grid-cols-1 gap-3 px-7 xl:mt-33.1/3 xl:gap-7 xl:px-pc-container">
         {items.map((item, index) => (
           <li key={index}>
             <CardDescription

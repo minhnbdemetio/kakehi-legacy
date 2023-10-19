@@ -1,13 +1,19 @@
+"use client";
+
 import { FAQData } from "@/app/utils/queries/getFAQCategories";
-import { Accordion } from "../Accordion";
 import { InfoContainer } from "../InfoContainer";
 import { InfoHeading } from "../InfoHeading";
+import { useState } from "react";
+import { Accordion } from "../Accordion";
 
-export const FAQContent = async ({
+export const FAQContent = ({
   categories,
 }: {
-  categories: { title: string; faqs: FAQData[] }[];
+  categories: { title: string; faqs: FAQData[]; id: string }[];
 }) => {
+  const [openSection, setOpenSection] = useState("");
+  const [openQuestion, setOpenQuestion] = useState("");
+
   if (!categories.length) {
     return null;
   }
@@ -18,18 +24,26 @@ export const FAQContent = async ({
       <div className="mx-auto space-y-7">
         {categories.map((category) => (
           <Accordion
+            toggle={() =>
+              setOpenSection(category.id === openSection ? "" : category.id)
+            }
+            open={openSection === category.id}
             summary={category.title}
             key={`FAQCategory_${category.title}`}
           >
             {category.faqs.map((faq) => (
               <Accordion
+                toggle={() =>
+                  setOpenQuestion(faq.id === openQuestion ? "" : faq.id)
+                }
+                open={openQuestion === faq.id}
                 key={`FAQQuestion_${faq.question}`}
                 summary={faq.question}
                 type="question"
               >
                 <span
                   dangerouslySetInnerHTML={{ __html: faq.answer }}
-                  className="whitespace-pre-line"
+                  className="whitespace-pre-line font-[200] "
                 />
               </Accordion>
             ))}
