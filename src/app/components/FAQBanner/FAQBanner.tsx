@@ -15,10 +15,10 @@ export const FAQBanner: FC = () => {
           className={clsx(
             "bg-white text-center",
             "mx-auto space-y-33 px-7 pb-33 pt-23",
-            "xl:px-32"
+            "xl:px-[85px]"
           )}
         >
-          <p className="xl:leading-loose text-lg font-[350]   leading-[1.8] text-primary xl:text-1.5xl">
+          <p className="xl:leading-loose text-lg font-[350] leading-[1.8] text-primary xl:text-1.5xl">
             システム建築について、もっと詳しく知りたい方は、ガイドブックをご活用ください。
             <br />
             以下のフォームに必要事項をご入力の上、お問い合わせください。
