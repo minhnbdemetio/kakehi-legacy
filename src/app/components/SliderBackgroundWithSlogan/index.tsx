@@ -27,7 +27,7 @@ export default function SliderBackgroundWithSlogan({
     slidesToShow: 1,
     slidesToScroll: 1,
     autoplay: true,
-    autoplaySpeed: 5 * 1000000000,
+    autoplaySpeed: 5 * 1000,
   };
 
   return (
