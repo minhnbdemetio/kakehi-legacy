@@ -12,10 +12,7 @@ export default function Home() {
   );
   return (
     <>
-      <SliderBackgroundWithSlogan images={images}>
-        <h1 className="hidden whitespace-pre-wrap text-center text-3xl xl:block">{`システム建築で、\n工場・倉庫に 最適な答えを。`}</h1>
-        <h1 className="block w-full whitespace-pre-wrap text-center text-3xl xl:hidden">{`システム建築で、\n工場・倉庫に \n最適な答えを。`}</h1>
-      </SliderBackgroundWithSlogan>
+      <SliderBackgroundWithSlogan images={images}></SliderBackgroundWithSlogan>
 
       <TopPageInformation />
 
