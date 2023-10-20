@@ -22,15 +22,12 @@ const TopPageFLowSection: React.FC<IProps> = () => {
           <div className="relative flex h-[150px]" key={item.label}>
             <div
               className={clsx(
-                "mx-auto flex w-[100px] min-w-[100px] items-center justify-center bg-cover bg-center bg-no-repeat text-left font-noto-sans-jp text-[15px] font-bold text-white xl:w-[150px] xl:min-w-[150px] xl:text-[21px]",
+                "mx-auto flex w-[100px] min-w-[100px] items-center justify-center text-left font-noto-sans-jp text-[15px] font-bold text-white xl:w-[150px] xl:min-w-[150px] xl:text-[21px]",
                 index === 2 && "px-[12px] xl:px-0 xl:pl-[23px]",
                 index === 3 && "px-[20px] xl:px-[33px]"
               )}
               style={{
-                background: `url('${item.img}')`,
-                backgroundSize: "cover !important",
-                backgroundRepeat: "no-repeat !important",
-                backgroundPosition: "center",
+                background: `url('${item.img}') no-repeat center center/cover`,
               }}
             >
               {item.label}
