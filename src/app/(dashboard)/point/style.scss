@@ -2,8 +2,17 @@
 
 .point-screen {
   .page-header {
-    .list-points {
+    .point-lists {
       border-bottom: 2px solid $text-primary-color;
+
+      .card-description-label {
+        width: 150px !important;
+      }
+    }
+  }
+  .list-points {
+    .card-description-content {
+      font-weight: 350 !important;
     }
   }
 }

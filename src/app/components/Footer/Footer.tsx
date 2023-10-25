@@ -24,13 +24,13 @@ const Footer: React.FC<IProps> = ({ showPreFooter = true }) => {
             }}
           >
             <div className="px-7 pt-[125px] xl:pt-[121px]">
-              <p className="greeting whitespace-pre-wrap text-center font-noto-sans text-[19px] font-[350] leading-lg md:w-full md:text-center">{`工場・倉庫建設に関するあらゆるお悩みに対応いたします。\n資料請求・お見積りはフォームより、お気軽にお問い合わせください。`}</p>
+              <p className="greeting whitespace-pre-wrap text-center font-noto-sans text-[21px] font-[400] leading-lg md:w-full md:text-center">{`工場・倉庫建設に関するあらゆるお悩みに対応いたします。\n資料請求・お見積りはフォームより、お気軽にお問い合わせください。`}</p>
             </div>
 
             <div className="mt-[106px] flex justify-center xl:mt-[86px]">
               <Button
                 href={Routes.CONTACT}
-                className="font-noto-sans text-[21px] font-medium xl:text-[24px]"
+                className="font-noto-sans text-[24px] font-[500] xl:text-[24px]"
               >
                 <span className="font-noto-sans">お問い合わせ</span>
               </Button>
