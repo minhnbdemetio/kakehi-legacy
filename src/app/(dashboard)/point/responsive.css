@@ -10,12 +10,14 @@
   }
 
   .point-screen .card-description-content {
+    font-size: 19px !important;
+    font-weight: 400 !important;
     line-height: 32px !important;
   }
 
-  .point-screen .card-description-content {
-    font-size: 19px !important;
-    font-weight: 400 !important;
+  .point-screen .card-list .card-description-content {
+    font-size: 24px !important;
+    font-weight: 500 !important;
   }
 
   .point-screen .point-lists .card-description-content {

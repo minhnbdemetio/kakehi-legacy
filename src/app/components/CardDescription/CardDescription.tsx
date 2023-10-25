@@ -45,7 +45,7 @@ const CardDescription: React.FC<IProps> = ({
   return (
     <div
       className={CLSX({
-        [`card-description ${size} flex items-stretch background-${background}`]:
+        [`card-description ${size} flex h-full items-stretch background-${background}`]:
           true,
       })}
     >
