@@ -18,7 +18,7 @@ export const FAQBanner: FC = () => {
             "xl:px-[85px]"
           )}
         >
-          <p className="xl:leading-loose text-lg font-[350] leading-[1.8] text-primary xl:text-1.5xl">
+          <p className="xl:leading-loose text-[21px] font-[400]  leading-[1.8] text-primary xl:text-1.5xl">
             システム建築について、もっと詳しく知りたい方は、ガイドブックをご活用ください。
             <br />
             以下のフォームに必要事項をご入力の上、お問い合わせください。

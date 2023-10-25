@@ -19,7 +19,7 @@ export const TopSectionWorkCard: FC<Props> = ({
         <Image src={image} alt={alt} layout="fill" objectFit="cover" />
         <span className="z-10 whitespace-pre-wrap">{textImage}</span>
       </div>
-      <div className="flex w-full flex-col justify-center bg-white px-[25px] py-[21px] font-noto-sans-jp-gg text-[19px] font-[300] leading-lg">
+      <div className="flex w-full  flex-col justify-center bg-white px-[25px] py-[21px] font-noto-sans-jp-gg text-[19px]  font-[350] leading-lg">
         {children}
       </div>
     </div>
