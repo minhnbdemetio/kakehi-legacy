@@ -26,7 +26,7 @@ export default function TopSectionWork3() {
 
         <div className="flex flex-col gap-[20px] px-[20px]">
           <div className="flex flex-row">
-            <div className="w-full bg-white px-[26px] py-[15px] font-noto-sans-jp text-[15px] font-normal leading-sm">
+            <div className="w-full bg-white px-[26px] py-[15px] font-noto-sans-jp text-[15px] font-[350] leading-sm">
               創業1954年。「お客様の懸け橋に」をコンセプトに、地域に根差す私たちは、多様な建物の建設により、鳥取を彩ってきました。年間の平均売上は20億円、300件以上の案件に対応しています。
             </div>
           </div>
@@ -48,7 +48,7 @@ export default function TopSectionWork3() {
         <div className="ml-[10vw] bg-card-background-primary pb-[161px] pr-[107px] pt-[109px]">
           <div className="ml-[40vw] flex flex-col gap-[14px] pl-[14px]">
             <div className="flex flex-row">
-              <div className="w-full bg-white px-[66.36px] py-[36px] font-noto-sans-jp-gg text-[19px] font-[300] leading-[32px]">
+              <div className="w-full bg-white px-[66.36px] py-[36px] font-noto-sans-jp-gg text-[19px] font-[350] leading-[32px]">
                 創業1954年。「お客様の懸け橋に」をコンセプトに、地域に根差す私たちは、多様な建物の建設により、鳥取を彩ってきました。年間の平均売上は20億円、300件以上の案件に対応しています。
               </div>
             </div>

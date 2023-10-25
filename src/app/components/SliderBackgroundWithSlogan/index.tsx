@@ -52,8 +52,14 @@ export default function SliderBackgroundWithSlogan({
         ))}
       </Slider>
       <div className="absolute left-[50%] top-[50%] flex w-full translate-x-[-50%] translate-y-[-50%] justify-center">
-        <h1 className="hidden whitespace-pre-wrap text-center text-3xl xl:block">{`システム建築で、\n工場・倉庫に 最適な答えを。`}</h1>
-        <h1 className="block w-full whitespace-pre-wrap text-center text-3xl xl:hidden">{`システム建築で、\n工場・倉庫に \n最適な答えを。`}</h1>
+        <h1
+          className="hidden whitespace-pre-wrap text-center text-3.5xl 	 xl:block"
+          style={{ textShadow: "2px 3px #00000052" }}
+        >{`システム建築で、\n工場・倉庫に 最適な答えを。`}</h1>
+        <h1
+          style={{ textShadow: "2px 3px #00000052" }}
+          className="block w-full whitespace-pre-wrap text-center text-3.5xl  xl:hidden"
+        >{`システム建築で、\n工場・倉庫に \n最適な答えを。`}</h1>
       </div>
     </div>
   );
