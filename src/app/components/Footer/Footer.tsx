@@ -24,15 +24,15 @@ const Footer: React.FC<IProps> = ({ showPreFooter = true }) => {
             }}
           >
             <div className="px-7 pt-[125px] xl:pt-[121px]">
-              <p className="greeting whitespace-pre-wrap text-center font-noto-sans text-[21px] font-[400] leading-lg md:w-full md:text-center">{`工場・倉庫建設に関するあらゆるお悩みに対応いたします。\n資料請求・お見積りはフォームより、お気軽にお問い合わせください。`}</p>
+              <p className="greeting whitespace-pre-wrap text-center  text-[21px] font-[400] leading-lg md:w-full md:text-center">{`工場・倉庫建設に関するあらゆるお悩みに対応いたします。\n資料請求・お見積りはフォームより、お気軽にお問い合わせください。`}</p>
             </div>
 
             <div className="mt-[106px] flex justify-center xl:mt-[86px]">
               <Button
                 href={Routes.CONTACT}
-                className="font-noto-sans text-[24px] font-[500] xl:text-[24px]"
+                className="font-[Noto Sans JP] text-[24px] font-[500] xl:text-[24px]"
               >
-                <span className="font-noto-sans">お問い合わせ</span>
+                <span className="font-[Noto Sans JP]">お問い合わせ</span>
               </Button>
             </div>
           </BackgroundSection>
@@ -46,14 +46,14 @@ const Footer: React.FC<IProps> = ({ showPreFooter = true }) => {
             alt="Kakehi footer logo"
           />
         </div>
-        <p className="mt-[9.99px] text-center font-noto-sans-jp text-md xl:mt-[33.16px] xl:text-[15px]">
+        <p className="mt-[9.99px] text-center  text-md xl:mt-[33.16px] xl:text-[15px]">
           〒680-1417 鳥取県鳥取市桂見573番地
         </p>
         <p className="font-base mt-[5px] text-center font-noto-sans text-md xl:text-[15px]">
           TEL 0857-28-4788
         </p>
 
-        <div className="footer-link mt-[25px] font-noto-sans-jp xl:mt-[31px]">
+        <div className="footer-link mt-[25px]  xl:mt-[31px]">
           <a href={Routes.PROFILE}>
             <span className="text-md xl:px-[22px] xl:text-[15px]">
               会社概要
