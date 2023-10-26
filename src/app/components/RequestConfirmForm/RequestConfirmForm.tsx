@@ -16,6 +16,7 @@ const INFO_TEXT_CLASSNAME =
 
 export const RequestConfirmForm = () => {
   const [isConfirmed, setIsConfirmed] = useState(false);
+  const [sumbmitting, setSubmitting] = useState(false);
   const requestData = useSessionStorage(sessionStorageKey.REQUEST_DATA, null);
   const parsedData = useMemo<RequestFormData | null>(
     () => (requestData ? JSON.parse(requestData) : null),
@@ -34,6 +35,7 @@ export const RequestConfirmForm = () => {
   const handleSubmit = async () => {
     try {
       if (parsedData && executeRecaptcha) {
+        setSubmitting(true);
         const token = await executeRecaptcha();
 
         console.debug(token);
@@ -54,6 +56,8 @@ export const RequestConfirmForm = () => {
     } finally {
       setIsConfirmed(true);
     }
+
+    setSubmitting(false);
   };
 
   return (
@@ -125,7 +129,7 @@ export const RequestConfirmForm = () => {
               className="relative flex flex-col items-center justify-center gap-y-2 px-7 sm:flex-row sm:justify-between"
             >
               <span className="sm:w-[50px]"></span>
-              <span>送信する</span>
+              <span>{sumbmitting ? "送信中..." : "送信する"}</span>
               <img
                 src="/icons/arrow-right-icon.png"
                 alt=""
