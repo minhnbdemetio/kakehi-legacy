@@ -41,7 +41,7 @@ const MobileSidebar: React.FC<IProps> = () => {
   return (
     <div
       id="main-mobile-sidebar"
-      className="bg-primary right-sidebar fixed right-0 top-0 z-50 h-full w-full p-5"
+      className="bg-primary right-sidebar fixed right-0 top-0  z-[1000] h-full w-full p-5"
     >
       <div className="mb-5 flex justify-end">
         <button
