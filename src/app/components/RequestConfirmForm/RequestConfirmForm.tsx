@@ -125,7 +125,7 @@ export const RequestConfirmForm = () => {
               className="relative flex flex-col items-center justify-center gap-y-2 px-7 sm:flex-row sm:justify-between"
             >
               <span className="sm:w-[50px]"></span>
-              <span>確認する</span>
+              <span>送信する</span>
               <img
                 src="/icons/arrow-right-icon.png"
                 alt=""
