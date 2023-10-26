@@ -91,7 +91,7 @@ export const RequestForm = () => {
       onSubmit={form.handleSubmit(onSubmit)}
       className="bg-card-background-primary pb-23 pl-6 pr-6 pt-17  xl:pl-33 xl:pr-12"
     >
-      <p className="xl:leading-loose mb-17 text-center font-noto-sans-jp text-lg leading-[1.8] text-primary xl:text-xl">
+      <p className="xl:leading-loose mb-17 text-center  text-lg leading-[1.8] text-primary xl:text-xl">
         以下のフォームに必要事項をご入力の上、資料をご請求ください。
         <br />
         ご入力いただいたメールアドレスへ、資料のダウンロードリンクをご連絡いたします。

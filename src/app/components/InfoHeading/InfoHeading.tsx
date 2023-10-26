@@ -23,9 +23,7 @@ export const InfoHeading: FC<Props> = ({ subtitle, title, className }) => {
       >
         {subtitle}
       </h2>
-      <h1 className="font-noto-sans-jp text-2xl font-bold text-inherit xl:text-3xl">
-        {title}
-      </h1>
+      <h1 className=" text-2xl font-bold text-inherit xl:text-3xl">{title}</h1>
     </div>
   );
 };
