@@ -89,12 +89,12 @@ p {
 
 .accordion__question::before {
   content: "Q.";
-  font-family: var(--font-noto-sans);
+  font-family: Noto Sans JP;
 }
 
 .accordion__answer::before {
   content: "A.";
-  font-family: var(--font-noto-sans);
+  font-family: Noto Sans JP;
   font-weight: 200;
   color: #333333;
 }

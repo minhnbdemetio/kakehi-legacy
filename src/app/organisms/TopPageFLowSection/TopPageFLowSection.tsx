@@ -23,7 +23,7 @@ const TopPageFLowSection: React.FC<IProps> = () => {
           <div className="relative flex h-[150px]" key={item.label}>
             <div
               className={clsx(
-                "relative mx-auto flex w-[100px] min-w-[100px] items-center justify-center bg-cover bg-center bg-no-repeat text-left font-noto-sans-jp text-[15px] font-bold text-white xl:w-[150px] xl:min-w-[150px] xl:text-[21px]",
+                "relative mx-auto flex w-[100px] min-w-[100px] items-center justify-center bg-cover bg-center bg-no-repeat text-left  text-[15px] font-bold text-white xl:w-[150px] xl:min-w-[150px] xl:text-[21px]",
                 index === 2 && "px-[12px] xl:px-0 xl:pl-[23px]",
                 index === 3 && "px-[20px] xl:px-[33px]"
               )}
@@ -36,7 +36,7 @@ const TopPageFLowSection: React.FC<IProps> = () => {
               />
               <div className="z-10">{item.label}</div>
             </div>
-            <div className="flex w-full content-center items-center bg-card-background-primary px-3 font-noto-sans-jp-gg text-[15px] font-[350] leading-sm xl:px-[21px] xl:py-[57px] xl:text-[18px] xl:leading-lg">
+            <div className="-gg flex w-full content-center items-center bg-card-background-primary px-3 text-[15px] font-[350] leading-sm xl:px-[21px] xl:py-[57px] xl:text-[18px] xl:leading-lg">
               {item.content}
             </div>
             {index !== items.length - 1 && (
