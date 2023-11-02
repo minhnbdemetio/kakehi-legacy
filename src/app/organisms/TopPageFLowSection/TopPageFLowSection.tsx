@@ -14,7 +14,7 @@ const TopPageFLowSection: React.FC<IProps> = () => {
         </div>
 
         <div className="mb-[51px] font-noto-sans text-2xl font-bold xl:mb-[79px] xl:px-0 xl:text-3xl">
-          お問い合せからの流れ
+          お問い合わせからの流れ
         </div>
       </div>
 
