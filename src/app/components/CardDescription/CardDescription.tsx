@@ -81,7 +81,8 @@ const CardDescription: React.FC<IProps> = ({
             [`text-${descriptionAlign}`]: true,
             "xl:px-22": descriptionOnly,
             "xl:py-17.1/3": descriptionOnly,
-            "hover:text-hover-nav": !!link,
+            "hover:text-[#1955a7] hover:underline hover:underline-offset-4":
+              !!link,
           },
           descriptionClassName
         )}
