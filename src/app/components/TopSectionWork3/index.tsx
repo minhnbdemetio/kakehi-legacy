@@ -17,7 +17,7 @@ export default function TopSectionWork3() {
       <div className="flex w-full flex-col gap-[50px] bg-card-background-primary pb-[50px] xl:hidden">
         <div className="relative h-[800px] w-full">
           <Image
-            src="/history-img.jpg"
+            src="/top/kakehi_lp_top_page_exterior.jpg"
             alt="advantages"
             layout="fill"
             objectFit="cover"
@@ -27,7 +27,7 @@ export default function TopSectionWork3() {
         <div className="flex flex-col gap-[20px] px-[20px]">
           <div className="flex flex-row">
             <div className="w-full bg-white px-[26px] py-[15px]  text-[15px] font-[350] leading-sm">
-              創業1954年。「お客様の懸け橋に」をコンセプトに、地域に根差す私たちは、多様な建物の建設により、鳥取を彩ってきました。年間の平均売上は20億円、300件以上の案件に対応しています。
+              1954年の創業以来、地域に根差す私たちは、工場やオフィス、公共施設などたくさんの建物を建築してきました。これからもお客様にとって大切なものと向き合い、鳥取を彩り続けます。
             </div>
           </div>
         </div>
@@ -36,7 +36,7 @@ export default function TopSectionWork3() {
       <div className="absolute bottom-[161px] left-0 hidden xl:block">
         <div className="relative h-[481px] w-[50vw]">
           <Image
-            src="/history-img.jpg"
+            src="/top/kakehi_lp_top_page_exterior.jpg"
             alt="advantages"
             layout="fill"
             objectFit="cover"
@@ -49,7 +49,7 @@ export default function TopSectionWork3() {
           <div className="ml-[40vw] flex flex-col gap-[14px] pl-[14px]">
             <div className="flex flex-row">
               <div className="-gg w-full bg-white px-[66.36px] py-[36px] text-[19px] font-[350] leading-[32px]">
-                創業1954年。「お客様の懸け橋に」をコンセプトに、地域に根差す私たちは、多様な建物の建設により、鳥取を彩ってきました。年間の平均売上は20億円、300件以上の案件に対応しています。
+                1954年の創業以来、地域に根差す私たちは、工場やオフィス、公共施設などたくさんの建物を建築してきました。これからもお客様にとって大切なものと向き合い、鳥取を彩り続けます。
               </div>
             </div>
           </div>

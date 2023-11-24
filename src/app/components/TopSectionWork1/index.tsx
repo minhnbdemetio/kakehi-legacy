@@ -40,7 +40,7 @@ export default function TopSectionWork1() {
               <span className="z-10">ローコスト</span>
             </div>
             <div className="flex w-full items-center bg-white px-[26px] py-[15px]  text-[15px] font-[350]  leading-sm">
-              部材の標準化と少部材化を図り、コスト削減を実現。蓄積されたデータを基に、初期過程から高精度の見積りが可能です。
+              部材の標準化と軽量化を追求し、コスト削減を実現しました。初期工程から高精度の見積りが可能な点も特徴のひとつです。
             </div>
           </div>
 
@@ -55,7 +55,7 @@ export default function TopSectionWork1() {
               <span className="z-10">高品質</span>
             </div>
             <div className="flex w-full items-center bg-white px-[26px] py-[15px]  text-[15px] font-[350]  leading-sm">
-              部材と工法の標準化により品質の安定性を確保。屋根断熱性能は高層ビルにも用いられる外壁材ALCの約2倍。耐震性や耐久性にも優れています。
+              標準化された部材は安定した品質を確保し、耐震性と耐久性に優れています。屋根断熱性能は高層ビルにも用いられる外壁材ALCの約2倍を誇ります。
             </div>
           </div>
 
@@ -70,7 +70,7 @@ export default function TopSectionWork1() {
               <span className="z-10">大空間</span>
             </div>
             <div className="flex w-full items-center bg-white px-[26px] py-[15px]  text-[15px] font-[350] leading-sm">
-              橋梁などに使用される高張力材を採用し、最大無柱スパン60mを実現。さらに、中間柱を設けることで最大120mの大空間の構築も可能です。
+              橋梁などに使用される高張力材を採用し、最大無柱スパン60mを実現できます。さらに、中間柱を設けることで最大120mの大空間の構築も可能です。
             </div>
           </div>
 
@@ -85,9 +85,7 @@ export default function TopSectionWork1() {
               <span className="z-10">短工期</span>
             </div>
             <div className="flex w-full items-center bg-white px-[26px] py-[15px]  text-[15px] font-[350] leading-sm">
-              設計から施工までの工程をシステム化。在来工法に比べ、工期をおよそ15%〜20%短縮できます。
-              <br />
-              ※建物の仕様による{" "}
+              部材のストックが可能なシステム建築は、その手配や製作におけるタイムロスがありません。生産システムも標準化されており、在来工法に比べて約20％の短工期化を実現します。
             </div>
           </div>
         </div>
@@ -112,7 +110,7 @@ export default function TopSectionWork1() {
               textImage="ローコスト"
               alt="advantages"
             >
-              部材の標準化と少部材化を図り、コスト削減を実現。蓄積されたデータを基に、初期過程から高精度の見積りが可能です。
+              部材の標準化と軽量化を追求し、コスト削減を実現しました。初期工程から高精度の見積りが可能な点も特徴のひとつです。
             </TopSectionWorkCard>
 
             <TopSectionWorkCard
@@ -120,7 +118,7 @@ export default function TopSectionWork1() {
               textImage="高品質"
               alt="advantages"
             >
-              部材と工法の標準化により品質の安定性を確保。屋根断熱性能は高層ビルにも用いられる外壁材ALCの約2倍。耐震性や耐久性にも優れています。
+              標準化された部材は安定した品質を確保し、耐震性と耐久性に優れています。屋根断熱性能は高層ビルにも用いられる外壁材ALCの約2倍を誇ります。
             </TopSectionWorkCard>
 
             <TopSectionWorkCard
@@ -128,7 +126,7 @@ export default function TopSectionWork1() {
               textImage="大空間"
               alt="advantages"
             >
-              橋梁などに使用される高張力材を採用し、最大無柱スパン60mを実現。さらに、中間柱を設けることで最大120mの大空間の構築も可能です。
+              橋梁などに使用される高張力材を採用し、最大無柱スパン60mを実現できます。さらに、中間柱を設けることで最大120mの大空間の構築も可能です。
             </TopSectionWorkCard>
 
             <TopSectionWorkCard
@@ -136,9 +134,7 @@ export default function TopSectionWork1() {
               textImage="短工期"
               alt="advantages"
             >
-              設計から施工までの工程をシステム化。在来工法に比べ、工期をおよそ15%〜20%短縮できます。
-              <br />
-              ※建物の仕様による
+              部材のストックが可能なシステム建築は、その手配や製作におけるタイムロスがありません。生産システムも標準化されており、在来工法に比べて約20％の短工期化を実現します。
             </TopSectionWorkCard>
           </div>
         </div>

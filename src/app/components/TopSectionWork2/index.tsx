@@ -21,7 +21,7 @@ export default function TopSectionWork2() {
       <div className="flex w-full flex-col gap-[50px] bg-card-background-primary pb-[41px] xl:hidden">
         <div className="relative h-[800px] w-full">
           <Image
-            src="/strength-image.jpg"
+            src="/top/kakehi_lp_top_page_strength.jpg"
             alt="advantages"
             layout="fill"
             objectFit="cover"
@@ -40,7 +40,7 @@ export default function TopSectionWork2() {
               <span className="z-10">土地探し</span>
             </div>
             <div className="flex w-full items-center bg-white px-[26px] py-[15px]  text-[15px] font-[350] leading-sm">
-              宅地建物取引士の資格を有するスタッフが、土地探しからお手伝いいたします。立地条件や地域環境など、ご希望の条件をお聞かせください。{" "}
+              宅地建物取引士の資格を有するスタッフが、土地探しからお手伝いいたします。立地条件や地域環境など、ご希望の条件をお聞かせください。
             </div>
           </div>
 
@@ -55,7 +55,7 @@ export default function TopSectionWork2() {
               <span className="z-10">設計</span>
             </div>
             <div className="flex w-full items-center bg-white px-[26px] py-[15px]  text-[15px] font-[350] leading-sm">
-              設計部を設けた弊社には、10名もの一級建築士が在籍しています。お客様との入念なヒアリングを基に、最適な工場・倉庫を設計いたします。{" "}
+              設計部を設けた弊社には、10名もの一級建築士が在籍しています。お客様との入念なヒアリングを基に、最適な工場・倉庫を設計いたします。
             </div>
           </div>
 
@@ -70,7 +70,7 @@ export default function TopSectionWork2() {
               <span className="z-10">施工</span>
             </div>
             <div className="flex w-full items-center bg-white px-[26px] py-[15px]  text-[15px] font-[350] leading-sm">
-              住宅からビル・工場・商業施設まで、あらゆる建物の建設で得られた豊富な経験と実績を基に、信頼性の高い建物をお届けいたします。
+              住宅からビル・工場・商業施設まで、あらゆる建物の建設で得られた豊富な経験と実績を基に、信頼性の高い建物を提供いたします。
             </div>
           </div>
 
@@ -89,7 +89,7 @@ export default function TopSectionWork2() {
               </span>
             </div>
             <div className="flex w-full items-center bg-white px-[26px] py-[15px]  text-[15px] font-[350] leading-sm">
-              お客様が長きにわたり安心して工場・倉庫をご利用いただけるよう、建物の保守管理のお手伝いをいたします。
+              私たちは建物が完成してからがお客様との「本当のお付き合い」が始まると考えています。建物を長きにわたり安心してご利用いただけるよう、保守管理のお手伝いをいたします。
             </div>
           </div>
         </div>
@@ -98,7 +98,7 @@ export default function TopSectionWork2() {
       <div className="absolute bottom-[161px] right-0 hidden xl:block">
         <div className="relative h-[960px] w-[50vw]">
           <Image
-            src="/strength-image.jpg"
+            src="/top/kakehi_lp_top_page_strength.jpg"
             alt="advantages"
             layout="fill"
             objectFit="cover"
@@ -130,7 +130,7 @@ export default function TopSectionWork2() {
               textImage="施工"
               alt="advantages"
             >
-              住宅からビル・工場・商業施設まで、あらゆる建物の建設で得られた豊富な経験と実績を基に、信頼性の高い建物をお届けいたします。
+              住宅からビル・工場・商業施設まで、あらゆる建物の建設で得られた豊富な経験と実績を基に、信頼性の高い建物を提供いたします。
             </TopSectionWorkCard>
 
             <TopSectionWorkCard
@@ -138,7 +138,7 @@ export default function TopSectionWork2() {
               textImage={`アフター\nメンテナンス`}
               alt="advantages"
             >
-              お客様が長きにわたり安心して工場・倉庫をご利用いただけるよう、建物の保守管理のお手伝いをいたします。
+              私たちは建物が完成してからがお客様との「本当のお付き合い」が始まると考えています。建物を長きにわたり安心してご利用いただけるよう、保守管理のお手伝いをいたします。
             </TopSectionWorkCard>
           </div>
         </div>

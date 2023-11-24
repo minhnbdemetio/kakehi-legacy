@@ -8,7 +8,7 @@ import SliderBackgroundWithSlogan from "@/app/components/SliderBackgroundWithSlo
 
 export default function Home() {
   const images = Array.from({ length: 5 }).map(
-    (_, idx) => `/top/kakehi_lp_main_visual-${idx + 1}.png`
+    (_, idx) => `/top/kakehi_lp_top_slider-${idx + 1}.jpg`
   );
   return (
     <>
