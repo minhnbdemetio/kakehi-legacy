@@ -1,5 +1,6 @@
 @media screen(xl) {
   .toppage-information-background {
     height: 1200px !important;
+    background-position: bottom;
   }
 }

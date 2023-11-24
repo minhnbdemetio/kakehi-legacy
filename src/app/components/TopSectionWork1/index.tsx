@@ -85,7 +85,7 @@ export default function TopSectionWork1() {
               <span className="z-10">短工期</span>
             </div>
             <div className="flex w-full items-center bg-white px-[26px] py-[15px]  text-[15px] font-[350] leading-sm">
-              部材のストックが可能なシステム建築は、その手配や製作におけるタイムロスがありません。生産システムも標準化されており、在来工法に比べて約20％の短工期化を実現します。
+              部材のストックが可能なシステム建築は、材料の手配や製作におけるタイムロスがありません。生産システムも標準化されており、在来工法に比べ約20％工期を短縮できます。
             </div>
           </div>
         </div>
