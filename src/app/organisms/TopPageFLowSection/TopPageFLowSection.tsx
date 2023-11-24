@@ -23,9 +23,9 @@ const TopPageFLowSection: React.FC<IProps> = () => {
           <div className="relative flex h-[150px]" key={item.label}>
             <div
               className={clsx(
-                "relative mx-auto flex w-[100px] min-w-[100px] items-center justify-center bg-cover bg-center bg-no-repeat text-left  text-[15px] font-bold text-white xl:w-[150px] xl:min-w-[150px] xl:text-[21px]",
-                index === 2 && "px-[12px] xl:px-0 xl:pl-[23px]",
-                index === 3 && "px-[20px] xl:px-[33px]"
+                "relative mx-auto flex w-[100px] min-w-[100px] items-center justify-center bg-cover bg-center bg-no-repeat text-left  text-[15px] font-bold text-white xl:w-[150px] xl:min-w-[150px] xl:text-[21px]"
+                // index === 2 && "px-[12px] xl:px-0 xl:pl-[23px]",
+                // index === 3 && "px-[20px] xl:px-[33px]"
               )}
             >
               <Image
@@ -34,7 +34,7 @@ const TopPageFLowSection: React.FC<IProps> = () => {
                 layout="fill"
                 objectFit="cover"
               />
-              <div className="z-10">{item.label}</div>
+              <div className="z-10 whitespace-pre">{item.label}</div>
             </div>
             <div className="-gg flex w-full content-center items-center bg-card-background-primary px-3 text-[15px] font-[350] leading-sm xl:px-[21px] xl:py-[57px] xl:text-[18px] xl:leading-lg">
               {item.content}

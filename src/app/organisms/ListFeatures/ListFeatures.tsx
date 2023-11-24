@@ -9,9 +9,13 @@ interface IProps {}
 const ListFeatures: React.FC<IProps> = () => {
   return (
     <div className="featuring mx-[20px] p-[50px] xl:mx-auto xl:max-w-[1000px] xl:px-[75px] xl:pb-[64px] xl:pt-[90px]">
-      <div className="mx-auto mb-[70px] w-max border-b-2 border-black pb-[8px]  text-1.5xl font-bold xl:mb-[100px] xl:rounded-[50px] xl:border-2 xl:px-[63px] xl:pt-[10px] xl:text-2.5xl">
+      <div className="mx-auto  w-max border-b-2 border-black pb-[8px]  text-1.5xl font-bold  xl:rounded-[50px] xl:border-2 xl:px-[63px] xl:pt-[10px] xl:text-2.5xl">
         システム建築に適した建物
       </div>
+
+      <p className="font-[Noto Sans JP] mb-[50px] mt-[50px] px-[25px] text-[20px] font-[500] leading-[36px] text-primary">
+        柔軟な空間設計や大空間を実現するシステム建築は、平屋から6階建てまでの建物の建築が可能です。
+      </p>
 
       <ul className="list-feature flex flex-col xl:flex-row xl:justify-center xl:gap-16.2/3">
         {items.map((item) => {
