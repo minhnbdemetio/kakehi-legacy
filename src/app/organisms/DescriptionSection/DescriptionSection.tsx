@@ -2,12 +2,11 @@
 
 import CardDescription from "@/app/components/CardDescription";
 import SectionTitle from "@/app/components/SectionTitle";
-import React, { useMemo } from "react";
+import React from "react";
 import "./responsive.css";
 
 import "./style.scss";
 import PreviewImages from "@/app/components/PreviewImages";
-import Image from "next/image";
 
 interface CommonProps {
   titlePosition: "left" | "right";
@@ -59,12 +58,7 @@ const DescriptionSection: React.FC<IProps> = ({
               <>
                 {rest.imageTrueSize ? (
                   <div className="relative flex h-full w-full items-end">
-                    <Image
-                      fill
-                      alt={subtitle}
-                      src={rest.img}
-                      className="w-full"
-                    />
+                    <img alt={subtitle} src={rest.img} className="w-full" />
                   </div>
                 ) : (
                   <div
