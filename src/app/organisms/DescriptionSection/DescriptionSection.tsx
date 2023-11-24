@@ -2,7 +2,7 @@
 
 import CardDescription from "@/app/components/CardDescription";
 import SectionTitle from "@/app/components/SectionTitle";
-import React, { useMemo } from "react";
+import React from "react";
 import "./responsive.css";
 
 import "./style.scss";
@@ -19,6 +19,7 @@ interface CommonProps {
 interface SingleImageProps extends CommonProps {
   type: "single-image";
   img: string;
+  imageTrueSize?: boolean;
 }
 
 interface MultipleImageProps extends CommonProps {
@@ -54,10 +55,18 @@ const DescriptionSection: React.FC<IProps> = ({
         >
           <div className="description-section-img-box h-full w-full xl:relative xl:h-auto">
             {rest.type === "single-image" ? (
-              <div
-                className="description-section-img w-full xl:z-20 "
-                style={{ backgroundImage: `url(${rest.img})` }}
-              />
+              <>
+                {rest.imageTrueSize ? (
+                  <div className="relative flex h-full w-full items-end">
+                    <img alt={subtitle} src={rest.img} className="w-full" />
+                  </div>
+                ) : (
+                  <div
+                    className="description-section-img w-full xl:z-20 "
+                    style={{ backgroundImage: `url(${rest.img})` }}
+                  />
+                )}
+              </>
             ) : (
               <PreviewImages
                 images={rest.images}
