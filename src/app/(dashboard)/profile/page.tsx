@@ -10,7 +10,7 @@ interface IProps {}
 const Profile: React.FC<IProps> = () => {
   return (
     <div className="profile pb-22 xl:pb-38.1/3">
-      <BackgroundWithSlogan src="/company-profile-background.png">
+      <BackgroundWithSlogan src="/company-profile-background.jpg">
         <h1 className="leading-snug text-3xl font-bold xl:text-3.5xl">
           会社概要
         </h1>
