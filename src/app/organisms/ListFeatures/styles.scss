@@ -1,9 +1,10 @@
 @import "../../variables.module.scss";
 .featuring {
-  background: linear-gradient(180deg, rgba(242, 242, 242, 0) 0%, #f2f2f2 100%);
-
-  .featuring-title {
-  }
+  background: linear-gradient(
+    180deg,
+    rgba(242, 242, 242, 0) 0%,
+    #f2f2f2 74.13%
+  );
 
   .list-feature {
     margin-top: 70px;
