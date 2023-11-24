@@ -56,6 +56,7 @@ const PointScreen: React.FC<IProps> = () => {
                 firstTitle={item.firstTitle}
                 img={item.img}
                 items={item.descriptions}
+                imageTrueSize
               />
             </li>
           ))}
