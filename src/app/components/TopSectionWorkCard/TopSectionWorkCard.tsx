@@ -16,7 +16,13 @@ export const TopSectionWorkCard: FC<Props> = ({
   return (
     <div className="flex flex-row">
       <div className="relative flex min-w-[150px] items-center justify-center bg-pink-custom-2 py-[57px]  text-1.5xl font-bold text-white">
-        <Image src={image} alt={alt} layout="fill" objectFit="cover" />
+        <Image
+          src={image}
+          alt={alt}
+          layout="fill"
+          // objectFit="cover"
+          className="!top-1/2  !h-auto  !-translate-y-1/2 p-[20px]"
+        />
         <span className="z-10 whitespace-pre-wrap">{textImage}</span>
       </div>
       <div className="-gg flex  w-full flex-col justify-center bg-white px-[25px] py-[21px] text-[19px]  font-[350] leading-lg">

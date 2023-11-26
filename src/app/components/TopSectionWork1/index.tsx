@@ -35,7 +35,7 @@ export default function TopSectionWork1() {
                 src="/background/advantage-1.png"
                 alt="advantages"
                 layout="fill"
-                objectFit="cover"
+                className="!top-1/2  !h-auto  !-translate-y-1/2 p-[10px]"
               />
               <span className="z-10">ローコスト</span>
             </div>
@@ -50,7 +50,7 @@ export default function TopSectionWork1() {
                 src="/background/advantage-2.png"
                 alt="advantages"
                 layout="fill"
-                objectFit="cover"
+                className="!top-1/2  !h-auto  !-translate-y-1/2 p-[10px]"
               />
               <span className="z-10">高品質</span>
             </div>
@@ -65,7 +65,7 @@ export default function TopSectionWork1() {
                 src="/background/advantage-3.png"
                 alt="advantages"
                 layout="fill"
-                objectFit="cover"
+                className="!top-1/2  !h-auto  !-translate-y-1/2 p-[10px]"
               />
               <span className="z-10">大空間</span>
             </div>
@@ -80,12 +80,12 @@ export default function TopSectionWork1() {
                 src="/background/advantage-4.png"
                 alt="advantages"
                 layout="fill"
-                objectFit="cover"
+                className="!top-1/2  !h-auto  !-translate-y-1/2 p-[10px]"
               />
               <span className="z-10">短工期</span>
             </div>
             <div className="flex w-full items-center bg-white px-[26px] py-[15px]  text-[15px] font-[350] leading-sm">
-              部材のストックが可能なシステム建築は、材料の手配や製作におけるタイムロスがありません。生産システムも標準化されており、在来工法に比べ約20％工期を短縮できます。
+              部材のストックが可能なため、材料の手配や製作におけるタイムロスがありません。生産システムも標準化されており、在来工法に比べて約20％工期を短縮できます。
             </div>
           </div>
         </div>
@@ -134,7 +134,7 @@ export default function TopSectionWork1() {
               textImage="短工期"
               alt="advantages"
             >
-              部材のストックが可能なシステム建築は、材料の手配や製作におけるタイムロスがありません。生産システムも標準化されており、在来工法に比べ約20％工期を短縮できます。
+              部材のストックが可能なため、材料の手配や製作におけるタイムロスがありません。生産システムも標準化されており、在来工法に比べて約20％工期を短縮できます。
             </TopSectionWorkCard>
           </div>
         </div>

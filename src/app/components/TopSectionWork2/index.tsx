@@ -35,7 +35,7 @@ export default function TopSectionWork2() {
                 src="/background/strength-1.png"
                 alt="advantages"
                 layout="fill"
-                objectFit="cover"
+                className="!top-1/2  !h-auto  !-translate-y-1/2 p-[10px]"
               />
               <span className="z-10">土地探し</span>
             </div>
@@ -50,7 +50,7 @@ export default function TopSectionWork2() {
                 src="/background/strength-2.png"
                 alt="advantages"
                 layout="fill"
-                objectFit="cover"
+                className="!top-1/2  !h-auto  !-translate-y-1/2 p-[10px]"
               />
               <span className="z-10">設計</span>
             </div>
@@ -65,7 +65,7 @@ export default function TopSectionWork2() {
                 src="/background/strength-3.png"
                 alt="advantages"
                 layout="fill"
-                objectFit="cover"
+                className="!top-1/2  !h-auto  !-translate-y-1/2 p-[10px]"
               />
               <span className="z-10">施工</span>
             </div>
@@ -80,7 +80,7 @@ export default function TopSectionWork2() {
                 src="/background/strength-4.png"
                 alt="advantages"
                 layout="fill"
-                objectFit="cover"
+                className="!top-1/2  !h-auto  !-translate-y-1/2 p-[10px]"
               />
               <span className="z-10">
                 アフター
@@ -89,7 +89,7 @@ export default function TopSectionWork2() {
               </span>
             </div>
             <div className="flex w-full items-center bg-white px-[26px] py-[15px]  text-[15px] font-[350] leading-sm">
-              私たちは建物が完成してからがお客様との「本当のお付き合い」が始まると考えています。建物を長きにわたり安心してご利用いただけるよう、保守管理のお手伝いをいたします。
+              建物が完成してからがお客様との「本当のお付き合い」が始まると考えています。建物を長きにわたり安心してご利用いただけるよう、保守管理のお手伝いをいたします。
             </div>
           </div>
         </div>
@@ -138,7 +138,7 @@ export default function TopSectionWork2() {
               textImage={`アフター\nメンテナンス`}
               alt="advantages"
             >
-              私たちは建物の完成からがお客様との「本当のお付き合い」が始まると考えています。建物を長きにわたり安心してご利用いただけるよう、保守管理のお手伝いをいたします。
+              建物が完成してからがお客様との「本当のお付き合い」が始まると考えています。建物を長きにわたり安心してご利用いただけるよう、保守管理のお手伝いをいたします。
             </TopSectionWorkCard>
           </div>
         </div>
