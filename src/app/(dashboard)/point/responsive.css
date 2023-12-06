@@ -13,7 +13,6 @@
     font-size: 19px !important;
     font-weight: 400 !important;
     line-height: 32px !important;
-    transform: translate(0, 93px);
   }
 
   .point-screen .card-list .card-description-content {
@@ -23,6 +22,9 @@
 
   .point-screen .point-lists .card-description-content {
     text-align: center !important;
+  }
+  .point-screen .list-points .card-description-content {
+    transform: translate(0, 93px);
   }
 
   .point-screen
