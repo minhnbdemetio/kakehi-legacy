@@ -23,8 +23,8 @@
   .point-screen .point-lists .card-description-content {
     text-align: center !important;
   }
-  .point-screen .list-points .card-description-content {
-    transform: translate(0, 93px);
+  .point-screen .list-points .card-description {
+    transform: translate(0, 100px);
   }
 
   .point-screen
@@ -35,6 +35,16 @@
     padding-right: 0;
     margin-right: 108px;
     padding-left: 12px;
+  }
+
+  .point-screen .list-points .description-section img {
+    object-fit: cover;
+    height: 100%;
+    object-position: right;
+  }
+
+  .point-screen .list-points .description-section.left img {
+    object-position: left !important;
   }
 
   .point-screen
@@ -80,7 +90,7 @@
   }
 
   .point-screen .list-points .description-section .background {
-    height: 400px !important;
+    height: 500px !important;
     top: -8px !important;
   }
 }
