@@ -37,7 +37,7 @@
     padding-left: 12px;
   }
 
-  .point-screen .list-points .description-section img {
+  /* .point-screen .list-points .description-section img {
     object-fit: cover;
     height: 100%;
     object-position: right;
@@ -45,7 +45,7 @@
 
   .point-screen .list-points .description-section.left img {
     object-position: left !important;
-  }
+  } */
 
   .point-screen
     .list-points
