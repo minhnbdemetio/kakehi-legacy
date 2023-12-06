@@ -13,6 +13,7 @@
     font-size: 19px !important;
     font-weight: 400 !important;
     line-height: 32px !important;
+    transform: translate(0, 93px);
   }
 
   .point-screen .card-list .card-description-content {
