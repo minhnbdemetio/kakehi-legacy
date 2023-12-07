@@ -58,7 +58,7 @@ const items: {
     img: "/flows/kakehi_system_lp_flow_icon-8.png",
     content:
       "お客様の検査が完了しましたら、お引き渡しとなります。建物の使用や管理に関するお取扱いにつきましてご説明いたします。",
-    bgColor: "#dcbec7",
+    bgColor: "#831f3f",
   },
 ];
 
