@@ -23,16 +23,18 @@ const TopPageFLowSection: React.FC<IProps> = () => {
           <div className="relative flex h-[150px]" key={item.label}>
             <div
               className={clsx(
-                "relative mx-auto flex w-[100px] min-w-[100px] items-center justify-center bg-cover bg-center bg-no-repeat text-left  text-[15px] font-bold text-white xl:w-[150px] xl:min-w-[150px] xl:text-[21px]"
+                "relative mx-auto flex w-[100px] min-w-[100px] items-center items-center justify-center  bg-cover bg-center bg-no-repeat text-left  text-[15px] font-bold text-white xl:w-[150px] xl:min-w-[150px] xl:text-[21px]"
                 // index === 2 && "px-[12px] xl:px-0 xl:pl-[23px]",
                 // index === 3 && "px-[20px] xl:px-[33px]"
               )}
+              style={{ background: item.bgColor }}
             >
               <Image
                 src={item.img}
                 alt={item.label}
                 layout="fill"
                 objectFit="cover"
+                className="!left-1/2 !top-1/2 !h-auto w-full -translate-x-1/2 -translate-y-1/2 p-[20px]"
               />
               <div className="z-10 whitespace-pre">{item.label}</div>
             </div>

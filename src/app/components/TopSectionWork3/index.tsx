@@ -26,7 +26,7 @@ export default function TopSectionWork3() {
 
         <div className="flex flex-col gap-[20px] px-[20px]">
           <div className="flex flex-row">
-            <div className="w-full bg-white px-[26px] py-[15px]  text-[15px] font-[350] leading-sm">
+            <div className="w-full bg-white px-[26px] py-[15px]  text-[15px] font-[350] leading-sm ">
               1954年の創業以来、地域に根差す私たちは、工場やオフィス、公共施設などたくさんの建物を建築してきました。これからもお客様にとって大切なものと向き合い、鳥取を彩り続けます。
             </div>
           </div>
@@ -48,7 +48,7 @@ export default function TopSectionWork3() {
         <div className="ml-[10vw] bg-card-background-primary pb-[161px] pr-[107px] pt-[109px]">
           <div className="ml-[40vw] flex flex-col gap-[14px] pl-[14px]">
             <div className="flex flex-row">
-              <div className="-gg w-full bg-white px-[66.36px] py-[36px] text-[19px] font-[350] leading-[32px]">
+              <div className="-gg w-full bg-white px-[66.36px] py-[36px] text-[19px] font-[350] leading-[32px] md:leading-[36px]">
                 1954年の創業以来、地域に根差す私たちは、工場やオフィス、公共施設などたくさんの建物を建築してきました。これからもお客様にとって大切なものと向き合い、鳥取を彩り続けます。
               </div>
             </div>
