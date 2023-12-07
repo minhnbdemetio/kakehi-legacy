@@ -23,6 +23,10 @@
   .point-screen .point-lists .card-description-content {
     text-align: center !important;
   }
+
+  .point-screen .page-header .card-description.small .card-description-label {
+    min-height: 75px !important;
+  }
   .point-screen .list-points .card-description {
     transform: translate(0, 100px);
   }
