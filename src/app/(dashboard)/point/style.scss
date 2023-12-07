@@ -6,7 +6,16 @@
       border-bottom: 2px solid $text-primary-color;
 
       .card-description-label {
-        width: 150px !important;
+        width: 100px !important;
+      }
+    }
+
+    .card-description.small {
+      .card-description-content {
+        padding: 7px 26px;
+      }
+      .card-description-label {
+        min-height: 50px !important;
       }
     }
   }
