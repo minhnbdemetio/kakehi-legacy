@@ -7,6 +7,7 @@ import "./responsive.css";
 
 import "./style.scss";
 import PreviewImages from "@/app/components/PreviewImages";
+import clsx from "clsx";
 
 interface CommonProps {
   titlePosition: "left" | "right";
@@ -20,6 +21,7 @@ interface SingleImageProps extends CommonProps {
   type: "single-image";
   img: string;
   imageTrueSize?: boolean;
+  imgSp?: string;
 }
 
 interface MultipleImageProps extends CommonProps {
@@ -48,7 +50,7 @@ const DescriptionSection: React.FC<IProps> = ({
       />
 
       <div
-        className={`description-section-content relative mt-33 bg-transparent pb-16.2/3 xl:mt-36 xl:h-fit xl:pb-0 ${titlePosition}`}
+        className={`description-section-content relative mt-16.2/3 bg-transparent pb-16.2/3 xl:mt-36 xl:h-fit xl:pb-0 ${titlePosition}`}
       >
         <div
           className={`description-section-content-body  relative  z-20  h-full xl:flex xl:items-stretch `}
@@ -58,7 +60,20 @@ const DescriptionSection: React.FC<IProps> = ({
               <>
                 {rest.imageTrueSize ? (
                   <div className="relative flex h-full w-full items-end">
-                    <img alt={subtitle} src={rest.img} className="w-full" />
+                    <img
+                      alt={subtitle}
+                      src={rest.img}
+                      className={clsx("w-full", {
+                        "hidden md:block": !!rest.imgSp,
+                      })}
+                    />
+                    <img
+                      alt={subtitle}
+                      src={rest.imgSp}
+                      className={clsx("w-full", {
+                        "block md:hidden": !!rest.imgSp,
+                      })}
+                    />
                   </div>
                 ) : (
                   <div
