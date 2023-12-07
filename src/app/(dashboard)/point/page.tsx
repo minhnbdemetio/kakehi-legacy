@@ -19,13 +19,13 @@ const PointScreen: React.FC<IProps> = () => {
           <h1 className="whitespace-pre text-center text-[40px] font-bold leading-[normal] xl:whitespace-nowrap">{`工場・倉庫\n建築のポイント`}</h1>
         </BackgroundWithSlogan>
 
-        <div className="mx-7 mt-33 xl:mx-pc-container xl:mt-16.2/3">
+        <div className="mx-7 mt-25 xl:mx-pc-container xl:mt-16.2/3">
           <p className="text-1.5xl font-[400] leading-lg">
             用途に応じた高い専門性が求められる工場・倉庫の建築では、多くの考慮すべきポイントがあります。運用開始後の改築が難しい点については、基本計画の段階から考慮する必要があります。事前の検討や確認が必要な4つのポイントを紹介いたしますので、お役立てください。
           </p>
         </div>
 
-        <div className="card-list mx-7 mt-33 pb-33 xl:mx-pc-container xl:mt-16.2/3">
+        <div className="card-list mx-7 mt-25 pb-33 xl:mx-pc-container xl:mt-16.2/3">
           <ul className="point-lists grid grid-cols-1 gap-3 pb-25 xl:grid-cols-2 xl:gap-7 xl:gap-x-14">
             {items.map((item) => (
               <li key={item.firstTitle}>
@@ -35,8 +35,8 @@ const PointScreen: React.FC<IProps> = () => {
                   background="card-primary"
                   description={item.secondTitle}
                   label={item.label}
-                  labelClassName="!text-[21px] "
-                  descriptionClassName="!text-[24px] font-bold"
+                  labelClassName="md:!text-[21px] "
+                  descriptionClassName="md:!text-[24px] font-[500] md:font-bold !leading-[36px]"
                 />
               </li>
             ))}
@@ -55,6 +55,7 @@ const PointScreen: React.FC<IProps> = () => {
                 titlePosition={item.position}
                 firstTitle={item.firstTitle}
                 img={item.img}
+                imgSp={item.imgSp}
                 items={item.descriptions}
                 imageTrueSize
               />

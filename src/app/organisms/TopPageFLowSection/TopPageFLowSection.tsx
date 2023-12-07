@@ -34,7 +34,7 @@ const TopPageFLowSection: React.FC<IProps> = () => {
                 alt={item.label}
                 layout="fill"
                 objectFit="cover"
-                className="!left-1/2 !top-1/2 !h-auto w-full -translate-x-1/2 -translate-y-1/2 p-[20px]"
+                className=" !left-1/2 !top-1/2 !h-auto w-full -translate-x-1/2 -translate-y-1/2 p-[20px]"
               />
               <div className="z-10 whitespace-pre">{item.label}</div>
             </div>
