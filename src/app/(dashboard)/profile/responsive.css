@@ -1,0 +1,80 @@
+@media screen(xl) {
+  .work-page-container .description-section ul {
+    margin-top: 25px !important;
+  }
+
+  .work-page-container .description-section .card-description-label {
+    /* font-size: 21px; */
+    height: 90px !important;
+  }
+
+  .work-page-container .description-section .card-description-label p {
+    font-size: 21px;
+    line-height: normal;
+  }
+
+  .work-page-container .description-section .title p {
+    padding-left: 51px !important;
+  }
+
+  .work-page-container .card-description-content {
+    line-height: 36px !important;
+  }
+  .work-page-container .card-description-label p {
+    font-size: 16px;
+  }
+
+  .work-page-container .list-project-title .divider {
+    font-size: 24px;
+  }
+
+  .work-page-container
+    .description-section-content
+    .preview-images-container
+    .main-image {
+    height: 479px !important;
+  }
+
+  .work-page-container
+    .description-section-content
+    .preview-images-container
+    .list-images {
+    height: 90px !important;
+  }
+
+  .work-page-container
+    .description-section-content
+    .preview-images-container
+    .list-images
+    div {
+    height: 90px !important;
+  }
+
+  .work-page-container .description-section .background {
+    height: 600px;
+  }
+
+  .work-page-container .description-section .card-description-content {
+    min-width: 450px !important;
+    font-size: 18px;
+    padding-left: 25px !important;
+  }
+
+  .work-page-container .description-section-content ul {
+    padding-right: 6px !important ;
+  }
+
+  .work-page-container .description-section-content {
+    margin-top: 108px !important;
+    padding-bottom: 0;
+  }
+
+  .work-page-container .list-project-title .divider {
+    font-size: 32px;
+  }
+
+  .work-page-container .description-section .subtitle,
+  .work-page-container .description-section .title {
+    line-height: 128px;
+  }
+}
