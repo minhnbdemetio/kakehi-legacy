@@ -1,10 +1,10 @@
 .work-page-container {
   .description-section {
     .card-description-label {
-      min-height: 75px !important;
+      min-height: 50px !important;
 
       p {
-        font-size: 16px;
+        font-size: 15px;
       }
     }
 
@@ -47,8 +47,15 @@
   .list-project-title {
     .divider {
       padding-bottom: 8px;
-      font-size: 24px;
+      font-size: 20px;
       line-height: normal;
     }
+  }
+}
+
+@media screen and (width <= 576px) {
+  .card-description-content {
+    line-height: 27px;
+    padding: 10px 25px 9px 25px;
   }
 }

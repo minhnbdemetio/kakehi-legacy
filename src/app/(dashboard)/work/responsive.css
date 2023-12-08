@@ -17,6 +17,17 @@
     padding-left: 51px !important;
   }
 
+  .work-page-container .card-description-content {
+    line-height: 36px !important;
+  }
+  .work-page-container .card-description-label p {
+    font-size: 16px;
+  }
+
+  .work-page-container .list-project-title .divider {
+    font-size: 24px;
+  }
+
   .work-page-container
     .description-section-content
     .preview-images-container
