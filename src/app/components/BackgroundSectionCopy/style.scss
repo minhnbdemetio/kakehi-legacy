@@ -13,4 +13,10 @@
 
     height: 100%;
   }
+
+  &--mobile-src > div {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+  }
 }

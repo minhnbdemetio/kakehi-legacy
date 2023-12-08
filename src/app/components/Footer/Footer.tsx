@@ -1,8 +1,8 @@
 import { Routes } from "@/app/constants/routes";
 import BackgroundSection from "../BackgroundSection";
 import { Button } from "../Button";
-import "./responsive.css";
 import "./style.scss";
+import "./responsive.css";
 import React from "react";
 
 interface IProps {
@@ -17,22 +17,23 @@ const Footer: React.FC<IProps> = ({ showPreFooter = true }) => {
           <BackgroundSection
             className="footer-background"
             src="/footer.jpg"
+            mobileSrc="/kakehi_contact_sp.jpg"
             height={600}
-            style={{
-              background:
-                "linear-gradient(180deg, #FFF 10%, rgba(206, 236, 245, 0.5) 87%)",
-            }}
           >
-            <div className="px-7 pt-[125px] xl:pt-[121px]">
-              <p className="greeting whitespace-pre-wrap text-center  text-[21px] font-[400] leading-lg md:w-full md:text-center">{`工場・倉庫建設に関するあらゆるお悩みに対応いたします。\n資料請求・お見積りはフォームより、お気軽にお問い合わせください。`}</p>
+            <div className="px-7 pt-33 xl:pt-[121px]">
+              <p className="greeting whitespace-pre-wrap text-lg font-medium leading-lg md:w-full md:text-center xl:text-center xl:text-[21px] xl:font-normal">
+                工場・倉庫建設に関するあらゆるお悩みに対応いたします。
+                <br className="hidden xl:block" />
+                資料請求・お見積りはフォームより、お気軽にお問い合わせください。
+              </p>
             </div>
 
-            <div className="mt-[106px] flex justify-center xl:mt-[86px]">
+            <div className="mt-25 flex justify-center xl:mt-[86px]">
               <Button
                 href={Routes.CONTACT}
-                className="font-[Noto Sans JP] text-[24px] font-[500] xl:text-[24px]"
+                className="font-noto-sans-jp text-1.5xl font-medium xl:text-2xl"
               >
-                <span className="font-[Noto Sans JP]">お問い合わせ</span>
+                <span className="font-noto-sans-jp">お問い合わせ</span>
               </Button>
             </div>
           </BackgroundSection>
