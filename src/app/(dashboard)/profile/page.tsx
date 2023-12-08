@@ -4,30 +4,61 @@ import "./style.scss";
 import items from "./items";
 import BackgroundWithSlogan from "@/app/components/BackgroundWithSlogan";
 import CardDescription from "@/app/components/CardDescription";
+import clsx from "clsx";
 
 interface IProps {}
 
 const Profile: React.FC<IProps> = () => {
   return (
-    <div className="profile pb-22 xl:pb-38.1/3">
-      <BackgroundWithSlogan src="/company-profile-background.jpg">
-        <h1 className="leading-snug text-3xl font-bold xl:text-3.5xl">
-          会社概要
-        </h1>
-      </BackgroundWithSlogan>
+    <div className="profile pb-[100px] xl:pb-38.1/3">
+      <div className="hidden xl:block">
+        <BackgroundWithSlogan src="/company-profile-background.jpg">
+          <h1
+            style={{ textShadow: " 5px 5px 10px rgba(0, 0, 0, 0.75)" }}
+            className="leading-snug text-3xl font-bold xl:text-3.5xl"
+          >
+            会社概要
+          </h1>
+        </BackgroundWithSlogan>
+      </div>
+      <div className="block xl:hidden">
+        <BackgroundWithSlogan bgTrueSize src="/profile_background_sp.png">
+          <h1
+            style={{ textShadow: " 5px 5px 10px rgba(0, 0, 0, 0.75)" }}
+            className="leading-snug !h-auto text-3xl font-bold xl:text-3.5xl "
+          >
+            会社概要
+          </h1>
+        </BackgroundWithSlogan>
+      </div>
 
-      <ul className="mx-auto mt-22 box-content grid max-w-[994px] grid-cols-1 gap-3 px-7 xl:mt-33.1/3 xl:gap-7 xl:px-pc-container">
+      <ul className="mx-auto mt-[75px] box-content grid max-w-[994px] grid-cols-1 gap-3 px-7 xl:mt-33.1/3 xl:gap-7 xl:px-pc-container">
         {items.map((item, index) => (
           <li key={index}>
-            <CardDescription
-              size="small"
-              background="card-primary"
-              label={item.label}
-              description={item.description}
-              link={item.link}
-              descriptionClassName="!px-9 xl:!px-7 xl:!text-xl xl:!font-normal xl:!leading-[2] xl:!justify-start"
-              labelClassName="xl:!text-xl xl:!font-bold xl:!leading-[1.44]"
-            />
+            <div className={clsx({ "hidden xl:block": !!item.mobileDesc })}>
+              <CardDescription
+                size="small"
+                background="card-primary"
+                label={item.label}
+                description={item.description}
+                link={item.link}
+                descriptionClassName="!py-[7px] xl:!px-9 xl:!px-7 xl:!text-xl xl:!font-normal xl:!leading-[2] xl:!justify-start"
+                labelClassName="!py-[7px] xl:!text-xl xl:!font-bold xl:!leading-[1.44]"
+              />
+            </div>
+            {!!item.mobileDesc && (
+              <div className={"block xl:hidden"}>
+                <CardDescription
+                  size="small"
+                  background="card-primary"
+                  label={item.label}
+                  description={item.mobileDesc}
+                  link={item.link}
+                  descriptionClassName="!py-[7px] !px-9 xl:!px-7 xl:!text-xl xl:!font-normal xl:!leading-[2] xl:!justify-start"
+                  labelClassName="!py-[7px] xl:!text-xl xl:!font-bold xl:!leading-[1.44]"
+                />
+              </div>
+            )}
           </li>
         ))}
       </ul>

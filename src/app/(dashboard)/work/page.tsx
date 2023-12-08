@@ -82,19 +82,21 @@ const Work: React.FC<IProps> = async ({ searchParams }: IProps) => {
           items={[
             {
               label: "所在地",
-              description: "鳥取県米子市旗ヶ崎2147",
+              description: project.location || "",
             },
             {
               label: "竣工",
-              description: "2020年3月",
+              description: completedText,
             },
             {
               label: "構造",
-              description: "鉄骨造2階建て",
+              description: project.structure || "",
             },
             {
               label: "延床面積",
-              description: "2,699.79㎡",
+              description: `${Intl.NumberFormat().format(
+                project.acreage || 0
+              )}㎡`,
             },
           ]}
           mainImgHeight={261.8}
@@ -103,7 +105,7 @@ const Work: React.FC<IProps> = async ({ searchParams }: IProps) => {
         />
       </div>
 
-      <div className="list-project-title mt-38 xl:mt-0">
+      <div className="list-project-title mt-33.1/3 md:mt-38 xl:mt-0">
         <PageTitle title="その他の施工事例" divider />
       </div>
 

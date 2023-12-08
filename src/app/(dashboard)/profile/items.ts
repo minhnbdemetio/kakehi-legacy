@@ -1,4 +1,9 @@
-const items: { label: string; description: string; link?: string }[] = [
+const items: {
+  label: string;
+  description: string;
+  link?: string;
+  mobileDesc?: string;
+}[] = [
   {
     label: "会社名",
     description: "株式会社 懸樋工務店",
@@ -14,6 +19,8 @@ const items: { label: string; description: string; link?: string }[] = [
     label: "事業内容",
     description:
       "建物の設計施工、土木工事の施工、ゴルフ練習場「グリーンゴルフ21」の運営",
+    mobileDesc:
+      "建物の設計施工\n土木工事の施工\nゴルフ練習場「グリーンゴルフ21」の運営",
   },
 ];
 

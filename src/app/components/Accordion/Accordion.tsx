@@ -38,14 +38,14 @@ export const Accordion: FC<Props> = ({
           {
             // Section
             [clsx(
-              "leading-8 text-1.5xl",
+              "leading-8 text-[15px] md:text-1.5xl",
               "bg-card-background-primary pl-14 pr-7",
               "xl:pl-33 xl:pr-16.2/3"
             )]: type === "section",
 
             // Question
             [clsx(
-              "leading-8 text-xl",
+              "leading-8 text-md xl:text-xl",
               "px-7 transition-colors duration-300  xl:px-18",
               {
                 "bg-white": !open,
@@ -86,10 +86,14 @@ export const Accordion: FC<Props> = ({
         })}
       >
         <div
-          className={clsx("leading-8 space-y-7 text-xl font-bold", {
-            "px-8 pb-24 xl:px-17": type === "section",
-            "accordion__answer px-7 pb-13 pt-9  xl:px-18": type === "question",
-          })}
+          className={clsx(
+            "xl:leading-8 space-y-7 text-xl font-bold leading-[24px]",
+            {
+              "px-8 pb-[50px] xl:px-17 xl:pb-24": type === "section",
+              "accordion__answer px-7 pb-13 pt-9  xl:px-18":
+                type === "question",
+            }
+          )}
         >
           {children}
         </div>
