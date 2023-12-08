@@ -19,9 +19,12 @@ export const FAQContent = ({
   }
 
   return (
-    <InfoContainer as="section" className="space-y-24 py-33">
+    <InfoContainer
+      as="section"
+      className="space-y-[50px] py-33 !pb-[150px] xl:space-y-24 xl:!pb-[100px]"
+    >
       <InfoHeading subtitle="FAQ" title="よくあるお問い合わせ" />
-      <div className="mx-auto space-y-7">
+      <div className="mx-auto space-y-[20px] xl:space-y-7 ">
         {categories.map((category) => (
           <Accordion
             toggle={() =>
@@ -43,7 +46,7 @@ export const FAQContent = ({
               >
                 <span
                   dangerouslySetInnerHTML={{ __html: faq.answer }}
-                  className="whitespace-pre-line text-[18px] font-[300]"
+                  className="whitespace-pre-line text-[14px] font-[300] leading-[24px] xl:text-[18px] xl:leading-[27px]"
                 />
               </Accordion>
             ))}
