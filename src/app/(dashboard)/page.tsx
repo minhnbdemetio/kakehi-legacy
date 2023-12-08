@@ -10,9 +10,13 @@ export default function Home() {
   const images = Array.from({ length: 5 }).map(
     (_, idx) => `/top/kakehi_lp_top_slider-${idx + 1}.jpg`
   );
+  const imagesMobile = Array.from({ length: 5 }).map(
+    (_, idx) => `/top/kakehi_sp_top_slider-${idx + 1}.jpg`
+  );
+
   return (
     <>
-      <SliderBackgroundWithSlogan images={images}></SliderBackgroundWithSlogan>
+      <SliderBackgroundWithSlogan images={images} imagesMobile={imagesMobile} />
 
       <TopPageInformation />
 

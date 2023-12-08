@@ -1,31 +1,37 @@
 import Image from "next/image";
-import React from "react";
 import { TopSectionWorkCard } from "../TopSectionWorkCard";
 
 export default function TopSectionWork1() {
   return (
-    <div className="relative mt-[50px]">
+    <div className="relative mt-33 xl:mt-17">
       <div className="absolute right-0 font-noto-sans text-4xl font-medium uppercase tracking-[4.8px] text-section xl:text-[128px] xl:tracking-[12.8px]">
         advantages
       </div>
 
-      <div className="mb-[70px] px-[20px] pt-[37px] text-right  text-2xl font-bold xl:absolute xl:left-[52vw] xl:top-[229px] xl:p-0 xl:text-left xl:text-3xl">
+      <div className="mb-17 px-[20px] pt-[37px] text-right text-1.5xl font-bold xl:absolute xl:left-[52vw] xl:top-[229px] xl:mb-[70px] xl:p-0 xl:text-left xl:text-3xl">
         システム建築が
         <br />
-        <span className="text-2.5xl xl:text-[40px]">
+        <span className="text-2xl xl:text-[40px]">
           工場・倉庫に最適{" "}
           <span className="text-1.5xl xl:text-3xl">な理由</span>
         </span>
       </div>
 
-      <div className="flex w-full flex-col gap-[50px] bg-card-background-primary pb-[41px] xl:hidden">
+      <div className="flex w-full flex-col gap-[50px] bg-card-background-primary pb-17 xl:hidden xl:pb-[41px]">
         <div className="relative h-[800px] w-full">
-          <Image
-            src="/advantages.jpg"
-            alt="advantages"
-            layout="fill"
-            objectFit="cover"
-          />
+          <picture>
+            <source
+              media="(max-width: 1024px)"
+              srcSet="/top/kakehi_lp_top_advantages_sp.jpg"
+              type="image/jpg"
+            />
+            <Image
+              src="/advantages.jpg"
+              alt="advantages"
+              layout="fill"
+              objectFit="cover"
+            />
+          </picture>
         </div>
 
         <div className="flex flex-col gap-[20px] px-[20px]">
@@ -39,7 +45,7 @@ export default function TopSectionWork1() {
               />
               <span className="z-10">ローコスト</span>
             </div>
-            <div className="flex w-full items-center bg-white px-[26px] py-[15px]  text-[15px] font-[350]  leading-sm">
+            <div className="flex w-full items-center bg-white px-9 py-9 text-[15px] font-normal leading-sm xl:py-5 xl:font-[350]">
               部材の標準化と軽量化を追求し、コスト削減を実現しました。初期工程から高精度の見積りが可能な点も特徴のひとつです。
             </div>
           </div>
@@ -54,7 +60,7 @@ export default function TopSectionWork1() {
               />
               <span className="z-10">高品質</span>
             </div>
-            <div className="flex w-full items-center bg-white px-[26px] py-[15px]  text-[15px] font-[350]  leading-sm">
+            <div className="flex w-full items-center bg-white px-[26px] py-9 text-[15px]  font-normal leading-sm xl:py-[15px] xl:font-[350]">
               標準化された部材は安定した品質を確保し、耐震性と耐久性に優れています。屋根断熱性能は高層ビルにも用いられる外壁材ALCの約2倍を誇ります。
             </div>
           </div>
@@ -69,13 +75,13 @@ export default function TopSectionWork1() {
               />
               <span className="z-10">大空間</span>
             </div>
-            <div className="flex w-full items-center bg-white px-[26px] py-[15px]  text-[15px] font-[350] leading-sm">
+            <div className="flex w-full items-center bg-white px-[26px] py-9 text-[15px] font-normal leading-sm xl:py-[15px] xl:font-[350]">
               橋梁などに使用される高張力材を採用し、最大無柱スパン60mを実現できます。さらに、中間柱を設けることで最大120mの大空間の構築も可能です。
             </div>
           </div>
 
           <div className="flex flex-row">
-            <div className="relative flex min-w-[100px] items-center justify-center bg-pink-custom-2 py-[48px]  text-lg font-bold text-white">
+            <div className="relative flex min-w-[100px] items-center justify-center bg-pink-custom-2 py-[48px] text-lg font-bold text-white">
               <Image
                 src="/background/advantage-4.png"
                 alt="advantages"
@@ -84,7 +90,7 @@ export default function TopSectionWork1() {
               />
               <span className="z-10">短工期</span>
             </div>
-            <div className="flex w-full items-center bg-white px-[26px] py-[15px]  text-[15px] font-[350] leading-sm">
+            <div className="flex w-full items-center bg-white px-[26px] py-9 text-[15px] font-normal leading-sm xl:py-[15px] xl:font-[350]">
               部材のストックが可能なため、材料の手配や製作におけるタイムロスがありません。生産システムも標準化されており、在来工法に比べて約20％工期を短縮できます。
             </div>
           </div>

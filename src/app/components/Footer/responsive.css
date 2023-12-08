@@ -5,6 +5,14 @@
     aspect-ratio: unset;
   }
 
+  .footer-container .background-section-container > div {
+    background: linear-gradient(180deg, #fff 10%, rgba(206, 236, 245, 0.5) 87%);
+  }
+
+  .footer-container .link-btn {
+    width: 300px;
+  }
+
   .footer-background-container {
     min-height: 500px !important;
   }

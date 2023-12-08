@@ -1,7 +1,7 @@
 "use client";
 
 import clsx from "clsx";
-import React, { PropsWithChildren } from "react";
+import { PropsWithChildren } from "react";
 import Slider, { Settings } from "react-slick";
 
 import "slick-carousel/slick/slick.css";
@@ -9,16 +9,18 @@ import "slick-carousel/slick/slick-theme.css";
 
 import "./style.scss";
 import "./responsive.css";
+import Image from "next/image";
 
 interface SliderBackgroundWithSloganProps extends PropsWithChildren {
   images: string[];
+  imagesMobile?: string[];
   className?: string;
 }
 
 export default function SliderBackgroundWithSlogan({
   images,
+  imagesMobile,
   className,
-  children,
 }: SliderBackgroundWithSloganProps) {
   const settings: Settings = {
     dots: true,
@@ -42,25 +44,30 @@ export default function SliderBackgroundWithSlogan({
             key={index}
             className={clsx("h-[749px] w-full xl:aspect-[1440/543] xl:h-auto")}
           >
-            <div
-              style={{
-                backgroundImage: `url(${image})`,
-                backgroundPosition: "center",
-              }}
-              className="h-full w-full bg-cover bg-no-repeat"
-            ></div>
+            <picture>
+              {imagesMobile && imagesMobile.length === images.length ? (
+                <source
+                  media="(max-width: 1024px)"
+                  srcSet={imagesMobile[index]}
+                />
+              ) : null}
+              <img src={image} alt="banner" />
+            </picture>
           </div>
         ))}
       </Slider>
       <div className="absolute left-[50%] top-[50%] flex w-full translate-x-[-50%] translate-y-[-50%] justify-center">
-        <h1
-          className="hidden whitespace-pre-wrap text-center text-3.5xl font-bold	 xl:block"
-          style={{ textShadow: "5px 5px 10px rgba(0, 0, 0, 0.75)" }}
-        >{`システム建築で、\n工場・倉庫に 最適な答えを。`}</h1>
-        <h1
-          style={{ textShadow: "5px 5px 10px rgba(0, 0, 0, 0.75)" }}
-          className="block w-full whitespace-pre-wrap text-center text-3.5xl  font-bold xl:hidden"
-        >{`システム建築で、\n工場・倉庫に \n最適な答えを。`}</h1>
+        <h1>
+          <span
+            className="hidden whitespace-pre-wrap text-center text-3.5xl font-bold xl:block"
+            style={{ textShadow: "5px 5px 10px rgba(0, 0, 0, 0.75)" }}
+          >{`システム建築で、\n工場・倉庫に 最適な答えを。`}</span>
+
+          <span
+            style={{ textShadow: "5px 5px 10px rgba(0, 0, 0, 0.75)" }}
+            className="block w-full whitespace-pre-wrap text-center text-2xl font-bold xl:hidden"
+          >{`システム建築で、\n工場・倉庫に \n最適な答えを。`}</span>
+        </h1>
       </div>
     </div>
   );

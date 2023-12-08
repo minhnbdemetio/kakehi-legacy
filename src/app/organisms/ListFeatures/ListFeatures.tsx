@@ -3,17 +3,28 @@ import PageTitle from "@/app/components/PageTitle";
 import "./styles.scss";
 import items from "./items";
 import "./responsive.css";
+import clsx from "clsx";
 
 interface IProps {}
 
 const ListFeatures: React.FC<IProps> = () => {
   return (
-    <div className="featuring mx-[20px] p-[50px] xl:mx-auto xl:max-w-[1000px] xl:px-[75px] xl:pb-[64px] xl:pt-[90px]">
-      <div className="mx-auto  w-max border-b-2 border-black pb-[8px]  text-1.5xl font-bold  xl:rounded-[50px] xl:border-2 xl:px-[63px] xl:pt-[10px] xl:text-2.5xl">
+    <div className="featuring mx-[20px] p-17 xl:mx-auto xl:max-w-[1000px] xl:px-[75px] xl:pb-[64px] xl:pt-[90px]">
+      <div
+        className={clsx(
+          "mx-auto w-max border-b-2 border-black pb-3 text-xl font-bold",
+          "xl:rounded-[50px] xl:border-2 xl:px-21 xl:pt-3 xl:text-2.5xl"
+        )}
+      >
         システム建築に適した建物
       </div>
 
-      <p className="font-[Noto Sans JP] mb-[50px] mt-[50px] px-[25px] text-[20px] font-[500] leading-[36px] text-primary">
+      <p
+        className={clsx(
+          "-mx-17 my-17 !w-[calc(100%+102px)]  font-noto-sans-jp text-lg font-medium leading-md text-primary",
+          "xl:px-8 xl:text-1.5xl xl:leading-lg"
+        )}
+      >
         柔軟な空間設計や大空間を実現するシステム建築は、平屋から6階建てまでの建物の建築が可能です。
       </p>
 
@@ -29,7 +40,7 @@ const ListFeatures: React.FC<IProps> = () => {
               </div>
               <div className="feature-item-description">
                 <p
-                  className="pb-[22px] pt-[23px] text-center  text-1.5xl font-bold text-white"
+                  className="py-5 text-center text-lg font-bold text-white xl:py-7 xl:text-1.5xl"
                   style={{ background: "#BE95A1" }}
                 >
                   {item.label}
