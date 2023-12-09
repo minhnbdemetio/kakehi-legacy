@@ -64,18 +64,18 @@ export const RequestConfirmForm = () => {
     <div>
       <div
         className={clsx(
-          "bg-card-background-primary pb-33 pl-6 pr-6 text-center xl:pl-33 xl:pr-12",
+          "bg-card-background-primary pb-[75px] pl-6 pr-6 text-left leading-[36px] xl:pl-33 xl:pr-12 xl:text-center",
           isConfirmed ? "pb-30 pt-23" : "pb-33 pt-17"
         )}
       >
         {isConfirmed ? (
-          <p className={clsx(INFO_TEXT_CLASSNAME, "mb-33")}>
+          <p className={clsx(INFO_TEXT_CLASSNAME, "mb-[50px] xl:mb-33")}>
             以下の内容にて、資料請求のお受付を完了いたしました。
-            <br />
+            <br className="hidden xl:block" />
             ご入力いただいたメールアドレスへ、資料のダウンロードリンクをお送りいたします。
           </p>
         ) : (
-          <p className={clsx(INFO_TEXT_CLASSNAME, "mb-30")}>
+          <p className={clsx(INFO_TEXT_CLASSNAME, "mb-[50px] xl:mb-30 ")}>
             入力した内容をご確認ください。
           </p>
         )}
@@ -112,29 +112,32 @@ export const RequestConfirmForm = () => {
           <div className="flex justify-center gap-7 xl:gap-14">
             <Button
               href={Routes.REQUEST}
-              className="relative flex flex-col-reverse items-center justify-center gap-y-2 bg-black px-7 sm:flex-row sm:justify-between"
+              className="relative flex flex-col-reverse items-center justify-center bg-black px-7 sm:flex-row sm:justify-between xl:gap-y-2"
             >
               <img
-                className="-scale-x-100"
+                className="hidden -scale-x-100 xl:block"
                 src="/icons/arrow-right-icon.png"
                 alt=""
                 width={50}
                 height={17}
               />
-              <span>戻る</span>
+              <span className="text-[20px]">戻る</span>
               <span className="sm:w-[50px]"></span>
             </Button>
             <Button
               onClick={handleSubmit}
-              className="relative flex flex-col items-center justify-center gap-y-2 px-7 sm:flex-row sm:justify-between"
+              className="relative flex flex-col items-center justify-center !px-[30px] !py-[0] sm:flex-row sm:justify-between xl:gap-y-2 xl:!p-7"
             >
               <span className="sm:w-[50px]"></span>
-              <span>{sumbmitting ? "送信中..." : "送信する"}</span>
+              <span className="text-[20px]">
+                {sumbmitting ? "送信中..." : "送信する"}
+              </span>
               <img
                 src="/icons/arrow-right-icon.png"
                 alt=""
                 width={50}
                 height={17}
+                className="hidden xl:block"
               />
             </Button>
           </div>
@@ -142,8 +145,13 @@ export const RequestConfirmForm = () => {
       </div>
 
       {isConfirmed ? (
-        <div className="mt-33 text-center">
-          <Button href={Routes.TOP}>トップページへ戻る</Button>
+        <div className="mt-[50px] pb-33.1/3 text-center xl:mt-33.1/3">
+          <Button
+            className="!w-[250px] !text-[20px] xl:!w-[330px] xl:!text-xl"
+            href={Routes.TOP}
+          >
+            トップページへ戻る
+          </Button>
         </div>
       ) : null}
     </div>

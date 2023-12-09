@@ -31,14 +31,14 @@ const ContactForm: React.FC<IProps> = ({ form, next }) => {
   };
 
   return (
-    <div className="contact-form">
+    <div className="contact-form mb-33.1/3">
       <form onSubmit={form.handleSubmit(handleSubmit)}>
-        <div className="px-5 pt-16.2/3 xl:px-0">
-          <p className="text-center text-lg xl:whitespace-pre xl:text-xl ">
+        <div className="pl-[25px] pr-[27px] pt-16.2/3 xl:px-0">
+          <p className="whitespace-pre-wrap text-left text-lg  leading-[36px] xl:text-center xl:text-xl ">
             {`以下のフォームに必要事項をご入力の上、お問い合わせください。\n*は必須項目です。`}
           </p>
         </div>
-        <div className=" contact-form-body table w-full border-spacing-y-7 px-5 pb-5  pt-11 xl:px-14 xl:pb-16 xl:pl-33.1/3">
+        <div className=" contact-form-body table w-full space-y-[20px] pb-5 pl-[25px] pr-[27px] pt-[50px]  xl:border-spacing-y-7 xl:px-14 xl:pb-16 xl:pl-33.1/3">
           <Controller
             name="companyName"
             control={form.control}
@@ -137,7 +137,7 @@ const ContactForm: React.FC<IProps> = ({ form, next }) => {
           control={form.control}
           name="acceptPolicy"
           render={({ field, fieldState }) => (
-            <div className="mb-7 ">
+            <div className="mb-7 mt-[35px] xl:mt-[0px] ">
               <Checkbox
                 checked={field.value}
                 error={fieldState.error?.message}
@@ -147,7 +147,7 @@ const ContactForm: React.FC<IProps> = ({ form, next }) => {
                 <a
                   href={Routes.PRIVACY_POLICY}
                   target="_blank"
-                  className="text-hover-primary hover:underline hover:decoration-hover-primary"
+                  className="text-[15px] text-hover-primary hover:underline hover:decoration-hover-primary xl:text-xl"
                 >
                   個人情報保護方針
                 </a>{" "}
@@ -157,8 +157,10 @@ const ContactForm: React.FC<IProps> = ({ form, next }) => {
           )}
         />
 
-        <div className="flex justify-center pb-14 xl:pb-23.1/3">
-          <Button className="mx-auto">確認する</Button>
+        <div className="flex justify-center pb-[75px] xl:pb-23.1/3">
+          <Button className="mx-auto !w-[150px] text-[20px] xl:!w-[330px] xl:text-[21px] ">
+            確認する
+          </Button>
         </div>
       </form>
     </div>
