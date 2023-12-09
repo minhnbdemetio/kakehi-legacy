@@ -2,6 +2,7 @@ import { Button } from "@/app/components/Button";
 import { RequestConfirmForm } from "@/app/components/RequestConfirmForm";
 import { RequestConfirmField } from "@/app/components/RequestConfirmForm/RequestConfirmField";
 import { Routes } from "@/app/constants/routes";
+import clsx from "clsx";
 import React, { useCallback, useState } from "react";
 
 interface IProps {
@@ -44,17 +45,21 @@ const ContactFormReview: React.FC<IProps> = ({
 
   return (
     <div>
-      <div className="contact-form pb-17.1/3">
+      <div
+        className={clsx("contact-form   xl:pb-17.1/3", {
+          "mb-[100px] pb-[75px]": !submitted,
+        })}
+      >
         <div className="pt-16.2/3">
           {submitted ? (
-            <p className="whitespace-pre text-center text-xl">{`以下の内容にて、お問い合わせをお受付いたしました。\n確認後に、担当者よりご連絡いたします。`}</p>
+            <p className="whitespace-normal pl-[25px] pr-[27px] text-left  text-lg leading-[36px] xl:whitespace-pre-wrap xl:text-center xl:text-xl">{`以下の内容にて、お問い合わせをお受付いたしました。\n確認後に、担当者よりご連絡いたします。`}</p>
           ) : (
-            <p className="text-center text-xl">
+            <p className="pl-[25px] pr-[27px] text-center font-noto-sans-jp text-lg leading-[36px] text-primary xl:text-xl">
               入力した内容をご確認ください。
             </p>
           )}
         </div>
-        <div className="contact-form-body w-full space-y-7 px-5 pb-24 pt-14 xl:table xl:border-spacing-y-26 xl:px-33.1/3">
+        <div className="contact-form-body w-full space-y-[20px] pb-24 pl-[25px] pr-[27px] pt-[50px] xl:table xl:border-spacing-y-26 xl:px-33.1/3">
           <RequestConfirmField label="会社名" content={data.companyName} />
           <RequestConfirmField label="お名前" content={data.name} />
           <RequestConfirmField label="ふりがな" content={data.furigana} />
@@ -74,30 +79,33 @@ const ContactFormReview: React.FC<IProps> = ({
         </div>
 
         {!submitted ? (
-          <div className="flex justify-center gap-7 px-5 xl:gap-14">
+          <div className="flex justify-center gap-[20px] pl-[25px]  pr-[27px] xl:gap-14 ">
             <Button
               onClick={back}
               className="relative flex flex-col-reverse items-center justify-center gap-y-2 bg-black px-7 sm:flex-row sm:justify-between"
             >
               <img
-                className="-scale-x-100"
+                className="hidden -scale-x-100 xl:block"
                 src="/icons/arrow-right-icon.png"
                 alt=""
                 width={50}
                 height={17}
               />
-              <span>戻る</span>
+              <span className="text-[20px]">戻る</span>
               <span className="sm:w-[50px]"></span>
             </Button>
             <Button
               onClick={handleSubmit}
-              className="relative flex flex-col items-center justify-center gap-y-2 px-7 sm:flex-row sm:justify-between"
+              className="relative flex flex-col items-center justify-center gap-y-2 !px-[30px] !py-[0] sm:flex-row sm:justify-between xl:!p-7"
             >
               <span className="sm:w-[50px]"></span>
-              <span>{submitting ? "送信中..." : "送信する"}</span>
+              <span className="text-[20px]">
+                {submitting ? "送信中..." : "送信する"}
+              </span>
               <img
                 src="/icons/arrow-right-icon.png"
                 alt=""
+                className="hidden xl:block"
                 width={50}
                 height={17}
               />
@@ -106,8 +114,13 @@ const ContactFormReview: React.FC<IProps> = ({
         ) : null}
       </div>
       {submitted ? (
-        <div className="mt-33.1/3 pb-33.1/3 text-center">
-          <Button href={Routes.TOP}>トップページへ戻る</Button>
+        <div className="mt-[50px] pb-33.1/3 text-center xl:mt-33.1/3">
+          <Button
+            className="!w-[250px] !text-[20px] xl:!w-[330px] xl:!text-xl"
+            href={Routes.TOP}
+          >
+            トップページへ戻る
+          </Button>
         </div>
       ) : null}
     </div>
