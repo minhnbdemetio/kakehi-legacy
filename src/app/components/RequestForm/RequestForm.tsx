@@ -89,19 +89,19 @@ export const RequestForm = () => {
   return (
     <form
       onSubmit={form.handleSubmit(onSubmit)}
-      className="bg-card-background-primary pb-23 pl-6 pr-6 pt-17  xl:pl-33 xl:pr-12"
+      className="bg-card-background-primary pb-23 pl-[25px] pr-[27px] pt-17  xl:pl-33 xl:pr-12"
     >
-      <p className="xl:leading-loose mb-17 text-center  text-lg leading-[1.8] text-primary xl:text-xl">
+      <p className="xl:leading-loose mb-17 text-left text-lg  leading-[1.8] text-primary xl:text-center xl:text-xl">
         以下のフォームに必要事項をご入力の上、資料をご請求ください。
-        <br />
+        <br className="hidden xl:block" />
         ご入力いただいたメールアドレスへ、資料のダウンロードリンクをご連絡いたします。
-        <br />
+        <br className="hidden xl:block" />
         *は必須項目です。
       </p>
 
       <InfoCard title="工場・倉庫建設ガイド" />
 
-      <div className="-my-7 table w-full border-spacing-y-7 pb-17 pt-21">
+      <div className="-my-7 table w-full space-y-[20px]  pb-17 pt-21 xl:border-spacing-y-7">
         <Controller
           name="company"
           control={form.control}
@@ -201,7 +201,7 @@ export const RequestForm = () => {
             <a
               href={Routes.PRIVACY_POLICY}
               target="_blank"
-              className="text-hover-primary hover:underline hover:decoration-hover-primary"
+              className="text-[15px] text-hover-primary hover:underline hover:decoration-hover-primary xl:text-xl"
             >
               個人情報保護方針
             </a>{" "}
@@ -211,7 +211,9 @@ export const RequestForm = () => {
       />
 
       <div className="text-center">
-        <Button className="mx-auto">確認する</Button>
+        <Button className="mx-auto !w-[150px] text-[20px] xl:!w-[330px] xl:text-[21px] ">
+          確認する
+        </Button>
       </div>
     </form>
   );

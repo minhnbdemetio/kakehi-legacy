@@ -11,10 +11,15 @@ interface IProps {
 const PageTitle: React.FC<IProps> = ({ divider = false, subTitle, title }) => {
   return (
     <div className="flex flex-col items-center justify-center">
-      {subTitle && <p className="sub-title text-xl">{subTitle}</p>}
+      {subTitle && (
+        <p className="sub-title font-noto-sans text-[13px] xl:text-xl">
+          {subTitle}
+        </p>
+      )}
       <p
         className={CLSX({
-          ["mt-[5px] text-1.5xl font-bold xl:text-3xl"]: true,
+          ["mt-[5px] font-noto-sans-jp text-[20px] font-bold xl:text-3xl"]:
+            true,
           divider: divider,
         })}
       >
