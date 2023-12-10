@@ -34,11 +34,11 @@ export const Accordion: FC<Props> = ({
     <div>
       <button
         className={clsx(
-          "flex w-full items-center justify-between gap-5 py-9 text-left font-bold",
+          "flex w-full items-center justify-between gap-5 py-9 text-left ",
           {
             // Section
             [clsx(
-              "leading-8 text-[15px] md:text-1.5xl",
+              "leading-8 text-[15px] font-bold md:text-1.5xl",
               "bg-card-background-primary pl-14 pr-7",
               "xl:pl-33 xl:pr-16.2/3"
             )]: type === "section",
@@ -87,7 +87,7 @@ export const Accordion: FC<Props> = ({
       >
         <div
           className={clsx(
-            "xl:leading-8 space-y-7 text-xl font-bold leading-[24px]",
+            "xl:leading-8 space-y-7 text-md font-[400] leading-[24px] xl:font-bold",
             {
               "px-8 pb-[50px] xl:px-17 xl:pb-24": type === "section",
               "accordion__answer px-7 pb-13 pt-9  xl:px-18":

@@ -33,7 +33,7 @@ const PointScreen: React.FC<IProps> = () => {
         </div>
 
         <div className="mx-7 mt-25 xl:mx-pc-container xl:mt-16.2/3">
-          <p className="text-1.5xl font-[400] leading-lg">
+          <p className="text-lg font-[500] leading-lg xl:text-1.5xl">
             用途に応じた高い専門性が求められる工場・倉庫の建築では、多くの考慮すべきポイントがあります。運用開始後の改築が難しい点については、基本計画の段階から考慮する必要があります。事前の検討や確認が必要な4つのポイントを紹介いたしますので、お役立てください。
           </p>
         </div>
@@ -48,7 +48,7 @@ const PointScreen: React.FC<IProps> = () => {
                   background="card-primary"
                   description={item.secondTitle}
                   label={item.label}
-                  labelClassName="md:!text-[21px] "
+                  labelClassName="!text-[15px] md:!text-[21px] "
                   descriptionClassName="md:!text-[24px] font-[500] md:font-bold !leading-[36px]"
                 />
               </li>

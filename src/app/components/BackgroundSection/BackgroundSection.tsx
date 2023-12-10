@@ -50,7 +50,7 @@ const BackgroundSection: React.FC<IProps> = ({
         </div>
       )}
 
-      <div className="relative" style={{ width: "100%", zIndex: 100 }}>
+      <div className="relative" style={{ width: "100%", zIndex: 20 }}>
         {children}
       </div>
     </div>
