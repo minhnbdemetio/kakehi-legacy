@@ -52,9 +52,9 @@ const ContactFormReview: React.FC<IProps> = ({
       >
         <div className="pt-16.2/3">
           {submitted ? (
-            <p className="whitespace-normal pl-[25px] pr-[27px] text-left  text-lg leading-[36px] xl:whitespace-pre-wrap xl:text-center xl:text-xl">{`以下の内容にて、お問い合わせをお受付いたしました。\n確認後に、担当者よりご連絡いたします。`}</p>
+            <p className=" whitespace-normal pl-[25px] pr-[27px] text-left font-noto-sans-jp-gg text-lg  font-[500] leading-[36px] xl:whitespace-pre-wrap xl:text-center xl:text-xl">{`以下の内容にて、お問い合わせをお受付いたしました。\n確認後に、担当者よりご連絡いたします。`}</p>
           ) : (
-            <p className="pl-[25px] pr-[27px] text-left font-noto-sans-jp text-lg leading-[36px] text-primary xl:text-center xl:text-xl">
+            <p className="pl-[25px] pr-[27px] text-left font-noto-sans-jp-gg text-lg font-[500] leading-[36px] text-primary xl:text-center xl:text-xl">
               入力した内容をご確認ください。
             </p>
           )}

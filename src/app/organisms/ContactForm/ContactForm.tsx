@@ -142,7 +142,7 @@ const ContactForm: React.FC<IProps> = ({ form, next }) => {
                 checked={field.value}
                 error={fieldState.error?.message}
                 onChange={field.onChange}
-                className="justify-center"
+                className="justify-center !text-[15px] xl:!text-xl"
               >
                 <a
                   href={Routes.PRIVACY_POLICY}

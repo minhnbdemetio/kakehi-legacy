@@ -91,7 +91,7 @@ export const RequestForm = () => {
       onSubmit={form.handleSubmit(onSubmit)}
       className="bg-card-background-primary pb-23 pl-[25px] pr-[27px] pt-17  xl:pl-33 xl:pr-12"
     >
-      <p className="xl:leading-loose mb-17 text-left text-lg  leading-[1.8] text-primary xl:text-center xl:text-xl">
+      <p className="xl:leading-loose mb-17 text-left text-lg font-[500] leading-[1.8] text-primary xl:text-center xl:text-xl">
         以下のフォームに必要事項をご入力の上、資料をご請求ください。
         <br className="hidden xl:block" />
         ご入力いただいたメールアドレスへ、資料のダウンロードリンクをご連絡いたします。
@@ -193,7 +193,7 @@ export const RequestForm = () => {
         control={form.control}
         render={({ field, fieldState }) => (
           <Checkbox
-            className="mb-7 justify-center"
+            className="mb-7 justify-center !text-[15px] xl:!text-xl"
             error={fieldState.error?.message}
             onChange={field.onChange}
             checked={field.value}
