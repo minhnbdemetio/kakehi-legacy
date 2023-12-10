@@ -45,8 +45,8 @@ export const Accordion: FC<Props> = ({
 
             // Question
             [clsx(
-              "leading-8 text-md xl:text-xl",
-              "px-7 transition-colors duration-300  xl:px-18",
+              "leading-8 text-md font-[500] xl:text-xl",
+              "px-7 transition-colors duration-300 xl:px-18  xl:font-bold",
               {
                 "bg-white": !open,
                 "bg-hover-primary/40": open,

@@ -42,8 +42,8 @@ const Profile: React.FC<IProps> = () => {
                 label={item.label}
                 description={item.description}
                 link={item.link}
-                descriptionClassName="!py-[7px] xl:!px-9 xl:!px-7 xl:!text-xl xl:!font-normal xl:!leading-[2] xl:!justify-start"
-                labelClassName="!py-[7px] xl:!text-xl xl:!font-bold xl:!leading-[1.44]"
+                descriptionClassName="!py-[7px] xl:!px-9 !font-[500] xl:!px-7 xl:!text-xl xl:!font-normal xl:!leading-[2] xl:!justify-start"
+                labelClassName="!py-[7px]  xl:!text-xl xl:!font-bold xl:!leading-[1.44]"
               />
             </div>
             {!!item.mobileDesc && (
