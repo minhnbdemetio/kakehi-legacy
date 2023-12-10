@@ -74,7 +74,7 @@ const CardDescription: React.FC<IProps> = ({
       )}
       <DescriptionWrapper
         className={CLSX(
-          "card-description-content flex flex-auto items-center justify-start px-9 py-5 text-[15px] leading-[normal]",
+          "card-description-content flex flex-auto items-center justify-start px-9 py-[25px] text-[15px] leading-[normal] xl:py-5",
           "xl:leading-8 xl:justify-center xl:text-1.5xl xl:font-medium",
           {
             "font-bold": descriptionBold,
