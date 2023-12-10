@@ -17,11 +17,11 @@ const Footer: React.FC<IProps> = ({ showPreFooter = true }) => {
           <BackgroundSection
             className="footer-background"
             src="/footer.jpg"
-            mobileSrc="/kakehi_contact_sp.jpg"
-            height={600}
+            mobileSrc="/kakehi_contact_sp.png"
+            height={500}
           >
             <div className="px-7 pt-33 xl:pt-[121px]">
-              <p className="greeting whitespace-pre-wrap text-lg font-medium leading-lg md:w-full md:text-center xl:text-center xl:text-[21px] xl:font-normal">
+              <p className="greeting whitespace-pre-wrap text-[15px] font-medium leading-lg md:w-full md:text-center xl:text-center xl:text-[21px] xl:font-normal">
                 工場・倉庫建設に関するあらゆるお悩みに対応いたします。
                 <br className="hidden xl:block" />
                 資料請求・お見積りはフォームより、お気軽にお問い合わせください。

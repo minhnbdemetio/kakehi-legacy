@@ -9,7 +9,7 @@ interface IProps {}
 
 const ListFeatures: React.FC<IProps> = () => {
   return (
-    <div className="featuring mx-[20px] p-17 xl:mx-auto xl:max-w-[1000px] xl:px-[75px] xl:pb-[64px] xl:pt-[90px]">
+    <div className="featuring mx-7 p-17 pt-[0] xl:mx-auto xl:max-w-[1000px] xl:px-[75px] xl:pb-[64px] xl:pt-[90px]">
       <div
         className={clsx(
           "mx-auto w-max border-b-2 border-black pb-3 text-xl font-bold",
@@ -21,26 +21,36 @@ const ListFeatures: React.FC<IProps> = () => {
 
       <p
         className={clsx(
-          "-mx-17 my-17 !w-[calc(100%+102px)]  font-noto-sans-jp text-lg font-medium leading-md text-primary",
+          "-mx-17 my-17 !w-[calc(100%+102px)]  font-noto-sans-jp text-[15px] font-medium leading-md text-primary",
           "xl:px-8 xl:text-1.5xl xl:leading-lg"
         )}
       >
         柔軟な空間設計や大空間を実現するシステム建築は、平屋から6階建てまでの建物の建築が可能です。
       </p>
 
-      <ul className="list-feature flex flex-col xl:flex-row xl:justify-center xl:gap-16.2/3">
+      <ul className="list-feature mt-[50px] flex flex-col xl:mt-[70px] xl:flex-row xl:justify-center xl:gap-16.2/3">
         {items.map((item) => {
           return (
             <li
               key={item.img}
-              className="feature-item flex flex-col gap-[50px] pb-[70px] last:pb-0 xl:gap-[90px] xl:pb-0"
+              className="feature-item flex flex-col gap-[40px]  pb-[60px] last:pb-0 xl:gap-[90px] xl:pb-0"
             >
-              <div className="feature-img !h-[170px]">
-                <img alt="Factory" src={item.img} />
+              <div className="feature-img  xl:!h-[170px] ">
+                <img
+                  className="hidden xl:block"
+                  alt={item.label}
+                  src={item.img}
+                />
+                <img
+                  className="block xl:hidden"
+                  alt={item.label}
+                  src={item.imgSp}
+                />
               </div>
+
               <div className="feature-item-description">
                 <p
-                  className="py-5 text-center text-lg font-bold text-white xl:py-7 xl:text-1.5xl"
+                  className="py-5 text-center text-[15px] font-bold text-white xl:py-7 xl:text-1.5xl"
                   style={{ background: "#BE95A1" }}
                 >
                   {item.label}
@@ -48,7 +58,12 @@ const ListFeatures: React.FC<IProps> = () => {
                 <div>
                   <ul>
                     {item.description.map((desc) => (
-                      <li key={desc}>{desc}</li>
+                      <li
+                        className="text-[13px] leading-[24px] before:text-[22px] xl:text-lg xl:leading-[32px] xl:before:text-[32px]"
+                        key={desc}
+                      >
+                        {desc}
+                      </li>
                     ))}
                   </ul>
                 </div>

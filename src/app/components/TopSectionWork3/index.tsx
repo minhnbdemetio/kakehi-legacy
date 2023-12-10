@@ -15,25 +15,20 @@ export default function TopSectionWork3() {
       </div>
 
       <div className="flex w-full flex-col gap-[50px] bg-card-background-primary pb-[50px] xl:hidden">
-        <div className="relative h-[800px] w-full">
+        <div className="relative  w-full">
           <picture>
             <source
               media="(max-width: 1024px)"
               srcSet="/top/kakehi_lp_top_exterior_sp.jpg"
               type="image/jpg"
             />
-            <Image
-              src="/top/kakehi_lp_top_page_exterior.jpg"
-              alt="advantages"
-              layout="fill"
-              objectFit="cover"
-            />
+            <img src="/top/kakehi_lp_top_page_exterior.jpg" alt="advantages" />
           </picture>
         </div>
 
         <div className="flex flex-col gap-[20px] px-[20px]">
           <div className="flex flex-row">
-            <div className="w-full bg-white px-[26px] py-9 text-[15px]  font-normal leading-sm xl:py-[15px] xl:font-[350] ">
+            <div className="w-full bg-white px-[26px] py-9 text-md  font-normal leading-sm xl:py-[15px] xl:font-[350] ">
               1954年の創業以来、地域に根差す私たちは、工場やオフィス、公共施設などたくさんの建物を建築してきました。これからもお客様にとって大切なものと向き合い、鳥取を彩り続けます。
             </div>
           </div>

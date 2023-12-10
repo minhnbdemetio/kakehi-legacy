@@ -25,25 +25,20 @@ export default function TopSectionWork2() {
       </div>
 
       <div className="flex w-full flex-col gap-[50px] bg-card-background-primary pb-17 xl:hidden xl:pb-[41px]">
-        <div className="relative h-[800px] w-full">
+        <div className="relative  w-full">
           <picture>
             <source
               media="(max-width: 1024px)"
               srcSet="/top/kakehi_lp_top_strength_sp.jpg"
               type="image/jpg"
             />
-            <Image
-              src="/top/kakehi_lp_top_page_strength.jpg"
-              alt="advantages"
-              layout="fill"
-              objectFit="cover"
-            />
+            <img src="/top/kakehi_lp_top_page_strength.jpg" alt="advantages" />
           </picture>
         </div>
 
         <div className="flex flex-col gap-[20px] px-[20px]">
           <div className="flex flex-row">
-            <div className="relative flex min-w-[100px] items-center justify-center bg-pink-custom-2 py-[48px]  text-lg font-bold text-white">
+            <div className="relative flex min-w-[100px] items-center justify-center bg-pink-custom-2 py-[48px]  text-[15px] font-bold text-white">
               <Image
                 src="/background/strength-1.png"
                 alt="advantages"
@@ -52,13 +47,13 @@ export default function TopSectionWork2() {
               />
               <span className="z-10">土地探し</span>
             </div>
-            <div className="flex w-full items-center bg-white px-[26px] py-9 text-[15px]  font-normal leading-sm xl:py-[15px] xl:font-[350]">
+            <div className="flex w-full items-center bg-white px-[26px] py-9 text-md  font-normal leading-[24px] xl:py-[15px] xl:font-[350] xl:leading-sm">
               宅地建物取引士の資格を有するスタッフが、土地探しからお手伝いいたします。立地条件や地域環境など、ご希望の条件をお聞かせください。
             </div>
           </div>
 
           <div className="flex flex-row">
-            <div className="relative flex min-w-[100px] items-center justify-center bg-pink-custom-2 py-[48px]  text-lg font-bold text-white">
+            <div className="relative flex min-w-[100px] items-center justify-center bg-pink-custom-2 py-[48px]  text-[15px] font-bold text-white">
               <Image
                 src="/background/strength-2.png"
                 alt="advantages"
@@ -67,13 +62,13 @@ export default function TopSectionWork2() {
               />
               <span className="z-10">設計</span>
             </div>
-            <div className="flex w-full items-center bg-white px-[26px] py-9 text-[15px]  font-normal leading-sm xl:py-[15px] xl:font-[350]">
+            <div className="flex w-full items-center bg-white px-[26px] py-9 text-md  font-normal leading-[24px] xl:py-[15px] xl:font-[350] xl:leading-sm">
               設計部を設けた弊社には、10名もの一級建築士が在籍しています。お客様との入念なヒアリングを基に、最適な工場・倉庫を設計いたします。
             </div>
           </div>
 
           <div className="flex flex-row">
-            <div className="relative flex min-w-[100px] items-center justify-center bg-pink-custom-2 py-[48px]  text-lg font-bold text-white">
+            <div className="relative flex min-w-[100px] items-center justify-center bg-pink-custom-2 py-[48px]  text-[15px] font-bold text-white">
               <Image
                 src="/background/strength-3.png"
                 alt="advantages"
@@ -82,13 +77,13 @@ export default function TopSectionWork2() {
               />
               <span className="z-10">施工</span>
             </div>
-            <div className="flex w-full items-center bg-white px-[26px] py-9 text-[15px]  font-normal leading-sm xl:py-[15px] xl:font-[350]">
+            <div className="flex w-full items-center bg-white px-[26px] py-9 text-md  font-normal leading-[24px] xl:py-[15px] xl:font-[350] xl:leading-sm">
               住宅からビル・工場・商業施設まで、あらゆる建物の建設で得られた豊富な経験と実績を基に、信頼性の高い建物を提供いたします。
             </div>
           </div>
 
           <div className="flex flex-row">
-            <div className="relative flex min-w-[100px] items-center justify-center bg-pink-custom-2 py-[48px] text-center  text-lg font-bold text-white">
+            <div className="relative flex min-w-[100px] items-center justify-center bg-pink-custom-2 py-[48px] text-center  text-[15px] font-bold text-white">
               <Image
                 src="/background/strength-4.png"
                 alt="advantages"
@@ -101,7 +96,7 @@ export default function TopSectionWork2() {
                 メンテナンス
               </span>
             </div>
-            <div className="flex w-full items-center bg-white px-[26px] py-9 text-[15px]  font-normal leading-sm xl:py-[15px] xl:font-[350]">
+            <div className="flex w-full items-center bg-white px-[26px] py-9 text-md  font-normal leading-[24px] xl:py-[15px] xl:font-[350] xl:leading-sm">
               建物が完成してからがお客様との「本当のお付き合い」が始まると考えています。建物を長きにわたり安心してご利用いただけるよう、保守管理のお手伝いをいたします。
             </div>
           </div>
