@@ -34,7 +34,7 @@ const ContactForm: React.FC<IProps> = ({ form, next }) => {
     <div className="contact-form mb-33.1/3">
       <form onSubmit={form.handleSubmit(handleSubmit)}>
         <div className="pl-[25px] pr-[27px] pt-16.2/3 xl:px-0">
-          <p className="whitespace-pre-wrap text-left text-lg  leading-[36px] xl:text-center xl:text-xl ">
+          <p className="whitespace-pre-wrap text-left text-lg  font-[500]  leading-[36px] xl:text-center xl:text-xl ">
             {`以下のフォームに必要事項をご入力の上、お問い合わせください。\n*は必須項目です。`}
           </p>
         </div>
@@ -147,7 +147,7 @@ const ContactForm: React.FC<IProps> = ({ form, next }) => {
                 <a
                   href={Routes.PRIVACY_POLICY}
                   target="_blank"
-                  className="text-[15px] text-hover-primary hover:underline hover:decoration-hover-primary xl:text-xl"
+                  className="text-[15px] font-[500] text-hover-primary hover:underline hover:decoration-hover-primary xl:text-xl xl:font-normal"
                 >
                   個人情報保護方針
                 </a>{" "}

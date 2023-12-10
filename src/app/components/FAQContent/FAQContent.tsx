@@ -46,7 +46,7 @@ export const FAQContent = ({
               >
                 <span
                   dangerouslySetInnerHTML={{ __html: faq.answer }}
-                  className="whitespace-pre-line text-[14px] font-[300] leading-[24px] xl:text-[18px] xl:leading-[27px]"
+                  className="whitespace-pre-line text-[14px] font-[400] leading-[24px] xl:text-[18px] xl:leading-[27px]"
                 />
               </Accordion>
             ))}

@@ -10,7 +10,7 @@ interface IProps {}
 
 const PointScreen: React.FC<IProps> = () => {
   return (
-    <div className="point-screen xl:mb-33.1/3">
+    <div className="point-screen mb-33.1/3">
       <div className="page-header">
         <BackgroundWithSlogan
           className="xl:h-[543px]"
@@ -45,7 +45,7 @@ const PointScreen: React.FC<IProps> = () => {
       </div>
 
       <div className="list-points mt-15">
-        <ul className="grid grid-cols-1 gap-15 xl:gap-33.1/3">
+        <ul className="grid grid-cols-1  gap-[65px] xl:gap-33.1/3">
           {items.map((item) => (
             <li key={item.firstTitle}>
               <DescriptionSection

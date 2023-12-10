@@ -29,7 +29,7 @@ export const TextField: FC<Props> = ({
         {label ? (
           <label
             className={clsx(
-              "leading-normal box-content table-cell whitespace-pre pr-10 text-left font-noto-sans-jp text-[15px] font-bold xl:w-[168px] xl:text-1.5xl",
+              "leading-normal box-content table-cell whitespace-nowrap pr-10 text-left font-noto-sans-jp text-[15px] font-bold xl:w-[168px] xl:whitespace-pre xl:text-1.5xl",
               {
                 "align-middle": !props.rows,
                 "align-top xl:pt-10": props.rows,
