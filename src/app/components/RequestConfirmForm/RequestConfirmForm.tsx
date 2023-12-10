@@ -12,7 +12,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 const INFO_TEXT_CLASSNAME =
-  "text-lg  text-primary leading-[1.8] xl:mb-30 xl:leading-loose xl:text-xl";
+  "text-lg  text-primary font-[500] leading-[1.8] xl:mb-30 xl:leading-loose xl:text-xl";
 
 export const RequestConfirmForm = () => {
   const [isConfirmed, setIsConfirmed] = useState(false);

@@ -22,7 +22,7 @@ const Profile: React.FC<IProps> = () => {
         </BackgroundWithSlogan>
       </div>
       <div className="block xl:hidden">
-        <BackgroundWithSlogan bgTrueSize src="/profile_background_sp.jpg">
+        <BackgroundWithSlogan bgTrueSize src="/profile_background_sp.png">
           <h1
             style={{ textShadow: " 5px 5px 10px rgba(0, 0, 0, 0.75)" }}
             className="leading-snug !h-auto text-3xl font-bold xl:text-3.5xl "
@@ -32,7 +32,7 @@ const Profile: React.FC<IProps> = () => {
         </BackgroundWithSlogan>
       </div>
 
-      <ul className="mx-auto mt-[75px] box-content grid max-w-[994px] grid-cols-1 gap-3 px-7 xl:mt-33.1/3 xl:gap-7 xl:px-pc-container">
+      <ul className="mx-auto mt-[75px] box-content grid max-w-[994px] grid-cols-1 gap-[20px] px-7 xl:mt-33.1/3 xl:gap-7 xl:px-pc-container">
         {items.map((item, index) => (
           <li key={index}>
             <div className={clsx({ "hidden xl:block": !!item.mobileDesc })}>
@@ -43,7 +43,7 @@ const Profile: React.FC<IProps> = () => {
                 description={item.description}
                 link={item.link}
                 descriptionClassName="!py-[7px] xl:!px-9 !font-[500] xl:!px-7 xl:!text-xl xl:!font-normal xl:!leading-[2] xl:!justify-start"
-                labelClassName="!py-[7px] !text-[15px]  xl:!text-xl xl:!font-bold xl:!leading-[1.44]"
+                labelClassName="font-noto-sans-jp-gg !px-[12px]  !py-[20px] !leading-[120%] !text-[15px]  xl:!text-xl xl:!font-bold xl:!leading-[1.44]"
               />
             </div>
             {!!item.mobileDesc && (
@@ -55,7 +55,7 @@ const Profile: React.FC<IProps> = () => {
                   description={item.mobileDesc}
                   link={item.link}
                   descriptionClassName="!py-[7px] !px-9 xl:!px-7 xl:!text-xl xl:!font-normal xl:!leading-[2] xl:!justify-start"
-                  labelClassName="!py-[7px] xl:!text-xl xl:!font-bold xl:!leading-[1.44]"
+                  labelClassName="font-noto-sans-jp-gg !px-[12px] !py-[20px] !leading-[120%] xl:!text-xl xl:!font-bold xl:!leading-[1.44]"
                 />
               </div>
             )}
