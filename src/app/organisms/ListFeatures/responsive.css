@@ -3,7 +3,7 @@
     margin: unset !important;
   }
 
-  .featuring .feature-img img {
+  .featuring .feature-item {
     width: 230px;
     margin: auto;
   }

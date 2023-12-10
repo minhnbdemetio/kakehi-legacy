@@ -54,7 +54,7 @@ const ContactFormReview: React.FC<IProps> = ({
           {submitted ? (
             <p className="whitespace-normal pl-[25px] pr-[27px] text-left  text-lg leading-[36px] xl:whitespace-pre-wrap xl:text-center xl:text-xl">{`以下の内容にて、お問い合わせをお受付いたしました。\n確認後に、担当者よりご連絡いたします。`}</p>
           ) : (
-            <p className="pl-[25px] pr-[27px] text-center font-noto-sans-jp text-lg leading-[36px] text-primary xl:text-xl">
+            <p className="pl-[25px] pr-[27px] text-left font-noto-sans-jp text-lg leading-[36px] text-primary xl:text-center xl:text-xl">
               入力した内容をご確認ください。
             </p>
           )}
@@ -64,12 +64,10 @@ const ContactFormReview: React.FC<IProps> = ({
           <RequestConfirmField label="お名前" content={data.name} />
           <RequestConfirmField label="ふりがな" content={data.furigana} />
           <RequestConfirmField label="メールアドレス" content={data.email} />
-          {!submitted && (
-            <RequestConfirmField
-              label={`メールアドレス\n（確認用）`}
-              content={data.confirmationEmail}
-            />
-          )}
+          <RequestConfirmField
+            label={`メールアドレス\n（確認用）`}
+            content={data.confirmationEmail}
+          />
           <RequestConfirmField label="電話番号" content={data.phone} />
           <RequestConfirmField
             multiline
