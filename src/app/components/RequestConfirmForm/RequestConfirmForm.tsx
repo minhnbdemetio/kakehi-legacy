@@ -91,12 +91,10 @@ export const RequestConfirmForm = () => {
             label="メールアドレス"
             content={parsedData?.email}
           />
-          {!isConfirmed ? (
-            <RequestConfirmField
-              label="メールアドレス<br/>（確認用）"
-              content={parsedData?.emailConfirm}
-            />
-          ) : null}
+          <RequestConfirmField
+            label={`メールアドレス\n（確認用）`}
+            content={parsedData?.emailConfirm}
+          />
           <RequestConfirmField
             label="電話番号"
             content={parsedData?.phoneNumber}

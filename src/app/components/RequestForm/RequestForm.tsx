@@ -154,7 +154,7 @@ export const RequestForm = () => {
           control={form.control}
           render={({ field, fieldState }) => (
             <TextField
-              label="メールアドレス*<br/>（確認用）"
+              label={`メールアドレス*\n（確認用）`}
               {...field}
               error={fieldState.error?.message}
             />
@@ -179,7 +179,7 @@ export const RequestForm = () => {
           render={({ field, fieldState }) => (
             <TextField
               className="resize-none"
-              label="お問い合わせ内容<br/>（任意）"
+              label={`お問い合わせ内容\n（任意）`}
               rows={10}
               {...field}
               error={fieldState.error?.message}
