@@ -30,7 +30,7 @@ const TopPageInformation: React.FC<IProps> = () => {
 
       <div
         className={clsx(
-          "mb-17 px-7 text-[15px] font-[500] leading-lg",
+          "mb-17 px-7 text-lg font-[500] leading-lg",
           "xl:mb-11 xl:w-[800px] xl:px-0 xl:text-1.5xl"
         )}
       >
