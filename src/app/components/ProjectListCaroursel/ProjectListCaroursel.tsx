@@ -69,21 +69,25 @@ const ProjectListCaroursel: React.FC<IProps> = ({ projects }) => {
                 </div>
               </div>
               <div className="h-[200px] bg-card-background-primary px-[20.83px] pb-[35px] pt-[25px] xl:h-[250px] xl:pb-[49px] xl:pt-[32px]">
-                <div className="mb-[20px] border-b-2 border-black pb-[10.33px]  text-xl font-bold text-black xl:pb-[20px]">
+                <div className="mb-[20px] border-b-2 border-black pb-[10.33px] text-lg font-bold text-black xl:pb-[20px] xl:text-xl">
                   {project.name}
                 </div>
                 <div className="flex items-center gap-[16.67px] xl:gap-[20px]">
                   <div className="flex w-[75px] items-center justify-center bg-black px-[10.83px] py-[6.67px]  text-[13px] text-white xl:w-[90px] xl:pb-[9px] xl:pt-[8px] xl:text-[16px]">
                     構造
                   </div>
-                  <div className="xl:text-[16px]">{project.structure}</div>
+                  <div className="text-[13px] xl:text-[16px]">
+                    {project.structure}
+                  </div>
                 </div>
 
                 <div className="mt-[19.67px] flex items-center gap-[16.67px] xl:gap-[20px]">
                   <div className="flex w-[75px] items-center justify-center bg-black px-[10.83px] py-[6.67px]  text-[13px] text-white xl:w-[90px] xl:pb-[9px] xl:pt-[8px] xl:text-[16px]">
                     延床面積
                   </div>
-                  <div className="xl:text-[16px]">{project.acreage}㎡</div>
+                  <div className="text-[13px] xl:text-[16px]">
+                    {project.acreage}㎡
+                  </div>
                 </div>
               </div>
             </div>
