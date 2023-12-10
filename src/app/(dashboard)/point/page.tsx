@@ -9,15 +9,28 @@ import DescriptionSection from "@/app/organisms/DescriptionSection";
 interface IProps {}
 
 const PointScreen: React.FC<IProps> = () => {
+  const BANNER_CONTENT = (
+    <h1
+      style={{ textShadow: "5px 5px 10px rgba(0, 0, 0, 0.75);" }}
+      className="whitespace-pre text-center text-[40px] font-bold leading-[normal] xl:whitespace-nowrap"
+    >{`工場・倉庫\n建築のポイント`}</h1>
+  );
+
   return (
     <div className="point-screen mb-33.1/3">
       <div className="page-header">
         <BackgroundWithSlogan
-          className="xl:h-[543px]"
+          className="!hidden xl:!block xl:h-[543px]"
           src="/points/point-banner.jpg"
         >
-          <h1 className="whitespace-pre text-center text-[40px] font-bold leading-[normal] xl:whitespace-nowrap">{`工場・倉庫\n建築のポイント`}</h1>
+          {BANNER_CONTENT}
         </BackgroundWithSlogan>
+
+        <div className="!block xl:!hidden">
+          <BackgroundWithSlogan src="/points/point-banner-sp.jpg" bgTrueSize>
+            {BANNER_CONTENT}
+          </BackgroundWithSlogan>
+        </div>
 
         <div className="mx-7 mt-25 xl:mx-pc-container xl:mt-16.2/3">
           <p className="text-1.5xl font-[400] leading-lg">
