@@ -69,7 +69,7 @@ const ProjectListCaroursel: React.FC<IProps> = ({ projects }) => {
                 </div>
               </div>
               <div className="h-[200px] bg-card-background-primary px-[20.83px] pb-[35px] pt-[25px] xl:h-[250px] xl:pb-[49px] xl:pt-[32px]">
-                <div className="mb-[20px] border-b-2 border-black pb-[10.33px] text-lg font-bold text-black xl:pb-[20px] xl:text-xl">
+                <div className="mb-[20px] border-b-2 border-black pb-[10.33px] text-[15px] font-bold text-black xl:pb-[20px] xl:text-xl">
                   {project.name}
                 </div>
                 <div className="flex items-center gap-[16.67px] xl:gap-[20px]">
