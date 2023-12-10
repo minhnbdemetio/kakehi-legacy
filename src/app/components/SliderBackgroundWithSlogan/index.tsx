@@ -9,7 +9,6 @@ import "slick-carousel/slick/slick-theme.css";
 
 import "./style.scss";
 import "./responsive.css";
-import Image from "next/image";
 
 interface SliderBackgroundWithSloganProps extends PropsWithChildren {
   images: string[];
@@ -42,7 +41,7 @@ export default function SliderBackgroundWithSlogan({
         {images.map((image, index) => (
           <div
             key={index}
-            className={clsx("h-[749px] w-full xl:aspect-[1440/543] xl:h-auto")}
+            className={clsx(" w-full xl:aspect-[1440/543] xl:h-auto")}
           >
             <picture>
               {imagesMobile && imagesMobile.length === images.length ? (
