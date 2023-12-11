@@ -38,7 +38,7 @@ const PointScreen: React.FC<IProps> = () => {
           </p>
         </div>
 
-        <div className="card-list mx-7 mt-25 pb-33 xl:mx-pc-container xl:mt-16.2/3">
+        <div className="card-list mx-7 mt-25 pb-[64px] xl:mx-pc-container xl:mt-16.2/3 xl:pb-33">
           <ul className="point-lists grid grid-cols-1 gap-3 pb-25 xl:grid-cols-2 xl:gap-7 xl:gap-x-14">
             {items.map((item) => (
               <li key={item.firstTitle}>
@@ -57,7 +57,7 @@ const PointScreen: React.FC<IProps> = () => {
         </div>
       </div>
 
-      <div className="list-points mt-15">
+      <div className="list-points xl:mt-15">
         <ul className="grid grid-cols-1  gap-[65px] xl:gap-33.1/3">
           {items.map((item) => (
             <li key={item.firstTitle}>
