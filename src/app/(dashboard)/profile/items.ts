@@ -9,7 +9,11 @@ const items: {
     description: "株式会社 懸樋工務店",
     link: "https://www.kakehi-const.co.jp/",
   },
-  { label: "住所", description: "〒680-1417 鳥取県鳥取市桂見573番地" },
+  {
+    label: "住所",
+    description: "〒680-1417 鳥取県鳥取市桂見573番地",
+    mobileDesc: "〒680-1417\n鳥取県鳥取市桂見573番地",
+  },
   { label: "創業", description: "1954年3月1日" },
   { label: "代表取締役社長", description: "懸樋義樹" },
   { label: "資本金", description: "8980万円" },

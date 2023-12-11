@@ -12,7 +12,7 @@ const PointScreen: React.FC<IProps> = () => {
   const BANNER_CONTENT = (
     <h1
       style={{ textShadow: "5px 5px 10px rgba(0, 0, 0, 0.75);" }}
-      className="whitespace-pre text-center text-[40px] font-bold leading-[normal] xl:whitespace-nowrap"
+      className="whitespace-pre text-center text-[24px] font-bold leading-[normal] xl:whitespace-nowrap xl:text-[40px]"
     >{`工場・倉庫\n建築のポイント`}</h1>
   );
 

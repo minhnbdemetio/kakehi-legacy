@@ -1,5 +1,10 @@
 import clsx from "clsx";
-import React, { FC, InputHTMLAttributes, TextareaHTMLAttributes } from "react";
+import React, {
+  InputHTMLAttributes,
+  LegacyRef,
+  TextareaHTMLAttributes,
+  forwardRef,
+} from "react";
 
 type InputType = InputHTMLAttributes<HTMLInputElement> &
   TextareaHTMLAttributes<HTMLTextAreaElement>;
@@ -13,14 +18,10 @@ interface Props extends InputType {
   error?: string;
 }
 
-export const TextField: FC<Props> = ({
-  label,
-  name,
-  className,
-  wrapperClassName,
-  error,
-  ...props
-}) => {
+export const TextField = forwardRef<
+  HTMLTextAreaElement | HTMLInputElement,
+  Props
+>(({ wrapperClassName, label, className, error, name, ...props }, ref) => {
   const InputElement = props.rows ? "textarea" : "input";
 
   return (
@@ -39,21 +40,40 @@ export const TextField: FC<Props> = ({
             dangerouslySetInnerHTML={{ __html: label }}
           />
         ) : null}
+        {props.rows ? (
+          <textarea
+            ref={ref as LegacyRef<HTMLTextAreaElement>}
+            className={clsx(
+              "leading-normal mt-[20px] table-cell min-h-[70px] w-full px-7 py-3 font-noto-sans text-1.5xl font-medium xl:mt-[0px] xl:min-h-[100px]",
+              {
+                "border-2 border-red-700": error,
+              },
+              className
+            )}
+            name={name}
+            id={name}
+            {...props}
+          />
+        ) : (
+          <input
+            ref={ref as LegacyRef<HTMLInputElement>}
+            className={clsx(
+              "leading-normal mt-[20px] table-cell min-h-[70px] w-full px-7 py-3 font-noto-sans text-1.5xl font-medium xl:mt-[0px] xl:min-h-[100px]",
+              {
+                "border-2 border-red-700": error,
+              },
+              className
+            )}
+            name={name}
+            id={name}
+            {...props}
+          ></input>
+        )}
 
-        <InputElement
-          className={clsx(
-            "leading-normal mt-[20px] table-cell min-h-[70px] w-full px-7 py-3 font-noto-sans text-1.5xl font-medium xl:mt-[0px] xl:min-h-[100px]",
-            {
-              "border-2 border-red-700": error,
-            },
-            className
-          )}
-          name={name}
-          id={name}
-          {...props}
-        />
         {error && <p className="mt-3 text-lg text-red-700">{error}</p>}
       </div>
     </>
   );
-};
+});
+
+TextField.displayName = "TextField";

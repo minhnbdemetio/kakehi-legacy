@@ -85,9 +85,8 @@ const CardDescription: React.FC<IProps> = ({
           },
           descriptionClassName
         )}
-      >
-        {description}
-      </DescriptionWrapper>
+        dangerouslySetInnerHTML={{ __html: description }}
+      ></DescriptionWrapper>
     </div>
   );
 };

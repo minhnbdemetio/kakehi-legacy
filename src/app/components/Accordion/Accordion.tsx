@@ -64,12 +64,14 @@ export const Accordion: FC<Props> = ({
           {summary}
         </span>
 
-        <div className={clsx({ "p-5": type === "section" })}>
+        <div
+          className={clsx("w-full max-w-[15px]", { "p-5": type === "section" })}
+        >
           <img
             src="/icons/chevron-icon.png"
             alt=""
-            width={20}
-            height={12}
+            width={15}
+            height={8}
             className={clsx({
               "rotate-180 transform": !open,
             })}

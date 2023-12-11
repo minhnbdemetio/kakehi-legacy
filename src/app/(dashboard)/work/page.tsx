@@ -70,13 +70,10 @@ const Work: React.FC<IProps> = async ({ searchParams }: IProps) => {
         <DescriptionSection
           type="multi-image"
           firstTitle="施工事例"
-          images={[
-            { tag: "食品工場", src: "/projects/project-2.jpg" },
-            { tag: "食品工場", src: "/projects/project-3.jpg" },
-            { tag: "食品工場", src: "/projects/project-4.jpg" },
-            { tag: "食品工場", src: "/projects/project-5.jpg" },
-            { tag: "食品工場", src: "/projects/project-6.jpg" },
-          ]}
+          images={project?.images.map((image) => ({
+            tag: project.tag,
+            src: image,
+          }))}
           secondTitle="株式会社さんれいフーズ"
           titlePosition={"left"}
           items={[

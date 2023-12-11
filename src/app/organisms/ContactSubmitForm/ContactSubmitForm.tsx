@@ -66,6 +66,13 @@ const ContactSubmitForm: React.FC<IProps> = () => {
     },
     resolver: yupResolver(schema),
   });
+  const email = form.watch("email");
+
+  useEffect(() => {
+    if (email) {
+      form.trigger("confirmationEmail");
+    }
+  }, [email]);
 
   const { executeRecaptcha } = useGoogleReCaptcha();
 

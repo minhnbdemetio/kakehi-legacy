@@ -49,6 +49,7 @@ const ContactForm: React.FC<IProps> = ({ form, next }) => {
                 name={field.name}
                 onChange={field.onChange}
                 value={field.value}
+                ref={field.ref}
               />
             )}
           />
@@ -62,6 +63,7 @@ const ContactForm: React.FC<IProps> = ({ form, next }) => {
                 name={field.name}
                 onChange={field.onChange}
                 value={field.value}
+                ref={field.ref}
               />
             )}
           />
@@ -75,6 +77,7 @@ const ContactForm: React.FC<IProps> = ({ form, next }) => {
                 name={field.name}
                 onChange={field.onChange}
                 value={field.value}
+                ref={field.ref}
               />
             )}
           />
@@ -88,6 +91,7 @@ const ContactForm: React.FC<IProps> = ({ form, next }) => {
                 name={field.name}
                 onChange={field.onChange}
                 value={field.value}
+                ref={field.ref}
               />
             )}
           />
@@ -101,6 +105,7 @@ const ContactForm: React.FC<IProps> = ({ form, next }) => {
                 name={field.name}
                 onChange={field.onChange}
                 value={field.value}
+                ref={field.ref}
               />
             )}
           />
@@ -114,6 +119,7 @@ const ContactForm: React.FC<IProps> = ({ form, next }) => {
                 name={field.name}
                 onChange={field.onChange}
                 value={field.value}
+                ref={field.ref}
               />
             )}
           />
@@ -129,6 +135,7 @@ const ContactForm: React.FC<IProps> = ({ form, next }) => {
                 rows={9}
                 onChange={field.onChange}
                 value={field.value}
+                ref={field.ref}
               />
             )}
           />
