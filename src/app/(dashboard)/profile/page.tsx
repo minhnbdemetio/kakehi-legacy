@@ -22,7 +22,7 @@ const Profile: React.FC<IProps> = () => {
         </BackgroundWithSlogan>
       </div>
       <div className="block xl:hidden">
-        <BackgroundWithSlogan bgTrueSize src="/profile_background_sp.png">
+        <BackgroundWithSlogan bgTrueSize src="/profile_background_sp.jpg">
           <h1
             style={{ textShadow: " 5px 5px 10px rgba(0, 0, 0, 0.75)" }}
             className="leading-snug !h-auto text-[24px] font-bold xl:text-3.5xl "

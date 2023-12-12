@@ -60,15 +60,8 @@ export const RequestForm = () => {
       acceptPolicy: false,
     },
     resolver: yupResolver(schema),
+    mode: "onSubmit",
   });
-
-  const email = form.watch("email");
-
-  useEffect(() => {
-    if (email) {
-      form.trigger("emailConfirm");
-    }
-  }, [email]);
 
   const onSubmit = useCallback(
     (data: any) => {

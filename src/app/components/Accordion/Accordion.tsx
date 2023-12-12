@@ -34,7 +34,7 @@ export const Accordion: FC<Props> = ({
     <div>
       <button
         className={clsx(
-          "flex w-full items-center justify-between gap-5 py-9 text-left ",
+          "flex w-full items-center justify-between gap-5 py-8 text-left ",
           {
             // Section
             [clsx(
@@ -64,9 +64,7 @@ export const Accordion: FC<Props> = ({
           {summary}
         </span>
 
-        <div
-          className={clsx("w-full max-w-[15px]", { "p-5": type === "section" })}
-        >
+        <div className={clsx("w-full max-w-[15px]")}>
           <img
             src="/icons/chevron-icon.png"
             alt=""

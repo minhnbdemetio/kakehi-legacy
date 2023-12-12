@@ -74,7 +74,7 @@ const Work: React.FC<IProps> = async ({ searchParams }: IProps) => {
             tag: project.tag,
             src: image,
           }))}
-          secondTitle="株式会社さんれいフーズ"
+          secondTitle={project.name}
           titlePosition={"left"}
           items={[
             {
