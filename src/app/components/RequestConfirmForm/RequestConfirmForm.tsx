@@ -55,6 +55,10 @@ export const RequestConfirmForm = () => {
       alert("Something went wrong!");
     } finally {
       setIsConfirmed(true);
+
+      if (typeof window !== "undefined") {
+        window.scrollTo({ top: 0, behavior: "instant" });
+      }
     }
 
     setSubmitting(false);

@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useEffect, useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 
 import "./responsive.css";
@@ -65,14 +65,8 @@ const ContactSubmitForm: React.FC<IProps> = () => {
       acceptPolicy: false,
     },
     resolver: yupResolver(schema),
+    mode: "onSubmit",
   });
-  const email = form.watch("email");
-
-  useEffect(() => {
-    if (email) {
-      form.trigger("confirmationEmail");
-    }
-  }, [email]);
 
   const { executeRecaptcha } = useGoogleReCaptcha();
 
@@ -103,19 +97,29 @@ const ContactSubmitForm: React.FC<IProps> = () => {
       alert("Something went wrong!");
     } finally {
       setSubmitted(true);
+      if (typeof window !== "undefined") {
+        window.scrollTo({ top: 0, behavior: "instant" });
+      }
     }
   };
+
+  const changePage = useCallback((page: number) => {
+    setStage(page);
+    if (typeof window !== "undefined") {
+      window.scrollTo({ top: 0, behavior: "instant" });
+    }
+  }, []);
 
   return (
     <div>
       {stage === STAGES.FORM && (
-        <ContactForm next={() => setStage(STAGES.REVIEW)} form={form} />
+        <ContactForm next={() => changePage(STAGES.REVIEW)} form={form} />
       )}
       {stage === STAGES.REVIEW && (
         <ContactFormReview
           onSubmit={handleSubmit}
           submitted={submitted}
-          back={() => setStage(STAGES.FORM)}
+          back={() => changePage(STAGES.FORM)}
           data={form.getValues() as any}
         />
       )}
