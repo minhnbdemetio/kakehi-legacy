@@ -1,4 +1,3 @@
-"use client";
 import React, { useEffect } from "react";
 import items from "./items";
 import clsx from "clsx";
@@ -9,25 +8,6 @@ import { useSearchParams } from "next/navigation";
 interface IProps {}
 
 const TopPageFLowSection: React.FC<IProps> = () => {
-  const searchParams = useSearchParams();
-  const goTo = searchParams.get("goto");
-
-  useEffect(() => {
-    if (goTo) {
-      const targetElement = document.getElementById(goTo);
-      if (targetElement) {
-        const offset = -80;
-        const rect = targetElement.getBoundingClientRect();
-        setTimeout(() => {
-          window.scrollTo({
-            top: rect.top + window.scrollY + offset,
-            behavior: "smooth",
-          });
-        }, 500);
-      }
-    }
-  }, [goTo]);
-
   return (
     <div id="Flow">
       <div className="mt-33 flex flex-col items-center justify-center">
