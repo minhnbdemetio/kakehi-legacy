@@ -56,7 +56,7 @@ export const RequestConfirmForm = () => {
       }
     } catch (e) {
       console.error(e);
-      alert("Something went wrong!");
+      alert("Something went wrong! Please try again.");
     }
     setSubmitting(false);
   };
