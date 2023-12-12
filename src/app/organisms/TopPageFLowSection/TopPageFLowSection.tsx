@@ -14,15 +14,16 @@ const TopPageFLowSection: React.FC<IProps> = () => {
 
   useEffect(() => {
     if (goTo) {
-
       const targetElement = document.getElementById(goTo);
       if (targetElement) {
         const offset = -80;
         const rect = targetElement.getBoundingClientRect();
-        window.scrollTo({
-          top: rect.top + window.scrollY + offset,
-          behavior: "smooth",
-        });
+        setTimeout(() => {
+          window.scrollTo({
+            top: rect.top + window.scrollY + offset,
+            behavior: "smooth",
+          });
+        }, 500);
       }
     }
   }, [goTo]);
