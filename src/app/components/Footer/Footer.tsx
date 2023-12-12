@@ -51,8 +51,7 @@ const Footer: React.FC<IProps> = ({ showPreFooter = true }) => {
           〒680-1417 鳥取県鳥取市桂見573番地
         </p>
         <p className="font-base mt-[5px] text-center font-noto-sans text-md !no-underline xl:text-[15px]">
-          {/* TEL 0857-28-4788{""} */}
-          TEL 0857-28-4788
+          TEL 0857-28-4788{""}
         </p>
 
         <div className="footer-link mt-[25px]  xl:mt-[31px]">
