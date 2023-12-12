@@ -92,14 +92,13 @@ const ContactSubmitForm: React.FC<IProps> = () => {
           token,
         });
       }
-    } catch (e) {
-      console.error(e);
-      alert("Something went wrong!");
-    } finally {
       setSubmitted(true);
       if (typeof window !== "undefined") {
         window.scrollTo({ top: 0, behavior: "instant" });
       }
+    } catch (e) {
+      console.error(e);
+      alert("Something went wrong!");
     }
   };
 
