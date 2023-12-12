@@ -50,17 +50,14 @@ export const RequestConfirmForm = () => {
           token,
         });
       }
-    } catch (e) {
-      console.error(e);
-      alert("Something went wrong!");
-    } finally {
       setIsConfirmed(true);
-
       if (typeof window !== "undefined") {
         window.scrollTo({ top: 0, behavior: "instant" });
       }
+    } catch (e) {
+      console.error(e);
+      alert("Something went wrong!");
     }
-
     setSubmitting(false);
   };
 
