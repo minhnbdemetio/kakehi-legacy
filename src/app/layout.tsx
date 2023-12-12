@@ -9,11 +9,6 @@ import { GoogleReCaptchaProvider } from "react-google-recaptcha-v3";
 export const metadata: Metadata = {
   title: "Kakehi",
   description: "",
-  formatDetection: {
-    email: false,
-    address: false,
-    telephone: false,
-  },
 };
 
 export default function RootLayout({

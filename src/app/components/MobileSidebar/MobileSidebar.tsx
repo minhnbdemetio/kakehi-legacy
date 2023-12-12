@@ -30,9 +30,9 @@ const MobileSidebar: React.FC<IProps> = () => {
           data-close={"#main-mobile-sidebar"}
           className="btn-primary btn rounded"
         >
-          <Link href={item.link}>
+          <a href={item.link}>
             <p className="text-lg">{item.label}</p>
-          </Link>
+          </a>
         </li>
       );
     });
