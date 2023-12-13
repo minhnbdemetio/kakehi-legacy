@@ -38,22 +38,24 @@ export default function SliderBackgroundWithSlogan({
       style={{}}
     >
       <Slider {...settings}>
-        {images.map((image, index) => (
-          <div
-            key={index}
-            className={clsx(" w-full xl:aspect-[1440/543] xl:h-auto")}
-          >
-            <picture>
-              {imagesMobile && imagesMobile.length === images.length ? (
-                <source
-                  media="(max-width: 1024px)"
-                  srcSet={imagesMobile[index]}
-                />
-              ) : null}
-              <img src={image} alt="banner" />
-            </picture>
-          </div>
-        ))}
+        {
+          images.map((image, index) => (
+            <div
+              key={index}
+              className={clsx(" w-full xl:aspect-[1440/543] xl:h-auto")}
+            >
+              <picture>
+                {imagesMobile && imagesMobile.length === images.length ? (
+                  <source
+                    media="(max-width: 1024px)"
+                    srcSet={imagesMobile[index]}
+                  />
+                ) : null}
+                <img src={image} alt="banner" />
+              </picture>
+            </div>
+          )) as any
+        }
       </Slider>
       <div className="absolute left-[50%] top-[50%] flex w-full translate-x-[-50%] translate-y-[-50%] justify-center">
         <h1>

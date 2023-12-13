@@ -14,7 +14,7 @@ interface IProps {
       acceptPolicy?: boolean | undefined;
       companyName: string;
       name: string;
-      furigana: string;
+      furigana?: string;
       email: string;
       content: string;
     },
