@@ -111,7 +111,7 @@ export const RequestConfirmForm = () => {
           <div className="flex justify-center gap-7 xl:gap-14">
             <Button
               href={Routes.REQUEST}
-              className="relative flex flex-col-reverse items-center justify-center bg-black px-7 sm:flex-row sm:justify-between xl:gap-y-2"
+              className="relative flex flex-col-reverse items-center justify-center !bg-black px-7 sm:flex-row sm:justify-between xl:gap-y-2"
             >
               <img
                 className="hidden -scale-x-100 xl:block"

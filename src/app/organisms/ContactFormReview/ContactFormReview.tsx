@@ -80,7 +80,7 @@ const ContactFormReview: React.FC<IProps> = ({
           <div className="flex justify-center gap-[20px] pl-[25px]  pr-[27px] xl:gap-14 ">
             <Button
               onClick={back}
-              className="relative flex flex-col-reverse items-center justify-center gap-y-2 bg-black px-7 sm:flex-row sm:justify-between"
+              className="relative flex flex-col-reverse items-center justify-center gap-y-2 !bg-black px-7 sm:flex-row sm:justify-between"
             >
               <img
                 className="hidden -scale-x-100 xl:block"
