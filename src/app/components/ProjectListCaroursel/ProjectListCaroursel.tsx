@@ -1,6 +1,6 @@
 "use client";
 
-import React from "react";
+import React, { useMemo } from "react";
 import Slider from "react-slick";
 import "./style.scss";
 import "./responsive.css";
@@ -18,9 +18,10 @@ interface IProps {
     structure: string;
     acreage: number;
   }[];
+  hideId?: string;
 }
 
-const ProjectListCaroursel: React.FC<IProps> = ({ projects }) => {
+const ProjectListCaroursel: React.FC<IProps> = ({ projects, hideId }) => {
   const router = useRouter();
   const settings = {
     dots: false,
@@ -45,6 +46,12 @@ const ProjectListCaroursel: React.FC<IProps> = ({ projects }) => {
     ],
   };
 
+  const showProjects = useMemo(() => {
+    if (!hideId) return projects;
+
+    return projects.filter((p) => p.id != hideId);
+  }, [hideId, projects]);
+
   const toWorkPage = (id: string) => {
     router.push(`/work?id=${id}`);
   };
@@ -53,7 +60,7 @@ const ProjectListCaroursel: React.FC<IProps> = ({ projects }) => {
     <div className="project-list-carousel-container">
       <div className="project-list-carousel px-[71px] xl:px-0">
         <Slider {...settings}>
-          {projects.map((project, index) => (
+          {showProjects.map((project, index) => (
             <div
               onClick={() => toWorkPage(project.id)}
               key={index}
