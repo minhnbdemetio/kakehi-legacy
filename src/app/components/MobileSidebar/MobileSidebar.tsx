@@ -24,16 +24,15 @@ const MobileSidebar: React.FC<IProps> = () => {
   const renderMenuItems = useMemo(() => {
     return menuItems.map((item) => {
       return (
-        <li
-          key={item.label}
-          onClick={closeSidebar}
-          data-close={"#main-mobile-sidebar"}
-          className="btn-primary btn rounded"
-        >
-          <a href={item.link}>
+        <a key={item.label} href={item.link}>
+          <li
+            onClick={closeSidebar}
+            data-close={"#main-mobile-sidebar"}
+            className="btn-primary btn rounded"
+          >
             <p className="text-lg">{item.label}</p>
-          </a>
-        </li>
+          </li>
+        </a>
       );
     });
   }, [closeSidebar]);

@@ -2,17 +2,18 @@ import React from "react";
 import items from "./items";
 import clsx from "clsx";
 import Image from "next/image";
+import { ScrollToFlow } from "@/app/components/ScrollToFlow";
 
 interface IProps {}
 
 const TopPageFLowSection: React.FC<IProps> = () => {
   return (
-    <div id="Flow">
+    <div>
+      <ScrollToFlow />
       <div className="flex flex-col items-center justify-center pt-33">
         <div className="mb-3 w-max border-b-2 border-color-custom pb-[3px] text-center font-noto-sans text-base uppercase text-primary xl:mb-[5px] xl:px-0 xl:text-xl xl:leading-lg">
           FLOW
         </div>
-
         <div className="mb-[51px] font-noto-sans text-1.5xl font-bold xl:mb-[79px] xl:px-0 xl:text-3xl">
           お問い合わせからの流れ
         </div>
