@@ -4,6 +4,7 @@ import BackgroundSection from "@/app/components/BackgroundSectionCopy";
 import ListFeatures from "../ListFeatures";
 import "./responsive.css";
 import clsx from "clsx";
+import { ScrollToHash } from "@/app/components/ScrollToHash";
 
 interface IProps {}
 
@@ -45,10 +46,8 @@ const TopPageInformation: React.FC<IProps> = () => {
   return (
     <div>
       <div className="block xl:hidden">
-        <div
-          id="About"
-          className="toppage-information-container pt-[80px] xl:pt-[101px]"
-        >
+        <ScrollToHash hash="#About" />
+        <div className="toppage-information-container pt-[80px] xl:pt-[101px]">
           {ABOUT}
           <BackgroundSection
             className="toppage-information-background"

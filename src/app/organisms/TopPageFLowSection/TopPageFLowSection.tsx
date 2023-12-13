@@ -2,14 +2,14 @@ import React from "react";
 import items from "./items";
 import clsx from "clsx";
 import Image from "next/image";
-import { ScrollToFlow } from "@/app/components/ScrollToFlow";
+import { ScrollToHash } from "@/app/components/ScrollToHash";
 
 interface IProps {}
 
 const TopPageFLowSection: React.FC<IProps> = () => {
   return (
     <div>
-      <ScrollToFlow />
+      <ScrollToHash hash="#Flow" />
       <div className="flex flex-col items-center justify-center pt-33">
         <div className="mb-3 w-max border-b-2 border-color-custom pb-[3px] text-center font-noto-sans text-base uppercase text-primary xl:mb-[5px] xl:px-0 xl:text-xl xl:leading-lg">
           FLOW
