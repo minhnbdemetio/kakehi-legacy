@@ -107,7 +107,7 @@ const Work: React.FC<IProps> = async ({ searchParams }: IProps) => {
       </div>
 
       <div className="mt-30 xl:mt-33.1/3">
-        <ProjectListCaroursel projects={projects} />
+        <ProjectListCaroursel hideId={searchParams.id} projects={projects} />
       </div>
     </div>
   );
