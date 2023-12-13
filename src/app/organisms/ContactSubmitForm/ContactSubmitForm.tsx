@@ -88,8 +88,8 @@ const ContactSubmitForm: React.FC<IProps> = () => {
           email: values.email,
           companyName: values.companyName,
           content: values.content,
-          furigana: values.furigana,
-          phone: values.phone,
+          furigana: values.furigana || "",
+          phone: values.phone || "",
           name: values.name,
           token,
         });
