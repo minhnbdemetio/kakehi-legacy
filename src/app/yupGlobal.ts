@@ -5,4 +5,17 @@ Yup.addMethod(Yup.string, "jpPhone", function (message) {
   return this.matches(JP_PHONE_REGEX, { message, excludeEmptyString: true });
 });
 
+Yup.addMethod(Yup.string, "hiragana", function (message) {
+  const HIRAGANA = /^([ぁ-ん]+)$/;
+
+  return this.matches(HIRAGANA, { message, excludeEmptyString: true });
+});
+
+declare module "yup" {
+  interface StringSchema {
+    jpPhone(message: string): StringSchema;
+    hiragana(message: string): StringSchema;
+  }
+}
+
 export default Yup;
