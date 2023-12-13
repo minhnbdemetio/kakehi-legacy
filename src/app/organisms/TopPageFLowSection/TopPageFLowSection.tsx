@@ -1,9 +1,7 @@
-import React, { useEffect } from "react";
+import React from "react";
 import items from "./items";
 import clsx from "clsx";
 import Image from "next/image";
-
-import { useSearchParams } from "next/navigation";
 
 interface IProps {}
 
