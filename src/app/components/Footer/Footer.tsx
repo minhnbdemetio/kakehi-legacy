@@ -4,6 +4,7 @@ import { Button } from "../Button";
 import "./style.scss";
 import "./responsive.css";
 import React from "react";
+import Link from "next/link";
 
 interface IProps {
   showPreFooter?: boolean;
@@ -50,9 +51,10 @@ const Footer: React.FC<IProps> = ({ showPreFooter = true }) => {
         <p className="mt-[9.99px] text-center  text-md xl:mt-[33.16px] xl:text-[15px]">
           〒680-1417 鳥取県鳥取市桂見573番地
         </p>
-        <p className="font-base mt-[5px] text-center font-noto-sans text-md !no-underline xl:text-[15px]">
-          TEL 0857-28-4788
-        </p>
+        <div className="font-base mt-[5px] flex text-center font-noto-sans text-md text-white !no-underline xl:text-[15px]">
+          <div>TEL </div> &nbsp;<div>0857-28-</div>
+          <div>4788</div>
+        </div>
 
         <div className="footer-link mt-[25px]  xl:mt-[31px]">
           <a href={Routes.PROFILE}>

@@ -14,6 +14,7 @@ export default function Home() {
     (_, idx) => `/top/kakehi_sp_top_slider-${idx + 1}.jpg`
   );
 
+
   return (
     <>
       <SliderBackgroundWithSlogan images={images} imagesMobile={imagesMobile} />
