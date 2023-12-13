@@ -19,7 +19,9 @@ import { RequestFormData } from "@/app/types/RequestFormData";
 const schema = Yup.object().shape({
   company: Yup.string().required(formValidationMessage.REQUIRED),
   name: Yup.string().required(formValidationMessage.REQUIRED),
-  namePronunciation: Yup.string().required(formValidationMessage.REQUIRED),
+  namePronunciation: Yup.string()
+    .required(formValidationMessage.REQUIRED)
+    .hiragana(formValidationMessage.HIRAGANA),
   email: Yup.string()
     .required(formValidationMessage.REQUIRED)
     .email(formValidationMessage.INVALID_EMAIL),

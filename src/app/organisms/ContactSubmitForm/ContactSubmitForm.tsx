@@ -21,7 +21,9 @@ interface IProps {}
 const schema = Yup.object().shape({
   companyName: Yup.string().required(formValidationMessage.REQUIRED),
   name: Yup.string().required(formValidationMessage.REQUIRED),
-  furigana: Yup.string().required(formValidationMessage.REQUIRED),
+  furigana: Yup.string()
+    .required(formValidationMessage.REQUIRED)
+    .hiragana(formValidationMessage.HIRAGANA),
   email: Yup.string()
     .required(formValidationMessage.REQUIRED)
     .email(formValidationMessage.INVALID_EMAIL),
@@ -32,7 +34,7 @@ const schema = Yup.object().shape({
       [Yup.ref("email")],
       formValidationMessage.INVALID_CONFIRMATION_EMAIL
     ),
-  phone: (Yup.string() as any)
+  phone: Yup.string()
     .required(formValidationMessage.REQUIRED)
     .jpPhone(formValidationMessage.INVALID_PHONE),
   content: Yup.string().required(formValidationMessage.REQUIRED),
