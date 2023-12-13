@@ -8,7 +8,7 @@ interface IProps {}
 const TopPageFLowSection: React.FC<IProps> = () => {
   return (
     <div id="Flow">
-      <div className="mt-33 flex flex-col items-center justify-center">
+      <div className="flex flex-col items-center justify-center pt-33">
         <div className="mb-3 w-max border-b-2 border-color-custom pb-[3px] text-center font-noto-sans text-base uppercase text-primary xl:mb-[5px] xl:px-0 xl:text-xl xl:leading-lg">
           FLOW
         </div>

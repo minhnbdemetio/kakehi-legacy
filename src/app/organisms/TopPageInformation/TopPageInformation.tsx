@@ -9,7 +9,7 @@ interface IProps {}
 
 const TopPageInformation: React.FC<IProps> = () => {
   const ABOUT = (
-    <div className="flex flex-col  items-center justify-center" id="About">
+    <div className="flex flex-col  items-center justify-center">
       <div
         className={clsx(
           "mb-3 w-max border-b-2 border-color-custom pb-[3px] text-center font-noto-sans text-[13px]  uppercase text-primary",
@@ -45,7 +45,10 @@ const TopPageInformation: React.FC<IProps> = () => {
   return (
     <div>
       <div className="block xl:hidden">
-        <div className="toppage-information-container pt-[80px] xl:pt-[101px]">
+        <div
+          id="About"
+          className="toppage-information-container pt-[80px] xl:pt-[101px]"
+        >
           {ABOUT}
           <BackgroundSection
             className="toppage-information-background"
