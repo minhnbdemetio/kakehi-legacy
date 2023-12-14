@@ -14,7 +14,7 @@ const TopPageInformation: React.FC<IProps> = () => {
       <div
         className={clsx(
           "mb-3 w-max border-b-2 border-color-custom pb-[3px] text-center font-noto-sans text-[13px]  uppercase text-primary",
-          "md:text-[15px]",
+          "md:mb-[7px] md:text-[15px]",
           "xl:mb-2 xl:text-xl"
         )}
       >
@@ -34,7 +34,7 @@ const TopPageInformation: React.FC<IProps> = () => {
       <div
         className={clsx(
           "mb-17 px-7 text-lg  font-[500] leading-lg",
-          "md:mb-[100px] md:text-[20px]",
+          "md:mb-0 md:max-w-[700px] md:px-0 md:text-[20px]",
           "xl:mb-11 xl:w-[800px] xl:px-0 xl:text-1.5xl"
         )}
       >
@@ -59,7 +59,7 @@ const TopPageInformation: React.FC<IProps> = () => {
             height={1454}
             src="/steel-self-background.jpg"
             mobileSrc="/top/about_background.jpg"
-            tabletSrc="/top/about_background_tablet.png"
+            tabletSrc="/top/about_background_tablet.jpg"
           >
             <ListFeatures />
           </BackgroundSection>

@@ -9,7 +9,7 @@ interface IProps {}
 
 const ListFeatures: React.FC<IProps> = () => {
   return (
-    <div className="featuring mx-7 p-17 pt-[0] md:mx-[43px] md:px-[25px] xl:mx-auto xl:max-w-[1000px] xl:px-[75px] xl:pb-[64px] xl:pt-[90px]">
+    <div className="featuring mx-7 p-17 pt-[0] md:mx-[43px] md:px-[25px] md:pt-[100px] xl:mx-auto xl:max-w-[1000px] xl:px-[75px] xl:pb-[64px] xl:pt-[90px]">
       <div
         className={clsx(
           "mx-auto w-max border-b-2 border-black pb-3 text-xl font-bold",
@@ -23,7 +23,7 @@ const ListFeatures: React.FC<IProps> = () => {
       <p
         className={clsx(
           "-mx-17 my-17 !w-[calc(100%+102px)]  font-noto-sans-jp text-[15px] font-medium leading-md text-primary",
-          " md:text-[19px] md:leading-lg",
+          " md:mx-auto md:max-w-[700px] md:text-[19px] md:leading-lg",
           "xl:px-8 xl:text-1.5xl xl:leading-lg"
         )}
       >
@@ -33,7 +33,7 @@ const ListFeatures: React.FC<IProps> = () => {
       <ul
         className={clsx(
           "list-feature mt-[50px] flex flex-col ",
-          "md:flex-row md:gap-16.2/3",
+          "md:mt-[82px] md:flex-row md:gap-16.2/3",
           "xl:mt-[70px]  xl:justify-center "
         )}
       >
@@ -41,33 +41,50 @@ const ListFeatures: React.FC<IProps> = () => {
           return (
             <li
               key={item.img}
-              className="feature-item flex flex-col gap-[40px]  pb-[60px] last:pb-0 xl:gap-[90px] xl:pb-0"
+              className="feature-item flex flex-col gap-[40px]  pb-[60px] last:pb-0 md:pb-0 xl:gap-[90px]"
             >
-              <div className="feature-img  xl:!h-[170px] ">
+              <div className="feature-img md:!h-[154px]  xl:!h-[170px] ">
                 <img
                   className="hidden xl:block"
                   alt={item.label}
                   src={item.img}
                 />
                 <img
-                  className="block xl:hidden"
+                  className="hidden md:block xl:hidden"
+                  alt={item.label}
+                  src={item.imgTablet}
+                />
+                <img
+                  className="block md:hidden"
                   alt={item.label}
                   src={item.imgSp}
                 />
               </div>
 
-              <div className="feature-item-description">
+              <div className={clsx("feature-item-description")}>
                 <p
-                  className="py-5 text-center text-[15px] font-bold text-white xl:py-7 xl:text-1.5xl"
+                  className={clsx(
+                    "py-5 text-center text-[15px] font-bold text-white ",
+                    "md:pb-[22px] md:pt-[23px] md:text-[18px] md:leading-[30px]",
+                    "xl:py-7 xl:text-1.5xl xl:leading-[32px]"
+                  )}
                   style={{ background: "#BE95A1" }}
                 >
                   {item.label}
                 </p>
                 <div>
-                  <ul>
+                  <ul
+                    className={clsx(
+                      "md:!pb-[26px] md:!pt-[19px] xl:!py-[20px]"
+                    )}
+                  >
                     {item.description.map((desc) => (
                       <li
-                        className="text-[13px] leading-[24px] before:text-[22px] xl:text-lg xl:leading-[32px] xl:before:text-[32px]"
+                        className={clsx(
+                          "text-[13px] leading-[24px] before:text-[22px] ",
+                          "md:text-md md:leading-[27px] ",
+                          "xl:text-lg xl:leading-[32px] xl:before:text-[32px]"
+                        )}
                         key={desc}
                       >
                         {desc}

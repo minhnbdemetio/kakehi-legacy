@@ -3,7 +3,7 @@ import "./style.scss";
 import "./responsive.css";
 import DescriptionSection from "@/app/organisms/DescriptionSection";
 import PageTitle from "@/app/components/PageTitle";
-import ProjectListCaroursel from "@/app/components/ProjectListCaroursel";
+import ProjectListCarousel from "@/app/components/ProjectListCaroursel";
 import getProjects from "@/app/utils/queries/getProjects";
 import getProject from "@/app/utils/queries/getProject";
 import { redirect } from "next/navigation";
@@ -107,7 +107,7 @@ const Work: React.FC<IProps> = async ({ searchParams }: IProps) => {
       </div>
 
       <div className="mt-30 xl:mt-33.1/3">
-        <ProjectListCaroursel hideId={searchParams.id} projects={projects} />
+        <ProjectListCarousel hideId={searchParams.id} projects={projects} />
       </div>
     </div>
   );

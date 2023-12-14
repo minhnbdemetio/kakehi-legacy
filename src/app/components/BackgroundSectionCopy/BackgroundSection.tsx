@@ -36,6 +36,7 @@ const BackgroundSection: React.FC<IProps> = ({
               layout="fill"
               objectFit="cover"
               objectPosition="center"
+              style={{ top: 1 }}
             />
           </picture>
 

@@ -68,6 +68,22 @@
   }
 }
 
+@media screen and (min-width: 768px) {
+  .project-list-carousel-container {
+    .slick-next {
+      width: 50px !important;
+      height: 50px !important;
+      right: -90px !important;
+    }
+
+    .slick-prev {
+      width: 50px !important;
+      height: 50px !important;
+      left: -90px !important;
+    }
+  }
+}
+
 @media screen and (min-width: 1024px) {
   .project-list-carousel-container {
     .slick-prev {
