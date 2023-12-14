@@ -6,7 +6,7 @@ Yup.addMethod(Yup.string, "jpPhone", function (message) {
 });
 
 Yup.addMethod(Yup.string, "hiragana", function (message) {
-  const HIRAGANA = /^([ぁ-ん]+)$/;
+  const HIRAGANA = /^[\u3040-\u309F 　]+$/;
 
   return this.matches(HIRAGANA, { message, excludeEmptyString: true });
 });
