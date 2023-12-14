@@ -8,11 +8,13 @@ import clsx from "clsx";
 import MenuIcon from "../svg/MenuIcon";
 import { usePathname } from "next/navigation";
 import { Routes } from "@/app/constants/routes";
+import useHash from "@/app/hooks/useHash";
 
 interface IProps {}
 
 const Header: React.FC<IProps> = () => {
   const pathname = usePathname();
+  const currentHash = useHash();
 
   const openMobileSidebar = useCallback((e: React.MouseEvent) => {
     const targetId = e.currentTarget.getAttribute("data-target");
@@ -38,7 +40,8 @@ const Header: React.FC<IProps> = () => {
             const isLast = index === menuItems.length - 1;
             const hasBorderRight = !isFirst && !isLast;
             const hasBorderLeft = isFirst;
-            const isActive = item.link === pathname;
+            const isActive =
+              item.link === pathname || item.link === `/${currentHash}`;
 
             return (
               <div
@@ -53,11 +56,11 @@ const Header: React.FC<IProps> = () => {
                 )}
                 key={index}
               >
-                <Link href={item.link} className="hover:text-hover-nav">
+                <a href={item.link} className="hover:text-hover-nav">
                   <span className="xl:text-lg xxl:font-medium">
                     {item.label}
                   </span>
-                </Link>
+                </a>
               </div>
             );
           })}

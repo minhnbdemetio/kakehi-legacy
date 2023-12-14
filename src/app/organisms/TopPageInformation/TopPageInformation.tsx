@@ -45,8 +45,8 @@ const TopPageInformation: React.FC<IProps> = () => {
 
   return (
     <div>
+      <ScrollToHash hash="#About" />
       <div className="block xl:hidden">
-        <ScrollToHash hash="#About" />
         <div className="toppage-information-container pt-[80px] xl:pt-[101px]">
           {ABOUT}
           <BackgroundSection

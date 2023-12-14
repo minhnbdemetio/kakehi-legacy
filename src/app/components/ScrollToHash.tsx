@@ -8,6 +8,7 @@ export const ScrollToHash: React.FC<{ hash: string }> = ({ hash }) => {
 
   useEffect(() => {
     if (currentHash === hash) {
+      console.log("scroll di chu");
       setTimeout(() => ref.current?.scrollIntoView(), 500);
     }
   }, [currentHash, hash]);
