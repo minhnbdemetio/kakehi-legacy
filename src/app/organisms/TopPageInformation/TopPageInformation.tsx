@@ -14,6 +14,7 @@ const TopPageInformation: React.FC<IProps> = () => {
       <div
         className={clsx(
           "mb-3 w-max border-b-2 border-color-custom pb-[3px] text-center font-noto-sans text-[13px]  uppercase text-primary",
+          "md:text-[15px]",
           "xl:mb-2 xl:text-xl"
         )}
       >
@@ -23,6 +24,7 @@ const TopPageInformation: React.FC<IProps> = () => {
       <div
         className={clsx(
           "mb-20 px-[22px] text-[20px] font-bold",
+          "md:mb-[50px] md:text-2xl",
           "xl:mb-[40px] xl:px-0 xl:text-3xl"
         )}
       >
@@ -31,7 +33,8 @@ const TopPageInformation: React.FC<IProps> = () => {
 
       <div
         className={clsx(
-          "mb-17 px-7 text-lg font-[500] leading-lg",
+          "mb-17 px-7 text-lg  font-[500] leading-lg",
+          "md:mb-[100px] md:text-[20px]",
           "xl:mb-11 xl:w-[800px] xl:px-0 xl:text-1.5xl"
         )}
       >
@@ -45,15 +48,18 @@ const TopPageInformation: React.FC<IProps> = () => {
 
   return (
     <div>
+      <ScrollToHash hash="#About" />
+
       <div className="block xl:hidden">
-        <ScrollToHash hash="#About" />
-        <div className="toppage-information-container pt-[80px] xl:pt-[101px]">
+        {/* mobile and tablet */}
+        <div className="toppage-information-container  pt-[80px] md:pt-[120px] xl:pt-[101px]">
           {ABOUT}
           <BackgroundSection
             className="toppage-information-background"
             height={1454}
             src="/steel-self-background.jpg"
             mobileSrc="/top/about_background.jpg"
+            tabletSrc="/top/about_background_tablet.png"
           >
             <ListFeatures />
           </BackgroundSection>
