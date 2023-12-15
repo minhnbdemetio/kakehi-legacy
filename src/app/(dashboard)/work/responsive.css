@@ -1,6 +1,84 @@
+@media screen(md) {
+  .work-page-container .description-section ul {
+    margin-top: 72px !important;
+    gap: 15px !important;
+  }
+
+  .work-page-container .description-section .card-description-label {
+    /* font-size: 21px; */
+    min-height: 80px !important;
+  }
+
+  .work-page-container .description-section .card-description-label p {
+    font-size: 18px;
+    line-height: normal;
+  }
+
+  .work-page-container .card-description-content {
+    line-height: 36px !important;
+    font-size: 15px;
+    padding: 22px 30px !important;
+  }
+  .work-page-container .card-description-label p {
+    font-size: 16px;
+    font-family: "Noto Sans JP";
+  }
+
+  .work-page-container .list-project-title .divider {
+    font-size: 24px;
+  }
+
+  .work-page-container
+    .description-section-content
+    .preview-images-container
+    .main-image {
+    height: auto !important;
+    aspect-ratio: 834/556;
+  }
+
+  .work-page-container
+    .description-section-content
+    .preview-images-container
+    .list-images {
+    height: auto !important;
+    /* aspect-ratio: 158/105; */
+  }
+
+  .work-page-container
+    .description-section-content
+    .preview-images-container
+    .list-images
+    div {
+    height: auto !important;
+    aspect-ratio: 158/105;
+  }
+
+  /* .work-page-container .description-section .background {
+    height: 600px;
+  } */
+
+  .work-page-container .description-section .card-description-content {
+    min-width: 450px !important;
+    padding-left: 25px !important;
+  }
+
+  .work-page-container .description-section-content {
+    margin-top: 75px !important;
+    padding-bottom: 0;
+  }
+
+  .work-page-container .description-section .title p {
+    line-height: 30px;
+  }
+  .work-page-container .description-section .title > div {
+    height: 67px;
+  }
+}
+
 @media screen(xxl) {
   .work-page-container .description-section ul {
     margin-top: 25px !important;
+    gap: 10px !important;
   }
 
   .work-page-container .description-section .card-description-label {
@@ -15,6 +93,7 @@
 
   .work-page-container .description-section .title p {
     padding-left: 51px !important;
+    line-height: 40px;
   }
 
   .work-page-container .card-description-content {
@@ -33,6 +112,7 @@
     .preview-images-container
     .main-image {
     height: 479px !important;
+    aspect-ratio: unset;
   }
 
   .work-page-container
@@ -48,6 +128,7 @@
     .list-images
     div {
     height: 90px !important;
+    aspect-ratio: unset;
   }
 
   .work-page-container .description-section .background {
@@ -76,5 +157,9 @@
   .work-page-container .description-section .subtitle,
   .work-page-container .description-section .title {
     line-height: 128px;
+  }
+
+  .work-page-container .description-section .title > div {
+    height: 117px;
   }
 }

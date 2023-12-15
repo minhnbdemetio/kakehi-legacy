@@ -29,8 +29,8 @@ const Work: React.FC<IProps> = async ({ searchParams }: IProps) => {
   }
 
   return (
-    <div className="work-page-container mt-[5px] pb-43.1/3 xl:mt-0 xl:pb-33.1/3">
-      <div className="xl hidden xl:block">
+    <div className="work-page-container mt-[5px] pb-43.1/3 md:mt-[9.5px] md:pb-[150px] xxl:pb-33.1/3">
+      <div className="xl hidden xxl:block">
         <DescriptionSection
           type="multi-image"
           firstTitle="施工事例"
@@ -66,7 +66,7 @@ const Work: React.FC<IProps> = async ({ searchParams }: IProps) => {
         />
       </div>
 
-      <div className="xl block xl:hidden">
+      <div className="xl block xxl:hidden">
         <DescriptionSection
           type="multi-image"
           firstTitle="施工事例"
@@ -102,11 +102,11 @@ const Work: React.FC<IProps> = async ({ searchParams }: IProps) => {
         />
       </div>
 
-      <div className="list-project-title mt-33.1/3 md:mt-38 xl:mt-0">
+      <div className="list-project-title mt-33.1/3  xxl:mt-0">
         <PageTitle title="その他の施工事例" divider />
       </div>
 
-      <div className="mt-30 xl:mt-33.1/3">
+      <div className="mt-30 md:mt-[65px] xxl:mt-33.1/3">
         <ProjectListCarousel hideId={searchParams.id} projects={projects} />
       </div>
     </div>
