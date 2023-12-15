@@ -15,7 +15,7 @@ const TopPageInformation: React.FC<IProps> = () => {
         className={clsx(
           "mb-3 w-max border-b-2 border-color-custom pb-[3px] text-center font-noto-sans text-[13px]  uppercase text-primary",
           "md:mb-[7px] md:text-[15px]",
-          "xl:mb-2 xl:text-xl"
+          "xxl:mb-2 xxl:text-xl"
         )}
       >
         ABOUT
@@ -25,7 +25,7 @@ const TopPageInformation: React.FC<IProps> = () => {
         className={clsx(
           "mb-20 px-[22px] text-[20px] font-bold",
           "md:mb-[50px] md:text-2xl",
-          "xl:mb-[40px] xl:px-0 xl:text-3xl"
+          "xxl:mb-[40px] xxl:px-0 xxl:text-3xl"
         )}
       >
         システム建築とは
@@ -35,7 +35,7 @@ const TopPageInformation: React.FC<IProps> = () => {
         className={clsx(
           "mb-17 px-7 text-lg  font-[500] leading-lg",
           "md:mb-0 md:w-[700px] md:px-0 md:text-[20px]",
-          "xl:mb-11 xl:w-[800px] xl:px-0 xl:text-1.5xl"
+          "xxl:mb-11 xxl:w-[800px] xxl:px-0 xxl:text-1.5xl"
         )}
       >
         システム建築は、建物を構成する材料と建築生産プロセスの標準化により、効率性を実現した建築手法です。在来工法に比べて工期が短く、コストの抑制が可能です。
@@ -50,9 +50,9 @@ const TopPageInformation: React.FC<IProps> = () => {
     <div>
       <ScrollToHash hash="#About" />
 
-      <div className="block xl:hidden">
+      <div className="block xxl:hidden">
         {/* mobile and tablet */}
-        <div className="toppage-information-container  pt-[80px] md:pt-[120px] xl:pt-[101px]">
+        <div className="toppage-information-container  pt-[80px] md:pt-[120px] xxl:pt-[101px]">
           {ABOUT}
           <BackgroundSection
             className="toppage-information-background"
@@ -65,14 +65,14 @@ const TopPageInformation: React.FC<IProps> = () => {
           </BackgroundSection>
         </div>
       </div>
-      <div className="hidden xl:block">
+      <div className="hidden xxl:block">
         <BackgroundSection
           className="toppage-information-background"
           height={1662}
           src="/steel-self-background.jpg"
           mobileSrc="/top/about_background.jpg"
         >
-          <div className="toppage-information-container pt-[80px] xl:pt-[101px]">
+          <div className="toppage-information-container pt-[80px] xxl:pt-[101px]">
             {ABOUT}
             <ListFeatures />
           </div>

@@ -44,7 +44,7 @@ export default function SliderBackgroundWithSlogan({
           images.map((image, index) => (
             <div
               key={index}
-              className={clsx(" w-full xl:aspect-[1440/543] xl:h-auto")}
+              className={clsx(" w-full xxl:aspect-[1440/543] xxl:h-auto")}
             >
               <picture>
                 {imagesMobile && imagesMobile.length === images.length ? (
@@ -71,7 +71,7 @@ export default function SliderBackgroundWithSlogan({
             className={clsx(
               "hidden whitespace-pre-wrap text-center font-bold ",
               "md:block md:text-[30px]",
-              "xl:text-3.5xl"
+              "xxl:text-3.5xl"
             )}
             style={{ textShadow: "5px 5px 10px rgba(0, 0, 0, 0.75)" }}
           >{`システム建築で、\n工場・倉庫に 最適な答えを。`}</span>
