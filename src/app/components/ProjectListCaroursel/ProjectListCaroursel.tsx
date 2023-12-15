@@ -67,7 +67,7 @@ const ProjectListCarousel: React.FC<IProps> = ({ projects, hideId }) => {
   };
 
   return (
-    <div className="project-list-carousel-container">
+    <div className="project-list-carousel-container overflow-hidden">
       <div className="project-list-carousel px-[71px] md:-mx-[17px] md:px-[17.98%] xl:mx-0 xl:px-0">
         <Slider {...settings}>
           {

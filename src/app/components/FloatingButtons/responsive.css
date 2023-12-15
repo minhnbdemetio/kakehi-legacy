@@ -1,3 +1,26 @@
+@media screen(md) {
+  .floating-buttons .email-button img {
+    width: 48.98px !important;
+    height: 30px !important;
+    flex-shrink: 0;
+  }
+
+  .floating-buttons .document-button img {
+    width: 30px !important;
+    height: 40.714px !important;
+    flex-shrink: 0;
+  }
+
+  .floating-buttons a {
+    height: 75px;
+  }
+
+  .scroll-to-top-buttons {
+    right: 10px;
+    top: -38px;
+  }
+}
+
 @media screen(xl) {
   .floating-buttons-box {
     right: 0 !important;

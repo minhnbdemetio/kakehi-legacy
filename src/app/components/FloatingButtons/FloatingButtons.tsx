@@ -48,9 +48,13 @@ const FloatingButtons: React.FC<IProps> = () => {
             alt="Chevron up circle icon"
           />
         </button>
-        <div className="floating-buttons grid w-full grid-cols-2">
+        <div className="floating-buttons grid w-full grid-cols-2 ">
           <a
-            className="email-button flex w-full flex-col items-center justify-around pb-[5px] pt-[11px] xl:mb-[20px]"
+            className={clsx(
+              "email-button flex w-full flex-col items-center justify-around pb-[5px] pt-[11px] ",
+              "md:flex-row md:justify-center md:gap-[30px]",
+              "xl:mb-[20px]"
+            )}
             href={Routes.CONTACT}
           >
             <img
@@ -58,10 +62,15 @@ const FloatingButtons: React.FC<IProps> = () => {
               className="btn-icon inline"
               alt="Email icon"
             />
-            <p className="font-noto-sans text-secondary">お問い合わせ</p>
+            <p className="font-noto-sans text-secondary md:text-[15px]">
+              お問い合わせ
+            </p>
           </a>
           <a
-            className="document-button flex w-full flex-col items-center justify-around pb-[5px] pt-[8px]"
+            className={clsx(
+              "document-button flex w-full flex-col items-center justify-around pb-[5px] pt-[8px]",
+              "md:flex-row md:justify-center md:gap-[30px]"
+            )}
             href={Routes.REQUEST}
           >
             <img
@@ -69,7 +78,9 @@ const FloatingButtons: React.FC<IProps> = () => {
               className="btn-icon inline"
               alt="Document icon"
             />
-            <p className="font-noto-sans text-secondary">資料請求</p>
+            <p className="font-noto-sans text-secondary md:text-[15px]">
+              資料請求
+            </p>
           </a>
         </div>
       </div>

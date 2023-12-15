@@ -22,9 +22,9 @@ const ListFeatures: React.FC<IProps> = () => {
 
       <p
         className={clsx(
-          "-mx-17 my-17 !w-[calc(100%+102px)]  font-noto-sans-jp text-[15px] font-medium leading-md text-primary",
-          " md:mx-auto md:max-w-[700px] md:text-[19px] md:leading-lg",
-          "xl:px-8 xl:text-1.5xl xl:leading-lg"
+          "-mx-17 my-17 w-[calc(100%+102px)]  font-noto-sans-jp text-[15px] font-medium leading-md text-primary",
+          " md:mx-auto md:w-[700px] md:text-[19px] md:leading-lg",
+          "xl:mx-auto xl:w-[800px] xl:px-0 xl:text-1.5xl xl:leading-lg"
         )}
       >
         柔軟な空間設計や大空間を実現するシステム建築は、平屋から6階建てまでの建物の建築が可能です。
