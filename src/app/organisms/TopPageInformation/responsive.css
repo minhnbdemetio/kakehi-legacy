@@ -1,4 +1,11 @@
-@media screen(xl) {
+@media screen(md) {
+  .toppage-information-background {
+    height: 680px !important;
+    background-position: bottom;
+  }
+}
+
+@media screen(xxl) {
   .toppage-information-background {
     height: 1200px !important;
     background-position: bottom;

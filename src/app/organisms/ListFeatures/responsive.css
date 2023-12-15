@@ -1,4 +1,18 @@
-@media screen(xl) {
+@media screen(md) {
+  .featuring .feature-item {
+    width: 200px;
+    margin: auto;
+  }
+
+  .featuring .feature-img {
+    display: flex;
+    align-items: center;
+    flex: auto;
+    justify-content: center;
+  }
+}
+
+@media screen(xxl) {
   .featuring .feature-item {
     margin: unset !important;
   }

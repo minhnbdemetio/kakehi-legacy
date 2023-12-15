@@ -13,11 +13,17 @@ export default function Home() {
   const imagesMobile = Array.from({ length: 5 }).map(
     (_, idx) => `/top/kakehi_sp_top_slider-${idx + 1}.jpg`
   );
-
+  const imagesTablet = Array.from({ length: 5 }).map(
+    (_, idx) => `/top/kakehi_tablet_top_slider-${idx + 1}.jpg`
+  );
 
   return (
     <>
-      <SliderBackgroundWithSlogan images={images} imagesMobile={imagesMobile} />
+      <SliderBackgroundWithSlogan
+        imagesTablet={imagesTablet}
+        images={images}
+        imagesMobile={imagesMobile}
+      />
 
       <TopPageInformation />
 

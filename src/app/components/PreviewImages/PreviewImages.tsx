@@ -2,6 +2,7 @@
 
 import React, { useCallback, useEffect, useState } from "react";
 import "./style.scss";
+import clsx from "clsx";
 
 interface IProps {
   images: { tag: string; src: string }[];
@@ -34,7 +35,7 @@ const PreviewImages: React.FC<IProps> = ({
   return (
     <div className="preview-images-container relative">
       <div
-        className="main-image mb-2 mt-10 xl:mb-3.1/3"
+        className="main-image mb-2 mt-10 md:mb-[20px] xxl:mb-3.1/3"
         style={{
           height: mainImgHeight,
           backgroundImage: `url(${mainImg.src})`,
@@ -42,7 +43,7 @@ const PreviewImages: React.FC<IProps> = ({
       ></div>
 
       <div
-        className="list-images grid grid-cols-5 gap-2 xl:gap-3.1/3"
+        className="list-images grid grid-cols-5 gap-2 md:gap-[11px] xxl:gap-3.1/3"
         style={{ height: miniImgHeight }}
       >
         {images.map((image) => (
@@ -59,7 +60,13 @@ const PreviewImages: React.FC<IProps> = ({
         ))}
       </div>
 
-      <span className="tag absolute left-0 top-0 px-7 py-3 text-md leading-[normal] xl:px-[35px] xl:py-5 xl:pb-[16px] xl:text-[20px] ">
+      <span
+        className={clsx(
+          "tag absolute left-0 top-0 px-7 py-3 text-md leading-[normal]",
+          "md:px-[28px] md:pb-[14px] md:pt-[13px] md:text-lg md:leading-[23px]",
+          " xxl:px-[35px] xxl:py-5 xxl:pb-[16px] xxl:text-[20px] xxl:leading-[29px] "
+        )}
+      >
         {mainImg.tag}
       </span>
     </div>

@@ -1,4 +1,4 @@
-@media screen(xl) {
+@media screen(xxl) {
   .contact-form-body {
     width: 994px !important;
   }
@@ -14,7 +14,4 @@
 }
 
 @media screen(md) {
-  .contact-form-body {
-    width: 600px;
-  }
 }

@@ -7,6 +7,7 @@ interface IProps extends PropsWithChildren {
   mobileSrc: string;
   height: number;
   style?: React.CSSProperties;
+  tabletSrc?: string;
   className?: string;
 }
 
@@ -17,6 +18,7 @@ const BackgroundSection: React.FC<IProps> = ({
   height,
   style = {},
   className,
+  tabletSrc,
 }) => {
   return (
     <div
@@ -29,13 +31,15 @@ const BackgroundSection: React.FC<IProps> = ({
           style={{ height }}
         >
           <picture>
-            <source media="(max-width: 1024px)" srcSet={mobileSrc} />
+            <source media="(max-width: 576px)" srcSet={mobileSrc} />
+            <source media="(max-width: 1280px)" srcSet={tabletSrc} />
             <Image
               src={src}
               alt="background"
               layout="fill"
               objectFit="cover"
               objectPosition="center"
+              style={{ top: 1 }}
             />
           </picture>
 

@@ -22,6 +22,7 @@ interface SingleImageProps extends CommonProps {
   img: string;
   imageTrueSize?: boolean;
   imgSp?: string;
+  imgTablet?: string;
 }
 
 interface MultipleImageProps extends CommonProps {
@@ -50,12 +51,12 @@ const DescriptionSection: React.FC<IProps> = ({
       />
 
       <div
-        className={`description-section-content relative mt-16.2/3 bg-transparent pb-16.2/3 xl:mt-36 xl:h-fit xl:pb-0 ${titlePosition}`}
+        className={`description-section-content  relative mt-16.2/3 bg-transparent pb-16.2/3 md:mt-[5px] xxl:mt-36 xxl:h-fit xxl:pb-0 ${titlePosition}`}
       >
         <div
-          className={`description-section-content-body  relative  z-20  h-full xl:flex xl:items-stretch `}
+          className={`description-section-content-body  relative  z-20  h-full xxl:flex xxl:items-stretch `}
         >
-          <div className="description-section-img-box h-full w-full xl:relative xl:h-auto">
+          <div className="description-section-img-box h-full w-full xxl:relative xxl:h-auto">
             {rest.type === "single-image" ? (
               <>
                 {rest.imageTrueSize ? (
@@ -64,7 +65,7 @@ const DescriptionSection: React.FC<IProps> = ({
                       alt={subtitle}
                       src={rest.img}
                       className={clsx("w-full", {
-                        "hidden md:block": !!rest.imgSp,
+                        "hidden xxl:block": !!rest.img,
                       })}
                     />
                     <img
@@ -74,10 +75,17 @@ const DescriptionSection: React.FC<IProps> = ({
                         "block md:hidden": !!rest.imgSp,
                       })}
                     />
+                    <img
+                      alt={subtitle}
+                      src={rest.imgTablet}
+                      className={clsx("w-full", {
+                        "hidden md:block xxl:hidden": !!rest.imgTablet,
+                      })}
+                    />
                   </div>
                 ) : (
                   <div
-                    className="description-section-img w-full xl:z-20 "
+                    className="description-section-img w-full xxl:z-20 "
                     style={{ backgroundImage: `url(${rest.img})` }}
                   />
                 )}
@@ -92,7 +100,7 @@ const DescriptionSection: React.FC<IProps> = ({
           </div>
 
           <ul
-            className={`mt-16.2/3 grid grid-cols-1 gap-7 px-7 xl:flex-1 xl:gap-3 xl:self-end xl:pl-3 ${
+            className={`mt-16.2/3 grid grid-cols-1 gap-7 px-7 md:mx-auto   md:px-[14.028776978%] md:pb-[77px] xxl:flex-1 xxl:gap-3 xxl:self-end xxl:pb-0 xxl:pl-3 ${
               titlePosition === "left" ? "xl:ml-35" : "xl:mr-35"
             } `}
           >
@@ -111,7 +119,7 @@ const DescriptionSection: React.FC<IProps> = ({
           className={`background absolute left-0 top-0 z-10 h-full w-full ${titlePosition} `}
         ></div>
 
-        {/* <div className='description-section-content-items pb-14  px-7 grid grid-cols-1 xl:grid-cols-2 gap-7 xl:z-10 xl:gap-0 xl:px-0'>
+        {/* <div className='description-section-content-items pb-14  px-7 grid grid-cols-1 xxl:grid-cols-2 gap-7 xxl:z-10 xxl:gap-0 xxl:px-0'>
                
             </div> */}
       </div>

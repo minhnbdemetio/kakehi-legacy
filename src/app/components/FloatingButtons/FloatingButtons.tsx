@@ -34,12 +34,12 @@ const FloatingButtons: React.FC<IProps> = () => {
   });
 
   return (
-    <div className="floating-buttons-box z-30 xl:w-fit">
-      <div className="xl:relative xl:flex xl:w-fit xl:flex-col-reverse xl:items-end">
+    <div className="floating-buttons-box z-30 xxl:w-fit">
+      <div className="xxl:relative xxl:flex xxl:w-fit xxl:flex-col-reverse xxl:items-end">
         <button
           onClick={scrollToTop}
           className={clsx({
-            ["scroll-to-top-buttons sticky xl:mt-10"]: true,
+            ["scroll-to-top-buttons sticky xxl:mt-10"]: true,
             visible: visible,
           })}
         >
@@ -48,9 +48,13 @@ const FloatingButtons: React.FC<IProps> = () => {
             alt="Chevron up circle icon"
           />
         </button>
-        <div className="floating-buttons grid w-full grid-cols-2">
+        <div className="floating-buttons grid w-full grid-cols-2 ">
           <a
-            className="email-button flex w-full flex-col items-center justify-around pb-[5px] pt-[11px] xl:mb-[20px]"
+            className={clsx(
+              "email-button flex w-full flex-col items-center justify-around pb-[5px] pt-[11px] ",
+              "md:flex-row md:justify-center md:gap-[30px]",
+              "xxl:mb-[20px] xxl:flex-col xxl:gap-[8px]"
+            )}
             href={Routes.CONTACT}
           >
             <img
@@ -58,10 +62,16 @@ const FloatingButtons: React.FC<IProps> = () => {
               className="btn-icon inline"
               alt="Email icon"
             />
-            <p className="font-noto-sans text-secondary">お問い合わせ</p>
+            <p className="font-noto-sans text-secondary md:text-[15px]">
+              お問い合わせ
+            </p>
           </a>
           <a
-            className="document-button flex w-full flex-col items-center justify-around pb-[5px] pt-[8px]"
+            className={clsx(
+              "document-button flex w-full flex-col items-center justify-around pb-[5px] pt-[8px]",
+              "md:flex-row md:justify-center md:gap-[30px]",
+              "xxl:flex-col xxl:gap-[8px]"
+            )}
             href={Routes.REQUEST}
           >
             <img
@@ -69,7 +79,9 @@ const FloatingButtons: React.FC<IProps> = () => {
               className="btn-icon inline"
               alt="Document icon"
             />
-            <p className="font-noto-sans text-secondary">資料請求</p>
+            <p className="font-noto-sans text-secondary md:text-[15px]">
+              資料請求
+            </p>
           </a>
         </div>
       </div>

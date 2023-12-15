@@ -1,3 +1,3 @@
-import ProjectListCaroursel from "./ProjectListCaroursel";
+import ProjectListCarousel from "./ProjectListCaroursel";
 
-export default ProjectListCaroursel;
+export default ProjectListCarousel;

@@ -95,19 +95,19 @@ export const RequestForm = () => {
   return (
     <form
       onSubmit={form.handleSubmit(onSubmit)}
-      className="bg-card-background-primary pb-23 pl-[25px] pr-[27px] pt-17  xl:pl-33 xl:pr-12"
+      className="bg-card-background-primary pb-23 pl-[25px] pr-[27px] pt-17 md:px-[75px] xxl:pl-33 xxl:pr-12"
     >
-      <p className="xl:leading-loose mb-17 text-left text-lg font-[500] leading-[1.8] text-primary xl:text-center xl:text-xl">
+      <p className="xxl:leading-loose mb-17 text-left text-lg font-[500] leading-[1.8] text-primary md:text-[21px] md:font-normal xxl:text-center xxl:text-xl">
         以下のフォームに必要事項をご入力の上、資料をご請求ください。
-        <br className="hidden xl:block" />
+        <br className="hidden xxl:block" />
         ご入力いただいたメールアドレスへ、資料のダウンロードリンクをご連絡いたします。
-        <br className="hidden xl:block" />
+        <br className="hidden xxl:block" />
         *は必須項目です。
       </p>
 
       <InfoCard title="工場・倉庫建設ガイド" />
 
-      <div className="-my-7 table w-full space-y-[20px]  pb-17 pt-21 xl:border-spacing-y-7">
+      <div className="table w-full space-y-[20px] py-[50px] md:px-[50px] md:pb-[75px] md:pt-[67.38px] xxl:border-spacing-y-7 xxl:px-0 xxl:pb-[50px] xxl:pt-[64px]">
         <Controller
           name="company"
           control={form.control}

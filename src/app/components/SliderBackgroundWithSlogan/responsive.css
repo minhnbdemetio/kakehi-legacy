@@ -1,5 +1,20 @@
 @media screen(md) {
   .slider-background .slick-prev {
+    left: 59px;
+  }
+
+  .slider-background .slick-next {
+    right: 59px;
+  }
+
+  .slider-background .slick-prev:before,
+  .slider-background .slick-next:before {
+    font-size: 40px;
+  }
+}
+
+@media screen(xxl) {
+  .slider-background .slick-prev {
     left: 60px;
   }
 
