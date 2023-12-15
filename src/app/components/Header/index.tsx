@@ -26,9 +26,15 @@ const Header: React.FC<IProps> = () => {
 
   return (
     <>
-      <div className="fixed top-0 z-[1000] flex w-full flex-row items-center justify-between gap-[50px] bg-white p-[10px] shadow-sm xl:justify-start xl:gap-[30px] xl:py-[20px] xxl:px-[50px]">
+      <div
+        className={clsx(
+          "fixed top-0 z-[1000] flex w-full flex-row items-center justify-between gap-[50px] bg-white p-[10px] shadow-sm ",
+          "md:px-[30px] md:py-[16px]",
+          "xl:justify-start xl:gap-[30px] xl:py-[20px] xxl:px-[50px]"
+        )}
+      >
         <Link href={Routes.TOP}>
-          <div className="xl:mw-[120px] relative h-[29.369px] w-[150px] min-w-[150px] xl:w-[120px] xxl:h-[34.264px] xxl:w-[175px] xxl:min-w-[175px]">
+          <div className=" relative h-[29.369px] w-[150px] min-w-[150px] md:h-[30px] md:w-[164px]  xl:min-w-[164px]  xxl:h-[34.264px] xxl:w-[175px] xxl:min-w-[175px]">
             <Image src="/logo.png" alt="logo" layout="fill" objectFit="cover" />
           </div>
         </Link>

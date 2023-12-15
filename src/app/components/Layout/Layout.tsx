@@ -13,7 +13,7 @@ export const Layout: FC<Props> = ({ showPreFooter, children }) => {
     <>
       <Header />
 
-      <div className="pt-[49.36px] lg:pt-[74.25px]">
+      <div className="pt-[49.36px] md:pt-[62px] xxl:pt-[74.25px]">
         <Suspense fallback={<>Loading...</>}>{children}</Suspense>
       </div>
 
