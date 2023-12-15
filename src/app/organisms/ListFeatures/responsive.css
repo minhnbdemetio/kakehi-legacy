@@ -12,7 +12,7 @@
   }
 }
 
-@media screen(xl) {
+@media screen(xxl) {
   .featuring .feature-item {
     margin: unset !important;
   }

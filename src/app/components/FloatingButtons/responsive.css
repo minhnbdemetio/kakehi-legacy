@@ -21,7 +21,7 @@
   }
 }
 
-@media screen(xl) {
+@media screen(xxl) {
   .floating-buttons-box {
     right: 0 !important;
     left: unset !important;

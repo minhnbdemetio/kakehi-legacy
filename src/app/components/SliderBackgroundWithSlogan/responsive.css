@@ -13,7 +13,7 @@
   }
 }
 
-@media screen(xl) {
+@media screen(xxl) {
   .slider-background .slick-prev {
     left: 60px;
   }

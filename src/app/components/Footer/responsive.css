@@ -28,7 +28,7 @@
   }
 }
 
-@media screen(xl) {
+@media screen(xxl) {
   .footer-background {
     width: 100%;
     height: 500px !important;

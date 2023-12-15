@@ -23,12 +23,12 @@ const Footer: React.FC<IProps> = ({ showPreFooter = true }) => {
             tabletSrc="/kakehi_contact_tablet.jpg"
             height={500}
           >
-            <div className="z-2 px-7 pt-33 md:px-[11.6306%] md:pt-[100px] xl:pt-[121px]">
+            <div className="z-2 px-7 pt-33 md:px-[11.6306%] md:pt-[100px] xxl:pt-[121px]">
               <p
                 className={clsx(
                   "greeting whitespace-pre-wrap text-[15px] font-medium leading-lg ",
                   "md:w-full md:text-center md:text-[20px] md:leading-[36px]",
-                  " xl:text-center xl:text-[21px] xl:font-normal"
+                  " xxl:text-center xxl:text-[21px] xxl:font-normal"
                 )}
               >
                 工場・倉庫建設に関するあらゆるお悩みに対応いたします。
@@ -37,10 +37,10 @@ const Footer: React.FC<IProps> = ({ showPreFooter = true }) => {
               </p>
             </div>
 
-            <div className="mt-25 flex justify-center md:mt-[50px] xl:mt-[86px]">
+            <div className="mt-25 flex justify-center md:mt-[50px] xxl:mt-[86px]">
               <Button
                 href={Routes.CONTACT}
-                className="font-noto-sans-jp text-1.5xl font-medium md:text-[22px] xl:text-2xl"
+                className="font-noto-sans-jp text-1.5xl font-medium md:text-[22px] xxl:text-2xl"
               >
                 <span className="font-noto-sans-jp">お問い合わせ</span>
               </Button>
@@ -48,8 +48,8 @@ const Footer: React.FC<IProps> = ({ showPreFooter = true }) => {
           </BackgroundSection>
         </div>
       )}
-      <div className="footer flex flex-col items-center pb-[43px] md:pb-[20px] xl:pb-[25px]">
-        <div className="mt-[43px] md:mt-[41px] xl:mt-[50px]">
+      <div className="footer flex flex-col items-center pb-[43px] md:pb-[20px] xxl:pb-[25px]">
+        <div className="mt-[43px] md:mt-[41px] xxl:mt-[50px]">
           <img
             className="footer-logo "
             src="/kakehi_logo_white_rectangle.png"
@@ -59,39 +59,39 @@ const Footer: React.FC<IProps> = ({ showPreFooter = true }) => {
         <p
           className={clsx(
             "mt-[9.99px] text-center  text-md",
-            "md:mt-[30px] md:text-[13px] md:leading-[19px] xl:leading-[22px]",
-            " xl:mt-[33.16px] xl:text-[15px]"
+            "md:mt-[30px] md:text-[13px] md:leading-[19px] xxl:leading-[22px]",
+            " xxl:mt-[33.16px] xxl:text-[15px]"
           )}
         >
           〒680-1417 鳥取県鳥取市桂見573番地
         </p>
-        <div className="font-base mt-[5px] flex text-center font-noto-sans text-md text-white !no-underline md:mt-[6px] md:text-[13px] md:leading-[18px] xl:text-[15px] xl:leading-[20px]">
+        <div className="font-base mt-[5px] flex text-center font-noto-sans text-md text-white !no-underline md:mt-[6px] md:text-[13px] md:leading-[18px] xxl:text-[15px] xxl:leading-[20px]">
           <div>TEL </div> &nbsp;<div>0857-28-</div>
           <div>4788</div>
         </div>
 
-        <div className="footer-link mt-[25px] md:mt-[20px] md:h-[19px] md:leading-[19px]  xl:mt-[31px] xl:h-[22px] xl:leading-[22px]">
+        <div className="footer-link mt-[25px] md:mt-[20px] md:h-[19px] md:leading-[19px]  xxl:mt-[31px] xxl:h-[22px] xxl:leading-[22px]">
           <a
-            className="text-md  md:text-[13px]  xl:text-[15px]"
+            className="text-md  md:text-[13px]  xxl:text-[15px]"
             href={Routes.PROFILE}
           >
-            <span className="md:px-[25px] xl:px-[22px]">会社概要</span>
+            <span className="md:px-[25px] xxl:px-[22px]">会社概要</span>
           </a>
           <a
-            className="text-md  md:text-[13px]  xl:text-[15px]"
+            className="text-md  md:text-[13px]  xxl:text-[15px]"
             href={Routes.PRIVACY_POLICY}
           >
-            <span className="md:px-[25px] xl:px-[22px]">個人情報保護方針</span>
+            <span className="md:px-[25px] xxl:px-[22px]">個人情報保護方針</span>
           </a>
           <a
-            className="text-md md:text-[13px]   xl:text-[15px]"
+            className="text-md md:text-[13px]   xxl:text-[15px]"
             href={Routes.TERMS_OF_SERVICE}
           >
-            <span className="md:px-[25px] xl:px-[22px]">利用規約</span>
+            <span className="md:px-[25px] xxl:px-[22px]">利用規約</span>
           </a>
         </div>
 
-        <p className="mt-[15px] text-center font-noto-sans text-sm md:mt-[20px] md:text-[13px] md:leading-[18px] xl:mt-[33px] xl:text-[15px] xl:leading-[20px]">
+        <p className="mt-[15px] text-center font-noto-sans text-sm md:mt-[20px] md:text-[13px] md:leading-[18px] xxl:mt-[33px] xxl:text-[15px] xxl:leading-[20px]">
           Copyright © Kakehi Builder. All rights reserved.
         </p>
       </div>

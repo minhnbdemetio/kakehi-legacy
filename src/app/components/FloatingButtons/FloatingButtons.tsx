@@ -34,12 +34,12 @@ const FloatingButtons: React.FC<IProps> = () => {
   });
 
   return (
-    <div className="floating-buttons-box z-30 xl:w-fit">
-      <div className="xl:relative xl:flex xl:w-fit xl:flex-col-reverse xl:items-end">
+    <div className="floating-buttons-box z-30 xxl:w-fit">
+      <div className="xxl:relative xxl:flex xxl:w-fit xxl:flex-col-reverse xxl:items-end">
         <button
           onClick={scrollToTop}
           className={clsx({
-            ["scroll-to-top-buttons sticky xl:mt-10"]: true,
+            ["scroll-to-top-buttons sticky xxl:mt-10"]: true,
             visible: visible,
           })}
         >
@@ -53,7 +53,7 @@ const FloatingButtons: React.FC<IProps> = () => {
             className={clsx(
               "email-button flex w-full flex-col items-center justify-around pb-[5px] pt-[11px] ",
               "md:flex-row md:justify-center md:gap-[30px]",
-              "xl:mb-[20px]"
+              "xxl:mb-[20px]"
             )}
             href={Routes.CONTACT}
           >

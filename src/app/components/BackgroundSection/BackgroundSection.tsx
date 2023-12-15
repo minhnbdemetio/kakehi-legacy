@@ -32,7 +32,7 @@ const BackgroundSection: React.FC<IProps> = ({
         >
           <picture>
             <source media="(max-width: 576px)" srcSet={mobileSrc} />
-            <source media="(max-width: 1024px)" srcSet={tabletSrc} />
+            <source media="(max-width: 1280px)" srcSet={tabletSrc} />
             <Image
               src={src}
               alt="background"

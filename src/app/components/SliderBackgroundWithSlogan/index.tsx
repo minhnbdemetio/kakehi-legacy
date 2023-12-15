@@ -55,7 +55,7 @@ export default function SliderBackgroundWithSlogan({
                 ) : null}
                 {imagesTablet && imagesTablet.length === images.length ? (
                   <source
-                    media="(max-width: 1024px)"
+                    media="(max-width: 1280px)"
                     srcSet={imagesTablet[index]}
                   />
                 ) : null}
