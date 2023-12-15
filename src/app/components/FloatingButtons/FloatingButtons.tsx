@@ -53,7 +53,7 @@ const FloatingButtons: React.FC<IProps> = () => {
             className={clsx(
               "email-button flex w-full flex-col items-center justify-around pb-[5px] pt-[11px] ",
               "md:flex-row md:justify-center md:gap-[30px]",
-              "xxl:mb-[20px]"
+              "xxl:mb-[20px] xxl:flex-col xxl:gap-[8px]"
             )}
             href={Routes.CONTACT}
           >
@@ -69,7 +69,8 @@ const FloatingButtons: React.FC<IProps> = () => {
           <a
             className={clsx(
               "document-button flex w-full flex-col items-center justify-around pb-[5px] pt-[8px]",
-              "md:flex-row md:justify-center md:gap-[30px]"
+              "md:flex-row md:justify-center md:gap-[30px]",
+              "xxl:flex-col xxl:gap-[8px]"
             )}
             href={Routes.REQUEST}
           >
