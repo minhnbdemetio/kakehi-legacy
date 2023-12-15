@@ -4,6 +4,7 @@ const items: {
   secondTitle: string;
   img: string;
   imgSp: string;
+  imgTablet: string;
   position: "left" | "right";
   descriptions: { label?: string; description: string }[];
 }[] = [
@@ -13,6 +14,7 @@ const items: {
     secondTitle: "設計・施工の依頼先",
     img: "/points/point-1.jpg",
     imgSp: "/points/point-sp-1.png",
+    imgTablet: "/points/point-tablet-1.jpg",
     position: "right",
     descriptions: [
       {
@@ -27,6 +29,7 @@ const items: {
     secondTitle: "建物の現状把握",
     img: "/points/point-2.jpg",
     imgSp: "/points/point-sp-2.png",
+    imgTablet: "/points/point-tablet-2.jpg",
 
     position: "left",
 
@@ -43,6 +46,7 @@ const items: {
     secondTitle: "建物の目的",
     img: "/points/point-3.jpg",
     imgSp: "/points/point-sp-3.png",
+    imgTablet: "/points/point-tablet-3.jpg",
 
     position: "right",
 
@@ -59,6 +63,7 @@ const items: {
     secondTitle: "建設地の環境",
     img: "/points/point-4.jpg",
     imgSp: "/points/point-sp-4.png",
+    imgTablet: "/points/point-tablet-4.jpg",
 
     position: "left",
 

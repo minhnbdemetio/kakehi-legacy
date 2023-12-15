@@ -22,6 +22,7 @@ interface SingleImageProps extends CommonProps {
   img: string;
   imageTrueSize?: boolean;
   imgSp?: string;
+  imgTablet?: string;
 }
 
 interface MultipleImageProps extends CommonProps {
@@ -50,7 +51,7 @@ const DescriptionSection: React.FC<IProps> = ({
       />
 
       <div
-        className={`description-section-content relative mt-16.2/3 bg-transparent pb-16.2/3 md:mt-[5px] xxl:mt-36 xxl:h-fit xxl:pb-0 ${titlePosition}`}
+        className={`description-section-content  relative mt-16.2/3 bg-transparent pb-16.2/3 md:mt-[5px] xxl:mt-36 xxl:h-fit xxl:pb-0 ${titlePosition}`}
       >
         <div
           className={`description-section-content-body  relative  z-20  h-full xxl:flex xxl:items-stretch `}
@@ -64,7 +65,7 @@ const DescriptionSection: React.FC<IProps> = ({
                       alt={subtitle}
                       src={rest.img}
                       className={clsx("w-full", {
-                        "hidden md:block": !!rest.img,
+                        "hidden xxl:block": !!rest.img,
                       })}
                     />
                     <img
@@ -72,6 +73,13 @@ const DescriptionSection: React.FC<IProps> = ({
                       src={rest.imgSp}
                       className={clsx("w-full", {
                         "block md:hidden": !!rest.imgSp,
+                      })}
+                    />
+                    <img
+                      alt={subtitle}
+                      src={rest.imgTablet}
+                      className={clsx("w-full", {
+                        "hidden md:block xxl:hidden": !!rest.imgTablet,
                       })}
                     />
                   </div>
@@ -92,7 +100,7 @@ const DescriptionSection: React.FC<IProps> = ({
           </div>
 
           <ul
-            className={`mt-16.2/3 grid grid-cols-1 gap-7 px-7 md:mx-auto  md:px-[14.028776978%] md:pb-[77px] xxl:flex-1 xxl:gap-3 xxl:self-end xxl:pb-0 xxl:pl-3 ${
+            className={`mt-16.2/3 grid grid-cols-1 gap-7 px-7 md:mx-auto   md:px-[14.028776978%] md:pb-[77px] xxl:flex-1 xxl:gap-3 xxl:self-end xxl:pb-0 xxl:pl-3 ${
               titlePosition === "left" ? "xl:ml-35" : "xl:mr-35"
             } `}
           >

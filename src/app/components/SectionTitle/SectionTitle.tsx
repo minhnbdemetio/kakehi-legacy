@@ -27,14 +27,14 @@ const SectionTitle: React.FC<IProps> = ({
       <p
         className={clsx(
           "subtitle relative text-4xl font-medium leading-[normal] ",
-          "md:text-[72px] md:leading-[98px] md:tracking-[7.2px]",
-          "xxl:text-6xl"
+          "md:text-[72px] md:leading-[98px] md:!tracking-[7.2px]",
+          "xxl:text-6xl xxl:!tracking-[12.8px]"
         )}
       >
         {subtitle}
       </p>
       <div className="title">
-        <div>
+        <div className="md:!h-[67px] xxl:!h-[117px]">
           <p
             className={CLSX(
               "xl:pt-18s z-20 mx-7 whitespace-normal  text-[20px] font-bold leading-sectionTitle",
