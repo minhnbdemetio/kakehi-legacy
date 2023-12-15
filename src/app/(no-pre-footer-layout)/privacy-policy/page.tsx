@@ -8,23 +8,23 @@ interface IProps {}
 
 const PrivacyPolicy: React.FC<IProps> = () => {
   return (
-    <div className="privacy-policy mx-7 pb-33.1/3   md:m-auto md:pb-66.2/3">
+    <div className="privacy-policy mx-7 pb-33.1/3 md:m-auto md:pb-[150px] xxl:pb-[200px]">
       <div id="privacies" className="mt-[75px] xl:mt-39.1/3">
         <PageTitle title="個人情報保護方針" subTitle="PRIVACY POLICY" />
       </div>
       <div className=" mt-[50px] xl:mt-21.2/3">
-        <p className="leading text-lg font-[500] leading-[36px] xl:leading-lg">
+        <p className="leading text-lg font-[500] leading-[36px] md:text-[18px] md:font-normal xl:leading-lg xxl:text-[16px]">
           懸樋工務店は、お客さまの氏名や生年月日、住所、メールアドレスなど、特定の個人を識別できる情報（以下｢個人情報｣といいます）を適切に取り扱い、保護することが企業の責務であると認識し、次の取り組みを実施します。
         </p>
       </div>
-      <div className="mt-[50px]  xl:mt-33.1/3">
-        <ul className="grid grid-cols-1 gap-7 xl:gap-16">
+      <div className="mt-[50px] xxl:mt-[100px]">
+        <ul className="grid grid-cols-1 gap-10 md:gap-[50px]">
           {privacies.map((item, index) => (
             <li key={index} className="">
-              <p className="title pb-2 text-[15px] font-bold leading-md xl:text-xl xl:leading-lg">
+              <p className="title pb-[10px] text-[15px] font-bold leading-md md:pb-[5px] md:text-[16px] xxl:text-[18px] xxl:leading-lg">
                 {index + 1}. {item.title}
               </p>
-              <p className="mt-[10px] text-md leading-[24px] xl:mt-[0px] xl:text-lg xl:leading-lg">
+              <p className="mt-[10px] text-md leading-[24px] md:mt-[5px] xxl:text-lg xxl:leading-lg">
                 {item.content}
               </p>
             </li>
