@@ -17,13 +17,13 @@ export const InfoHeading: FC<Props> = ({ subtitle, title, className }) => {
     >
       <h2
         className={clsx(
-          "font-noto-sans text-[13px] xl:text-xl",
+          "font-noto-sans text-[13px] md:text-[15px] xxl:text-xl",
           "decoration-width underline decoration-hover-primary/60 decoration-2 underline-offset-4"
         )}
       >
         {subtitle}
       </h2>
-      <h1 className="text-[20px] font-bold text-inherit md:text-2xl xl:text-3xl">
+      <h1 className="text-[20px] font-bold text-inherit md:text-2xl xxl:text-3xl">
         {title}
       </h1>
     </div>

@@ -12,7 +12,7 @@ import { useEffect, useMemo, useState } from "react";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
 const INFO_TEXT_CLASSNAME =
-  "text-lg  text-primary font-[500] leading-[1.8] xl:mb-30 xl:leading-loose xl:text-xl";
+  "text-lg  text-primary font-[500] leading-[1.8] xxl:mb-30 xxl:leading-loose xxl:text-xl";
 
 export const RequestConfirmForm = () => {
   const [isConfirmed, setIsConfirmed] = useState(false);
@@ -65,23 +65,23 @@ export const RequestConfirmForm = () => {
     <div>
       <div
         className={clsx(
-          "bg-card-background-primary pb-[75px] pl-6 pr-6 text-left leading-[36px] xl:pl-33 xl:pr-12 xl:text-center",
+          "bg-card-background-primary px-[25px] pb-[75px] text-left leading-[36px] md:px-[75px] xxl:px-[96px] xxl:pl-33 xxl:pr-12 xxl:text-center",
           isConfirmed ? "pb-30 pt-23" : "pb-33 pt-17"
         )}
       >
         {isConfirmed ? (
-          <p className={clsx(INFO_TEXT_CLASSNAME, "mb-[50px] xl:mb-33")}>
+          <p className={clsx(INFO_TEXT_CLASSNAME, "mb-[50px] xxl:mb-33")}>
             以下の内容にて、資料請求のお受付を完了いたしました。
-            <br className="hidden xl:block" />
+            <br className="hidden xxl:block" />
             ご入力いただいたメールアドレスへ、資料のダウンロードリンクをお送りいたします。
           </p>
         ) : (
-          <p className={clsx(INFO_TEXT_CLASSNAME, "mb-[50px] xl:mb-30 ")}>
+          <p className={clsx(INFO_TEXT_CLASSNAME, "mb-[50px] xxl:mb-30 ")}>
             入力した内容をご確認ください。
           </p>
         )}
 
-        <div className="w-full space-y-7 pb-24 xl:-my-26 xl:table xl:border-spacing-y-26">
+        <div className="w-full space-y-7 pb-24 md:px-[50px] xxl:-my-26 xxl:table xxl:border-spacing-y-26">
           <RequestConfirmField label="会社名" content={parsedData?.company} />
           <RequestConfirmField label="お名前" content={parsedData?.name} />
           <RequestConfirmField
@@ -108,13 +108,13 @@ export const RequestConfirmForm = () => {
         </div>
 
         {!isConfirmed ? (
-          <div className="flex justify-center gap-7 xl:gap-14">
+          <div className="flex justify-center gap-7 xxl:gap-14">
             <Button
               href={Routes.REQUEST}
-              className="relative flex flex-col-reverse items-center justify-center !bg-black px-7 sm:flex-row sm:justify-between xl:gap-y-2"
+              className="relative flex flex-col-reverse items-center justify-center !bg-black px-7 sm:flex-row sm:justify-between xxl:gap-y-2"
             >
               <img
-                className="hidden -scale-x-100 xl:block"
+                className="hidden -scale-x-100 xxl:block"
                 src="/icons/arrow-right-icon.png"
                 alt=""
                 width={50}
@@ -125,7 +125,7 @@ export const RequestConfirmForm = () => {
             </Button>
             <Button
               onClick={handleSubmit}
-              className="relative flex flex-col items-center justify-center !px-[30px] !py-[0] sm:flex-row sm:justify-between xl:gap-y-2 xl:!p-7"
+              className="relative flex flex-col items-center justify-center !px-[30px] !py-[0] sm:flex-row sm:justify-between xxl:gap-y-2 xxl:!p-7"
             >
               <span className="sm:w-[50px]"></span>
               <span className="text-[20px]">
@@ -136,7 +136,7 @@ export const RequestConfirmForm = () => {
                 alt=""
                 width={50}
                 height={17}
-                className="hidden xl:block"
+                className="hidden xxl:block"
               />
             </Button>
           </div>
@@ -144,9 +144,9 @@ export const RequestConfirmForm = () => {
       </div>
 
       {isConfirmed ? (
-        <div className="mt-[50px] pb-33.1/3 text-center xl:mt-33.1/3">
+        <div className="mt-[50px] pb-33.1/3 text-center xxl:mt-33.1/3">
           <Button
-            className="!w-[250px] !text-[20px] xl:!w-[330px] xl:!text-xl"
+            className="!w-[250px] !text-[20px] xxl:!w-[330px] xxl:!text-xl"
             href={Routes.TOP}
           >
             トップページへ戻る
