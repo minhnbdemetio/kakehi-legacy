@@ -81,7 +81,7 @@ const PointScreen: React.FC<IProps> = () => {
             ))}
           </ul>
 
-          <div className="divider mx-auto h-[2px] w-[71.942446043%] md:block xxl:hidden"></div>
+          <div className="divider mx-auto hidden h-[2px] w-[71.942446043%] md:block xxl:hidden"></div>
         </div>
       </div>
 
