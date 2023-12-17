@@ -1,6 +1,9 @@
 @import "../../variables.module.scss";
 
 .point-screen {
+  .divider {
+    background: $text-primary-color;
+  }
   .page-header {
     .point-lists {
       border-bottom: 2px solid $text-primary-color;

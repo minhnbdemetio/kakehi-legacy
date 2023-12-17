@@ -18,6 +18,10 @@
   .point-screen .description-section-content {
     padding-bottom: 75px;
   }
+
+  .point-screen .page-header .point-lists {
+    border-bottom-width: 0;
+  }
 }
 
 @media screen(xxl) {
@@ -129,5 +133,9 @@
   .point-screen .list-points .description-section .background {
     height: 500px !important;
     top: -8px !important;
+  }
+
+  .point-screen .page-header .point-lists {
+    border-bottom-width: 2px;
   }
 }
