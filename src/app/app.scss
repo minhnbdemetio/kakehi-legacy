@@ -19,7 +19,7 @@ body {
   background-color: $background-light-color;
   margin: 0;
   padding: 0;
-  font-family: Noto Sans JP;
+  font-family: "Noto Sans JP";
   width: 100vw;
   height: 100vh;
   box-sizing: border-box;
@@ -89,12 +89,34 @@ p {
 
 .accordion__question::before {
   content: "Q.";
-  font-family: Noto Sans JP;
+  font-family: "Noto Sans JP";
 }
 
 .accordion__answer::before {
   content: "A.";
-  font-family: Noto Sans JP;
+  font-family: var(--font-noto-sans);
   font-weight: 200;
   color: #333333;
+  font-size: 15px;
+  font-style: normal;
+  font-weight: 400;
+}
+
+@screen md {
+  .accordion__question,
+  .accordion__answer {
+    gap: 30px;
+  }
+}
+
+@screen xxl {
+  .accordion__question,
+  .accordion__answer {
+    gap: 25px;
+  }
+
+  .accordion__answer::before {
+    font-size: 21px;
+    font-style: normal;
+  }
 }

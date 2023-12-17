@@ -15,8 +15,9 @@ const PageTitle: React.FC<IProps> = ({ divider = false, subTitle, title }) => {
       {subTitle && (
         <p
           className={clsx(
-            "sub-title font-noto-sans text-[13px] ",
-            "xl:text-xl"
+            "sub-title font-noto-sans text-[13px]",
+            "md:text-md2",
+            "xxl:text-xl"
           )}
         >
           {subTitle}
@@ -24,9 +25,9 @@ const PageTitle: React.FC<IProps> = ({ divider = false, subTitle, title }) => {
       )}
       <p
         className={CLSX(
-          "mt-[5px] font-noto-sans-jp text-[20px] font-bold ",
-          "md:mt-0 md:text-[24px]",
-          "xl:text-3xl",
+          "mt-3 font-noto-sans-jp text-[20px] font-bold ",
+          "md:mt-2 md:text-[24px]",
+          "xxl:text-3xl",
           {
             divider: divider,
           }

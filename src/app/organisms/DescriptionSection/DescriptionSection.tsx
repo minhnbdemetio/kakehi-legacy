@@ -101,7 +101,7 @@ const DescriptionSection: React.FC<IProps> = ({
 
           <ul
             className={`mt-16.2/3 grid grid-cols-1 gap-7 px-7 md:mx-auto   md:px-[14.028776978%] md:pb-[77px] xxl:flex-1 xxl:gap-3 xxl:self-end xxl:pb-0 xxl:pl-3 ${
-              titlePosition === "left" ? "xl:ml-35" : "xl:mr-35"
+              titlePosition === "left" ? "xxl:ml-35" : "xxl:mr-35"
             } `}
           >
             {items.map((item, index) => (

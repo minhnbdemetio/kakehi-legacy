@@ -2,4 +2,10 @@
   .card-description-content {
     line-height: 27px;
   }
+
+  @screen md {
+    .card-description .card-description-label {
+      width: 150px;
+    }
+  }
 }

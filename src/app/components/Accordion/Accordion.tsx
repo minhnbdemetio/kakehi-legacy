@@ -34,19 +34,20 @@ export const Accordion: FC<Props> = ({
     <div>
       <button
         className={clsx(
-          "flex w-full items-center justify-between gap-5 py-8 text-left ",
+          "flex w-full items-center justify-between gap-5 py-8 text-left md:gap-10 xxl:gap-8",
           {
             // Section
             [clsx(
-              "leading-8 text-[15px] font-bold md:text-1.5xl",
-              "bg-card-background-primary pl-14 pr-7",
-              "xl:pl-33 xl:pr-16.2/3"
+              "bg-card-background-primary pl-14 pr-7 text-[15px] font-bold leading-[22px]",
+              "md:px-23 md:py-10 md:text-xl md:leading-xl",
+              "xxl:pl-33 xxl:pr-16.2/3 xxl:text-1.5xl"
             )]: type === "section",
 
             // Question
             [clsx(
-              "leading-8 text-md font-[500] xl:text-xl",
-              "px-7 transition-colors duration-300 xl:px-18  xl:font-bold",
+              "leading-8 px-7 text-md font-medium transition-colors duration-300",
+              "md:pl-15 md:pr-17 md:text-md2",
+              "xxl:px-18 xxl:text-xl xxl:font-bold",
               {
                 "bg-white": !open,
                 "bg-hover-primary/40": open,
@@ -64,7 +65,7 @@ export const Accordion: FC<Props> = ({
           {summary}
         </span>
 
-        <div className={clsx("w-full max-w-[15px]")}>
+        <picture className="shrink-0 xxl:p-4">
           <img
             src="/icons/chevron-icon.png"
             alt=""
@@ -72,9 +73,11 @@ export const Accordion: FC<Props> = ({
             height={8}
             className={clsx({
               "rotate-180 transform": !open,
+              "w-7 xxl:w-8": type === "section",
+              "w-5 xxl:w-7": type === "question",
             })}
           />
-        </div>
+        </picture>
       </button>
 
       <div
@@ -87,10 +90,12 @@ export const Accordion: FC<Props> = ({
       >
         <div
           className={clsx(
-            "xl:leading-8 space-y-7 text-md font-[400] leading-[24px] xl:font-bold",
+            "space-y-7 text-md font-[400] leading-[24px]",
+            "md:text-md2 md:leading-sm",
+            "xxl:text-xl xxl:font-bold xxl:leading-xl",
             {
-              "px-8 pb-[50px] xl:px-17 xl:pb-24": type === "section",
-              "accordion__answer px-7 pb-13 pt-9  xl:px-18":
+              "px-8 pb-[50px] xxl:px-17 xxl:pb-24": type === "section",
+              "accordion__answer px-7 py-7 md:py-8 md:pl-15 md:pr-17 xxl:px-18 xxl:pb-12 xxl:pt-9":
                 type === "question",
             }
           )}

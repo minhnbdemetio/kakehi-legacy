@@ -11,7 +11,7 @@ interface IProps {}
 
 const Contact: React.FC<IProps> = () => {
   return (
-    <div className="contact mx-7 mt-[75px] md:mt-[101.5px] xxl:mt-39.1/3 xxl:pb-40">
+    <div className="contact mx-7 mt-[75px] md:mx-14 md:mt-[101.5px] xxl:mt-39.1/3 xxl:pb-40">
       <div>
         <PageTitle title="お問い合わせ" subTitle="CONTACT" />
       </div>

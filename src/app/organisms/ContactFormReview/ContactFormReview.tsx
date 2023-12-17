@@ -47,10 +47,10 @@ const ContactFormReview: React.FC<IProps> = ({
     <div>
       <div
         className={clsx("contact-form xxl:pb-17.1/3", {
-          "mb-[100px] pb-[75px]": !submitted,
+          "mb-33 pb-[75px] md:mb-50 xxl:mb-33": !submitted,
         })}
       >
-        <div className="pt-16.2/3 md:px-[75px] xxl:px-[100px]">
+        <div className="pt-16.2/3 md:px-41.2/3 xxl:px-[100px]">
           {submitted ? (
             <p className=" whitespace-normal pl-[25px] pr-[27px] text-left font-noto-sans-jp-gg text-lg  font-[500] leading-[36px] xxl:whitespace-pre-wrap xxl:text-center xxl:text-xl">{`以下の内容にて、お問い合わせをお受付いたしました。\n確認後に、担当者よりご連絡いたします。`}</p>
           ) : (
@@ -59,7 +59,7 @@ const ContactFormReview: React.FC<IProps> = ({
             </p>
           )}
         </div>
-        <div className="contact-form-body w-full space-y-[20px] pb-24 pl-[25px] pr-[27px] pt-[50px] md:space-y-[60px] md:px-[125px] xxl:table xxl:border-spacing-y-26 xxl:px-33.1/3">
+        <div className="contact-form-body mx-auto box-content w-full max-w-full space-y-[20px] pb-24 pl-[25px] pr-[27px] pt-[50px] md:w-[500px] md:space-y-[60px] md:px-[125px] xxl:table xxl:border-spacing-y-26 xxl:px-33.1/3">
           <RequestConfirmField label="会社名" content={data.companyName} />
           <RequestConfirmField label="お名前" content={data.name} />
           <RequestConfirmField label="ふりがな" content={data.furigana} />
@@ -77,33 +77,33 @@ const ContactFormReview: React.FC<IProps> = ({
         </div>
 
         {!submitted ? (
-          <div className="flex justify-center gap-[20px] pl-[25px]  pr-[27px] md:px-[165px] xxl:gap-14 xxl:px-[148px] ">
+          <div className="flex justify-center gap-[20px] pl-[25px]  pr-[27px] xxl:gap-14 xxl:px-[148px] ">
             <Button
               onClick={back}
-              className="relative flex flex-col-reverse items-center justify-center gap-y-2 !bg-black px-7 sm:flex-row sm:justify-between"
+              className="box relative flex flex-col-reverse items-center justify-center !bg-black px-7 md:!w-[200px] md:flex-row md:gap-3 xxl:!w-[330px] xxl:justify-between xxl:gap-y-2"
             >
               <img
-                className="hidden -scale-x-100 xxl:block"
+                className="hidden shrink-0 -scale-x-100 md:block"
                 src="/icons/arrow-right-icon.png"
                 alt=""
                 width={50}
                 height={17}
               />
-              <span className="text-[20px]">戻る</span>
-              <span className="sm:w-[50px]"></span>
+              <span className="text-1.5xl xxl:text-2xl">戻る</span>
+              <span className="hidden xxl:block xxl:w-17"></span>
             </Button>
             <Button
               onClick={handleSubmit}
-              className="relative flex flex-col items-center justify-center gap-y-2 !px-[30px] !py-[0] sm:flex-row sm:justify-between xxl:!p-7"
+              className="relative flex flex-col items-center justify-center !py-[0] md:!w-[200px] md:flex-row md:justify-between md:gap-3 xxl:!w-[330px] xxl:gap-y-2 xxl:!p-7"
             >
-              <span className="sm:w-[50px]"></span>
-              <span className="text-[20px]">
+              <span className="hidden xxl:block xxl:w-17"></span>
+              <span className="text-1.5xl xxl:text-2xl">
                 {submitting ? "送信中..." : "送信する"}
               </span>
               <img
                 src="/icons/arrow-right-icon.png"
                 alt=""
-                className="hidden xxl:block"
+                className="hidden shrink-0 md:block"
                 width={50}
                 height={17}
               />
@@ -112,9 +112,9 @@ const ContactFormReview: React.FC<IProps> = ({
         ) : null}
       </div>
       {submitted ? (
-        <div className="mt-[50px] pb-33.1/3 text-center xxl:mt-33.1/3">
+        <div className="mb-33 mt-[50px] text-center md:mb-50 md:mt-25 xxl:mb-33 xxl:mt-33.1/3">
           <Button
-            className="!w-[250px] !text-[20px] xxl:!w-[330px] xxl:!text-xl"
+            className="!w-[250px] !text-1.5xl md:!w-[300px] xxl:!w-[330px] xxl:!text-2xl"
             href={Routes.TOP}
           >
             トップページへ戻る

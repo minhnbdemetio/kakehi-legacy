@@ -40,7 +40,7 @@ const Footer: React.FC<IProps> = ({ showPreFooter = true }) => {
             <div className="mt-25 flex justify-center md:mt-[50px] xxl:mt-[86px]">
               <Button
                 href={Routes.CONTACT}
-                className="font-noto-sans-jp text-1.5xl font-medium md:text-[22px] xxl:text-2xl"
+                className="font-noto-sans-jp text-1.5xl font-medium md:text-[22px] md:font-bold xxl:text-2xl xxl:font-medium"
               >
                 <span className="font-noto-sans-jp">お問い合わせ</span>
               </Button>

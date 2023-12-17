@@ -68,7 +68,7 @@ const items: {
     ],
     subtitle: "STRENGTH",
     titlePosition: "left",
-    className: "xl:mt-20",
+    className: "xxl:mt-20",
   },
   {
     img: "/history-img.jpg",
@@ -82,7 +82,7 @@ const items: {
     ],
     subtitle: "HISTORY",
     titlePosition: "right",
-    className: "xl:mt-[51px]",
+    className: "xxl:mt-[51px]",
   },
 ];
 

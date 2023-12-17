@@ -15,7 +15,10 @@ export const InfoContainer: FC<Props> = ({
 
   return (
     <Component
-      className={clsx("mx-auto box-content max-w-[994px] px-7", className)}
+      className={clsx(
+        "mx-auto box-content max-w-[994px] px-7 md:px-14",
+        className
+      )}
     >
       {children}
     </Component>
