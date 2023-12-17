@@ -1,6 +1,7 @@
 import PageTitle from "@/app/components/PageTitle";
 import React from "react";
 import privacies from "./privacy-items";
+import clsx from "clsx";
 
 import "./style.scss";
 
@@ -24,7 +25,13 @@ const PrivacyPolicy: React.FC<IProps> = () => {
               <p className="title pb-[10px] text-[15px] font-bold leading-md md:pb-[5px] md:text-[16px] xxl:text-[18px] xxl:leading-lg">
                 {index + 1}. {item.title}
               </p>
-              <p className="mt-[10px] text-md leading-[24px] md:mt-[5px] xxl:text-lg xxl:leading-lg">
+              <p
+                className={clsx(
+                  "mt-[10px] text-md leading-[24px]",
+                  "md:mt-[5px] md:text-lg md:font-medium md:leading-xl",
+                  "xxl:font-normal xxl:leading-lg"
+                )}
+              >
                 {item.content}
               </p>
             </li>

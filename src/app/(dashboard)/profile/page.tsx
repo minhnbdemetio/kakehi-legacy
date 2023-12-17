@@ -62,8 +62,8 @@ const Profile: React.FC<IProps> = () => {
                 description={item.description}
                 link={item.link}
                 descriptionClassName={clsx(
-                  "!leading-[24px] !font-[500]",
-                  "md:!text-md2 md:!px-10 md:!py-7 md:!leading-lg",
+                  "!leading-[24px] !font-medium",
+                  "md:!text-md2 md:!px-10 md:!py-7 md:!leading-lg md:!font-normal",
                   "xxl:!px-9 xxl:!px-7 xxl:!text-xl xxl:!font-normal xxl:!leading-[2] xxl:!justify-start"
                 )}
                 labelClassName="font-noto-sans-jp-gg !px-[12px]  !py-[20px] !leading-[120%] !text-[15px]  xxl:!text-xl xxl:!font-bold xxl:!leading-[1.44]"
@@ -78,8 +78,8 @@ const Profile: React.FC<IProps> = () => {
                   description={item.mobileDesc}
                   link={item.link}
                   descriptionClassName={clsx(
-                    "!px-9 !leading-[24px]",
-                    "md:!text-md2 md:!px-10 md:!py-7 md:!leading-lg",
+                    "!px-9 !leading-[24px] !font-medium",
+                    "md:!text-md2 md:!px-10 md:!py-7 md:!leading-lg md:!font-normal",
                     "xxl:!justify-start xxl:!px-7 xxl:!text-xl xxl:!font-normal xxl:!leading-[2]"
                   )}
                   labelClassName="font-noto-sans-jp-gg !px-[12px] !py-[20px] !leading-[120%] xxl:!text-xl xxl:!font-bold xxl:!leading-[1.44]"
