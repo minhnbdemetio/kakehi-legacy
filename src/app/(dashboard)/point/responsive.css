@@ -20,7 +20,7 @@
   }
 
   .point-screen .page-header .point-lists {
-    border-bottom-width: 0;
+    border-bottom-width: 0 !important ;
   }
 }
 
@@ -136,6 +136,6 @@
   }
 
   .point-screen .page-header .point-lists {
-    border-bottom-width: 2px;
+    border-bottom-width: 2px !important;
   }
 }
