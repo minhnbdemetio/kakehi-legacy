@@ -37,7 +37,7 @@ const SectionTitle: React.FC<IProps> = ({
         <div className="md:!h-[67px] xxl:!h-[117px]">
           <p
             className={CLSX(
-              "xl:pt-18s z-20 mx-7 whitespace-normal  text-[20px] font-bold leading-sectionTitle",
+              "xxl:pt-18s z-20 mx-7 whitespace-normal  text-[20px] font-bold leading-sectionTitle",
               "md:mx-[30px] md:pl-0 md:text-[24px] md:leading-[30px]",
               " xxl:mx-0 xxl:pl-16.2/3 xxl:text-3xl xxl:leading-[normal]",
               {

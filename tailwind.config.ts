@@ -25,11 +25,13 @@ const config: Config = {
         sm: "10px", // Small
         base: "12px", // Base (usually 16px)
         md: "14px",
+        md2: "15px",
         lg: "16px", // Large
         xl: "18px", // Extra Large
         "1.5xl": "21px",
         "2xl": "24px", // 2x Large
         "2.5xl": "27px",
+        "2.8xl": "30px",
         "3xl": "32px", // 3x Large
         "3.5xl": "40px",
         "4xl": "48px", // 4x Large

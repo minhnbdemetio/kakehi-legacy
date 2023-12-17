@@ -9,11 +9,11 @@ interface IProps {}
 const PrivacyPolicy: React.FC<IProps> = () => {
   return (
     <div className="privacy-policy mx-7 pb-33.1/3 md:m-auto md:pb-[150px] xxl:pb-[200px]">
-      <div id="privacies" className="mt-[75px] xl:mt-39.1/3">
+      <div id="privacies" className="mt-[75px] xxl:mt-39.1/3">
         <PageTitle title="個人情報保護方針" subTitle="PRIVACY POLICY" />
       </div>
-      <div className=" mt-[50px] xl:mt-21.2/3">
-        <p className="leading text-lg font-[500] leading-[36px] md:text-[18px] md:font-normal xl:leading-lg xxl:text-[16px]">
+      <div className=" mt-[50px] xxl:mt-21.2/3">
+        <p className="leading text-lg font-[500] leading-[36px] md:text-[18px] md:font-normal xxl:text-[16px] xxl:leading-lg">
           懸樋工務店は、お客さまの氏名や生年月日、住所、メールアドレスなど、特定の個人を識別できる情報（以下｢個人情報｣といいます）を適切に取り扱い、保護することが企業の責務であると認識し、次の取り組みを実施します。
         </p>
       </div>

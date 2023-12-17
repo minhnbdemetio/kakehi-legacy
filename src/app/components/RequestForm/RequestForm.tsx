@@ -15,6 +15,7 @@ import React, { useCallback, useEffect, useMemo } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { useSessionStorage } from "@/app/hooks/useSessionStorage";
 import { RequestFormData } from "@/app/types/RequestFormData";
+import clsx from "clsx";
 
 const schema = Yup.object().shape({
   company: Yup.string().required(formValidationMessage.REQUIRED),
@@ -107,7 +108,7 @@ export const RequestForm = () => {
 
       <InfoCard title="工場・倉庫建設ガイド" />
 
-      <div className="table w-full space-y-[20px] py-[50px] md:px-[50px] md:pb-[75px] md:pt-[67.38px] xxl:border-spacing-y-7 xxl:px-0 xxl:pb-[50px] xxl:pt-[64px]">
+      <div className="mx-auto table w-full space-y-[20px] py-[50px] md:max-w-[500px] md:pb-[75px] md:pt-[67.38px] xxl:max-w-full xxl:border-spacing-y-7 xxl:px-0 xxl:pb-[50px] xxl:pt-[64px]">
         <Controller
           name="company"
           control={form.control}
@@ -199,7 +200,7 @@ export const RequestForm = () => {
         control={form.control}
         render={({ field, fieldState }) => (
           <Checkbox
-            className="mb-7 justify-center !text-[15px] xl:!text-xl"
+            className="mb-7 justify-center !text-[15px] md:mb-8 xxl:mb-7 xxl:!text-xl"
             error={fieldState.error?.message}
             onChange={field.onChange}
             checked={field.value}
@@ -207,7 +208,12 @@ export const RequestForm = () => {
             <a
               href={Routes.PRIVACY_POLICY}
               target="_blank"
-              className="text-[15px] text-hover-primary hover:underline hover:decoration-hover-primary xl:text-xl"
+              className={clsx(
+                "text-[15px] font-medium leading-xl text-hover-primary",
+                "md:text-lg md:leading-lg",
+                "xxl:text-xl xxl:font-normal",
+                "hover:underline hover:decoration-hover-primary"
+              )}
             >
               個人情報保護方針
             </a>{" "}
@@ -217,7 +223,13 @@ export const RequestForm = () => {
       />
 
       <div className="text-center">
-        <Button className="mx-auto !w-[150px] text-[20px] xl:!w-[330px] xl:text-[21px] ">
+        <Button
+          className={clsx(
+            "mx-auto !w-[150px] text-[20px]",
+            "md:!w-[200px] md:text-1.5xl md:font-bold",
+            "xxl:!w-[330px] xxl:text-2xl xxl:font-medium"
+          )}
+        >
           確認する
         </Button>
       </div>

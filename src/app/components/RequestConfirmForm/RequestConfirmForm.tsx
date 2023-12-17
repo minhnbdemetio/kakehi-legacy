@@ -11,8 +11,11 @@ import clsx from "clsx";
 import { useEffect, useMemo, useState } from "react";
 import { useGoogleReCaptcha } from "react-google-recaptcha-v3";
 
-const INFO_TEXT_CLASSNAME =
-  "text-lg  text-primary font-[500] leading-[1.8] xxl:mb-30 xxl:leading-loose xxl:text-xl";
+const INFO_TEXT_CLASSNAME = clsx(
+  "text-lg font-medium leading-[1.8] text-primary",
+  "md:text-xl md:font-normal md:leading-lg",
+  "xxl:leading-loose xxl:mb-30 xxl:text-xl"
+);
 
 export const RequestConfirmForm = () => {
   const [isConfirmed, setIsConfirmed] = useState(false);
@@ -65,8 +68,8 @@ export const RequestConfirmForm = () => {
     <div>
       <div
         className={clsx(
-          "bg-card-background-primary px-[25px] pb-[75px] text-left leading-[36px] md:px-[75px] xxl:px-[96px] xxl:pl-33 xxl:pr-12 xxl:text-center",
-          isConfirmed ? "pb-30 pt-23" : "pb-33 pt-17"
+          "bg-card-background-primary px-[25px] pt-17 text-left leading-[36px] md:px-[75px] xxl:px-[96px] xxl:pl-33 xxl:pr-12 xxl:text-center",
+          isConfirmed ? "pb-25 md:pb-0" : "pb-33"
         )}
       >
         {isConfirmed ? (
@@ -81,7 +84,13 @@ export const RequestConfirmForm = () => {
           </p>
         )}
 
-        <div className="w-full space-y-7 pb-24 md:px-[50px] xxl:-my-26 xxl:table xxl:border-spacing-y-26">
+        <div
+          className={clsx(
+            "w-full space-y-7 pb-24",
+            "md:space-y-20 md:px-[50px] md:pb-33",
+            "xxl:-mt-26 xxl:table xxl:border-spacing-y-26 xxl:pb-[84px]"
+          )}
+        >
           <RequestConfirmField label="会社名" content={parsedData?.company} />
           <RequestConfirmField label="お名前" content={parsedData?.name} />
           <RequestConfirmField
@@ -111,24 +120,24 @@ export const RequestConfirmForm = () => {
           <div className="flex justify-center gap-7 xxl:gap-14">
             <Button
               href={Routes.REQUEST}
-              className="relative flex flex-col-reverse items-center justify-center !bg-black px-7 sm:flex-row sm:justify-between xxl:gap-y-2"
+              className="relative flex flex-col-reverse items-center justify-center !bg-black px-7 md:!w-[200px] md:flex-row md:gap-3 xxl:!w-[330px] xxl:justify-between xxl:gap-y-2"
             >
               <img
-                className="hidden -scale-x-100 xxl:block"
+                className="hidden shrink-0 -scale-x-100 md:block"
                 src="/icons/arrow-right-icon.png"
                 alt=""
                 width={50}
                 height={17}
               />
-              <span className="text-[20px]">戻る</span>
-              <span className="sm:w-[50px]"></span>
+              <span className="text-1.5xl xxl:text-2xl">戻る</span>
+              <span className="hidden xxl:block xxl:w-17"></span>
             </Button>
             <Button
               onClick={handleSubmit}
-              className="relative flex flex-col items-center justify-center !px-[30px] !py-[0] sm:flex-row sm:justify-between xxl:gap-y-2 xxl:!p-7"
+              className="relative flex flex-col items-center justify-center !py-[0] md:!w-[200px] md:flex-row md:justify-between md:gap-3 xxl:!w-[330px] xxl:gap-y-2 xxl:!p-7"
             >
-              <span className="sm:w-[50px]"></span>
-              <span className="text-[20px]">
+              <span className="hidden xxl:block xxl:w-17"></span>
+              <span className="text-1.5xl xxl:text-2xl">
                 {sumbmitting ? "送信中..." : "送信する"}
               </span>
               <img
@@ -136,7 +145,7 @@ export const RequestConfirmForm = () => {
                 alt=""
                 width={50}
                 height={17}
-                className="hidden xxl:block"
+                className="hidden shrink-0 md:block"
               />
             </Button>
           </div>
@@ -144,9 +153,9 @@ export const RequestConfirmForm = () => {
       </div>
 
       {isConfirmed ? (
-        <div className="mt-[50px] pb-33.1/3 text-center xxl:mt-33.1/3">
+        <div className="mt-[50px] text-center md:mt-25 xxl:mt-33.1/3">
           <Button
-            className="!w-[250px] !text-[20px] xxl:!w-[330px] xxl:!text-xl"
+            className="!w-[250px] !text-1.5xl md:!w-[300px] xxl:!w-[330px] xxl:!text-2xl"
             href={Routes.TOP}
           >
             トップページへ戻る

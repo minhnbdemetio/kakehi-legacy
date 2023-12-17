@@ -30,7 +30,7 @@ const BackgroundWithSlogan: React.FC<IProps> = ({
   return (
     <div
       className={clsx(
-        "background-wrapper h-[749px] !bg-bottom xl:aspect-[1440/544] xl:h-auto",
+        "background-wrapper h-[749px] !bg-bottom xxl:aspect-[1440/544] xxl:h-auto",
         className
       )}
       style={{ backgroundImage: `url(${src})` }}

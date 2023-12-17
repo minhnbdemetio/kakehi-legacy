@@ -5,6 +5,7 @@ import { TextField } from "@/app/components/TextField";
 import { Checkbox } from "@/app/components/Checkbox";
 import { Routes } from "@/app/constants/routes";
 import { Button } from "@/app/components/Button";
+import clsx from "clsx";
 
 interface IProps {
   form: UseFormReturn<
@@ -31,14 +32,26 @@ const ContactForm: React.FC<IProps> = ({ form, next }) => {
   };
 
   return (
-    <div className="contact-form mb-33.1/3">
+    <div className="contact-form mb-33.1/3 md:mb-50 xxl:mb-40">
       <form onSubmit={form.handleSubmit(handleSubmit)}>
         <div className="pl-[25px] pr-[27px] pt-16.2/3 md:px-[75px] xxl:px-0">
-          <p className="whitespace-pre-wrap text-left text-lg  font-[500]  leading-[36px] xxl:text-center xxl:text-xl ">
+          <p
+            className={clsx(
+              "whitespace-pre-wrap text-left text-lg font-medium leading-lg",
+              "md:text-1.5xl md:font-normal",
+              "xxl:text-center xxl:text-xl"
+            )}
+          >
             {`以下のフォームに必要事項をご入力の上、お問い合わせください。\n*は必須項目です。`}
           </p>
         </div>
-        <div className=" contact-form-body table w-full space-y-[20px] pb-5 pl-[25px] pr-[27px] pt-[50px] md:px-[125px]  xxl:border-spacing-y-7 xxl:px-14 xxl:pb-16 xxl:pl-33.1/3">
+        <div
+          className={clsx(
+            "contact-form-body mx-auto table w-full space-y-[20px] pb-5 pl-[25px] pr-[27px] pt-[50px]",
+            "md:box-content md:max-w-[500px]",
+            "xxl:max-w-full xxl:border-spacing-y-7 xxl:px-14 xxl:pb-16 xxl:pl-33.1/3 xxl:pt-12"
+          )}
+        >
           <Controller
             name="companyName"
             control={form.control}
@@ -144,17 +157,24 @@ const ContactForm: React.FC<IProps> = ({ form, next }) => {
           control={form.control}
           name="acceptPolicy"
           render={({ field, fieldState }) => (
-            <div className="mb-7 mt-[35px] xxl:mt-[0px] ">
+            <div className="mb-7 mt-[35px] md:mb-8 md:mt-20 xxl:mb-7 xxl:mt-[0px] ">
               <Checkbox
                 checked={field.value}
                 error={fieldState.error?.message}
                 onChange={field.onChange}
-                className="justify-center !text-[15px] xxl:!text-xl"
+                className={clsx(
+                  "justify-center text-md2 font-medium",
+                  "md:text-lg md:leading-lg",
+                  "xxl:text-xl xxl:font-normal"
+                )}
               >
                 <a
                   href={Routes.PRIVACY_POLICY}
                   target="_blank"
-                  className="text-[15px] font-[500] text-hover-primary hover:underline hover:decoration-hover-primary xxl:text-xl xxl:font-normal"
+                  className={clsx(
+                    "text-hover-primary",
+                    "hover:underline hover:decoration-hover-primary"
+                  )}
                 >
                   個人情報保護方針
                 </a>{" "}
@@ -165,7 +185,13 @@ const ContactForm: React.FC<IProps> = ({ form, next }) => {
         />
 
         <div className="flex justify-center pb-[75px] xxl:pb-23.1/3">
-          <Button className="mx-auto !w-[150px] text-[20px] xxl:!w-[330px] xxl:text-[21px] ">
+          <Button
+            className={clsx(
+              "mx-auto !w-[150px] max-w-full text-1.5xl",
+              "md:!w-[200px] md:font-bold",
+              "xxl:!w-[330px] xxl:text-2xl xxl:font-medium"
+            )}
+          >
             確認する
           </Button>
         </div>
