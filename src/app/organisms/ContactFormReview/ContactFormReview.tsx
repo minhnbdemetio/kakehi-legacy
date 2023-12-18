@@ -50,7 +50,7 @@ const ContactFormReview: React.FC<IProps> = ({
           "mb-33 pb-[75px] md:mb-50 xxl:mb-33": !submitted,
         })}
       >
-        <div className="pt-16.2/3 md:px-41.2/3 xxl:px-[100px]">
+        <div className="pt-16.2/3 md:mx-auto md:w-[80%] md:px-0 xxl:w-full xxl:px-[100px]">
           {submitted ? (
             <p className=" whitespace-normal pl-[25px] pr-[27px] text-left font-noto-sans-jp-gg text-lg font-[500]  leading-[36px] md:px-0 xxl:whitespace-pre-wrap xxl:text-center xxl:text-xl">{`以下の内容にて、お問い合わせをお受付いたしました。\n確認後に、担当者よりご連絡いたします。`}</p>
           ) : (
