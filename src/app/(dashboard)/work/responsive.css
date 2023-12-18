@@ -11,7 +11,7 @@
   }
 
   .work-page-container .description-section .card-description-label p {
-    font-size: 18px;
+    font-size: 18px !important;
     line-height: normal;
   }
 
@@ -26,7 +26,7 @@
   }
 
   .work-page-container .list-project-title .divider {
-    font-size: 24px;
+    font-size: 24px !important;
   }
 
   .work-page-container
@@ -60,16 +60,20 @@
 
   .work-page-container .description-section .card-description-content {
     min-width: 450px !important;
-    padding-left: 25px !important;
+    /* padding-left: 25px !important; */
   }
 
   .work-page-container .description-section-content {
     margin-top: 75px !important;
-    padding-bottom: 0;
+    padding-bottom: 0 !important;
+  }
+
+  .work-page-container .description-section .title {
+    width: 100% !important;
   }
 
   .work-page-container .description-section .title p {
-    line-height: 30px;
+    line-height: 30px !important;
   }
   .work-page-container .description-section .title > div {
     height: 67px;
@@ -87,8 +91,12 @@
     height: 90px !important;
   }
 
+  .work-page-container .description-section .title {
+    width: 50% !important;
+  }
+
   .work-page-container .description-section .card-description-label p {
-    font-size: 21px;
+    font-size: 21px !important;
     line-height: normal;
   }
 
@@ -102,10 +110,6 @@
   }
   .work-page-container .card-description-label p {
     font-size: 16px;
-  }
-
-  .work-page-container .list-project-title .divider {
-    font-size: 24px;
   }
 
   .work-page-container
@@ -148,11 +152,11 @@
 
   .work-page-container .description-section-content {
     margin-top: 108px !important;
-    padding-bottom: 0;
+    padding-bottom: 0 !important;
   }
 
   .work-page-container .list-project-title .divider {
-    font-size: 32px;
+    font-size: 32px !important;
   }
 
   .work-page-container .description-section .subtitle,

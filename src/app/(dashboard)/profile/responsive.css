@@ -25,7 +25,7 @@
   }
 
   .work-page-container .list-project-title .divider {
-    font-size: 24px;
+    font-size: 24px !important;
   }
 
   .work-page-container
@@ -66,11 +66,11 @@
 
   .work-page-container .description-section-content {
     margin-top: 108px !important;
-    padding-bottom: 0;
+    padding-bottom: 0 !important;
   }
 
   .work-page-container .list-project-title .divider {
-    font-size: 32px;
+    font-size: 32px !important;
   }
 
   .work-page-container .description-section .subtitle,
