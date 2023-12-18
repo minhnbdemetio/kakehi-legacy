@@ -17,8 +17,8 @@ export const InfoHeading: FC<Props> = ({ subtitle, title, className }) => {
     >
       <h2
         className={clsx(
-          "font-noto-sans text-[13px] md:text-[15px] xxl:text-xl",
-          "decoration-width underline decoration-hover-primary/60 decoration-2 underline-offset-4"
+          "mx-auto w-fit border-b-[2px] border-b-hover-primary pb-[4px] font-noto-sans text-[13px] md:text-[15px] xxl:text-xl",
+          ""
         )}
       >
         {subtitle}

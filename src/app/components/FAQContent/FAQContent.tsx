@@ -21,7 +21,7 @@ export const FAQContent = ({
   return (
     <InfoContainer
       as="section"
-      className="space-y-[50px] py-33 !pb-[150px] md:space-y-25 xxl:space-y-24 xxl:!pb-[100px]"
+      className="space-y-[50px] py-33 !pb-[150px] md:space-y-[85px] xxl:space-y-24 xxl:!pb-[100px]"
     >
       <InfoHeading subtitle="FAQ" title="よくあるお問い合わせ" />
       <div className="mx-auto space-y-[20px] md:max-w-[600px] md:space-y-5 xxl:max-w-full xxl:space-y-7">

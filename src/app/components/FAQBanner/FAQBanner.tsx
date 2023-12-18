@@ -55,7 +55,10 @@ export const FAQBanner: FC = () => {
             </ul>
           </div>
           <div className="text-center">
-            <Button href={Routes.REQUEST} className="md:w-[300px] md:font-bold">
+            <Button
+              href={Routes.REQUEST}
+              className="md:w-[300px] md:text-[22px] md:font-bold"
+            >
               資料請求はこちら
             </Button>
           </div>
