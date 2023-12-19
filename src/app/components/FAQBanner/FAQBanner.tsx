@@ -38,7 +38,7 @@ export const FAQBanner: FC = () => {
             className="w-full md:mx-auto md:max-w-[500px] xxl:!mt-[100px]"
           />
 
-          <div className="!mt-[50px] block md:!mt-[75px] xxl:hidden">
+          <div className="!mt-[50px] block md:!mt-[75px] ">
             <p
               className={clsx(
                 "text-center font-noto-sans-jp text-lg font-bold leading-lg text-primary",
@@ -50,7 +50,7 @@ export const FAQBanner: FC = () => {
             <ul
               className={clsx(
                 "mx-auto mt-[10px] w-[80%] list-disc font-noto-sans-jp text-[13px] font-medium leading-[24px] text-primary",
-                "md:mt-7 md:w-[58.5%] md:max-w-full md:text-lg md:leading-sm"
+                "md:mt-7 md:w-[58.5%] md:max-w-full md:text-lg md:leading-sm  xxl:w-[35.311871227%] xxl:text-left"
               )}
             >
               <li>システム建築とは</li>
@@ -64,7 +64,7 @@ export const FAQBanner: FC = () => {
               <li>施工実績</li>
             </ul>
           </div>
-          <div className="text-center">
+          <div className="text-center xxl:!mt-[75px]">
             <Button
               href={Routes.REQUEST}
               className="md:w-[300px] md:text-[22px] md:font-bold"
