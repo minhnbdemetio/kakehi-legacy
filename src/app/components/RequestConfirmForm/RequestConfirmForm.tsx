@@ -129,7 +129,9 @@ export const RequestConfirmForm = () => {
                 width={50}
                 height={17}
               />
-              <span className="text-1.5xl xxl:text-2xl">戻る</span>
+              <span className="text-1.5xl md:text-[22px] xxl:text-2xl">
+                戻る
+              </span>
               <span className="hidden xxl:block xxl:w-17"></span>
             </Button>
             <Button
@@ -137,7 +139,7 @@ export const RequestConfirmForm = () => {
               className="relative flex flex-col items-center justify-center !py-[0] md:!w-[200px] md:flex-row md:justify-between md:gap-3 xxl:!w-[330px] xxl:gap-y-2 xxl:!p-7"
             >
               <span className="hidden xxl:block xxl:w-17"></span>
-              <span className="text-1.5xl xxl:text-2xl">
+              <span className="text-1.5xl  md:text-[22px] xxl:text-2xl">
                 {sumbmitting ? "送信中..." : "送信する"}
               </span>
               <img
@@ -152,10 +154,10 @@ export const RequestConfirmForm = () => {
         ) : null}
       </div>
 
-      {isConfirmed ? (
+      {!isConfirmed ? (
         <div className="mt-[50px] text-center md:mt-25 xxl:mt-33.1/3">
           <Button
-            className="!w-[250px] !text-1.5xl md:!w-[300px] xxl:!w-[330px] xxl:!text-2xl"
+            className="!w-[250px] !text-1.5xl md:!w-[300px] md:!text-[22px] xxl:!w-[330px] xxl:!text-2xl"
             href={Routes.TOP}
           >
             トップページへ戻る

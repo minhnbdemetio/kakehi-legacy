@@ -96,7 +96,7 @@ export const RequestForm = () => {
   return (
     <form
       onSubmit={form.handleSubmit(onSubmit)}
-      className="bg-card-background-primary pb-23 pl-[25px] pr-[27px] pt-17 md:px-[75px] xxl:pl-33 xxl:pr-12"
+      className="bg-card-background-primary pb-23 pl-[25px] pr-[27px] pt-17 md:px-[75px] md:pb-[75px] xxl:pl-33 xxl:pr-12"
     >
       <p className="xxl:leading-loose mb-17 text-left text-lg font-[500] leading-[1.8] text-primary md:text-[21px] md:font-normal xxl:text-center xxl:text-xl">
         以下のフォームに必要事項をご入力の上、資料をご請求ください。
@@ -185,7 +185,7 @@ export const RequestForm = () => {
           control={form.control}
           render={({ field, fieldState }) => (
             <TextField
-              className="resize-none"
+              className="resize-none md:max-h-[300px]"
               label={`お問い合わせ内容\n（任意）`}
               rows={10}
               {...field}
@@ -226,7 +226,7 @@ export const RequestForm = () => {
         <Button
           className={clsx(
             "mx-auto !w-[150px] text-[20px]",
-            "md:!w-[200px] md:text-1.5xl md:font-bold",
+            "md:!w-[200px] md:text-[22px] md:font-bold",
             "xxl:!w-[330px] xxl:text-2xl xxl:font-medium"
           )}
         >
