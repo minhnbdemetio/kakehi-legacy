@@ -30,12 +30,18 @@ export const FAQBanner: FC = () => {
             <br className="hidden xxl:block" />
             以下のフォームに必要事項をご入力の上、お問い合わせください。
           </p>
-          <InfoCard title="工場・倉庫建設ガイド" />
+          {/* <InfoCard title="工場・倉庫建設ガイド" /> */}
 
-          <div className="block xxl:hidden">
+          <img
+            alt="Document for lp"
+            src="/document_for_lp.svg"
+            className="w-full md:mx-auto md:max-w-[500px] xxl:!mt-[100px]"
+          />
+
+          <div className="!mt-[50px] block md:!mt-[75px] xxl:hidden">
             <p
               className={clsx(
-                "font-noto-sans-jp text-lg font-bold leading-lg text-primary",
+                "text-center font-noto-sans-jp text-lg font-bold leading-lg text-primary",
                 "md:text-center md:text-1.5xl"
               )}
             >
@@ -43,15 +49,19 @@ export const FAQBanner: FC = () => {
             </p>
             <ul
               className={clsx(
-                "mx-auto mt-[10px] w-[58.6%] list-disc font-noto-sans-jp text-[13px] font-medium leading-[24px] text-primary",
-                "md:mt-7 md:w-max md:max-w-full md:text-lg md:leading-sm"
+                "mx-auto mt-[10px] w-[80%] list-disc font-noto-sans-jp text-[13px] font-medium leading-[24px] text-primary",
+                "md:mt-7 md:w-[58.5%] md:max-w-full md:text-lg md:leading-sm"
               )}
             >
               <li>システム建築とは</li>
-              <li>システム建築のメリット</li>
               <li>システム建築に適した建物</li>
+              <li>システム建築が工場・倉庫に最適な理由</li>
+              <li>システム建築の商品と特徴</li>
               <li>工場・倉庫建築のポイント</li>
+              <li>建築予算の考慮すべき要素</li>
+              <li>建築予算の考え方</li>
               <li>懸樋工務店の強み</li>
+              <li>施工実績</li>
             </ul>
           </div>
           <div className="text-center">

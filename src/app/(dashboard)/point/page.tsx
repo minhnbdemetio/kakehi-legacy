@@ -46,7 +46,7 @@ const PointScreen: React.FC<IProps> = () => {
           </BackgroundWithSlogan>
         </div>
 
-        <div className="mx-7 mt-25 md:mx-auto md:max-w-[700px] xxl:mx-pc-container xxl:mt-16.2/3 xxl:max-w-[1000px]">
+        <div className="xxl:auto mx-7 mt-25 md:mx-auto md:max-w-[700px] xxl:mt-16.2/3 xxl:max-w-[1000px]">
           <p className="text-lg font-[500] leading-lg md:text-[21px] xxl:text-1.5xl">
             用途に応じた高い専門性が求められる工場・倉庫の建築では、多くの考慮すべきポイントがあります。運用開始後の改築が難しい点については、基本計画の段階から考慮する必要があります。事前の検討や確認が必要な4つのポイントを紹介いたしますので、お役立てください。
           </p>
@@ -56,7 +56,7 @@ const PointScreen: React.FC<IProps> = () => {
           className={clsx(
             "card-list mx-7 mt-25 pb-[64px] ",
             "md:mx-0 md:mt-[50px] md:pb-[100px]",
-            "xxl:mx-pc-container xxl:mt-16.2/3 xxl:pb-33"
+            "md:max-w-[1000px] xxl:mx-auto xxl:mt-16.2/3 xxl:pb-33"
           )}
         >
           <ul

@@ -154,7 +154,7 @@ export const RequestConfirmForm = () => {
         ) : null}
       </div>
 
-      {!isConfirmed ? (
+      {isConfirmed ? (
         <div className="mt-[50px] text-center md:mt-25 xxl:mt-33.1/3">
           <Button
             className="!w-[250px] !text-1.5xl md:!w-[300px] md:!text-[22px] xxl:!w-[330px] xxl:!text-2xl"
