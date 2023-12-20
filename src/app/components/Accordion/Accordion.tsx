@@ -92,7 +92,7 @@ export const Accordion: FC<Props> = ({
           className={clsx(
             "space-y-7 text-md font-[400] leading-[24px]",
             "md:space-y-[15px] md:text-md2 md:leading-sm",
-            "xxl:text-xl xxl:font-bold xxl:leading-xl",
+            "xxl:space-y-7 xxl:text-xl xxl:font-bold xxl:leading-xl",
             {
               "px-8 pb-[50px] xxl:px-17 xxl:pb-24": type === "section",
               "accordion__answer px-7 py-7 md:py-8 md:pl-15 md:pr-17 xxl:px-18 xxl:pb-12 xxl:pt-9":
