@@ -91,7 +91,7 @@ export const Accordion: FC<Props> = ({
         <div
           className={clsx(
             "space-y-7 text-md font-[400] leading-[24px]",
-            "md:text-md2 md:leading-sm",
+            "md:space-y-[15px] md:text-md2 md:leading-sm",
             "xxl:text-xl xxl:font-bold xxl:leading-xl",
             {
               "px-8 pb-[50px] xxl:px-17 xxl:pb-24": type === "section",
