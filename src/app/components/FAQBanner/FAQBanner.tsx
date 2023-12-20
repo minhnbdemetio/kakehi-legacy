@@ -21,7 +21,7 @@ export const FAQBanner: FC = () => {
         >
           <p
             className={clsx(
-              "font-noto-sans-jp text-lg font-medium leading-xl text-primary",
+              "font-noto-sans-jp text-lg font-medium leading-[36px] text-primary",
               "md:text-1.5xl md:leading-lg",
               "xxl:leading-loose xxl:text-1.5xl xxl:leading-[1.8]"
             )}
@@ -38,10 +38,10 @@ export const FAQBanner: FC = () => {
             className="w-full md:mx-auto md:max-w-[500px] xxl:!mt-[100px]"
           />
 
-          <div className="!mt-[50px] block md:!mt-[75px] ">
+          <div className="!mt-[50px] block  md:!mt-[75px] ">
             <p
               className={clsx(
-                "text-center font-noto-sans-jp text-lg font-bold leading-lg text-primary",
+                "mx-auto w-[220px] text-center font-noto-sans-jp text-lg font-bold leading-lg text-primary",
                 "md:text-center md:text-1.5xl"
               )}
             >
@@ -49,25 +49,43 @@ export const FAQBanner: FC = () => {
             </p>
             <ul
               className={clsx(
-                "mx-auto mt-[10px] w-[80%] list-disc font-noto-sans-jp text-[13px] font-medium leading-[24px] text-primary",
-                "md:mt-7 md:w-[58.5%] md:max-w-full md:text-lg md:leading-sm  xxl:w-[35.311871227%] xxl:text-left"
+                "mx-auto mt-[10px] max-w-[244px]   font-noto-sans-jp text-[13px] font-medium leading-[24px] text-primary",
+                "md:mt-7 md:max-w-[360px]   md:text-lg md:leading-sm  xxl:max-w-[351px] xxl:text-left"
               )}
             >
-              <li>システム建築とは</li>
-              <li>システム建築に適した建物</li>
-              <li>システム建築が工場・倉庫に最適な理由</li>
-              <li>システム建築の商品と特徴</li>
-              <li>工場・倉庫建築のポイント</li>
-              <li>建築予算の考慮すべき要素</li>
-              <li>建築予算の考え方</li>
-              <li>懸樋工務店の強み</li>
-              <li>施工実績</li>
+              <li className="before:content-[' '] flex items-center gap-[4px] before:block before:h-[3px] before:w-[3px] before:rounded-[50%] before:bg-black">
+                システム建築とは
+              </li>
+              <li className="before:content-[' '] flex items-center gap-[4px] before:block before:h-[3px] before:w-[3px] before:rounded-[50%] before:bg-black">
+                システム建築に適した建物
+              </li>
+              <li className="before:content-[' '] flex items-center gap-[4px] before:block before:h-[3px] before:w-[3px] before:rounded-[50%] before:bg-black">
+                システム建築が工場・倉庫に最適な理由
+              </li>
+              <li className="before:content-[' '] flex items-center gap-[4px] before:block before:h-[3px] before:w-[3px] before:rounded-[50%] before:bg-black">
+                システム建築の商品と特徴
+              </li>
+              <li className="before:content-[' '] flex items-center gap-[4px] before:block before:h-[3px] before:w-[3px] before:rounded-[50%] before:bg-black">
+                工場・倉庫建築のポイント
+              </li>
+              <li className="before:content-[' '] flex items-center gap-[4px] before:block before:h-[3px] before:w-[3px] before:rounded-[50%] before:bg-black">
+                建築予算の考慮すべき要素
+              </li>
+              <li className="before:content-[' '] flex items-center gap-[4px] before:block before:h-[3px] before:w-[3px] before:rounded-[50%] before:bg-black">
+                建築予算の考え方
+              </li>
+              <li className="before:content-[' '] flex items-center gap-[4px] before:block before:h-[3px] before:w-[3px] before:rounded-[50%] before:bg-black">
+                懸樋工務店の強み
+              </li>
+              <li className="before:content-[' '] flex items-center gap-[4px] before:block before:h-[3px] before:w-[3px] before:rounded-[50%] before:bg-black">
+                施工実績
+              </li>
             </ul>
           </div>
           <div className="text-center xxl:!mt-[75px]">
             <Button
               href={Routes.REQUEST}
-              className="md:w-[300px] md:text-[22px] md:font-bold"
+              className="w-[240px] text-[20px] md:w-[300px] md:text-[22px] md:font-bold xxl:font-[500]"
             >
               資料請求はこちら
             </Button>
