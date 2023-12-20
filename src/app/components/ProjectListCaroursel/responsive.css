@@ -5,9 +5,9 @@
 }
 
 @media screen(xxl) {
-  .project-list-carousel-container .project-list-carousel {
+  /* .project-list-carousel-container .project-list-carousel {
     margin: 0 220px;
-  }
+  } */
 
   .project-list-carousel-container .project-list-carousel-naviate-btn.left {
     left: 135px !important;
@@ -27,9 +27,9 @@
     padding-right: 0 !important;
   }
 
-  .project-list-carousel-container .slick-list {
+  /* .project-list-carousel-container .slick-list {
     margin: 0 -24px;
-  }
+  } */
 
   .project-list-carousel-container .slick-slide > div {
     padding: 0 24px;

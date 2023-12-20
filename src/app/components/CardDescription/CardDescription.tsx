@@ -74,7 +74,7 @@ const CardDescription: React.FC<IProps> = ({
       )}
       <DescriptionWrapper
         className={CLSX(
-          "card-description-content flex flex-auto items-center justify-start px-9 py-[25px] text-[15px] leading-[24px] xxl:py-5",
+          "card-description-content flex flex-auto items-center justify-start px-9 py-[25px] text-[15px] leading-[24px] ",
           "md:px-[40px] md:py-[30px] md:leading-[30px]",
           "xxl:leading-8 xxl:justify-center xxl:text-1.5xl xxl:font-medium",
           {

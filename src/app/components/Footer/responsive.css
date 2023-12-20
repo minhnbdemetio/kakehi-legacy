@@ -35,11 +35,16 @@
     aspect-ratio: unset;
   }
 
+  .footer-background img {
+    object-position: bottom !important;
+  }
+
   .footer-container .background-section-container > div {
     background: linear-gradient(
       180deg,
-      #f2f2f2 29.2%,
-      rgba(206, 236, 245, 0) 100%
+      #fffefe 1.2%,
+      #ffffffd9 22.2%,
+      rgb(227 227 227 / 0%) 100%
     );
   }
 
