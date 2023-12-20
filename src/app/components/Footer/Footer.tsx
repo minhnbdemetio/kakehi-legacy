@@ -17,7 +17,7 @@ const Footer: React.FC<IProps> = ({ showPreFooter = true }) => {
       {showPreFooter && (
         <div className="pre-footer">
           <BackgroundSection
-            className="footer-background"
+            className="footer-background "
             src="/footer.jpg"
             mobileSrc="/kakehi_contact_sp.png"
             tabletSrc="/kakehi_contact_tablet.jpg"

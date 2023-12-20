@@ -69,8 +69,8 @@ const ProjectListCarousel: React.FC<IProps> = ({ projects, hideId }) => {
   return (
     <div className="w-full">
       <div className="project-list-carousel-container w-full overflow-hidden ">
-        <div className="project-list-carousel px-[71px]  md:mx-auto md:w-[64.028776978%] md:overflow-hidden md:px-0 xxl:mx-0 xxl:w-[69.166666666%]  xxl:px-0">
-          <div className="md:-mx-[17px] xxl:mx-0">
+        <div className="project-list-carousel px-[71px]  md:mx-auto md:w-[64.028776978%] md:overflow-hidden md:px-0  xxl:w-[69.166666666%]  xxl:px-0">
+          <div className="md:-mx-[17px] xxl:-mx-[24px]">
             <Slider {...settings}>
               {
                 showProjects.map((project, index) => (
