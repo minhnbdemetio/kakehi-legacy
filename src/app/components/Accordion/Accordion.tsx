@@ -8,7 +8,8 @@ interface Props extends PropsWithChildren {
   summary: string;
   type?: "section" | "question";
   open: boolean;
-  toggle: () => void;
+  toggle: (e: React.ChangeEvent<HTMLButtonElement>) => void;
+  id?: string;
 }
 
 export const Accordion: FC<Props> = ({
@@ -17,6 +18,7 @@ export const Accordion: FC<Props> = ({
   type = "section",
   open,
   toggle,
+  id,
 }) => {
   const contentRef = useRef<HTMLDivElement>(null);
 
@@ -31,7 +33,7 @@ export const Accordion: FC<Props> = ({
   }, [open]);
 
   return (
-    <div>
+    <div id={id}>
       <button
         className={clsx(
           "flex w-full items-center justify-between gap-5 py-8 text-left md:gap-10 xxl:gap-8",

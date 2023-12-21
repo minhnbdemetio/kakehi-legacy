@@ -3,7 +3,7 @@
 import { FAQData } from "@/app/utils/queries/getFAQCategories";
 import { InfoContainer } from "../InfoContainer";
 import { InfoHeading } from "../InfoHeading";
-import { useState } from "react";
+import { useLayoutEffect, useState } from "react";
 import { Accordion } from "../Accordion";
 
 export const FAQContent = ({
@@ -13,6 +13,19 @@ export const FAQContent = ({
 }) => {
   const [openSection, setOpenSection] = useState("");
   const [openQuestion, setOpenQuestion] = useState("");
+
+  useLayoutEffect(() => {
+    if (typeof document !== "undefined" && openSection) {
+      setTimeout(() => {
+        window.scrollTo({
+          top: (document.getElementById(openSection)?.offsetTop || 0) - 80,
+          behavior: "smooth",
+        });
+
+        // Waiting for Previous accordion close completely!
+      }, 310);
+    }
+  }, [openSection]);
 
   if (!categories.length) {
     return null;
@@ -27,9 +40,13 @@ export const FAQContent = ({
       <div className="mx-auto space-y-[20px] md:max-w-[600px] md:space-y-5 xxl:max-w-full xxl:space-y-7">
         {categories.map((category) => (
           <Accordion
-            toggle={() =>
-              setOpenSection(category.id === openSection ? "" : category.id)
-            }
+            id={category.id}
+            toggle={(e) => {
+              setOpenSection(category.id === openSection ? "" : category.id);
+              const target = e.currentTarget;
+
+              // console.debug(target.getBoundingClientRect());
+            }}
             open={openSection === category.id}
             summary={category.title}
             key={`FAQCategory_${category.title}`}
