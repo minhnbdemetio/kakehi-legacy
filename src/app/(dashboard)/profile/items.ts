@@ -24,7 +24,7 @@ const items: {
     description:
       "建物の設計施工、土木工事の施工、ゴルフ練習場「グリーンゴルフ21」の運営 <br/> パーソナルジム「PT Body Lab.」の運営、フィットネスジム「グリーンフィットネス」の運営",
     mobileDesc:
-      "<span>建物の設計施工<br class='md:hidden'/><span class='hidden md:inline'>、</span>土木工事の施工<span class='hidden md:inline'>、</span>\nゴルフ練習場「グリーンゴルフ21」の運営</span>",
+      "<span>建物の設計施工<br class='md:hidden'/><span class='hidden md:inline'>、</span>土木工事の施工<span class='hidden md:inline'>、</span>\nゴルフ練習場「グリーンゴルフ21」の運営パーソナルジム「PT Body Lab.」の運営、フィットネスジム「グリーンフィットネス」の運営</span>",
   },
 ];
 
