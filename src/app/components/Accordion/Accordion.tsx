@@ -8,7 +8,7 @@ interface Props extends PropsWithChildren {
   summary: string;
   type?: "section" | "question";
   open: boolean;
-  toggle: (e: React.ChangeEvent<HTMLButtonElement>) => void;
+  toggle: (e: React.MouseEvent<HTMLButtonElement>) => void;
   id?: string;
 }
 
