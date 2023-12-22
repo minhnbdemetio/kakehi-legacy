@@ -70,7 +70,7 @@ export const Accordion: FC<Props> = ({
         <picture className="shrink-0 xxl:p-4">
           <img
             src="/icons/chevron-icon.png"
-            alt=""
+            alt="chevron icon"
             width={15}
             height={8}
             className={clsx({

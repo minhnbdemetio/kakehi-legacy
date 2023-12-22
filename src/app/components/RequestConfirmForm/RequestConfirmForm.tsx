@@ -125,7 +125,7 @@ export const RequestConfirmForm = () => {
               <img
                 className="hidden shrink-0 -scale-x-100 md:block"
                 src="/icons/arrow-right-icon.png"
-                alt=""
+                alt="arrow right icon"
                 width={50}
                 height={17}
               />
@@ -144,7 +144,7 @@ export const RequestConfirmForm = () => {
               </span>
               <img
                 src="/icons/arrow-right-icon.png"
-                alt=""
+                alt="arrow right icon"
                 width={50}
                 height={17}
                 className="hidden shrink-0 md:block"

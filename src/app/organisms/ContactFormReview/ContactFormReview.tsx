@@ -85,7 +85,7 @@ const ContactFormReview: React.FC<IProps> = ({
               <img
                 className="hidden shrink-0 -scale-x-100 md:block"
                 src="/icons/arrow-right-icon.png"
-                alt=""
+                alt="arrow right icon"
                 width={50}
                 height={17}
               />
@@ -102,7 +102,7 @@ const ContactFormReview: React.FC<IProps> = ({
               </span>
               <img
                 src="/icons/arrow-right-icon.png"
-                alt=""
+                alt="arrow right icon"
                 className="hidden shrink-0 md:block"
                 width={50}
                 height={17}

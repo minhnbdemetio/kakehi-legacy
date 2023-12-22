@@ -85,6 +85,7 @@ const ProjectListCarousel: React.FC<IProps> = ({ projects, hideId }) => {
                   >
                     <div className="relative w-full">
                       <img
+                        alt="project thumbnail"
                         className="project-card-image aspect-250/167 w-full  object-cover md:aspect-[250/171] xxl:aspect-[300/205]"
                         src={project.thumbnail}
                       />

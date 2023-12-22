@@ -6,8 +6,34 @@ import BackgroundWithSlogan from "@/app/components/BackgroundWithSlogan";
 import CardDescription from "@/app/components/CardDescription";
 import DescriptionSection from "@/app/organisms/DescriptionSection";
 import clsx from "clsx";
+import { Metadata } from "next";
 
 interface IProps {}
+
+export const metadata: Metadata = {
+  title: "建築のポイント｜生産性を向上させる工場と倉庫建築のために",
+  description:
+    "工場・倉庫の建築において、事前の検討や確認が必要なポイントをご紹介いたします。運用開始後の改築が難しい点については、基本計画の段階から考慮する必要があります。お客様が理想とされる建物の建築のためにお役立てください。",
+  keywords:
+    "鳥取,システム建築,工場,倉庫,物流,店舗,施設,商業施設,飲食店,スーパーマーケット,ドラッグストア,ホームセンター,スポーツ施設,体育館,室内練習場,オープンファクトリー,建物,建築,建設,建てる,新築,増築,改築,土地探し,設計,施工,依頼先,アフターメンテナンス,メンテナンス,保守,保守管理,相談,問い合わせ,見積もり,費用,コスト,低価格,ポイント,要点,重要,大切,大事,注意,注意点",
+  authors: { name: "株式会社 懸樋工務店" },
+  openGraph: {
+    title: "建築のポイント｜生産性を向上させる工場と倉庫建築のために",
+    description:
+      "工場・倉庫の建築において、事前の検討や確認が必要なポイントをご紹介いたします。運用開始後の改築が難しい点については、基本計画の段階から考慮する必要があります。お客様が理想とされる建物の建築のためにお役立てください。",
+    images: {
+      url: "/kakehi_system_construction_point.jpg",
+    },
+  },
+  twitter: {
+    title: "建築のポイント｜生産性を向上させる工場と倉庫建築のために",
+    description:
+      "工場・倉庫の建築において、事前の検討や確認が必要なポイントをご紹介いたします。運用開始後の改築が難しい点については、基本計画の段階から考慮する必要があります。お客様が理想とされる建物の建築のためにお役立てください。",
+    images: {
+      url: "/kakehi_system_construction_point.jpg",
+    },
+  },
+};
 
 const PointScreen: React.FC<IProps> = () => {
   const BANNER_CONTENT = (

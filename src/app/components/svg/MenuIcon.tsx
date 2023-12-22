@@ -16,7 +16,7 @@ export default function MenuIcon() {
           x2="28.8462"
           y2="1"
           stroke="black"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <line
           id="Line 28"
@@ -24,7 +24,7 @@ export default function MenuIcon() {
           x2="28.8462"
           y2="13.5"
           stroke="black"
-          stroke-width="2"
+          strokeWidth="2"
         />
         <line
           id="Line 29"
@@ -32,7 +32,7 @@ export default function MenuIcon() {
           x2="28.8462"
           y2="26"
           stroke="black"
-          stroke-width="2"
+          strokeWidth="2"
         />
       </g>
     </svg>
