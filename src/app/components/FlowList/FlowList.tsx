@@ -9,7 +9,13 @@ interface IProps {
 
 const FlowList: React.FC<IProps> = ({ children }) => {
   const polygonImg = useMemo(
-    () => <img className="chain-icon z-20" src="/icons/polygon-icon.svg" />,
+    () => (
+      <img
+        alt="polygon"
+        className="chain-icon z-20"
+        src="/icons/polygon-icon.svg"
+      />
+    ),
     []
   );
 

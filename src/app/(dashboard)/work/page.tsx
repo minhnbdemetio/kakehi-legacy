@@ -7,12 +7,38 @@ import ProjectListCarousel from "@/app/components/ProjectListCaroursel";
 import getProjects from "@/app/utils/queries/getProjects";
 import getProject from "@/app/utils/queries/getProject";
 import { redirect } from "next/navigation";
+import { Metadata } from "next";
 
 interface IProps {
   searchParams: {
     id: string;
   };
 }
+
+export const metadata: Metadata = {
+  title: "施工事例｜システム建築により建てられた工場と倉庫",
+  description:
+    "鳥取に根差す懸樋工務店が、システム建築により建設した工場・倉庫の施工事例をご紹介いたします。新築や増築の参考にご覧ください。",
+  keywords:
+    "鳥取,システム建築,工場,倉庫,物流,店舗,施設,商業施設,飲食店,スーパーマーケット,ドラッグストア,ホームセンター,スポーツ施設,体育館,室内練習場,オープンファクトリー,建物,建築,建設,建てる,新築,増築,改築,実績,施工実績,施工事例",
+  authors: { name: "株式会社 懸樋工務店" },
+  openGraph: {
+    title: "施工事例｜システム建築により建てられた工場と倉庫",
+    description:
+      "鳥取に根差す懸樋工務店が、システム建築により建設した工場・倉庫の施工事例をご紹介いたします。新築や増築の参考にご覧ください。",
+    images: {
+      url: "/kakehi_system_construction_example.jpg",
+    },
+  },
+  twitter: {
+    title: "施工事例｜システム建築により建てられた工場と倉庫",
+    description:
+      "鳥取に根差す懸樋工務店が、システム建築により建設した工場・倉庫の施工事例をご紹介いたします。新築や増築の参考にご覧ください。",
+    images: {
+      url: "/kakehi_system_construction_example.jpg",
+    },
+  },
+};
 
 const Work: React.FC<IProps> = async ({ searchParams }: IProps) => {
   const projects = await getProjects();

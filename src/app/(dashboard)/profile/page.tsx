@@ -5,8 +5,34 @@ import items from "./items";
 import BackgroundWithSlogan from "@/app/components/BackgroundWithSlogan";
 import CardDescription from "@/app/components/CardDescription";
 import clsx from "clsx";
+import { Metadata } from "next";
 
 interface IProps {}
+
+export const metadata: Metadata = {
+  title: "懸樋工務店とは｜1954年から鳥取を彩り続ける建築のパイオニア",
+  description:
+    "70年以上の歴史を持つ懸樋工務店では、設計から施工までの一貫したサービスを提供しています。住宅・ビル・工場・商業施設など、あらゆる建物の建設で培われた豊富な経験と実績を基に、お客様に安心と信頼をお届けいたします。",
+  keywords:
+    "鳥取,システム建築,オフィス,商業施設,ビル,建物,建築,建設,建てる,新築,増築,改築,土地探し,設計,施工,土木,工事,土木工事,依頼先,アフターメンテナンス,メンテナンス,保守,保守管理,相談,問い合わせ,大手,老舗",
+  authors: { name: "株式会社 懸樋工務店" },
+  openGraph: {
+    title: "懸樋工務店とは｜1954年から鳥取を彩り続ける建築のパイオニア",
+    description:
+      "70年以上の歴史を持つ懸樋工務店では、設計から施工までの一貫したサービスを提供しています。住宅・ビル・工場・商業施設など、あらゆる建物の建設で培われた豊富な経験と実績を基に、お客様に安心と信頼をお届けいたします。",
+    images: {
+      url: "/kakehi_construction.jpg",
+    },
+  },
+  twitter: {
+    title: "懸樋工務店とは｜1954年から鳥取を彩り続ける建築のパイオニア",
+    description:
+      "70年以上の歴史を持つ懸樋工務店では、設計から施工までの一貫したサービスを提供しています。住宅・ビル・工場・商業施設など、あらゆる建物の建設で培われた豊富な経験と実績を基に、お客様に安心と信頼をお届けいたします。",
+    images: {
+      url: "/kakehi_construction.jpg",
+    },
+  },
+};
 
 const Profile: React.FC<IProps> = () => {
   return (
